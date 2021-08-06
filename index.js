@@ -12,8 +12,8 @@ const ApplicationDetails = require("./models/ApplicationDetails"),
     Inventors = require("./models/Inventors");
 
 const fileName = 'US20210045996A1-20210218.XML'
-    filePath = path.join(__dirname, fileName);
-    path = '/var/www/html/trash/patent_application_bibliographic/'
+    filePath = path.join(__dirname, fileName),
+    path = '/var/www/html/trash/patent_application_bibliographic/';
 
 const folderName = 'I20210204'
 
