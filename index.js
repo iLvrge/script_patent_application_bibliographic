@@ -23,7 +23,7 @@ exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${fol
     }
 })*/
 
-console.log(`tar -xvf ${mainFolderPath}/DOWNLOAD/${folderName}.tar`)
+console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
 exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar` , (err, stdout, stderr) => {
     if( !err ) {
         console.log(stdout)
@@ -33,7 +33,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                 console.log(allFolders)
                 if(Array.isArray(allFolders)) {
                     allFolders.forEach( folder => {
-                        exec(`unzip ${folder}/*.ZIP -d ${mainFolderPath}EXTRACT_FILES`, async (err, stdout, stderr) => {
+                        exec(`unzip '${folder}*.ZIP' -d ${mainFolderPath}EXTRACT_FILES`, async (err, stdout, stderr) => {
                             if(!err) {
                                 
                                 const promiseXML = new Promise( function(resolve, reject) {
