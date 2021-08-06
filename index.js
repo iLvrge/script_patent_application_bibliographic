@@ -22,7 +22,7 @@ exec(`find /var/www/html/trash/patent_application_bibliographic/${folderName} -t
         console.log(allFolders)
         if(Array.isArray(allFolders)) {
             allFolders.forEach( folder => {
-                exec(`find ${folder} -name "*.zip" -exec unzip {} \/`, (err, stdout, stderr) => {
+                exec(`find ${folder} -name "*.ZIP" -exec unzip {} \/`, (err, stdout, stderr) => {
                     if(!err) {
                         console.log(stdout)
                     } else {
