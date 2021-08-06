@@ -18,7 +18,8 @@ const folderName = 'I20210218'
 
 exec(`find /var/www/html/trash/patent_application_bibliographic/${folderName} -type d  -name "UTIL*"`, (err, stdout, stderr) => {
     if(!err) {
-        console.log('FOLDER NAME', stdout)
+        const allFolders = stdout.split('\n')
+        console.log(allFolders)
     } else {
         console.log('Error', err)
     }
