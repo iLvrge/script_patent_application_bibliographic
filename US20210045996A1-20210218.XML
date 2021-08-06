@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE us-patent-application SYSTEM "us-patent-application-v44-2014-04-03.dtd" [ ]>
+<us-patent-application lang="EN" dtd-version="v4.4 2014-04-03" file="US20210045996A1-20210218.XML" status="PRODUCTION" id="us-patent-application" country="US" date-produced="20210203" date-publ="20210218">
+<us-bibliographic-data-application lang="EN" country="US">
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>20210045996</doc-number>
+<kind>A1</kind>
+<date>20210218</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>16965511</doc-number>
+<date>20190131</date>
+</document-id>
+</application-reference>
+<us-application-series-code>16</us-application-series-code>
+<priority-claims>
+<priority-claim sequence="01" kind="national">
+<country>FR</country>
+<doc-number>1870096</doc-number>
+<date>20180130</date>
+</priority-claim>
+</priority-claims>
+<classifications-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>61</class>
+<subclass>K</subclass>
+<main-group>8</main-group>
+<subgroup>9789</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>61</class>
+<subclass>Q</subclass>
+<main-group>19</main-group>
+<subgroup>08</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+</classifications-ipcr>
+<classifications-cpc>
+<main-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20170801</date></cpc-version-indicator>
+<section>A</section>
+<class>61</class>
+<subclass>K</subclass>
+<main-group>8</main-group>
+<subgroup>9789</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</main-cpc>
+<further-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>A</section>
+<class>61</class>
+<subclass>K</subclass>
+<main-group>2800</main-group>
+<subgroup>82</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>A</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>A</section>
+<class>61</class>
+<subclass>Q</subclass>
+<main-group>19</main-group>
+<subgroup>08</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</further-cpc>
+</classifications-cpc>
+<invention-title id="d2e61">MYRCIARIA DUBIA FRUIT EXTRACTS RICH IN ORGANIC ACIDS, COSMETIC COMPOSITIONS COMPRISING SAME AND COSMETIC USES THEREOF</invention-title>
+<us-parties>
+<us-applicants>
+<us-applicant sequence="00" app-type="applicant" designation="us-only" applicant-authority-category="assignee">
+<addressbook>
+<orgname>ISP INVESTMENTS LLC</orgname>
+<address>
+<city>Wilmington</city>
+<state>DE</state>
+<country>US</country>
+</address>
+</addressbook>
+<residence>
+<country>US</country>
+</residence>
+</us-applicant>
+<us-applicant sequence="01" app-type="applicant" designation="us-only" applicant-authority-category="assignee">
+<addressbook>
+<orgname>JAFER ENTERPRISES R&#x26;D, S.L.</orgname>
+<address>
+<city>Granollers</city>
+<country>ES</country>
+</address>
+</addressbook>
+<residence>
+<country>ES</country>
+</residence>
+</us-applicant>
+</us-applicants>
+<inventors>
+<inventor sequence="00" designation="us-only">
+<addressbook>
+<last-name>Botto</last-name>
+<first-name>Jean-Marie</first-name>
+<address>
+<city>Valbonne</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="01" designation="us-only">
+<addressbook>
+<last-name>Capallere</last-name>
+<first-name>Christophe</first-name>
+<address>
+<city>Nice</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="02" designation="us-only">
+<addressbook>
+<last-name>Gondran</last-name>
+<first-name>Catherine</first-name>
+<address>
+<city>Callian</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="03" designation="us-only">
+<addressbook>
+<last-name>Imbert</last-name>
+<first-name>Isabelle</first-name>
+<address>
+<city>Cannes</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="04" designation="us-only">
+<addressbook>
+<last-name>Garnier</last-name>
+<first-name>S&#xe8;bastien</first-name>
+<address>
+<city>Le Rouret</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="05" designation="us-only">
+<addressbook>
+<last-name>Le Borgne</last-name>
+<first-name>Erell</first-name>
+<address>
+<city>Antibes</city>
+<country>FR</country>
+</address>
+</addressbook>
+</inventor>
+</inventors>
+</us-parties>
+<assignees>
+<assignee>
+<addressbook>
+<orgname>ISP INVESTMENTS LLC</orgname>
+<role>02</role>
+<address>
+<city>Wilmington</city>
+<state>DE</state>
+<country>US</country>
+</address>
+</addressbook>
+</assignee>
+<assignee>
+<addressbook>
+<orgname>JAFER ENTERPRISES R&#x26;D, S.L.</orgname>
+<role>03</role>
+<address>
+<city>Granollers</city>
+<country>ES</country>
+</address>
+</addressbook>
+</assignee>
+</assignees>
+<pct-or-regional-filing-data>
+<document-id>
+<country>WO</country>
+<doc-number>PCT/EP2019/052452</doc-number>
+<kind>00</kind>
+<date>20190131</date>
+</document-id>
+<us-371c12-date><date>20200728</date></us-371c12-date>
+</pct-or-regional-filing-data>
+</us-bibliographic-data-application>
+<abstract id="abstract">
+<p id="p-0001" num="0000">A pulp and skin extract from dried, seed-free <i>Myrciaria dubia </i>fruit. The <i>Myrciaria dubia </i>fruit has a maturity of at least 70%, a soluble solids/acidity ratio between 2.5 and 3, and it is rich in organic acids. The extract is obtained by solid-liquid extraction in a hydro-polyalcohol solvent selected from a hydro-glycerol and/or hydro-gylcolic solvent under conventional agitation or with ultrasound. The extract is an active in cosmetic compositions, which reduce the signs of skin fatigue.</p>
+</abstract>
+<drawings id="DRAWINGS">
+<figure id="Fig-EMI-D00000" num="00000">
+<img id="EMI-D00000" he="80.69mm" wi="134.54mm" file="US20210045996A1-20210218-D00000.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00001" num="00001">
+<img id="EMI-D00001" he="90.34mm" wi="136.57mm" file="US20210045996A1-20210218-D00001.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00002" num="00002">
+<img id="EMI-D00002" he="214.29mm" wi="166.12mm" file="US20210045996A1-20210218-D00002.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00003" num="00003">
+<img id="EMI-D00003" he="201.76mm" wi="167.98mm" file="US20210045996A1-20210218-D00003.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00004" num="00004">
+<img id="EMI-D00004" he="202.01mm" wi="144.44mm" file="US20210045996A1-20210218-D00004.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+</drawings>
+<description id="description">
+<?summary-of-invention description="Summary of Invention" end="lead"?>
+<p id="p-0002" num="0001">The invention relates to a <i>Myrciaria dubia </i>(Camu-camu) fruit extract rich in organic acids, preparation process for same, cosmetic compositions comprising same, and cosmetic uses thereof.</p>
+<p id="p-0003" num="0002">The Camu-camu (<i>Myrciaria dubia </i>(H.B.K.) Mc Vaugh.) is a shrub native to the Amazon basin belonging to the Myrtaceae family. This shrub of about 3 metres high grows in the Amazonian forest of Peru, Colombia, Venezuela and Brazil in the floodplains, lakes and rivers of most of the Amazon. This highly-branched shrub flowers from November to December and August to September, and bears fruit from January to March and October to November.</p>
+<p id="p-0004" num="0003">The fruits of Camu-camu are round berries of dark red-purple colour measuring 1 to 3 cm in diameter with a fine, smooth, shiny skin and fleshy, acidic pulp. The ripe berries are traditionally picked by hand directly by canoe during the flood periods of the rainy season in the Amazonian swamp areas. For several years now, plantations have been established in a number of Amazonian countries. Indigenous peoples have been using Camu-camu for medicinal purposes for over 700 years to treat infections, reduce pain, strengthen joints, maintain longevity, strengthen the immune and nervous systems, and facilitate the absorption of nutrients. Due to its natural acidity, the pulp of this nutritious fruit is primarily consumed after processing into juices, alcoholic beverages, vinegars, concentrates, jams, ice cream and cakes. The pulp accounts for between 50 and 55% of the weight of the fruit, the rest being seeds (1 to 3 seeds per fruit) and skin. Globally, Camu-camu fruit gained popularity when researchers discovered its unique nutritional and health benefits due mainly to its high natural content of vitamin C (ascorbic acid) and flavonoids. The Camu-camu fruit is known to the man of art as belonging to the &#x201c;superfruits&#x201d; group due to its high content of ascorbic acid or vitamin C (between 3.5% and 9% of the dry weight), multiple polyphenols, such as flavonoids (myricetin, proanthocyanidin, ellagic acid, etc.), tannins (ellagitannin, mainly present in the seeds) or anthocyanins, as well as terpene compounds (alpha-pinene, limonene, carotenoid, etc.), which give it strong antioxidant powers (protection against oxidative stress caused by free radicals) and other health benefits. Thanks to several of these active elements, it is also believed to play an anti-inflammatory role, strengthen the immune system and improve the body's natural defences. It is indicated as an adjuvant in case of convalescence, fatigue, flu or other viral diseases.</p>
+<p id="p-0005" num="0004">It is known<sup>1-4 </sup>that the seeds of the Camu-camu fruit contain betulinic acid (triterpene), polyphenolic compounds (myricetin and derivatives, ellagic acid and derivatives, ellagitannins, proanthocyanidins) and acylphloroglucinols (isomyrtucommulone B, myrciarone B). It is also known<sup>1,3-6 </sup>that the skin of the Camu-camu fruit contains polyphenolic compounds (myricetin and derivatives, ellagic acid and derivatives, ellagitannins, proanthocyanidins), cyanidine-3-glucoside, delphinidine-3-glucoside), carotenoids (all-trans lutein, beta-carotene, violaxanthin, luteoxanthin) and acylphloroglucinols (myrciarone A, rhodomyrtone). Lastly, it is known<sup>4,7-9 </sup>that the pulp of the Camu-camu fruit contains polyphenolic compounds (myricetin and derivatives, ellagic acid and derivatives, ellagitannins, cyanidine-3-glucoside, quercetin and derivatives), ascorbic acid and dehydroascorbic acid, fatty acids (stearic acid, linoleic acid, oleic acid, gamma and alpha-linolenic acid, tricosanoic acid, eicosadienoic acid), citric acid, malic acid and isocitric acid, simple carbohydrates (mainly glucose and fructose), amino acids (serine, leucine, valine, but also glutamate, 4-aminobutanoate, proline, phenylalanine, threonine, alanine) and minerals (potassium, calcium, magnesium, sodium, phosphate, sulphate, aluminium, boron, copper, manganese, zinc). The document by Fracassetti et al.<sup>4 </sup>has also demonstrated the presence of vitamin C and polyphenols in an extract obtained from a mixture of seeds and skin, or pulp, with a solvent 50% methanol-water and 1% formic acid, and the amounts obtained of vitamin C and polyphenols are expressed in relation to the whole plant.</p>
+<p id="p-0006" num="0005">The concentration of the different ingredients of the Camu-camu fruit specified above has been studied at different stages of maturity of the fruit, either from fresh or dry plant material. Zapata et al.<sup>9 </sup>studied the chemical composition of fresh pulp at three different stages of ripeness. They showed that the vitamin C content increased by about 12% between green and ripe fruit and that the sugar content (glucose and fructose) doubled. The amino acid content also increases during fruit ripening, mainly the content of serine, valine and leucine. In this study, it was also shown that the citric acid content decreased during ripening, in contrast to malic acid, whose content increased. Isocitric acid is believed to be present in trace amounts in the pulp of this fruit. Finally, this study also showed an increase in potassium and phosphate content, a net reduction of 50-60% in sodium and sulphate content and a constant calcium and magnesium content during ripening.</p>
+<p id="p-0007" num="0006">Of the documents cited above, only documents 1 and 4 describe the use of the dried fruit of Camu-camu, often with the seeds, to carry out ingredient analyses. These two documents, using different analytical methods and different solvents, show that the extracts have high levels of polyphenols.</p>
+<p id="p-0008" num="0007">Furthermore, the document published under the number WO2014020219 discloses antioxidant compositions of a product obtained from the fruit of Camu-camu. It relates more particularly to a process for obtaining an extract of the Camu-camu fruit in a state of ripeness of between 20 and 30% and having a soluble solids/acidity ratio of between 1.40 and 2.30, said process comprising the steps of removing the seeds from the selected fruits and drying the seed-free fruits at a temperature below 60&#xb0; C. The water-soluble compounds are extracted with water at acidic pH (tricarboxylic acid), and the extract has been shown to contain large amounts of vitamin C and polyphenols, including proanthocyanidins. These extracts are described for the preparation mainly of nourishing food compositions and stimulating pharmaceutical compositions; cosmetic compositions that are nourishing a priori are generally cited.</p>
+<p id="p-0009" num="0008">The document published under the number WO2004074304 also discloses a glycosylated derivative compound of gallic acid (1-[1,5-dihydroxy-2,2,4,4-tetramethyl-3-[[6-O-(3,4,5-trihydroxybenzoyl)-&#x3b2;-D-glucopyranosyl]oxy]cyclopentyl]-3-methyl-2-buten-1-one) named &#x201c;CA1&#x201d; derived, according to example 1, from Camu-camu seeds and having a powerful antioxidant activity and a stable whitening effect. The extraction process is carried out with methanol, a mono-alcoholic solvent, on Camu-camu seeds. According to this document, the compound CA1 is also present in the pulp and skin, but seemingly at different concentrations.</p>
+<p id="p-0010" num="0009">Lastly, an extract from Camu-camu also showing bleaching activity is known from the document published under number JP3431383. The extract is obtained from the whole fruit of Camu-camu, preferably fresh, by maceration with water, an organic solvent or mixture of same, for a period of at least two days. The only example in this document indicates using a maceration of the fruit with ethanol for three days.</p>
+<p id="p-0011" num="0010">Thus, depending on the part of the <i>Myrciaria dubia </i>fruit used, the quality of the fruit (fresh or dried) and the extraction process used, in particular the choice of solvent, the extracted molecules prove to be different in quality and quantity. However, the composition of the extract conditions the biological activity and consequently the cosmetic effectiveness. As a result, the Applicants wished to obtain a new <i>Myrciaria dubia </i>extract rich in organic acids and low in polyphenols.</p>
+<p id="p-0012" num="0011">The Applicants have demonstrated that an extract of skin and pulp of dried <i>Myrciaria dubia </i>fruit with a ripeness of at least 70% and free of seeds has an activity reducing signs of skin fatigue. The extract according to the invention is rich in organic acids (mixture of ascorbic acid, dehydroascorbic acid, malic acid and citric acid), and comprises minerals and sugars (fructose, glucose, sucrose and traces of maltose) and includes traces of depigmenting compounds and phenolic compounds in small quantities.</p>
+<p id="p-0013" num="0012">The invention thus firstly relates to pulp and skin extract of dried, seed-free <i>Myrciaria dubia </i>fruit, the ripeness of which is at least 70% and the ratio of soluble solids/acidity of which is between 2.5 and 3, said extract being rich in organic acids.</p>
+<p id="p-0014" num="0013">The invention secondly relates to a process for obtaining an extract according to the invention, comprising the following steps in which:
+<ul id="ul0001" list-style="none">
+    <li id="ul0001-0001" num="0000">
+    <ul id="ul0002" list-style="none">
+        <li id="ul0002-0001" num="0014">a) the pulp and skin of the seed-free dried fruit of <i>Myrciaria dubia</i>, having a ripeness of at least 70% and a soluble solids/acidity ratio of 2.5 to 3, are dispersed and extracted in a hydro-polyalcohol solvent,</li>
+        <li id="ul0002-0002" num="0015">b) the liquid phase loaded with compounds of interest is separated from the solid phase by decantation and/or centrifugation and/or clarifying filtration of the extract obtained from step a),</li>
+        <li id="ul0002-0003" num="0016">c) the liquid extract obtained in step b) is microfiltered to remove solid plant particles,</li>
+        <li id="ul0002-0004" num="0017">d) optionally, the liquid extract obtained in step c) is purified by filtration, ultrafiltration and/or nanofiltration,</li>
+        <li id="ul0002-0005" num="0018">e) optionally, the liquid <i>Myrciaria dubia </i>extract obtained for example by spraying, freeze-drying or zeodration can be dried to obtain a solid <i>Myrciaria dubia </i>extract, optionally with a drying support such as maltodextrin.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0015" num="0019">The invention also relates to a pulp and skin extract of <i>Myrciaria dubia </i>obtained directly by the process.</p>
+<p id="p-0016" num="0020">The invention thirdly relates to a cosmetic composition comprising, as active agent, an effective amount of a pulp and skin extract of dried <i>Myrciaria dubia </i>fruit according to the invention, and a physiologically acceptable medium.</p>
+<p id="p-0017" num="0021">Lastly, the invention relates fourthly to the cosmetic use of a composition according to the invention to reduce the signs of skin fatigue.</p>
+<p id="p-0018" num="0022">In this description, unless otherwise specified, it is understood that when a range is given it includes the upper and lower bounds of that range.</p>
+<p id="p-0019" num="0000">Unless otherwise stated, percentages are percentages by weight.</p>
+<p id="p-0020" num="0023">In the present invention:
+<ul id="ul0003" list-style="none">
+    <li id="ul0003-0001" num="0000">
+    <ul id="ul0004" list-style="none">
+        <li id="ul0004-0001" num="0024">&#x201c;Hydro-polyalcohol&#x201d; means a mixture of water and polyols, the latter comprising at least two alcohol radicals, more specifically from 2 to 9 alcohol radicals and from 3 to 12 carbon atoms.</li>
+        <li id="ul0004-0002" num="0025">&#x201c;Extract rich in organic acids&#x201d; means an extract containing a quantity of organic acids (mixture of total ascorbic acid, including ascorbic acid and dehydroascorbic acid, malic acid and citric acid) greater than the other ingredients identified, i.e. between 13.5% and 80.5% in relation to the dry matter of the total extract.</li>
+        <li id="ul0004-0003" num="0026">&#x201c;Effective quantity&#x201d; means the quantity of compounds of interest necessary to obtain the desired result, namely to reduce the signs of skin fatigue.</li>
+        <li id="ul0004-0004" num="0027">&#x201c;Reduction of the signs of skin fatigue&#x201d; means one, more, or all of the following signs: the presence of puffiness and dark circles under the eyes, dull complexion, dry skin, accentuation of fine lines and wrinkles such as forehead or crow's feet wrinkles, accentuation of skin slackening, an increase in the fragility of the nails and a receding of the hair line, which can appear in a healthy person. At the molecular and cellular level, skin fatigue is characterised by, amongst other things, mitochondrial dysfunction, decreased ATP production, decreased glycolysis, and decreased creatine kinase system.</li>
+        <li id="ul0004-0005" num="0028">The plant names Camu-camu and <i>Myrciaria dubia </i>are used interchangeably in the application.</li>
+        <li id="ul0004-0006" num="0029">&#x201c;Topical application&#x201d; means applying or spreading a composition containing the <i>Myrciaria dubia </i>extract according to the invention on the surface of the skin, a mucous membrane, or appendages.</li>
+        <li id="ul0004-0007" num="0030">&#x201c;Physiologically acceptable&#x201d; means that the compositions comprising the <i>Myrciaria dubia </i>extract according to the invention are suitable for contact with the skin or a mucous membrane without causing toxicity, intolerance or allergy reactions. In the case of compositions which can be ingested or injected into the skin, these do not exhibit toxicity, incompatibility, instability, and do not cause a systemic allergic response.</li>
+        <li id="ul0004-0008" num="0031">&#x201c;Dry matter&#x201d;, expressed as a percentage by mass, means the dry residue obtained after total removal of the solvent by drying or evaporation.</li>
+        <li id="ul0004-0009" num="0032">&#x201c;Compounds of interest&#x201d; means the compounds extracted by the process according to the invention and useful in a cosmetic composition for reducing signs of skin fatigue.</li>
+        <li id="ul0004-0010" num="0033">&#x201c;Soluble solids/acidity ratio&#x201d; means the ratio of soluble solids contained in the fruit, mainly sugars, to the acidity of the fruit. During the fruit ripening process, the acids are broken down, the sugar content increases, and the total soluble solids/acidity ratio, called Brix/acidity, reaches a higher value. This ratio has no unit and corresponds to the Brix/acidity ratio calculated on the basis of the concentration of citric acid. The reference can be found for the calculation of this ratio in the document &#x201c;Quality assurance in Tropical Fruit Processing&#x201d; by A. Askar and H. Treptow, published in 1993 by Springer Verlag Berlin Heidelberg, page 25 paragraph 2.7.</li>
+        <li id="ul0004-0011" num="0034">&#x201c;Ripeness of at least 70%&#x201d; means that each fruit has a colour of at least 70% red and 30% green. This ripeness may be up to 100%.</li>
+        <li id="ul0004-0012" num="0035">&#x201c;Trace compounds&#x201d; means compounds whose presence is detectable but not quantifiable by routine laboratory detection methods.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0021" num="0036">The applicant filed an application for access to the genetic resource <i>Myrciaria dubia </i>(Kunth) McVau with the Peruvian Government (INIA: Instituto Nacional de Innovacion Agraria (&#x201c;National Institute of Agricultural Innovation&#x201d;) in accordance with Andean Law, Decision No. 391, relating to the Common Regime on Access to Genetic Resources.</p>
+<p id="p-0022" num="0037">The invention firstly relates a pulp and skin extract of dried, seed-free <i>Myrciaria dubia </i>fruit, the ripeness of which is at least 70% the ratio of soluble solids/acidity of which is between 2.5 and 3, said extract being rich in organic acids.</p>
+<p id="p-0023" num="0038">The invention also relates to a pulp and skin extract of dried, seed-free <i>Myrciaria dubia </i>fruit, the ripeness of which is at least 70% and the ratio of soluble solids to acidity of which is between 2.5 and 3, obtained directly by the process described as the second subject of the invention.</p>
+<p id="p-0024" num="0039">In the context of the present invention, the plant part selected is the fruit of <i>Myrciaria dubia</i>, from the group consisting of the skin and pulp of the dried fruit, the seeds having been removed. The fruits are harvested when they have reached a ripeness of 70% or more of red fruit and the ratio of soluble solids/acidity is between 2.5 and 3.</p>
+<p id="p-0025" num="0040">In a very preferential embodiment, the extract is obtained from the pulp and skin of dried <i>Myrciaria dubia </i>fruit by solid-liquid extraction in a hydro-polyalcohol solvent selected from a hydro-glycerol and/or hydro-glycolic solvent, under conventional agitation or with ultrasound.</p>
+<p id="p-0026" num="0041">The extract is obtained by solid-liquid extraction of the pulp and skin of dried and crushed <i>Myrciaria dubia </i>fruit in a hydro-polyalcohol solvent selected from the group consisting of water and polyalcohols, such as glycerol, glycols such as 1,3-propanediol, and mixtures thereof. The solvent 1,3-propanediol is the preferred solvent as this solvent is agro-based.</p>
+<p id="p-0027" num="0042">The extraction solvent is preferably a hydro-glycerol and/or hydro-glycolic solvent, advantageously in a proportion between 30 and 90% glycerol and/or glycol in water, such as a mixture of water and 1,3-propanediol.</p>
+<p id="p-0028" num="0043">In an even more preferential embodiment, the extract is obtained from the pulp and skin of dried, seed-free <i>Myrciaria dubia </i>fruit by solid-liquid extraction in a hydro-polyalcohol solvent consisting of 60% 1,3-propanediol and 40% demineralised water.</p>
+<p id="p-0029" num="0044">Lastly, in another very preferential embodiment, the extract comprises, in relation to the dry matter of the total extract, between 13.5% and 80.5% organic acids, including malic, citric and ascorbic acids; between 4.0% and 22.0% total sugars, including in particular glucose, fructose, sucrose and maltose; and between 0.5% and 3% minerals, including potassium, magnesium, calcium, sodium, manganese, zinc and iron.</p>
+<p id="p-0030" num="0045">The extract according to the invention contains only traces of proteins, traces of amino acids and peptides, an amount of polyphenols between 0.08% and 2.00%, and finally traces of the depigmenting compound CAL to make reference to the extracts known from the prior art.</p>
+<p id="p-0031" num="0046">The invention relates secondly to a process for obtaining an extract according to the invention, comprising the following steps in which:
+<ul id="ul0005" list-style="none">
+    <li id="ul0005-0001" num="0000">
+    <ul id="ul0006" list-style="none">
+        <li id="ul0006-0001" num="0047">a) the pulp and skin of the seed-free dried fruit of <i>Myrciaria dubia</i>, having a ripeness of at least 70% and a soluble solids/acidity ratio of 2.5 to 3, are dispersed and extracted in a hydro-polyalcohol solvent;</li>
+        <li id="ul0006-0002" num="0048">b) the liquid phase loaded with compounds of interest is separated from the solid phase by decantation and/or centrifugation and/or clarifying filtration of the extract obtained from step a),</li>
+        <li id="ul0006-0003" num="0049">c) the liquid extract obtained in step b) is microfiltered to remove solid plant particles,</li>
+        <li id="ul0006-0004" num="0050">d) optionally, the liquid extract obtained in step c) is purified by filtration, ultrafiltration and/or nanofiltration,</li>
+        <li id="ul0006-0005" num="0051">e) optionally, the liquid <i>Myrciaria dubia </i>extract obtained for example by spraying, freeze-drying or zeodration can be dried to obtain a solid <i>Myrciaria dubia </i>extract, optionally with a drying support such as maltodextrin.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0032" num="0052">To carry out the process of the present invention, the plant part selected is the fruit of <i>Myrciaria dubia</i>, from the group consisting of the dried pulp and skin of the fruit, and the seeds are removed to avoid extracting lipids which would compromise the extraction of the compounds of interest.</p>
+<p id="p-0033" num="0053">The fruits are harvested when they have reached a ripeness of 70% or more of red fruit and the ratio of soluble solids/acidity is between 2.5 and 3.</p>
+<p id="p-0034" num="0054">Particularly advantageously, step (a) is carried out on the dried and crushed pulp and skin of the seed-free <i>Myrciaria dubia </i>fruit. The harvested fruit is sorted, disinfected, washed and deseeded before being dehydrated with hot air and then the dry skin and pulp are crushed.</p>
+<p id="p-0035" num="0055">The extract is obtained by solid-liquid extraction of the dried and ground pulp and skin of <i>Myrciaria dubia </i>fruit in a hydro-polyalcohol solvent selected from the group consisting of water and polyalcohols, such as glycerol, glycols such as 1,3-propanediol, and mixtures thereof. The solvent 1,3-propanediol is the preferred solvent as this solvent is agro-based.</p>
+<p id="p-0036" num="0056">Advantageously, the hydro-polyalcohol solvent is a mixture comprising from 10% to 90% by weight of glycerol and/or 1,3-propanediol in demineralised water in relation to the total weight of solvent plus water.</p>
+<p id="p-0037" num="0057">Further preferably, the hydro-polyalcohol solvent is a mixture comprising from 50% to 80% by weight of glycerol and/or 1,3-propanediol in demineralised water in relation to the total weight of solvent plus water.</p>
+<p id="p-0038" num="0058">More particularly, within the scope of the solid-liquid extraction of the pulp and skin of the deseeded and dried fruit of <i>Myrciaria dubia</i>, between 0.1 and 20% by weight (dry matter) of part of the pulp and skin of the fruit is introduced into the extraction solvent, and preferably between 1 and 15% by weight, typically between 5 and 10% by weight (the % being expressed as the weight of the dry matter in relation to the total weight used).</p>
+<p id="p-0039" num="0059">When the solvent used is glycerol, a proportion between 30 and 90% of glycerol in water is chosen, and advantageously between 50 and 80% (the percentages are expressed as weight of glycerol in relation to the total weight of water+glycerol).</p>
+<p id="p-0040" num="0060">When the solvent used is glycol and more particularly 1,3-propanediol, a proportion of between 10 and 90% of 1,3-propanediol in water is chosen, advantageously between 50 and 70% and even more advantageously a proportion of 60% of 1,3-propanediol and 40% of demineralised water is chosen (the % are expressed as the weight of 1,3-propanediol in relation to the total weight of water plus 1,3-propanediol).</p>
+<p id="p-0041" num="0061">The extraction temperature is advantageously between 4&#xb0; C. and 100&#xb0; C., and preferably between 10&#xb0; C. and 80&#xb0; C., and more particularly between 20&#xb0; C. and 50&#xb0; C.</p>
+<p id="p-0042" num="0062">Heating can be provided by circulating a thermal fluid in a double jacketed extraction vessel or by microwave.</p>
+<p id="p-0043" num="0063">The extraction time advantageously varies from 10 minutes to 4 hours, and preferably from 30 minutes to 3 hours, and even more advantageously from 1 to 2 hours.</p>
+<p id="p-0044" num="0064">Extraction can be carried out advantageously under vacuum, at atmospheric pressure or under pressure, preferably at atmospheric pressure or under pressure, more advantageously at atmospheric pressure.</p>
+<p id="p-0045" num="0065">Extraction is always carried out under stirring, thus allowing dispersion and homogenisation of the solid in the liquid, effectively improving the diffusion of the solute in the solvent.</p>
+<p id="p-0046" num="0066">Following the extraction of step a), the residual plant material depleted in compounds of interest is advantageously separated from the liquid phase according to step b), for example by decantation, centrifugation or clarifying filtration. The resulting liquid phase can be micro-filtered according to step c) using filter media of suitable porosity to obtain a clear solution purified of solid plant particles.</p>
+<p id="p-0047" num="0067">These initial liquid-solid separation steps may be followed by purification steps according to step d), for example by filtration, ultrafiltration and/or nanofiltration, to concentrate the compounds of interest at the expense of other compounds.</p>
+<p id="p-0048" num="0068">Thus, in a preferential embodiment of the process according to the invention, the temperature of step a) is between 4&#xb0; C. and 100&#xb0; C., the extraction time varies from 10 minutes to 4 hours, and the extraction is carried out under conventional stirring or with ultrasound.</p>
+<p id="p-0049" num="0069">The invention also relates to an extract of <i>Myrciaria dubia </i>pulp and skin obtained directly by the process.</p>
+<p id="p-0050" num="0070">The invention also relates to a <i>Myrciaria dubia </i>extract comprising, in relation to the dry matter of the total extract, between 13.5% and 80.5% of organic acids, including malic, citric and ascorbic acids; between 4.0% and 22.0% of total sugars, including glucose, fructose, sucrose and maltose; between 0.5% and 3% of minerals, including potassium, magnesium, calcium, sodium, manganese, zinc and iron, obtained directly by the above process.</p>
+<p id="p-0051" num="0071">The invention also relates to <i>Myrciaria dubia </i>extract as described in the preceding paragraph and further comprising traces of proteins, traces of amino acids and peptides, and a quantity of polyphenols between 0.08 and 2% obtained directly by the above process.</p>
+<p id="p-0052" num="0072">The invention relates thirdly to a cosmetic composition, comprising an extract of the pulp and skin of the fruit of <i>Myrciaria dubia </i>according to the invention, and a physiologically acceptable medium.</p>
+<p id="p-0053" num="0073">In a preferential embodiment according to the invention, the hydro-polyalcohol extract of the pulp and skin of the fruit of <i>Myrciaria dubia </i>is present in the composition at a concentration of 0.1 to 3% relative to the total weight of the composition, preferably 0.1 to 1.5%.</p>
+<p id="p-0054" num="0074">In another preferred embodiment, the compositions according to the invention are intended more particularly for topical administration. These compositions must therefore contain a physiologically acceptable medium, i.e. compatible with the skin and the appendages, and must cover all cosmetic forms. These compositions may in particular be in the form of creams, oil-in-water or water-in-oil emulsions or multiple emulsions, solutions, suspensions, gels, milks, lotions, sticks or powders, suitable for application to the skin, lips and/or appendages. These compositions include the excipients necessary for their formulation, such as solvents, thickeners, diluents, surfactants, antioxidants, dyes, preservatives, and perfumes. They can be used as a skincare product and/or as a make-up product for the skin.</p>
+<p id="p-0055" num="0075">The compositions according to the invention furthermore include any additive commonly used in the envisaged field of application as well as the adjuvants necessary for their formulation, such as solvents, thickeners, diluents, antioxidants, dyes, sunscreens, self-tanning agents, pigments, fillers, preservatives, perfumes, odour absorbers, cosmetic or pharmaceutical active ingredients, essential oils, vitamins, essential fatty acids, surfactants, film-forming polymers, etc.</p>
+<p id="p-0056" num="0076">The INCI Dictionary &#x26; Handbook (&#x201c;International Nomenclature of Cosmetic Ingredients&#x201d; 13th Ed. 2010) published by &#x201c;the Personal Care Products Council, Inc.&#x201d;, Washington, D.C., describes a wide variety, without limitation, of cosmetic and pharmaceutical ingredients commonly used in the skincare industry which are suitable for use as additional ingredients in compositions according to the present invention.</p>
+<p id="p-0057" num="0077">Non-limiting examples of these additional ingredient classes include: healing agents, anti-ageing agents, anti-wrinkle agents, anti-atrophy agents, moisturising agents, softening agents, antibacterial agents, anti-parasitic agents, antifungal agents, fungicidal agents, fungistatic agents, bactericidal agents, bacteriostatic agents, antimicrobial agents, anti-inflammatory agents, anti-pruritic agents, anaesthetic agents, antiviral agents, keratolytic agents, anti-free radical agents, anti-seborrhoeic agents, anti-dandruff agents, agents modulating skin differentiation, proliferation or pigmentation agents, penetration accelerating agents, peeling agents, agents stimulating or inhibiting melanin synthesis, whitening, depigmenting or lightening agents, pro-pigmenting agents, self-tanning agents, NO-synthase inhibiting agents, antioxidant agents, free radical scavengers and/or anti-air pollution agents, anti-glycation agents, firming agents, agents stimulating the synthesis of dermal or epidermal macromolecules and/or agents capable of preventing or inhibiting their degradation, agents stimulating collagen synthesis, agents stimulating elastin synthesis, agents stimulating decorin synthesis, agents stimulating laminin synthesis, agents stimulating defensin synthesis, agents stimulating chaperone synthesis, agents stimulating aquaporin synthesis, agents stimulating hyaluronic acid synthesis, agents stimulating the synthesis of lipids and stratum corneum components (ceramides, fatty acids, etc.), agents inhibiting collagen degradation, agents inhibiting elastin degradation, agents stimulating fibroblast proliferation, agents stimulating keratinocyte proliferation, agents stimulating adipocyte proliferation, agents stimulating melanocyte proliferation, agents stimulating keratinocyte differentiation, agents stimulating adipocyte differentiation, acetylcholinesterase inhibiting agents, agents stimulating glycosaminoglycan synthesis, DNA repair agents, DNA protecting agents, anti-itching agents, agents for the treatment and/or care of sensitive skin, firming agents, anti-stretch mark agents, astringent agents, agents regulating sebum production, dermo-relaxing agents, healing adjuvant agents, agents stimulating re-epithelialisation, cytokine growth factors, calming agents, anti-inflammatory agents, agents acting on capillary circulation and/or microcirculation, agents stimulating angiogenesis, agents inhibiting vascular permeability, agents acting on cell metabolism, agents for improving the dermal-epidermal junction, agents for inducing head and/or body hair growth, agents for inhibiting or slowing down head and/or body hair growth, muscle relaxants, anti-pollution and/or anti-radical agents, agents for stimulating lipolysis, slimming agents, anti-cellulite agents, agents acting on the microcirculation, agents acting on cell metabolism, cleansing agents, hair styling agents, head hair growth stimulants, sunscreens, sunblocks, make-up agents, detergents, pharmaceutical products, emulsifying agents, emollients, organic solvents, antiseptic agents, deodorant active ingredients, physiologically acceptable media, surfactants, abrasive agents, absorbents, cosmetic components such as perfumes, pigments, dyes, colorants and natural colorants, essential oils, touching agents, cosmetic astringents, anti-acne agents, anti-coagulation agents, anti-foaming agents, antioxidants, ligands, biological additives, enzymes, enzyme inhibitors, enzyme inducers, coenzymes, chelating agents, plant extracts and plant derivatives, essential oils, marine extracts, agents from a biofermentation and/or biotechnology process, mineral salts, cell extracts, sunscreens (organic or mineral sunscreen agents which are active against ultraviolet A and/or B rays), ceramides, peptides, buffers, volume agents, chelating agents, chemical additives, colorants, cosmetic biocides, denaturants, medicinal astringents, external analgesics, film-forming agents, such as polymers, to exacerbate the film-forming properties and substantivity of the composition, quaternary derivatives, substantivity enhancing agents, opacifying agents, pH adjusters and regulators (e.g., triethanolamine), propellants, reducing agents, sequestering agents, skin bleaching and/or skin lightening agents, skin conditioning agents (i.e., humectants, including miscellanea and occlusives), moisture-retaining substances, alpha hydroxy acids, beta hydroxy acids, moisturisers, epidermal hydrolytic enzymes, soothing and/or healing agents, skin treatment agents, anti-wrinkle agents, agents capable of reducing or treating puffiness under the eyes, exfoliating agents, thickeners, softeners, gelling polymers, vitamins and their derivatives, wetting agents, peeling agents, calming agents, skin healing agents, lignans, preservatives (i.e. phenoxyethanol and parabens), anti-UV agents, cytotoxic agents, anti-neoplastic agents, viscosity modifiers, non-volatile solvents, pearling agents, antiperspirants, depilatories, vaccines, perfumed water, skin restructuring agents, excipients, fillers, minerals, anti-mycobacterial agents, anti-allergenic agents, Hl or H2 antihistamines, anti-irritants, agents stimulating the immune system, agents inhibiting the immune system, insect repellents, lubricants, pigments or colorants, hypopigmenting agents, photostabilisers, and mixtures thereof, as long as they are physically and chemically compatible with the other ingredients of the composition and especially with the active ingredients of the present invention.</p>
+<p id="p-0058" num="0078">Furthermore, the nature of these additional ingredients must not unacceptably alter the benefits of the active ingredients of the invention. These additional ingredients may be synthetic or natural, such as plant extracts, or from a biofermentation process. Additional examples can be found in the INCI Dictionary &#x26; Handbook.</p>
+<p id="p-0059" num="0079">Such additional ingredients may be selected from the group comprising: amino sugars, glucosamine, D-glucosamine, N-acetyl-glucosamine, N-acetyl-D-glucosamine, mannosamine, N-acetyl mannosamine, galactosamine, N-acetyl galactosamine, vitamin B3 and derivatives thereof, niacinamide, sodium dehydroacetate, dehydroacetic acid and its salts, phytosterols, salicylic acid compounds, hexamidines, dialkanoyl dihydroxyproline compounds, extracts and derivatives of soya, equol, isoflavones, flavonoids, phytantriol, farnesol, geraniol, bisabolol, peptides and derivatives thereof, di-, tri-, tetra-, penta-, and hexapeptides and derivatives thereof, lys-thr-thr-lys-ser, palmitoyl-lys-thr-thr-lys-ser, carnosine, N-acyl amino acid compounds, retinoids, retinyl propionate, retinol, retinyl palmitate, retinyl acetate, retinal, retinoic acid, water-soluble vitamins, ascorbates, vitamin C, ascorbyl glucoside, ascorbyl palmitate, magnesium ascorbyl phosphate, sodium ascorbyl phosphate, vitamins and their salts and derivatives, provitamins and their salts and derivatives, ethyl panthenol, vitamin B and its derivatives, vitamin B1, vitamin B2, vitamin B6, vitamin B12, vitamin K and its derivatives, pantothenic acid and its derivatives, pantothenyl ethyl ether, panthenol and its derivatives, ethyl panthenol, dexpanthenol, biotin, amino acids and their salts and derivatives, water-soluble amino acids, asparagine, alanine, indol, glutamic acid, water-insoluble vitamins, vitamin A, vitamin E, vitamin F, vitamin D and its compounds, mono-, di-, and triterpenoids, beta-ionol, cedrol, and derivatives thereof, water-insoluble amino acids, tyrosine, tryptamine, particulate materials, butylated hydroxytoluene, butylated hydroxyanisole, allantoin, tocopherol nicotinate, tocopherol, tocopherol esters, palmitoyl-gly-his-lys, phytosterol, hydroxy acids, glycolic acid, lactic acid, lactobionic acid, keto acids, pyruvic acid, phytic acid, lysophosphatidic acid, stilbenes, cinnamates, resveratrol, kinetin, zeatin, dimethylaminoethanol, natural peptides, soy peptides, salts of acid sugars, manganese gluconate, zinc gluconate, piroctone olamine, 3,4,4&#x2032;-trichlorocarbanilide, triclocarban, zinc pyrithione, hydroquinone, kojic acid, ascorbic acid, magnesium ascorbyl phosphate, ascorbyl glucoside, pyridoxine, aloe vera, terpene alcohols, allantoin, bisabolol, dipotassium glycyrrhizinate, glycerol acid, sorbitol, pentaerythritol, pyrrolidone and its salts, dihydroxyacetone, erythrulose, glyceraldehyde, tartaraldehyde, clove oil, menthol, camphor, <i>eucalyptus </i>oil, eugenol, menthyl lactate, witch hazel distillate, copolymer of eicosene and vinyl pyrrolidone, iodopropyl butylcarbamate, a polysaccharide, an essential fatty acid, a salicylate, glycyrrhetinic acid, carotenoids, ceramides and pseudo-ceramides, a complex lipid, oils in general of natural origin such as shea butter, apricot oil, evening primrose oil, prune oil, palm oil, monoi oil, kahai oil, hydroquinone, HEPES, procysteine, O-octanoyl-6-D-maltose, the disodium salt of methyl glycine diacetic acid, steroids such as diosgenin and DHEA derivatives, DHEA dehydroepiandrosterone and/or a chemical or biological precursor or derivative, N-ethylcarbonyl-4-para-aminophenol, bilberry extracts, phytohormones, <i>Saccharomyces cerevisiae </i>yeast extracts, seaweed extracts, extracts of soya, rapeseed, flax, spelt, rice, lupin, maize and/or peas, alverine and its salts, in particular alverine citrate, holly and horse chestnut extracts and combinations thereof, an inhibitor of metalloproteinases, and <i>Schinus molle </i>extracts.</p>
+<p id="p-0060" num="0080">Such additional ingredients may also be selected from the group comprising: peptides sold under the trade name MATRIXYL&#xae;, ARGIRELINE&#xae;, CHRONOGEN&#x2122;, LAMINIXYL IS&#x2122; PEPTIDE Q10&#x2122;, COLLAXYL&#x2122; (patent FR2827170), PEPTIDE VINCI 01&#x2122; (patent FR2837098), PEPTIDE VINCI 02&#x2122; (patent FR2841781), ATPeptide&#x2122; (patent FR2846883) or a peptide of sequence Arg-Gly-Ser-NH2, sold under the trade name ATPeptide&#x2122; by ASHLAND&#xae;, or an extract of <i>Artemia salina</i>, sold under the trade name GP4G&#x2122; (FR2817748), a yeast extract (Dynagen&#x2122;, patent FR2951946 or Actopontine&#x2122; patent FR2944526).</p>
+<p id="p-0061" num="0081">In all cases, the person skilled in the art shall ensure that these adjuvants and their proportions are chosen in such a way as not to adversely affect the desired advantageous properties of the composition according to the invention.</p>
+<p id="p-0062" num="0082">Finally, a fourth object of the invention is the use of cosmetic compositions to reduce the signs of skin fatigue in a healthy person.</p>
+<p id="p-0063" num="0083">Signs of skin fatigue result from the combined effects of several factors related to lifestyle (eating habits, exposure to pollution), emotions (psychological stress, overwork) and lack of rest or poor quality sleep (Flament et al, How a working day-induced-tiredness may alter some facial signs in differently aged Caucasian women, Int J Cos Sci, 1-9, 2017). Clinically, the most common facial signs of skin fatigue are: puffiness and dark circles under the eyes, dull complexion, dry skin, accentuation of fine lines and wrinkles such as forehead or crow's feet wrinkles, and an accentuation of skin slackening; increased nail fragility, and reduced hairline have also been observed in healthy people in association with fatigue.</p>
+<p id="p-0064" num="0084">This application relates to care compositions and cosmetic care methods for healthy people.</p>
+<p id="p-0065" num="0085">At the molecular and cellular level, mitochondrial dysfunction has been associated with fatigue (Filler et al, Association of mitochondrial dysfunction and fatigue: a review of the literature, BBA Clinical, 1, 12-23, 2014). Indeed, mitochondria play a key role in the production of energy in the form of ATP. Maintaining the energy level in the cell is essential for cell synthesis, regeneration and division as well as protection and repair (Blatt et al, Stimulation of skin's energy metabolism provides multiple benefits for mature human skin, Biofactors 25, 179-185, 2005). Within the cell, energy can also be produced by extra-mitochondrial pathways such as glycolysis and the creatine kinase system. Glycolysis is a key metabolic pathway for proliferative cells such as skin keratinocytes. The enzyme 6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 3 (PFKFB3) plays an important role in the regulation of glycolysis by catalysing the formation of fructose 2,6 biphosphate, the accumulation of which promotes the activity of phosphofructokinase 1, an enzyme playing a major limiting role in glycolysis (Amelio et al, p63 adjusts sugar taste of epidermal layers, J Invest Dermatol, 137, 1204-1206, 2017). PFKFB3 is required to maintain keratinocyte proliferative activity (Hamanaka et al, PFKFB3, a direct target of p63, is required for proliferation and inhibits differentiation in epidermal keratinocytes, J Invest Dermatol, 137, 1267-1276, 2017).</p>
+<p id="p-0066" num="0086">Creatine kinase is also a key enzyme in the cell's energy capacity. ATP is stored in the form of phosphocreatine, produced by the creatine kinase, which then allows its transport and availability in case of high energy demand (Lenz et al, The creatine kinase system in human skin: protective effects of creatine against oxidative and UV damage in vitro and in vivo, J Invest Dermatol, 124:443-452, 2005).</p>
+<p id="p-0067" num="0087">Thus, the invention has as its object the cosmetic use of a composition according to the invention for reducing the signs of fatigue that may appear in a healthy person, wherein the signs of fatigue of the skin are selected from: the presence of puffiness and dark circles under the eyes, dull complexion, dryness of the skin, accentuation of fine lines and wrinkles such as forehead or crow's feet wrinkles, accentuation of skin slackening, an increase in the fragility of the nails and a receding of the hair line, or all of these signs.</p>
+<p id="p-0068" num="0088">The invention further relates to the cosmetic use of a composition in which the signs of skin fatigue are manifested at molecular and cellular level by a decrease in the production of ATP, glycolysis and the creatine kinase system, the expression of type I collagen, the synthesis of PFKFB3, the level of messenger RNA (mRNA) of 11b-HSD2 and an increase in the level of messenger RNA (mRNA) of 11b-HSD1.</p>
+<p id="p-0069" num="0089">The invention further relates to the cosmetic use of a composition according to the invention for increasing the synthesis of cellular ATP, increasing the activity of creatine kinase, increasing the expression of type I collagen, increasing the synthesis of PFKFB3, decreasing the level of messenger RNA (mRNA) of 11b-HSD1 and increasing the level of messenger RNA (mRNA) of 11b-HSD2.</p>
+<?summary-of-invention description="Summary of Invention" end="tail"?>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="lead"?>
+<description-of-drawings>
+<p id="p-0070" num="0090">The invention and the advantages deriving therefrom will be better understood by reading the following description and the non-limiting embodiments, which are described in relation to the annexed figures, in which:</p>
+<p id="p-0071" num="0091"><figref idref="DRAWINGS">FIG. 1</figref> shows the ATP measurement on dermal fibroblast cultures;</p>
+<p id="p-0072" num="0092"><figref idref="DRAWINGS">FIG. 2</figref> shows the measurement of creatine kinase activity in dermal fibroblast cultures;</p>
+<p id="p-0073" num="0093"><figref idref="DRAWINGS">FIG. 3</figref> shows the qPCR measurement of COL1A1 type collagen on reconstructed dermis;</p>
+<p id="p-0074" num="0094"><figref idref="DRAWINGS">FIG. 4</figref> shows the qPCR measurement of 11b-HSD1 and 11b-HSD2 in normal human keratinocyte (KHN) cultures;</p>
+<p id="p-0075" num="0095"><figref idref="DRAWINGS">FIG. 5</figref> shows the haematoxylin/eosin (HE) staining on reconstructed epidermis;</p>
+<p id="p-0076" num="0096"><figref idref="DRAWINGS">FIG. 6</figref> shows the immunostaining intensity of PFKFB3 on reconstructed epidermis; and</p>
+<p id="p-0077" num="0097"><figref idref="DRAWINGS">FIG. 7</figref> shows the measurement of creatine kinase activity on reconstructed epidermis.</p>
+</description-of-drawings>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="tail"?>
+<?detailed-description description="Detailed Description" end="lead"?>
+<heading id="h-0001" level="1">EXAMPLE 1: PREPARATION OF A PLANT EXTRACT FROM PULP AND SKIN POWDER OF THE SEEDED <i>MYRCIARIA DUBIA </i>FRUIT</heading>
+<p id="p-0078" num="0098">The pulp and skin of the freshly seeded <i>Myrciaria dubia </i>fruit, 70% ripe, are placed for drying in a hot air tunnel system heated to 60&#xb0; C. under humidity control. The resulting powder (200 g) is placed in a glass reactor, equipped with a stirring means and heating by means of a double jacket in the presence of a heat-transfer fluid.</p>
+<p id="p-0079" num="0099">The solvent used (3800 g) for maceration is a mixture of 60% 1,3-propanediol and 40% demineralised water.</p>
+<p id="p-0080" num="0100">The <i>Myrciaria dubia </i>pulp and skin powder is dispersed in the solvent for 2 hours at 30&#xb0; C., then the mixture is separated on a decanter, centrifuged to remove the pellet, and the supernatant is recovered and filtered. After filtration, the supernatant is a 3220 g extract, in solvent medium 60% 1,3-propanediol and 40% water.</p>
+<p id="p-0081" num="0101">The extract thus obtained is called &#x201c;E1 <i>Myrciaria </i>extract&#x201d; in the following examples. This extract E1 contains 2.0% dry matter including itself (results expressed in relation to the dry matter (DM)):
+<ul id="ul0007" list-style="none">
+    <li id="ul0007-0001" num="0000">
+    <ul id="ul0008" list-style="none">
+        <li id="ul0008-0001" num="0102">35.3%/DM of organic acids, including malic acid, citric acid and total ascorbic acid (ascorbic acid and dehydroascorbic acid);</li>
+        <li id="ul0008-0002" num="0103">10.1%/DM of sugars, including glucose, fructose, sucrose and maltose;</li>
+        <li id="ul0008-0003" num="0104">1.8%/DM of minerals, including potassium, magnesium, calcium, sodium, manganese, zinc and iron; traces of peptides/proteins and traces of CA1 compounds;</li>
+        <li id="ul0008-0004" num="0105">1.5%/MS of polyphenols in ellagic and gallic form.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0082" num="0106">The dry extract described above is obtained by a gravimetric method based on the mass before and after evaporation of the solvent present in the liquid extract.</p>
+<p id="p-0083" num="0107">Total ascorbic acid (ascorbic acid+dehydroascorbic acid) was determined using an HPLC/external calibration method.</p>
+<p id="p-0084" num="0108">Citric and malic acids were determined by an HPLC/DEDL method by external calibration.</p>
+<p id="p-0085" num="0109">The total sugars were determined using an HPLC/DEDL method by external calibration.</p>
+<p id="p-0086" num="0110">The polyphenols were determined by HPLC/DAD by external calibration.</p>
+<p id="p-0087" num="0111">The minerals were assayed according to a method adapted from the NF EN ISO 11885 standard (the NF EN ISO 11885 method is an analytical method by ICP/OES).</p>
+<p id="p-0088" num="0112">List of Abbreviations:
+<ul id="ul0009" list-style="none">
+    <li id="ul0009-0001" num="0000">
+    <ul id="ul0010" list-style="none">
+        <li id="ul0010-0001" num="0113">HPLC: High-Performance Liquid Chromatography</li>
+        <li id="ul0010-0002" num="0114">DAD: Diode Array Detector</li>
+        <li id="ul0010-0003" num="0115">DEDL: Evaporative Light-Scattering Detector</li>
+        <li id="ul0010-0004" num="0116">ICP-OES: Inductively Coupled Plasma Optical Emission Spectrometry</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<heading id="h-0002" level="1">EXAMPLE 2: EFFECT OF EL <i>MYRCIARIA </i>EXTRACT ON THE SYNTHESIS OF ATP ON DERMAL FIBROBLAST CULTURES IN A TIRED CONDITION</heading>
+<p id="p-0089" num="0117">The aim of this study is to determine the level of ATP synthesis on dermal fibroblast cultures &#x201c;tired&#x201d; by replications and a nutrient-poor medium. These cultures are treated with the E1 extract at 0.1% (volume/volume), i.e. diluted 1/1000th in the culture medium.</p>
+<p id="p-0090" num="0118">Protocol: Dermal fibroblast cultures are &#x201c;tired&#x201d; by a number of replications (cells used between passes 15 and 20) and are fed with a nutrient-poor medium (without glucose) for 3 days. These cultures are treated with 0.1% E1 <i>Myrciaria </i>extract, from the second day of stress and for the remaining two days of stress, i.e. 48 hours of treatment. On the fourth day, an application of 0.1% E1 <i>Myrciaria </i>extract is carried out for 1 minute, and then the ATP is determined by luminescence (Abcam&#x2014;ref: ab113849).</p>
+<p id="p-0091" num="0119">Results: After 48 hours of treatment with E1 <i>Myrciaria </i>extract, the ATP level is increased by +104% compared to untreated &#x201c;tired&#x201d; fibroblasts. After 1 min of treatment with E1 <i>Myrciaria </i>extract, the ATP level is increased by +82% compared to untreated &#x201c;tired&#x201d; fibroblasts. The results are shown in <figref idref="DRAWINGS">FIG. 1</figref>.</p>
+<p id="p-0092" num="0120">Conclusion: Treatment of &#x201c;tired&#x201d; fibroblasts with 0.1% E1 <i>Myrciaria </i>extract leads to an increase in ATP synthesis.</p>
+<heading id="h-0003" level="1">EXAMPLE 3: EFFECT OF E1 <i>MYRCIARIA </i>EXTRACT ON CREATINE KINASE ACTIVITY ON DERMAL FIBROBLAST CULTURES IN A TIRED CONDITION</heading>
+<p id="p-0093" num="0121">The aim of this study is to determine the level of creatine kinase activity in dermal fibroblast cultures. The function of this enzyme is to catalyse the conversion of creatine to phosphocreatine, thus providing a rapidly usable energy reserve.</p>
+<p id="p-0094" num="0122">This activity measurement is performed on cultures of &#x201c;tired&#x201d; dermal fibroblasts treated with 0.1% E1 <i>Myrciaria </i>extract (volume/volume), i.e. diluted 1/1000th in the culture medium.</p>
+<p id="p-0095" num="0123">Protocol: Dermal fibroblast cultures are &#x201c;tired&#x201d; by a few replications (cells used between passes 15 and 20) and are fed with a nutrient-poor medium (without glucose) for 3 days. These cultures are treated with 0.1% E1 <i>Myrciaria </i>extract, or with vitamin C at 4 &#x3bc;g/mL as a positive control, from the second day of stress and for the remaining two days of stress. Two days after the start of treatment, a measurement of creatine kinase activity is performed using a kit (Abcam&#x2014;ref: ab155901).</p>
+<p id="p-0096" num="0124">For this purpose, the fibroblasts are detached with the CK buffer contained in the kit, recovered and centrifuged at 4000 g for 5 min at 4&#xb0; C. The activity is then measured for each sample according to the kit protocol. Kinetics are obtained by a colorimetric reading with the Synergy 2 spectrometer (Biotek) coupled to Gen5 software.</p>
+<p id="p-0097" num="0125">Results: In the condition where cells are &#x201c;tired&#x201d;, creatine kinase activity decreases by &#x2212;51%. With the treatment with 0.1% E1 <i>Myrciaria </i>extract, this enzymatic activity increases by +62% compared to untreated &#x201c;tired&#x201d; cells and by only +44% with the vitamin C treatment. The results are shown in <figref idref="DRAWINGS">FIG. 2</figref>.</p>
+<p id="p-0098" num="0126">Conclusion: The treatment of cells with 0.1% E1 <i>Myrciaria </i>extract prevents the decrease of creatine kinase activity on &#x201c;tired&#x201d; cells and is more important than the effect observed with vitamin C.</p>
+<heading id="h-0004" level="1">EXAMPLE 4: EFFECT OF E1 <i>MYRCIARIA </i>EXTRACT ON QPCR MEASUREMENT OF COL1A1 TYPE COLLAGEN ON RECONSTRUCTED DERMIS IN A &#x201c;TIRED&#x201d; CONDITION</heading>
+<p id="p-0099" num="0127">The aim of this study is to determine the level of collagen I messenger RNA (mRNA) on equivalents of dermis reconstructed from fibroblasts tired by replications and a nutrient-poor environment. These cultures are treated with 0.1% E1 <i>Myrciaria </i>extract (volume/volume) i.e. diluted 1/1000th in the culture medium.</p>
+<p id="p-0100" num="0128">Protocol: Dermal fibroblast cultures are &#x201c;tired&#x201d; by a number of replications (cells used between passes 15 and 20) and are fed with a nutrient-poor medium (without glucose) for two days. These cultures are also treated during these two days with 0.1% E1 <i>Myrciaria </i>extract (volume/volume), i.e. diluted 1/1000th. A fibroblast culture (pass between 4 and 10) maintained in DMEM 1 g/L medium in glucose supplemented with 10% (v/v) foetal calf serum, 2 mM L-glutamine (Lonza) and 100 &#x3bc;g/mL Primocine (Invivogen), is used as a control.</p>
+<p id="p-0101" num="0129">From these fibroblast and collagen cultures, dermis equivalents are reconstituted. Once the reconstitution is done, the 0.1% E1 <i>Myrciaria </i>extract is added once at D0, D1 and D2. At D5 the dermis are frozen at &#x2212;80&#xb0; C.</p>
+<p id="p-0102" num="0130">The dermis are then thawed in order to extract the total RNAs.</p>
+<p id="p-0103" num="0131">To do this, the dermis are crushed using Gentle MACS (Mylteni) and the total RNAs extracted using the mirVana* miRNA Isolation Kit (AM1561, Ambion). The RNAs are then reverse-transcribed using the High Capacity cDNA Reverse Transcription Kit with RNase Inhibitor (4374966, Life technologies). Finally, the real-time PCR reaction is performed on a StepOnePlus thermal cycler (Applied Biosystems) with the TaqMan* Gene Expression Master Mix (4369514, Life technologies) and the TaqMan* Gene Expression Assays (Life technologies). The Ct (Threshold Cycle) comparison method is used for relative quantification of the targets, and the StepOne* software (Applied Biosystems) for data processing.</p>
+<p id="p-0104" num="0132">Results: In the situation where the fibroblasts are &#x201c;tired&#x201d;, the level of collagen I messenger RNA (mRNA) is decreased compared to non-tired fibroblasts by &#x2212;58%. When these fibroblasts were cultured with the 0.1% E1 <i>Myrciaria </i>extract, the level of collagen I messenger RNA (mRNA) increases by +773%. The results are presented in <figref idref="DRAWINGS">FIG. 3</figref>.</p>
+<p id="p-0105" num="0133">Conclusion: The treatment of &#x201c;tired&#x201d; fibroblasts with 0.1% E1 <i>Myrciaria </i>extract, before and after reconstitution of equivalent dermis leads to an increase in messenger RNA (mRNA) of collagen I.</p>
+<heading id="h-0005" level="1">EXAMPLE 5: EFFECT OF E1 <i>MYRCIARIA </i>EXTRACT ON THE QPCR MEASUREMENT OF 11B-HSD1 AND 11B-HSD2 ON NORMAL HUMAN KERATINOCYTE (KHN) CULTURES</heading>
+<p id="p-0106" num="0134">The aim of this study is to determine the messenger RNA (mRNA) level of 11b-HSD1 and 11b-HSD2 on keratinocytes. 11b-HSD enzymes catalyse the interconversion of active cortisol to inactive cortisone. Cortisol levels have been associated with anxiety and psychological stress, which may contribute to signs of skin fatigue. These cultures are treated with 0.1% E1 <i>Myrciaria </i>extract (volume/volume), i.e. diluted 1/1000th in the culture medium.</p>
+<p id="p-0107" num="0135">Protocol: Keratinocytes are cultured and treated with 0.1% E1 <i>Myrciaria </i>extract once daily for 24 hours and 48 hours. The messenger RNA (mRNA) levels of 11b-HSD1 and 11b-HSD2 are measured by real-time PCR.</p>
+<p id="p-0108" num="0136">To do this, total RNAs are extracted using the mirVana* miRNA Isolation Kit (AM1561, Ambion) and then reverse-transcribed using the High Capacity cDNA Reverse Transcription Kit with RNase Inhibitor (4374966, Life technologies). Finally, the real-time PCR reaction is performed on a StepOnePlus thermal cycler (Applied Biosystems) with the TaqMan* Gene Expression Master Mix (4369514, Life technologies) and the TaqMan* Gene Expression Assays (Life technologies). The Ct (Threshold Cycle) comparison method is used for relative quantification of the targets, and the StepOne* software (Applied Biosystems) for data processing.</p>
+<p id="p-0109" num="0137">Results: In KHN treated with E1 <i>Myrciaria </i>extract, the level of 11b-HSD1 decreased by &#x2212;67% and &#x2212;84% respectively after 24 and 48 hours of treatment. The level of 11b-HSD2 increased respectively by +15% and +23% after 24 and 48 hours of treatment. The results are shown in <figref idref="DRAWINGS">FIG. 4</figref>.</p>
+<p id="p-0110" num="0138">Conclusion: Treatment of keratinocytes with 0.1% E1 <i>Myrciaria </i>extract leads to a decrease in the level of 11b-HSD1 messenger RNA (mRNA) and an increase in the level of 11b-HSD2 messenger RNA (mRNA).</p>
+<heading id="h-0006" level="1">EXAMPLE 6: EFFECT OF E1 <i>MYRCIARIA </i>EXTRACT ON THE MORPHOLOGY OF RECONSTRUCTED EPIDERMIS IN A TIRED CONDITION</heading>
+<p id="p-0111" num="0139">The aim of this study is to create a model of reconstructed &#x201c;tired&#x201d; human skin. To do this, the skin is reconstructed using adult donor keratinocytes and a respiratory chain inhibitor (rotenone) to create a lack of energy.</p>
+<p id="p-0112" num="0140">The use of a respiratory chain inhibitor such as rotenone creates mitochondrial dysfunction, including ATP depletion. Therefore, lack of cellular energy was equated in our model to a state of cellular fatigue (Han G et al, The mitochondrial complex I inhibitor rotenone induces endoplasmic reticulum stress and activation of GSK-3&#x3b2; in cultured rat retinal cells, Invest Ophthalmol Vis Sci. 31; 55(9):5616-28, 2014). These cultures are treated during the reconstruction with 0.1% E1 <i>Myrciaria </i>extract (volume/volume), i.e. diluted 1/1000th or 1% (volume/volume), i.e. diluted 1/100th in the culture medium.</p>
+<p id="p-0113" num="0141">Protocol: On day 12 of epidermal reconstruction, rotenone is added to the culture medium. A control condition is maintained without adding rotenone but changing the culture medium anyway. After 3 h incubation with the inhibitor, the medium is changed to a new medium containing 0.1% E1 <i>Myrciaria </i>extract and the epidermis is incubated again for 48 h. The placebo condition contains PBS (phosphate buffer saline) in the culture medium. The morphology of the skin is then observed by a Haematoxylin-Eosin (HE) staining.</p>
+<p id="p-0114" num="0142">For this, the reconstructed epidermises are fixed with formaldehyde and then embedded in paraffin. Cuts of 4 &#x3bc;m are then made.</p>
+<p id="p-0115" num="0143">For staining, the cuts are dewaxed by xylene and ethanol baths and then rinsed. Staining is done by a haematoxylin and then eosin bath.</p>
+<p id="p-0116" num="0144">The cuts are then examined under a microscope (Eclipse E600, Nikon) and photos are taken with the Q-capture acquisition software (QImaging*).</p>
+<p id="p-0117" num="0145">Results: In the condition where reconstructed epidermises are treated with rotenone, we observe a thinner epidermis than the control and a more damaged basal layer. When these are treated with 0.1% E1 <i>Myrciaria </i>extract, the epidermis seems to show less damage in its structure. The results are shown in <figref idref="DRAWINGS">FIG. 5</figref>.</p>
+<p id="p-0118" num="0146">Conclusion: Treatment of reconstructed epidermis with 0.1% E1 <i>Myrciaria </i>extract seems to partially compensate for the lack of energy induced by the inhibition of the respiratory chain by rotenone.</p>
+<heading id="h-0007" level="1">EXAMPLE 7: EFFECT OF E1 <i>MYRCIARIA </i>EXTRACT ON THE EXPRESSION OF PFKFB3 ON A RECONSTRUCTED EPIDERMIS IN A TIRED CONDITION</heading>
+<p id="p-0119" num="0147">The aim of this study is to determine the level of expression of PFKFB3 (6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 3) in a model of &#x201c;tired&#x201d; reconstructed human skin.</p>
+<p id="p-0120" num="0148">PFKFB3 is involved in the glycolysis process. It is an inducible enzyme that is expressed by the active epithelial cells of the epidermis. It enables the activation of the enzyme PFK-1 (phosphofructokinase-1), which limits this glycolysis process.</p>
+<p id="p-0121" num="0149">To obtain &#x201c;tired&#x201d; skin, this is reconstructed using adult donor keratinocytes and a respiratory chain inhibitor (rotenone) to create a lack of energy (see example 6). These cultures are treated during reconstruction with 0.1% E1 <i>Myrciaria </i>extract (volume/volume), i.e. diluted 1/1000th in the culture medium.</p>
+<p id="p-0122" num="0150">Protocol: On day 12 of epidermal reconstruction, rotenone is added to the culture medium. A control condition is maintained without adding rotenone but changing the culture medium anyway. After 3 h incubation with the inhibitor, the medium is changed to a new medium containing 0.1% E1 <i>Myrciaria </i>extract and the epidermises are incubated again for 48 h. The placebo condition contains PBS (phosphate buffer saline) in the culture medium. Detection of PFKFB3 expression is performed by an indirect immunofluorescence technique.</p>
+<p id="p-0123" num="0151">For this, the reconstructed epidermises are fixed with formaldehyde and then embedded in paraffin. Cuts of 4 &#x3bc;m are then made.</p>
+<p id="p-0124" num="0152">For staining, the cuts are dewaxed by xylene and ethanol baths and then rinsed. To unmask specific antigen binding sites, the cuts are heated in a citrate buffer bath in a microwave oven and then treated with a trypsin solution. After saturation with 5% BSA for 30 minutes to block non-specific sites, the cuts are then incubated with a PFKFB3 antibody solution for 1.5 hours and then with a solution of secondary anti-rabbit antibody coupled to a fluorochrome (Alexa Fluor&#xae; 488, Invitrogen) for 1 hour. The cuts are then examined under an Epi-fluorescence microscope (Zeiss Axiovert 200M microscope). A quantification of the fluorescence, using Volocity&#xae; image analysis software (PerkinElmer, Inc.), is performed from the obtained photographs.</p>
+<p id="p-0125" num="0153">Results: In the condition where reconstructed epidermises are treated with rotenone, we observe a decrease in PFKFB3 expression of &#x2212;20% compared to unstressed epidermises. When these are treated with 0.1% or 1% E1 <i>Myrciaria </i>extract, its expression increases by +19% and +46% respectively. The results are shown in <figref idref="DRAWINGS">FIG. 6</figref>.</p>
+<p id="p-0126" num="0154">Conclusion: Reconstructed epidermises treated with rotenone show a decrease in PFKFB3, reflecting reduced glycolysis. Treatment of these &#x201c;tired&#x201d; reconstructed epidermis with 0.1% E1 <i>Myrciaria </i>extract seems to partially compensate for this lack of energy observed by stimulating PFKFB3 synthesis.</p>
+<heading id="h-0008" level="1">EXAMPLE 8: EFFECT OF E1 <i>MYRCIARIA </i>EXTRACT ON THE ACTIVITY OF CREATINE KINASE ON A RECONSTRUCTED EPIDERMIS IN A TIRED CONDITION</heading>
+<p id="p-0127" num="0155">The aim of this study is to determine the level of creatine kinase activity in a model of reconstructed human skin. The function of this enzyme is to catalyse the conversion of creatine to phosphocreatine, thus providing a rapidly usable energy reservoir.</p>
+<p id="p-0128" num="0156">This measure of activity is done on a model of &#x201c;tired&#x201d; reconstructed human skin obtained using adult donor keratinocytes and a respiratory chain inhibitor (rotenone) to create a lack of energy. These cultures are treated during reconstruction with 0.1% <i>Myrciaria </i>extract (volume/volume), i.e. diluted 1/1000th in the culture medium.</p>
+<p id="p-0129" num="0157">Protocol: On day 12 of epidermal reconstruction, rotenone is added to the culture medium. A control condition is maintained without adding rotenone but changing the culture medium anyway. After 3 h incubation with the inhibitor, the medium is changed to a new medium containing 0.1% E1 <i>Myrciaria </i>extract and the epidermises are incubated again for 48 h. The placebo condition contains PBS (phosphate buffer saline) in the culture medium. A measurement of creatine kinase activity is performed using a kit (Abcam&#x2014;ref: ab155901).</p>
+<p id="p-0130" num="0158">To do this, the reconstructed epidermises are crushed using a glass pestle with the CK buffer contained in the kit, recovered, and centrifuged at 4,000 g for 5 min at 4&#xb0; C. The activity is then measured for each sample according to the kit protocol. Kinetics are obtained by a colorimetric reading with the Synergy 2 spectrometer (Biotek) coupled with the to Gen5 software.</p>
+<p id="p-0131" num="0159">Results: In the condition where reconstructed epidermises are &#x201c;tired&#x201d;, creatine kinase activity decreases by &#x2212;40% compared to non-&#x201c;tired&#x201d; epidermises. With treatment with 0.1% E1 <i>Myrciaria </i>extract, this enzymatic activity increases by +29% compared to the &#x201c;tired&#x201d; model. The results are shown in <figref idref="DRAWINGS">FIG. 7</figref>.</p>
+<p id="p-0132" num="0160">Conclusion: The treatment of reconstructed epidermises with 0.1% E1 <i>Myrciaria </i>extract prevents the decrease in creatine kinase activity observed on a model of &#x201c;tired&#x201d; reconstructed skin.</p>
+<heading id="h-0009" level="1">EXAMPLE 9: VELVET CREAM FORMULATION</heading>
+<p id="p-0133" num="0161"></p>
+<p id="p-0134" num="0000">
+<tables id="TABLE-US-00001" num="00001">
+<table frame="none" colsep="0" rowsep="0" pgwide="1">
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Ingredient/Trade name</entry>
+<entry>INCI name</entry>
+<entry>%</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="287pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase A</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Purified water</entry>
+<entry>Water</entry>
+<entry>70.48</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="287pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase B</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Natrosol&#x2009;&#x2122; Plus 330 CS</entry>
+<entry>Cetyl Hydroxyethylcellulose</entry>
+<entry>0.50</entry>
+</row>
+<row>
+<entry>Solagum AX*</entry>
+<entry>Acacia Senegal Gum &#x26; Xanthan Gum</entry>
+<entry>1.00</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="287pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase C</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Simulgreen 18-2*</entry>
+<entry>Hydroxystearyl Alcohol &#x26; Hydroxystearyl Glucoside</entry>
+<entry>3.00</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="287pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase D</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Ceraphyl&#x2009;&#x2122; 791 ester</entry>
+<entry>Isocetyl Stearoyl Stearate</entry>
+<entry>5.00</entry>
+</row>
+<row>
+<entry>Macadamia Nut Oil CP RBD</entry>
+<entry>Macadamia Temifolia Seed Oil</entry>
+<entry>5.00</entry>
+</row>
+<row>
+<entry>Virgin Prunus Oil</entry>
+<entry>Prunus Domestica Seed Extract</entry>
+<entry>2.00</entry>
+</row>
+<row>
+<entry>Orchid&#x2009;&#x2122; Complex OS ester</entry>
+<entry>Caprylic/Capric Triglyceride (and) <i>Cymbidium</i></entry>
+<entry>5.00</entry>
+</row>
+<row>
+<entry/>
+<entry><i>Grandiflorum </i>Flower Extract</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="287pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase E</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Optiphen&#x2009;&#x2122; BSB-N preservative</entry>
+<entry>Benzyl Alcohol (and) Glycerin (and) Benzoic Acid</entry>
+<entry>1.00</entry>
+</row>
+<row>
+<entry/>
+<entry>(and) Sorbic Acid</entry>
+</row>
+<row>
+<entry>Zemea*</entry>
+<entry>Propanediol</entry>
+<entry>5.00</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="287pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase F</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Extract E1</entry>
+<entry>1,3-Propanediol (and) Water/Aqua (and) <i>Myrciaria</i></entry>
+<entry>1.00</entry>
+</row>
+<row>
+<entry/>
+<entry><i>Dubia </i>Fruit Extract</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="287pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase G</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Purified water</entry>
+<entry>Water</entry>
+<entry>1.00</entry>
+</row>
+<row>
+<entry>Sodium Hydroxide</entry>
+<entry/>
+<entry>0.02</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="p-0135" num="0162">Method of Preparation:
+<ul id="ul0011" list-style="none">
+    <li id="ul0011-0001" num="0000">
+    <ul id="ul0012" list-style="none">
+        <li id="ul0012-0001" num="0163">1. In the main beaker, add the water and begin to homogenise by heating to 70-75&#xb0; C.</li>
+        <li id="ul0012-0002" num="0164">2. Sprinkle in Natrosol Plus 330 CS and mix well for 30 minutes.</li>
+        <li id="ul0012-0003" num="0165">3. Sprinkle in Solagum AX and mix well for 20 minutes.</li>
+        <li id="ul0012-0004" num="0166">4. Add the phase ingredients to a second beaker and heat to 70-75&#xb0; C.</li>
+        <li id="ul0012-0005" num="0167">5. Add phase C to phase A while homogenising.</li>
+        <li id="ul0012-0006" num="0168">6. At 70-75&#xb0; C., add phase D to the main beaker and mix well. The emulsion should be homogeneous.</li>
+        <li id="ul0012-0007" num="0169">7. Start cooling down. Add phase E ingredients one by one at 50&#xb0; C., mixing well after each addition.</li>
+        <li id="ul0012-0008" num="0170">8. At 25&#xb0; C., add phase F and homogenise.</li>
+        <li id="ul0012-0009" num="0171">9. Premix phase G until a clear and uniform mixture is obtained. Add to the main beaker and mix well.</li>
+        <li id="ul0012-0010" num="0172">10. Stop at 25&#xb0; C.</li>
+        <li id="ul0012-0011" num="0173">11. Appearance: White emulsion; opaque. pH: 4.4-4.8; viscosity (D0): 12000-20000 cps (Brookfield RVT/Spindle B/5 RPM/1 minute/25&#xb0; C.)</li>
+        <li id="ul0012-0012" num="0174">12. The preservation of the formula was validated by a double test of effectiveness after 28 days. However, the preservatives were not optimised at their lowest level of effectiveness.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<heading id="h-0010" level="1">EXAMPLE 10: VITAFRUIT CREAM GEL FORMULATION</heading>
+<p id="p-0136" num="0175"></p>
+<p id="p-0137" num="0000">
+<tables id="TABLE-US-00002" num="00002">
+<table frame="none" colsep="0" rowsep="0" pgwide="1">
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Ingredient/Trade name</entry>
+<entry>INCI name</entry>
+<entry>%</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="294pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase A</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Purified water</entry>
+<entry>Water/Aqua</entry>
+<entry>Qs. 100</entry>
+</row>
+<row>
+<entry>Tetrasodium EDTA</entry>
+<entry>Tetrasodium EDTA</entry>
+<entry>0.05</entry>
+</row>
+<row>
+<entry>Lubrajel&#x2009;&#x2122; Oil Free hydrogel*</entry>
+<entry>Glycerin (and) Glyceryl Acrylate/Acrylic Acid</entry>
+<entry>7.00</entry>
+</row>
+<row>
+<entry/>
+<entry>Copolymer (and) PVM/MA Copolymer</entry>
+</row>
+<row>
+<entry>Optiphen&#x2009;&#x2122; HD preservative</entry>
+<entry>1,2-Hexanediol</entry>
+<entry>3.00</entry>
+</row>
+<row>
+<entry>booster</entry>
+</row>
+<row>
+<entry>Butylene Glycol</entry>
+<entry>Butylene Glycol</entry>
+<entry>7.00</entry>
+</row>
+<row>
+<entry>Glycerol</entry>
+<entry>Glycerin</entry>
+<entry>5.00</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="294pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase B</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>FlexiThix&#x2009;&#x2122; polymer</entry>
+<entry>PVP</entry>
+<entry>2.00</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="294pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase C</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Montanov&#x2009;&#x2122; 68*</entry>
+<entry>Cetearyl Alcohol (and) Cetearyl Glucoside</entry>
+<entry>0.20</entry>
+</row>
+<row>
+<entry>Optiphen 200 condom</entry>
+<entry>Phenoxyethanol (and) Caprylyl Glycol</entry>
+<entry>0.90</entry>
+</row>
+<row>
+<entry>Ceraphyl&#x2009;&#x2122; SLK ester</entry>
+<entry>Isodecyl Neopentanoate</entry>
+<entry>2.50</entry>
+</row>
+<row>
+<entry>Lexfeel&#x2009;&#x2122; N5*</entry>
+<entry>Diheptyl Succinate (and) Capryloyl Glycerin/Sebacic</entry>
+<entry>1.00</entry>
+</row>
+<row>
+<entry/>
+<entry>Copolymer</entry>
+</row>
+<row>
+<entry>Ganex&#x2009;&#x2122;/Ganex&#x2009;&#x2122; Sensory</entry>
+<entry>VP/Acrylates/Lauryl Methacrylate Copolymer</entry>
+<entry>0.25</entry>
+</row>
+<row>
+<entry>polymer</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="294pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase D</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Surfin&#x2009;&#x2122; 96*</entry>
+<entry>Alcohol</entry>
+<entry>10.00</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="294pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase E</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>RapiThix&#x2009;&#x2122; A-60 polymer</entry>
+<entry>Sodium Polyacrylate (and) Hydrogenated Polydecene</entry>
+<entry>0.50</entry>
+</row>
+<row>
+<entry/>
+<entry>(and) Trideceth-6</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="294pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase F</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Extract E1</entry>
+<entry>1,3-Propanediol (and) Water/Aqua (and) <i>Myrciaria</i></entry>
+<entry>1.00</entry>
+</row>
+<row>
+<entry/>
+<entry><i>Dubia </i>Fruit Extract</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="294pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Phase A</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="105pt" align="left"/>
+<colspec colname="2" colwidth="161pt" align="left"/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>Smart 5*</entry>
+<entry>Isododecane (and) Hydrogenated</entry>
+<entry>5.00</entry>
+</row>
+<row>
+<entry/>
+<entry>Tetradecenyl/Methylpentadecene</entry>
+</row>
+<row>
+<entry>Unicert Yellow 08005-J (Sol. 1%)</entry>
+<entry>CI 19140 (yellow 5)</entry>
+<entry>0.35</entry>
+</row>
+<row>
+<entry>Unicert Red 07004-J (sol. 1%)</entry>
+<entry>CI 14700 (red 4)</entry>
+<entry>0.25</entry>
+</row>
+<row>
+<entry>Timiron&#x2009;&#x2122; Silk Gold *</entry>
+<entry>CI 77891 (Titanium Dioxide) (and) Mica (and) Tin</entry>
+<entry>1.00</entry>
+</row>
+<row>
+<entry/>
+<entry>Oxide</entry>
+</row>
+<row>
+<entry>PF Caipirinha Fresh G11724962</entry>
+<entry>Fragrance/Parfum (and) Benzyl Salicylate (and) Citral</entry>
+<entry>0.30</entry>
+</row>
+<row>
+<entry/>
+<entry>(and) Limonene (and) Linalool (and) Butylphenyl</entry>
+</row>
+<row>
+<entry/>
+<entry>methylpropional (Filial)</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="p-0138" num="0176">Method of Preparation:
+<ul id="ul0013" list-style="none">
+    <li id="ul0013-0001" num="0000">
+    <ul id="ul0014" list-style="none">
+        <li id="ul0014-0001" num="0177">1. In the main beaker add the ingredients of phase A, one by one, heating to 70&#xb0; C. while mixing until completely homogenised.</li>
+        <li id="ul0014-0002" num="0178">2. Sprinkle in the polymer FlexiThix&#x2122; and homogenise until a smooth mixture is obtained.</li>
+        <li id="ul0014-0003" num="0179">3. In a separate beaker, heat phase C (except Antaron&#x2122;/Ganex&#x2122; Sensory polymer) to 70&#xb0; C. until homogenised. Then immerse the Antaron/Ganex Sensory polymer in phase C under stirring.</li>
+        <li id="ul0014-0004" num="0180">4. At 70&#xb0; C., add phase C (Antaron/Ganex Sensory polymer are in wet powder form) to the main beaker and homogenise.</li>
+        <li id="ul0014-0005" num="0181">5. Cool.</li>
+        <li id="ul0014-0006" num="0182">6. At 25&#xb0; C., add phase D slowly and mix until completely homogenised.</li>
+        <li id="ul0014-0007" num="0183">7. Add phase E and mix until completely homogenised (viscosity increases).</li>
+        <li id="ul0014-0008" num="0184">8. At room temperature, pre-mix phase F with stirring, add the contents of the main beaker and mix well.</li>
+        <li id="ul0014-0009" num="0185">9. Stop when mixture is uniform in colour.</li>
+        <li id="ul0014-0010" num="0186">10. Appearance: orange opalescent cream gel; pH: 6.0-6.5; viscosity (D0): 25000-40000 cps (Brookfield RVT/Spindle B/5 RPM/1 minute/25&#xb0; C.).</li>
+        <li id="ul0014-0011" num="0187">11. The preservation of the formula was validated by a 3-month accelerated ageing test and an efficacy test after 28 days. However, the preservatives were not optimised at their lowest level of effectiveness.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<heading id="h-0011" level="1">BIBLIOGRAPHICAL REFERENCES</heading>
+<p id="p-0139" num="0000">
+<ul id="ul0015" list-style="none">
+    <li id="ul0015-0001" num="0188">(1) Myoda, T.; Fujimura, S.; Park, B.; Nagashima, T.; Nakagawa, J.; Nishizawa, M. <i>Int. J. Food Agric. Environ. </i>2010, 8 (2), 304.</li>
+    <li id="ul0015-0002" num="0189">(2) Yazawa, K.; Suga, K.; Honma, A.; Shirosaki, M.; Koyama, T. <i>J. Nutr. Sci. Vitaminol</i>. (<i>Tokyo</i>) 2011, 57 (1), 104.</li>
+    <li id="ul0015-0003" num="0190">(3) Kaneshima, T.; Myoda, T.; Toeda, K.; Fujimori, T.; Nishizawa, M. <i>Biosci. Biotechnol. Biochem. </i>2017, 81 (8), 1461.</li>
+    <li id="ul0015-0004" num="0191">(4) Fracassetti, D.; Costa, C.; Moulay, L.; Tom&#xe1;s-Barber&#xe1;n, F. A. <i>Food Chem. </i>2013, 139 (1-4), 578.</li>
+    <li id="ul0015-0005" num="0192">(5) Zanatta, C. F.; Mercadante, A. Z. <i>Food Chem. </i>2007, 101 (4), 1526.</li>
+    <li id="ul0015-0006" num="0193">(6) Zanatta, C. F.; Cuevas, E.; Bobbio, F. O.; Winterhalter, P.; Mercadante, A. Z. <i>J. Agric. Food Chem. </i>2005, 53 (24), 9531.</li>
+    <li id="ul0015-0007" num="0194">(7) Akter, M. S.; Oh, S.; Eun, J.-B.; Ahmed, M. <i>Food Res. Int. </i>2011, 44 (7), 1728.</li>
+    <li id="ul0015-0008" num="0195">(8) Justi, K. C.; Visentainer, J. V.; Evelazio de Souza, N.; Matsushita, M. <i>Arch. Latinoam. Nutr. </i>2000, 50 (4), 405.</li>
+    <li id="ul0015-0009" num="0196">(9) Zapata, S. M.; Dufour, J.-P. <i>J. Sci. Food Agric. </i>1993, 61 (3), 349.</li>
+</ul>
+</p>
+<?detailed-description description="Detailed Description" end="tail"?>
+</description>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text><b>1</b>. A pulp and skin extract of dried, seed-free <i>Myrciaria dubia </i>fruit having a ripeness of at least 70% and a ratio of soluble solids/acidity between 2.5 and 3, wherein the extract comprises between 13.5% and 80.5% organic acids.</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text><b>2</b>. The extract according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the extract is obtained from the pulp and skin of dried <i>Myrciaria dubia </i>fruit by solid-liquid extraction in a hydro-polyalcohol solvent selected from a hydro-glycerol and/or hydro-glycolic solvent, under agitation or with ultrasound.</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text><b>3</b>. The extract according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the hydro-polyalcohol solvent is a mixture of between 30 and 90% glycerol and/or glycol in water.</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text><b>4</b>. The extract according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein, in relation to the dry matter of the total extract, the extract comprises between 4.0% and 22.0% total sugars, including in particular glucose, fructose, sucrose and maltose; and between 0.5% and 3% minerals, including potassium, magnesium, calcium, sodium, manganese, zinc and iron.</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text><b>5</b>. The extract according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, comprising an amount of polyphenols of between 0.08% and 2.00%.</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text><b>6</b>. A process for obtaining an extract, the method comprising:
+<claim-text>providing pulp and skin of the seed-free dried fruit of <i>Myrciaria dubia</i>, having a ripeness of at least 70% and a soluble solids/acidity ratio of 2.5 to 3;</claim-text>
+<claim-text>dispersing and extracting the pulp and skin of the seed-free dried fruit in a hydro-polyalcohol solvent;</claim-text>
+<claim-text>separating a liquid phase loaded with compounds of interest from the solid phase of the pulp and skin of the seed-free dried fruit and hydro-polyalcohol dispersion;</claim-text>
+<claim-text>microfiltering the liquid phase to remove solid plant particles.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text><b>7</b>. The process according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein the hydro-polyalcohol solvent is a mixture comprising from 10% to 90% by weight of glycerol and/or 1,3-propanediol in demineralised water in relation to the total weight of solvent plus water.</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text><b>8</b>. The process according to <claim-ref idref="CLM-00007">claim 7</claim-ref>, wherein extracting is a solid-liquid extraction, with a hydro-glycolic solvent composed of 60% 1,3-propanediol and 40% demineralised water.</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text><b>9</b>. The process according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein extracting is carried out at a temperature between 4&#xb0; C. and 100&#xb0; C. for a time between 10 minutes and 4 hours with stirring or with ultrasound.</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text><b>10</b>. A cosmetic composition comprising an extract of the pulp and skin of dried, seed-free <i>Myrciaria dubia </i>fruit according to <claim-ref idref="CLM-00001">claim 1</claim-ref> in a physiologically acceptable medium.</claim-text>
+</claim>
+<claim id="CLM-00011" num="00011">
+<claim-text><b>11</b>. The composition according to <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the extract is present in the composition at a concentration of 0.1 to 3% in relation to the total weight of the composition.</claim-text>
+</claim>
+<claim id="CLM-00012" num="00012">
+<claim-text><b>12</b>. The composition according to <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the composition is a topical composition.</claim-text>
+</claim>
+<claim id="CLM-00013" num="00013">
+<claim-text><b>13</b>. The composition according to <claim-ref idref="CLM-00010">claim 10</claim-ref>, wherein the composition reduces signs of skin fatigue.</claim-text>
+</claim>
+<claim id="CLM-00014" num="00014">
+<claim-text><b>14</b>. The composition according to <claim-ref idref="CLM-00013">claim 13</claim-ref>, wherein the signs of skin fatigue are selected from the presence of puffiness and dark circles under the eyes, dull complexion, dryness of the skin, accentuation of fine lines and wrinkles such as wrinkles of the forehead or crow's feet, accentuation of skin slackening, an increase in the fragility of the nails and a receding of the hair line.</claim-text>
+</claim>
+<claim id="CLM-00015" num="00015">
+<claim-text><b>15</b>. The composition according to <claim-ref idref="CLM-00013">claim 13</claim-ref>, wherein the composition increases cellular ATP synthesis, creatine kinase activity, type I collagen expression, PFKFB3 synthesis, and the level of 11b-HSD2 messenger RNA and decreases the level of 11b-HSD1 messenger RNA.</claim-text>
+</claim>
+<claim id="CLM-00016" num="00016">
+<claim-text><b>16</b>. The composition according to <claim-ref idref="CLM-00011">claim 11</claim-ref>, wherein the extract is present in the composition at a concentration of 0.1 to 1.5% in relation to the total weight of the composition.</claim-text>
+</claim>
+<claim id="CLM-00017" num="00017">
+<claim-text><b>17</b>. The extract according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the organic acids comprise malic, citric and ascorbic acids.</claim-text>
+</claim>
+<claim id="CLM-00018" num="00018">
+<claim-text><b>18</b>. The method according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein separating comprises decanting and/or centrifuging.</claim-text>
+</claim>
+<claim id="CLM-00019" num="00019">
+<claim-text><b>19</b>. The method according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein separating comprises clarifying filtering.</claim-text>
+</claim>
+<claim id="CLM-00020" num="00020">
+<claim-text><b>20</b>. The method according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein, after microfiltering the liquid phase, the liquid phase is purified by ultrafiltration and/or nanofiltration.</claim-text>
+</claim>
+<claim id="CLM-00021" num="00021">
+<claim-text><b>21</b>. The method according to <claim-ref idref="CLM-00006">claim 6</claim-ref>, comprising drying the extract by spraying, freeze-drying, or zeodration.</claim-text>
+</claim>
+</claims>
+</us-patent-application>
