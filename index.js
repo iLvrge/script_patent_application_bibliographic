@@ -23,10 +23,11 @@ exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${fol
     }
 })*/
 
-
+console.log(`tar -xvf ${mainFolderPath}/DOWNLOAD/${folderName}.tar`)
 exec(`tar -xvf ${mainFolderPath}/DOWNLOAD/${folderName}.tar` , (err, stdout, stderr) => {
     if( !err ) {
-        exec(`find ${mainFolderPath}${folderName} -type d  -name "UTIL*"`, (err, stdout, stderr) => {
+        console.log(stdout)
+        exec(`find ${mainFolderPath}/DOWNLOAD/${folderName} -type d  -name "UTIL*"`, (err, stdout, stderr) => {
             if(!err) {
                 const allFolders = stdout.split('\n')
                 console.log(allFolders)
