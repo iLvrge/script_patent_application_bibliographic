@@ -33,7 +33,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                 console.log(allFolders)
                 if(Array.isArray(allFolders)) {
                     allFolders.forEach( folder => {
-                        exec(`unzip -o '${folder}/*.ZIP' -d "${mainFolderPath}EXTRACT_FILES/*"`, async (err, stdout, stderr) => {
+                        exec(`unzip -o '${folder}/*.ZIP' -d "${mainFolderPath}EXTRACT_FILES/"`, async (err, stdout, stderr) => {
                             if(!err) {
                                 
                                 const promiseXML = new Promise( function(resolve, reject) {
