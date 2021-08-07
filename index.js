@@ -34,10 +34,27 @@ const spawnOptions = {
 };
 const folderList = [`/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204`, `/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204-SUPP`]
 
-const child = spawn('find', [folderList[0], '-type', 'd', '-name', 'UTIL*']);
-child.stdout.on('data', (data) => {
-    console.log(`child stdout:\n${data}`);
-});
+const allUTILFolders = []
+
+const processExtractZipFolders = new Promise((resolve, reject) => {
+    const mapAllFolders = folderList.map(folder => {
+        const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
+        child.stdout.on('data', (data) => {
+            allUTILFolders.push(data)
+        });
+        child.stderr.on('data', (data) => {
+            reject(data)
+        });
+    })
+    Promise.all(mapAllFolders)
+    resolve('AllFolderDOne')
+})
+
+processExtractZipFolders.then((resolve, reject) => {
+    console.log(resolve, reject)
+    console.log('allUTILFolders', allUTILFolders)
+})
+
 
 
 
