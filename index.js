@@ -30,7 +30,17 @@ const downloadFilesAndProcess = async() => {
             const downloadPath = `https://bulkdata.uspto.gov/data/patent/application/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
             console.log(`FolderName: ${startDate} - ${folderName} - ${downloadPath}`)
             const downloadFileProcess = new Promise( (resolve, reject) => {
-                const downloadFileSpawn = spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
+                const downloadFileSpawn = spawn('wget', [downloadPath, '-P', `${mainFolderPath}DOWNLOAD/`])
+
+                downloadFileSpawn.stderr.on('data', (data) => {
+                    console.log(`Error: ${data}`)
+                    reject(data)
+                });
+
+                downloadFileSpawn.on('close', (code) => {
+                    resolve('download Done')    
+                })
+                /* const downloadFileSpawn = spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
                 downloadFileSpawn.stdout.on('data', (data) => {
                     console.log(`child.stdout: ${data}`)
                     const allFolders = data.toString().split('\n')
@@ -42,7 +52,7 @@ const downloadFilesAndProcess = async() => {
                 });
                 downloadFileSpawn.on('close', (code) => {
                     resolve('download Done')    
-                })    
+                })  */   
             })
             Promise.all([downloadFileProcess])
             .then(async () => {
