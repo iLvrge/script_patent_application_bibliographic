@@ -24,20 +24,21 @@ exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${fol
 })*/
 
 console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
-exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar` , (err, stdout, stderr) => {
+const option = {maxBuffer: 1024 * 500}
+exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`, option , (err, stdout, stderr) => {
     if( !err ) {
         console.log(stdout)
-        exec(`find ${mainFolderPath}DOWNLOAD/${folderName} -type d  -name "UTIL*"`, (err, stdout, stderr) => {
+        exec(`find ${mainFolderPath}DOWNLOAD/${folderName} -type d  -name "UTIL*"`, option , (err, stdout, stderr) => {
             if(!err) {
                 const allFolders = stdout.split('\n')
                 console.log(allFolders)
                 if(Array.isArray(allFolders)) {
                     allFolders.forEach( folder => {
-                        exec(`unzip -o '${folder}/*.ZIP' -d "${mainFolderPath}EXTRACT_FILES/"`, async (err, stdout, stderr) => {
+                        exec(`unzip -o '${folder}/*.ZIP' -d "${mainFolderPath}EXTRACT_FILES/"`, option , async (err, stdout, stderr) => {
                             if(!err) {
                                 
                                 const promiseXML = new Promise( function(resolve, reject) {
-                                    exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.XML" -exec mv -t ${mainFolderPath}XML {} +`, (err, stdout, stderr) => {
+                                    exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.XML" -exec mv -t ${mainFolderPath}XML {} +`, option , (err, stdout, stderr) => {
                                         if(!err) {
                                             resolve('DONE')
                                         }
@@ -45,7 +46,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                                 })
                                 
                                 const promiseTIF = new Promise( function(resolve, reject) {
-                                    exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.TIF" -exec mv -t ${mainFolderPath}IMAGES {} +`, (err, stdout, stderr) => {
+                                    exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.TIF" -exec mv -t ${mainFolderPath}IMAGES {} +`, option , (err, stdout, stderr) => {
                                         if(!err) {
                                             resolve('DONE')
                                         }
@@ -54,7 +55,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
         
                                 await Promise.all([promiseXML, promiseTIF])
         
-                                exec(`find ${mainFolderPath}XML -name "*.XML"`, (err, stdout, stderr) => {
+                                exec(`find ${mainFolderPath}XML -name "*.XML"`, option , (err, stdout, stderr) => {
                                     if(!err) {
                                         const allFiles = stdout.split('\n')
                                         if(Array.isArray(allFiles)) {
