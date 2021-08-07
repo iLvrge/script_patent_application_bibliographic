@@ -32,7 +32,14 @@ const spawnOptions = {
         'pipe'     // StdErr.
     ],
 };
-const child = spawn('find', ['.', '-type', 'f']);
+const folderList = [`/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204`, `/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204-SUPP`]
+
+const child = spawn('find', [folderList[0], '-type', 'd']);
 child.stdout.on('data', (data) => {
     console.log(`child stdout:\n${data}`);
 });
+
+
+
+
+  
