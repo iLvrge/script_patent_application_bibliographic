@@ -1,6 +1,7 @@
 const fs = require('fs'),
     path = require('path'),    
-    parser = require('fast-xml-parser');
+    parser = require('fast-xml-parser'),
+    moment = require('moment');
 
 const { exec, spawn  } = require('child_process');
 const { decode } = require('html-entities');
@@ -15,14 +16,59 @@ const fileName = 'US20210045996A1-20210218.XML'
     filePath = path.join(__dirname, fileName),
     mainFolderPath = '/var/www/html/trash/patent_application_bibliographic/';
 
-const folderName = 'I20210204'
+let startDate = '2021-07-29 00:00:00', endDate = '2021-07-29 00:00:00', currentDate = moment().format('YYYY-mm-dd')
+
+console.log('currentDate', currentDate)
+while(1==1){
+    const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
+    if(startGetTime <= endGetTime) {
+        const momentObject = moment(new Date(startDate))
+        const folderName = `${momentObject.format('YYYYMMDD')}`
+        const downloadPath = `https://bulkdata.uspto.gov/data/patent/application/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
+        console.log(`FolderName: ${folderName} - ${downloadPath}`)
+
+        exec(`wget ${downloadPath} -P ${mainFolderPath}DOWNLOAD/` , (err, stdout, stderr) => {
+            if( !err ) {
+                console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
+                let extractAllFolder = []
+                const extractTar = new Promise((resolve, reject) => {        
+                    const child =  spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
+                    child.stdout.on('data', (data) => {
+                        console.log(`child.stdout: ${data}`)
+                        const allFolders = data.toString().split('\n')
+                        extractAllFolder = [...extractAllFolder, ...allFolders]
+                    });
+                    child.stderr.on('data', (data) => {
+                        reject(data)
+                    });
+                    child.on('close', (code) => {
+                        resolve('Extract DOne')    
+                    })        
+                })
+                Promise.all([extractTar])
+                .then(() => {
+                    console.log('extractAllFolder', extractAllFolder)
+                })
+            }
+        })
+        const date = new Date(startDate)
+        startDate = moment(date).add(1, 'week').day(4);
+        
+    } else {
+        const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
+        console.log(`EXIT Date: ${startDate} - ${startGetTime} - ${endGetTime}`)
+        break;
+    }
+}
+
+
 /*
 exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${folderName}.tar -P ${mainFolderPath}DOWNLOAD/` , (err, stdout, stderr) => {
     if( !err ) {
         
     }
 })*/
-
+/* 
 console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
 const option = {maxBuffer: 1024 * 1024}
 const spawnOptions = {
@@ -111,7 +157,7 @@ Promise.all(allPromises)
 
             Promise.all([promiseXML, promiseTIF])
             .then(() => {
-                const allFiles = []
+                let allFiles = []
                 const processXMLFiles = new Promise( function(resolve, reject) {
                     const child = spawn('find', [`${mainFolderPath}XML`, '-name', `*.XML`]);
                     child.stdout.on('data', (data) => {
@@ -130,11 +176,12 @@ Promise.all(allPromises)
                 Promise.all([processXMLFiles])
                 .then(() => {
                     console.log('allFiles', allFiles.length)
+
                 })
             })
         })
     }
-}) 
+})  */
 
 
 
