@@ -44,7 +44,7 @@ const downloadFilesAndProcess = async() => {
                 })    
             })
             Promise.all([downloadFileProcess])
-            .then(() => {
+            .then(async () => {
                 await downloadFilesAndProcess()
             })
         }
