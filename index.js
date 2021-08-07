@@ -17,7 +17,7 @@ const fileName = 'US20210045996A1-20210218.XML'
 
 const folderName = 'I20210204'
 /*
-exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${folderName}.tar -P ${mainFolderPath}/DOWNLOAD/` , (err, stdout, stderr) => {
+exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${folderName}.tar -P ${mainFolderPath}DOWNLOAD/` , (err, stdout, stderr) => {
     if( !err ) {
         
     }
@@ -56,12 +56,16 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                             }) 
                             await Promise.all([promiseXML, promiseTIF])
                         })
+
+                        unZipFolder.stderr.on('data', (data) => {
+                            console.error(`unZipFolder stderr: ${data}`);
+                        });
                     })
                     await Promise.all(uzipAllFolders)
 
                     const listAllXMLFiles = spawn('find', [`${mainFolderPath}XML`, '-name', `"*.XML"`]);
 
-                    listAllXMLFiles.stdin.on('data', (data) => {
+                    listAllXMLFiles.stdout.on('data', (data) => {
                         console.log('IN XML FILES LISTING')
                         const allFiles = data.split('\n')
 
@@ -71,8 +75,14 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                             })
                         }
                     })
+                    listAllXMLFiles.stderr.on('data', (data) => {
+                        console.error(`unZipFolder stderr: ${data}`);
+                    });
                 }
             })
+            processFolder.stderr.on('data', (data) => {
+                console.error(`processFolder stderr: ${data}`);
+            });
         })        
     }            
 })
