@@ -25,12 +25,27 @@ exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${fol
 
 console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
 const option = {maxBuffer: 1024 * 1024}
+const spawnOptions = {
+    stdio: [
+        'inherit', // StdIn.
+        'pipe',    // StdOut.
+        'pipe'     // StdErr.
+    ],
+};
 exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`, option , (err, stdout, stderr) => {
     if( !err ) {        
         const folderList = [`${mainFolderPath}DOWNLOAD/${folderName}`, `${mainFolderPath}DOWNLOAD/${folderName}-SUPP`]
         folderList.forEach(mainFolder => {
             console.log(`FolderName: ${mainFolder}`)
-            const processFolder = spawn('find', [mainFolder, '-type', 'd', '-name', '"UTIL*"']);
+            const processFolder = spawn('find', 
+                [
+                    mainFolder, 
+                    '-type', 
+                    'd', 
+                    '-name', 
+                    '"UTIL*"'
+                ], spawnOptions);
+            
             processFolder.stdout.on('data', async(data) => {
                 console.log(`stdout: ${data}`);                
             })
