@@ -33,7 +33,7 @@ const spawnOptions = {
     ],
 };
 const folderList = [`/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204`, `/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204-SUPP`]
-/* 
+
 let allUTILFolders = [], allPromises = []
 folderList.forEach(folder => {
     const processAllZipFolders = new Promise((resolve, reject) => {        
@@ -75,7 +75,16 @@ Promise.all(allPromises)
         Promise.all(unzipAllFolder)
         .then(() => {
             const promiseXML = new Promise( function(resolve, reject) {
-                const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, 'name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML {} +`]);
+                const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML`, '{}', '+']);
+
+                findXMLFiles.stdout.on('data', (data) => {
+                    console.log(`child.stdout: ${data}`)
+                });
+
+                findXMLFiles.stderr.on('data', (data) => {
+                    console.log(`child.stderr: ${data}`)
+                    reject(`Error: ${data}`)
+                });
 
                 findXMLFiles.on('close', (code) => {
                     resolve(code)
@@ -84,7 +93,16 @@ Promise.all(allPromises)
             })   
             
             const promiseTIF = new Promise( function(resolve, reject) {
-                const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, 'name', `*.TIF`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES {} +`]);
+                const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES`, '{}', '+']);
+
+                findIMAGESFiles.stdout.on('data', (data) => {
+                    console.log(`child.stdout: ${data}`)
+                });
+
+                findIMAGESFiles.stderr.on('data', (data) => {
+                    console.log(`child.stderr: ${data}`)
+                    reject(`Error: ${data}`)
+                });
 
                 findIMAGESFiles.on('close', (code) => {
                     resolve(code)
@@ -116,59 +134,9 @@ Promise.all(allPromises)
             })
         })
     }
-}) */
+}) 
 
 
-
-const promiseXML = new Promise( function(resolve, reject) {
-    const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML`, '{}', '+']);
-
-    findXMLFiles.stdout.on('data', (data) => {
-        console.log(`child.stdout: ${data}`)
-    });
-
-    findXMLFiles.stderr.on('data', (data) => {
-        console.log(`child.stderr: ${data}`)
-    });
-
-    findXMLFiles.on('close', (code) => {
-        console.log(`Close: ${code}`)
-        resolve(code)
-    })
-
-})   
-
-/* const promiseTIF = new Promise( function(resolve, reject) {
-    const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES`, '{}', '+']);
-
-    findIMAGESFiles.on('close', (code) => {
-        resolve(code)
-    })
-}) */
-
-Promise.all([promiseXML/* , promiseTIF */])
-.then(() => {
-    const allFiles = []
-    const processXMLFiles = new Promise( function(resolve, reject) {
-        const child = spawn('find', [`${mainFolderPath}XML`, '-name', `*.XML`]);
-        child.stdout.on('data', (data) => {
-            console.log(`child.stdout: ${data}`)
-            const files = data.toString().split('\n')
-            allFiles = [...allFiles, ...files]
-        });
-        child.stderr.on('data', (data) => {
-            reject(data)
-        });
-        child.on('close', (code) => {
-            resolve('AllFolderDOne')    
-        })  
-    })
-
-    Promise.all([processXMLFiles])
-    .then(() => {
-        console.log('allFiles', allFiles.length)
-    })
-})
 
 
 
