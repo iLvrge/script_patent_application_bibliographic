@@ -16,7 +16,7 @@ const fileName = 'US20210045996A1-20210218.XML'
     filePath = path.join(__dirname, fileName),
     mainFolderPath = '/var/www/html/trash/patent_application_bibliographic/';
 
-let startDate = '2021-07-22 00:00:00', endDate = '2021-08-05 00:00:00'
+let startDate = '2021-07-08 00:00:00', endDate = '2021-07-22 00:00:00'
 
 
 const downloadFilesAndProcess = async() => {
@@ -36,7 +36,7 @@ const downloadFilesAndProcess = async() => {
                 });
                 downloadFileSpawn.stderr.on('data', (data) => {
                     console.log(`Error downloadFileSpawn.stderr: ${data}`)
-                    reject(data)
+                    //reject(data)
                 });
 
                 downloadFileSpawn.on('close', (code) => {
