@@ -24,7 +24,7 @@ exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${fol
 })*/
 
 console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
-const option = {maxBuffer: 1024 * 500}
+const option = {maxBuffer: 1024 * 1024}
 exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`, option , (err, stdout, stderr) => {
     if( !err ) {
         console.log(stdout)
