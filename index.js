@@ -121,12 +121,15 @@ Promise.all(allPromises)
 
 
 const promiseXML = new Promise( function(resolve, reject) {
-    const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `"*.XML"`, '-exec', 'mv', '-t', `${mainFolderPath}XML`, '{}', '+']);
+    const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML`, '{}', '+']);
 
     findXMLFiles.stdout.on('data', (data) => {
         console.log(`child.stdout: ${data}`)
     });
 
+    findXMLFiles.stderr.on('data', (data) => {
+        console.log(`child.stderr: ${data}`)
+    });
 
     findXMLFiles.on('close', (code) => {
         console.log(`Close: ${code}`)
