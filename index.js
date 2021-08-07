@@ -41,6 +41,7 @@ const processExtractZipFolders = new Promise((resolve, reject) => {
         const mapAllFolders = folderList.map(folder => {
             const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
             child.stdout.on('data', (data) => {
+                console.log(`child.stdout: ${data}`)
                 allUTILFolders.push(data)
             });
             child.stderr.on('data', (data) => {
