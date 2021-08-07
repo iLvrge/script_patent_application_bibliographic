@@ -28,7 +28,7 @@ const downloadFilesAndProcess = async() => {
             const momentObject = moment(new Date(startDate))
             const folderName = `${momentObject.format('YYYYMMDD')}`
             const downloadPath = `https://bulkdata.uspto.gov/data/patent/application/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
-            console.log(`FolderName: ${folderName} - ${downloadPath}`)
+            console.log(`FolderName: ${startDate} - ${folderName} - ${downloadPath}`)
             const downloadFileProcess = new Promise( (resolve, reject) => {
                 const downloadFileSpawn = spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
                 downloadFileSpawn.stdout.on('data', (data) => {
