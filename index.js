@@ -49,7 +49,7 @@ folderList.forEach(folder => {
             resolve('AllFolderDOne')    
         })        
     })
-    allPromise.push(processExtractZipFolders)
+    allPromises.push(processExtractZipFolders)
 })
 
 Promise.all(allPromises)
