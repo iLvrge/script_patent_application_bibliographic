@@ -34,29 +34,27 @@ const spawnOptions = {
 };
 const folderList = [`/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204`, `/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204-SUPP`]
 
-const allUTILFolders = []
-
-const processExtractZipFolders = new Promise((resolve, reject) => {
-    (async () => {
-        const mapAllFolders = folderList.map(folder => {
-            const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
-            child.stdout.on('data', (data) => {
-                console.log(`child.stdout: ${data}`)
-                allUTILFolders.push(data)
-            });
-            child.stderr.on('data', (data) => {
-                reject(data)
-            });
-        })
-        await Promise.all(mapAllFolders)
-        console.log('ALL PROMISE DONNNNNEEEEE')
-        resolve('AllFolderDOne')
-    })()
-    
+const allUTILFolders = [], allPromises = []
+folderList.forEach(folder => {
+    const processExtractZipFolders = new Promise((resolve, reject) => {        
+        const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
+        child.stdout.on('data', (data) => {
+            console.log(`child.stdout: ${data}`)
+            allUTILFolders.push(data)
+        });
+        child.stderr.on('data', (data) => {
+            reject(data)
+        });
+        child.on('close', (code) => {
+            resolve('AllFolderDOne')    
+        })        
+    })
+    allPromise.push(processExtractZipFolders)
 })
 
-processExtractZipFolders.then((resolve, reject) => {
-    console.log(resolve, reject)
+Promise.all(allPromises)
+.then(async() => {
+    console.log('ALL PROMISE DONNNNNEEEEE')
     console.log('allUTILFolders', allUTILFolders)
 })
 
