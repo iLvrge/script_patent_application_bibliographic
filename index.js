@@ -27,51 +27,54 @@ console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
 const option = {maxBuffer: 1024 * 1024}
 exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`, option , (err, stdout, stderr) => {
     if( !err ) {        
-        const folderList = [`${mainFolderPath}DOWNLOAD/${folderName}`, `${mainFolderPath}DOWNLOAD/${folderName}`]
-        exec(`find ${mainFolderPath}DOWNLOAD/${folderName} -type d  -name "UTIL*"`, option , (err, stdout, stderr) => {
-            if(!err) {
-                const allFolders = stdout.split('\n')
-                console.log(allFolders)
-                if(Array.isArray(allFolders)) {
-                    allFolders.forEach( folder => {
-                        exec(`unzip -o '${folder}/*.ZIP' -d "${mainFolderPath}EXTRACT_FILES/"`, option , async (err, stdout, stderr) => {
-                            if(!err) {                                
-                                const promiseXML = new Promise( function(resolve, reject) {
-                                    exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.XML" -exec mv -t ${mainFolderPath}XML {} +`, option , (err, stdout, stderr) => {
-                                        if(!err) {
-                                            resolve('DONE')
-                                        }
+        const folderList = [`${mainFolderPath}DOWNLOAD/${folderName}`, `${mainFolderPath}DOWNLOAD/${folderName}-SUPP`]
+        folderList.forEach(mainFolder => {
+            exec(`find ${mainFolder} -type d  -name "UTIL*"`, option , (err, stdout, stderr) => {
+                if(!err) {
+                    const allFolders = stdout.split('\n')
+                    console.log(allFolders)
+                    if(Array.isArray(allFolders)) {
+                        allFolders.forEach( folder => {
+                            exec(`unzip -o '${folder}/*.ZIP' -d "${mainFolderPath}EXTRACT_FILES/"`, option , async (err, stdout, stderr) => {
+                                if(!err) {                                
+                                    const promiseXML = new Promise( function(resolve, reject) {
+                                        exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.XML" -exec mv -t ${mainFolderPath}XML {} +`, option , (err, stdout, stderr) => {
+                                            if(!err) {
+                                                resolve('DONE')
+                                            }
+                                        })
+                                    })                                
+                                    const promiseTIF = new Promise( function(resolve, reject) {
+                                        exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.TIF" -exec mv -t ${mainFolderPath}IMAGES {} +`, option , (err, stdout, stderr) => {
+                                            if(!err) {
+                                                resolve('DONE')
+                                            }
+                                        })
                                     })
-                                })                                
-                                const promiseTIF = new Promise( function(resolve, reject) {
-                                    exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.TIF" -exec mv -t ${mainFolderPath}IMAGES {} +`, option , (err, stdout, stderr) => {
+            
+                                    await Promise.all([promiseXML, promiseTIF])
+            
+                                    /* exec(`find ${mainFolderPath}XML -name "*.XML"`, option , (err, stdout, stderr) => {
                                         if(!err) {
-                                            resolve('DONE')
+                                            const allFiles = stdout.split('\n')
+                                            if(Array.isArray(allFiles)) {
+                                                allFiles.forEach( file => {
+                                                    console.log(`FILE: ${file}`)
+                                                })
+                                            }
                                         }
-                                    })
-                                })
-        
-                                await Promise.all([promiseXML, promiseTIF])
-        
-                                /* exec(`find ${mainFolderPath}XML -name "*.XML"`, option , (err, stdout, stderr) => {
-                                    if(!err) {
-                                        const allFiles = stdout.split('\n')
-                                        if(Array.isArray(allFiles)) {
-                                            allFiles.forEach( file => {
-                                                console.log(`FILE: ${file}`)
-                                            })
-                                        }
-                                    }
-                                }) */
-                            } else {
-                                console.log(err)
-                            }
+                                    }) */
+                                } else {
+                                    console.log(err)
+                                }
+                            })
                         })
-                    })
+                    }
+                } else {
+                    console.log('Error', err)
                 }
-            } else {
-                console.log('Error', err)
-            }
+            })
         })
+        
     }            
 })
