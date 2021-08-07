@@ -26,8 +26,8 @@ exec(`wget https://bulkdata.uspto.gov/data/patent/application/redbook/2021/${fol
 console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
 const option = {maxBuffer: 1024 * 1024}
 exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`, option , (err, stdout, stderr) => {
-    if( !err ) {
-        console.log(stdout)
+    if( !err ) {        
+        const folderList = [`${mainFolderPath}DOWNLOAD/${folderName}`, `${mainFolderPath}DOWNLOAD/${folderName}`]
         exec(`find ${mainFolderPath}DOWNLOAD/${folderName} -type d  -name "UTIL*"`, option , (err, stdout, stderr) => {
             if(!err) {
                 const allFolders = stdout.split('\n')
@@ -35,16 +35,14 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                 if(Array.isArray(allFolders)) {
                     allFolders.forEach( folder => {
                         exec(`unzip -o '${folder}/*.ZIP' -d "${mainFolderPath}EXTRACT_FILES/"`, option , async (err, stdout, stderr) => {
-                            if(!err) {
-                                
+                            if(!err) {                                
                                 const promiseXML = new Promise( function(resolve, reject) {
                                     exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.XML" -exec mv -t ${mainFolderPath}XML {} +`, option , (err, stdout, stderr) => {
                                         if(!err) {
                                             resolve('DONE')
                                         }
                                     })
-                                })
-                                
+                                })                                
                                 const promiseTIF = new Promise( function(resolve, reject) {
                                     exec(`find ${mainFolderPath}EXTRACT_FILES/ -name "*.TIF" -exec mv -t ${mainFolderPath}IMAGES {} +`, option , (err, stdout, stderr) => {
                                         if(!err) {
@@ -55,7 +53,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
         
                                 await Promise.all([promiseXML, promiseTIF])
         
-                                exec(`find ${mainFolderPath}XML -name "*.XML"`, option , (err, stdout, stderr) => {
+                                /* exec(`find ${mainFolderPath}XML -name "*.XML"`, option , (err, stdout, stderr) => {
                                     if(!err) {
                                         const allFiles = stdout.split('\n')
                                         if(Array.isArray(allFiles)) {
@@ -64,7 +62,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                                             })
                                         }
                                     }
-                                })
+                                }) */
                             } else {
                                 console.log(err)
                             }
