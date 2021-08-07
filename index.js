@@ -29,17 +29,17 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
     if( !err ) {        
         const folderList = [`${mainFolderPath}DOWNLOAD/${folderName}`, `${mainFolderPath}DOWNLOAD/${folderName}-SUPP`]
         folderList.forEach(mainFolder => {
-            const processFolder = spawn('find', [mainFolder, '-type', 'd', ' -name', '"UTIL*"']);
+            const processFolder = spawn('find', [mainFolder, '-type', 'd', '-name', '"UTIL*"']);
             processFolder.stdout.on('data', async(data) => {
                 console.log(`stdout: ${data}`);
                 const allFolders = data.split('\n')
                 console.log(allFolders)
                 if(Array.isArray(allFolders)) {
                     const uzipAllFolders = allFolders.map( folder => {
-                        const unZipFolder = spawn('unzip', ['-o', `${folder}/*.ZIP`, ' -d', `"${mainFolderPath}EXTRACT_FILES/"`]);
+                        const unZipFolder = spawn('unzip', ['-o', `${folder}/*.ZIP`, '-d', `"${mainFolderPath}EXTRACT_FILES/"`]);
                         unZipFolder.stdout.on('data', async (data) => {
                             const promiseXML = new Promise( function(resolve, reject) {
-                                const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, ' -name', `"*.XML"`, ' -exec', 'mv', '-t', `${mainFolderPath}XML {} +`]);
+                                const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `"*.XML"`, '-exec', 'mv', '-t', `${mainFolderPath}XML {} +`]);
 
                                 findXMLFiles.on('close', (code) => {
                                     resolve(code)
@@ -48,7 +48,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                             })   
                             
                             const promiseTIF = new Promise( function(resolve, reject) {
-                                const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, ' -name', `"*.TIF"`, ' -exec', 'mv', '-t', `${mainFolderPath}IMAGES {} +`]);
+                                const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `"*.TIF"`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES {} +`]);
 
                                 findIMAGESFiles.on('close', (code) => {
                                     resolve(code)
@@ -63,7 +63,7 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
                     })
                     await Promise.all(uzipAllFolders)
 
-                    const listAllXMLFiles = spawn('find', [`${mainFolderPath}XML`, ' -name', `"*.XML"`]);
+                    const listAllXMLFiles = spawn('find', [`${mainFolderPath}XML`, '-name', `"*.XML"`]);
 
                     listAllXMLFiles.stdout.on('data', (data) => {
                         console.log('IN XML FILES LISTING')
