@@ -40,7 +40,8 @@ folderList.forEach(folder => {
         const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
         child.stdout.on('data', (data) => {
             console.log(`child.stdout: ${data}`)
-            allUTILFolders.push(data.toString())
+            const folderName = data.toString().replace('\n', '')
+            allUTILFolders.push(folderName)
         });
         child.stderr.on('data', (data) => {
             reject(data)
