@@ -16,9 +16,52 @@ const fileName = 'US20210045996A1-20210218.XML'
     filePath = path.join(__dirname, fileName),
     mainFolderPath = '/var/www/html/trash/patent_application_bibliographic/';
 
-let startDate = '2021-07-29 00:00:00', endDate = '2021-07-29 00:00:00', currentDate = moment().format('YYYY-mm-dd')
+let startDate = '2021-07-22 00:00:00', endDate = '2021-08-05 00:00:00'
 
-console.log('currentDate', currentDate)
+
+const downloadFilesAndProcess = async() => {
+    const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
+    try{
+        if (startGetTime < endGetTime) {
+            const date = new Date(startDate)
+            startDate = moment(date).add(1, 'week').day(4);
+            const momentObject = moment(new Date(startDate))
+            const folderName = `${momentObject.format('YYYYMMDD')}`
+            const downloadPath = `https://bulkdata.uspto.gov/data/patent/application/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
+            console.log(`FolderName: ${folderName} - ${downloadPath}`)
+            const downloadFileProcess = new Promise( (resolve, reject) => {
+                const downloadFileSpawn = spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
+                downloadFileSpawn.stdout.on('data', (data) => {
+                    console.log(`child.stdout: ${data}`)
+                    const allFolders = data.toString().split('\n')
+                    extractAllFolder = [...extractAllFolder, ...allFolders]
+                });
+                downloadFileSpawn.stderr.on('data', (data) => {
+                    reject(data)
+                });
+                downloadFileSpawn.on('close', (code) => {
+                    resolve('download Done')    
+                })    
+            })
+            Promise.all([downloadFileProcess])
+            .then(() => {
+                await downloadFilesAndProcess()
+            })
+        }
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+
+(async function() {
+    try {
+        await downloadFilesAndProcess()
+    } catch (e) {
+      console.log('caught', e)
+    }
+})();
+/* 
 while(1==1){
     const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
     if(startGetTime <= endGetTime) {
@@ -26,7 +69,7 @@ while(1==1){
         const folderName = `${momentObject.format('YYYYMMDD')}`
         const downloadPath = `https://bulkdata.uspto.gov/data/patent/application/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
         console.log(`FolderName: ${folderName} - ${downloadPath}`)
-
+        const downloadProcess =  spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
         exec(`wget ${downloadPath} -P ${mainFolderPath}DOWNLOAD/` , (err, stdout, stderr) => {
             if( !err ) {
                 console.log(`tar -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`)
@@ -59,7 +102,7 @@ while(1==1){
         console.log(`EXIT Date: ${startDate} - ${startGetTime} - ${endGetTime}`)
         break;
     }
-}
+} */
 
 
 /*
