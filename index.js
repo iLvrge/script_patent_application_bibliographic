@@ -37,6 +37,10 @@ exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderN
             processFolder.stderr.on('data', (data) => {
                 console.error(`processFolder stderr: ${data}`);
             });
+
+            processFolder.on('close', (code) => {
+                console.error(`processFolder close: ${code}`);
+            });
         })        
     }            
 })
