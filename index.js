@@ -37,6 +37,7 @@ const downloadFilesAndProcess = async() => {
                     extractAllFolder = [...extractAllFolder, ...allFolders]
                 });
                 downloadFileSpawn.stderr.on('data', (data) => {
+                    console.log(`Error: ${data}`)
                     reject(data)
                 });
                 downloadFileSpawn.on('close', (code) => {
@@ -46,7 +47,9 @@ const downloadFilesAndProcess = async() => {
             Promise.all([downloadFileProcess])
             .then(async () => {
                 await downloadFilesAndProcess()
-            })
+            }).catch(function(err) {
+                console.log(`Reject: ${err}`)
+            });
         }
     } catch (e) {
         console.log(e)
