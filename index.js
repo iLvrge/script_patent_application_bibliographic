@@ -37,17 +37,20 @@ const folderList = [`/var/www/html/trash/patent_application_bibliographic/DOWNLO
 const allUTILFolders = []
 
 const processExtractZipFolders = new Promise((resolve, reject) => {
-    const mapAllFolders = folderList.map(folder => {
-        const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
-        child.stdout.on('data', (data) => {
-            allUTILFolders.push(data)
-        });
-        child.stderr.on('data', (data) => {
-            reject(data)
-        });
-    })
-    Promise.all(mapAllFolders)
-    resolve('AllFolderDOne')
+    (async () => {
+        const mapAllFolders = folderList.map(folder => {
+            const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
+            child.stdout.on('data', (data) => {
+                allUTILFolders.push(data)
+            });
+            child.stderr.on('data', (data) => {
+                reject(data)
+            });
+        })
+        await Promise.all(mapAllFolders)
+        resolve('AllFolderDOne')
+    })()
+    
 })
 
 processExtractZipFolders.then((resolve, reject) => {
