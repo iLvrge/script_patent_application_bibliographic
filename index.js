@@ -36,7 +36,7 @@ const folderList = [`/var/www/html/trash/patent_application_bibliographic/DOWNLO
 
 let allUTILFolders = [], allPromises = []
 folderList.forEach(folder => {
-    const processExtractZipFolders = new Promise((resolve, reject) => {        
+    const processAllZipFolders = new Promise((resolve, reject) => {        
         const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
         child.stdout.on('data', (data) => {
             console.log(`child.stdout: ${data}`)
@@ -50,20 +50,72 @@ folderList.forEach(folder => {
             resolve('AllFolderDOne')    
         })        
     })
-    allPromises.push(processExtractZipFolders)
+    allPromises.push(processAllZipFolders)
 })
 
 Promise.all(allPromises)
-.then(async() => {
+.then(() => {
     console.log('ALL PROMISE DONNNNNEEEEE')
     console.log('allUTILFolders', allUTILFolders)
-    /* if(allUTILFolders.length > 0) {
+    if(allUTILFolders.length > 0) {
+        const unzipAllFolder = []
         allUTILFolders.forEach( folder => {
+            const processUnZipFolders = new Promise((resolve, reject) => {     
+                const child = spawn('unzip', ['-o', `${folder}/*.ZIP`, '-d', `${mainFolderPath}EXTRACT_FILES/`])
+                child.stdout.on('data', (data) => {
+                    console.log(`child.stdout: ${data}`)
+                });
+                child.on('close', (code) => {
+                    resolve('FolderExtractDone')    
+                })   
+            })
+            unzipAllFolder.push(processUnZipFolders)
+        })
 
-        })_
-        const allFolders = stdout.split('\n')
+        Promise.all(unzipAllFolder)
+        .then(() => {
+            const promiseXML = new Promise( function(resolve, reject) {
+                const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, 'name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML {} +`]);
+
+                findXMLFiles.on('close', (code) => {
+                    resolve(code)
+                })
+
+            })   
+            
+            const promiseTIF = new Promise( function(resolve, reject) {
+                const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, 'name', `*.TIF`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES {} +`]);
+
+                findIMAGESFiles.on('close', (code) => {
+                    resolve(code)
+                })
+            })
+
+            Promise.all([promiseXML, promiseTIF])
+            .then(() => {
+                const allFiles = []
+                const processXMLFiles = new Promise( function(resolve, reject) {
+                    const child = spawn('find', [`${mainFolderPath}XML`, '-name', `*.XML`]);
+                    child.stdout.on('data', (data) => {
+                        console.log(`child.stdout: ${data}`)
+                        const files = data.toString().split('\n')
+                        allFiles = [...allFiles, ...files]
+                    });
+                    child.stderr.on('data', (data) => {
+                        reject(data)
+                    });
+                    child.on('close', (code) => {
+                        resolve('AllFolderDOne')    
+                    })  
+                })
+
+                Promise.all(processXMLFiles)
+                .then(() => {
+                    console.log('allFiles', allFiles.length)
+                })
+            })
+        })
     }
-    const folderName = data.toString().replace(/\n/g, '') */
 })
 
 
