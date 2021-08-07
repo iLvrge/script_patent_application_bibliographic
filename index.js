@@ -32,30 +32,7 @@ const spawnOptions = {
         'pipe'     // StdErr.
     ],
 };
-exec(`tar -C ${mainFolderPath}DOWNLOAD/ -xvf ${mainFolderPath}DOWNLOAD/${folderName}.tar`, option , (err, stdout, stderr) => {
-    if( !err ) {        
-        const folderList = [`${mainFolderPath}DOWNLOAD/${folderName}`, `${mainFolderPath}DOWNLOAD/${folderName}-SUPP`]
-        folderList.forEach(mainFolder => {
-            console.log(`FolderName: ${mainFolder}`)
-            const processFolder = spawn('find', 
-                [
-                    mainFolder, 
-                    '-type', 
-                    'd', 
-                    '-name', 
-                    '"UTIL*"'
-                ], spawnOptions);
-            
-            processFolder.stdout.on('data', async(data) => {
-                console.log(`stdout: ${data}`);                
-            })
-            processFolder.stderr.on('data', (data) => {
-                console.error(`processFolder stderr: ${data}`);
-            });
-
-            processFolder.on('close', (code) => {
-                console.error(`processFolder close: ${code}`);
-            });
-        })        
-    }            
-})
+const child = spawn('find', ['.', '-type', 'f']);
+child.stdout.on('data', (data) => {
+    console.log(`child stdout:\n${data}`);
+});
