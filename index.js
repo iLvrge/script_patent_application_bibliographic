@@ -34,14 +34,14 @@ const spawnOptions = {
 };
 const folderList = [`/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204`, `/var/www/html/trash/patent_application_bibliographic/DOWNLOAD/I20210204-SUPP`]
 
-const allUTILFolders = [], allPromises = []
+let allUTILFolders = [], allPromises = []
 folderList.forEach(folder => {
     const processExtractZipFolders = new Promise((resolve, reject) => {        
         const child = spawn('find', [folder, '-type', 'd', '-name', 'UTIL*']);
         child.stdout.on('data', (data) => {
             console.log(`child.stdout: ${data}`)
-            const folderName = data.toString().replace(/\n/g, '')
-            allUTILFolders.push(folderName)
+            const allFolders = data.split('\n')
+            allUTILFolders = [...allUTILFolders, ...allFolders]
         });
         child.stderr.on('data', (data) => {
             reject(data)
@@ -57,6 +57,13 @@ Promise.all(allPromises)
 .then(async() => {
     console.log('ALL PROMISE DONNNNNEEEEE')
     console.log('allUTILFolders', allUTILFolders)
+    /* if(allUTILFolders.length > 0) {
+        allUTILFolders.forEach( folder => {
+
+        })_
+        const allFolders = stdout.split('\n')
+    }
+    const folderName = data.toString().replace(/\n/g, '') */
 })
 
 
