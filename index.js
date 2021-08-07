@@ -121,7 +121,7 @@ Promise.all(allPromises)
 
 
 const promiseXML = new Promise( function(resolve, reject) {
-    const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, 'name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML`, '{}', '+']);
+    const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML`, '{}', '+']);
 
     findXMLFiles.stdout.on('data', (data) => {
         console.log(`child.stdout: ${data}`)
@@ -136,7 +136,7 @@ const promiseXML = new Promise( function(resolve, reject) {
 })   
 
 /* const promiseTIF = new Promise( function(resolve, reject) {
-    const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, 'name', `*.TIF`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES {} +`]);
+    const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES`, '{}', '+']);
 
     findIMAGESFiles.on('close', (code) => {
         resolve(code)
