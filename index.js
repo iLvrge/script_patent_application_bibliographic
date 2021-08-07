@@ -49,6 +49,7 @@ const processExtractZipFolders = new Promise((resolve, reject) => {
             });
         })
         await Promise.all(mapAllFolders)
+        console.log('ALL PROMISE DONNNNNEEEEE')
         resolve('AllFolderDOne')
     })()
     
