@@ -159,6 +159,13 @@ const downloadFilesAndProcess = async() => {
 
                                     Promise.all([promiseXML, promiseTIF])
                                     .then(() => {
+
+                                        const childFolders =  spawn('rm', ['-R', `${mainFolderPath}EXTRACT_FILES/*`])
+
+                                        childFolders.on('close', (code) => {
+                                            resolve('Child folders deleted')    
+                                        })
+
                                         const child =  spawn('rm', [`${mainFolderPath}DOWNLOAD/${folderName}.tar`])
 
                                         child.on('close', (code) => {

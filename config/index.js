@@ -15,6 +15,16 @@ const resources = new Sequelize('db_patent_application_bibliographic_new', 'db_u
     }*/
 });
 
-const db = { Sequelize, Op, resources }
+const bucketConfig = {
+    bucketName: process.env.BUCKET_NAME,
+    dirName: process.env.BUCKET_PHOTO_DIR, /* optional */
+    region: process.env.BUCKET_REGION,
+    accessKeyId: process.env.BUCKET_ACCESS_KEY,
+    secretAccessKey: process.env.BUCKET_SECRET_KEY,
+    s3Url: process.env.BUCKET_URL, /* optional */
+    documentDir: process.env.BUCKET_DOCUMENT_DIR
+  }
+
+const db = { Sequelize, Op, resources, bucketConfig }
 
 module.exports = db;
