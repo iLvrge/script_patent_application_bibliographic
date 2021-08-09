@@ -159,6 +159,13 @@ const downloadFilesAndProcess = async() => {
 
                                     Promise.all([promiseXML, promiseTIF])
                                     .then(() => {
+                                        const child =  spawn('rm', [`${mainFolderPath}DOWNLOAD/${folderName}.tar`])
+
+                                        child.on('close', (code) => {
+                                            resolve('File deleted')    
+                                        }) 
+
+
                                         console.log(`DONEEEEEEE: ${downloadPath} -  ${startDate} - ${folderName}`)
                                         downloadFilesAndProcess()
                                     })
