@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patent-application-publication SYSTEM "pap-v15-2001-01-31.dtd" [
+<!ENTITY US20010000026A1-20010315-D00001.TIF SYSTEM "US20010000026A1-20010315-D00001.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00002.TIF SYSTEM "US20010000026A1-20010315-D00002.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00003.TIF SYSTEM "US20010000026A1-20010315-D00003.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00004.TIF SYSTEM "US20010000026A1-20010315-D00004.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00005.TIF SYSTEM "US20010000026A1-20010315-D00005.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00006.TIF SYSTEM "US20010000026A1-20010315-D00006.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00007.TIF SYSTEM "US20010000026A1-20010315-D00007.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00008.TIF SYSTEM "US20010000026A1-20010315-D00008.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00009.TIF SYSTEM "US20010000026A1-20010315-D00009.TIF" NDATA TIF>
+<!ENTITY US20010000026A1-20010315-D00010.TIF SYSTEM "US20010000026A1-20010315-D00010.TIF" NDATA TIF>
+]>
+<patent-application-publication>
+<subdoc-bibliographic-information>
+<document-id>
+<doc-number>20010000026</doc-number>
+<kind-code>A1</kind-code>
+<document-date>20010315</document-date></document-id>
+<publication-filing-type>new-utility</publication-filing-type>
+<domestic-filing-data>
+<application-number>
+<doc-number>09726879</doc-number>
+</application-number>
+<application-number-series-code>09</application-number-series-code>
+<filing-date>20001130</filing-date>
+</domestic-filing-data>
+<technical-information>
+<classification-ipc>
+<classification-ipc-primary>
+<ipc>G06K009/00</ipc>
+</classification-ipc-primary>
+<classification-ipc-secondary>
+<ipc>G09G005/00</ipc>
+</classification-ipc-secondary>
+<classification-ipc-secondary>
+<ipc>G06K009/22</ipc>
+</classification-ipc-secondary>
+<classification-ipc-edition>07</classification-ipc-edition>
+</classification-ipc>
+<classification-us>
+<classification-us-primary>
+<uspc>
+<class>382</class>
+<subclass>119000</subclass>
+</uspc>
+</classification-us-primary>
+<classification-us-secondary>
+<uspc>
+<class>382</class>
+<subclass>314000</subclass>
+</uspc>
+</classification-us-secondary>
+<classification-us-secondary>
+<uspc>
+<class>345</class>
+<subclass>179000</subclass>
+</uspc>
+</classification-us-secondary>
+</classification-us>
+<title-of-invention>Digitizer stylus containing handwriting data</title-of-invention>
+</technical-information>
+<continuity-data>
+<continuations>
+<continuation-of>
+<parent-child>
+<child>
+<document-id>
+<doc-number>09726879</doc-number>
+<kind-code>A1</kind-code>
+<document-date>20001130</document-date>
+</document-id>
+</child>
+<parent>
+<document-id>
+<doc-number>08905922</doc-number>
+<document-date>19970805</document-date>
+<country-code>US</country-code>
+</document-id>
+</parent>
+<parent-status>PENDING</parent-status>
+</parent-child>
+</continuation-of>
+</continuations>
+<continuations>
+<continuation-of>
+<parent-child>
+<child>
+<document-id>
+<doc-number>08905922</doc-number>
+<document-date>19970805</document-date>
+<country-code>US</country-code>
+</document-id>
+</child>
+<parent>
+<document-id>
+<doc-number>08357810</doc-number>
+<document-date>19941216</document-date>
+<country-code>US</country-code>
+</document-id>
+</parent>
+<parent-status>ABANDONED</parent-status>
+</parent-child>
+</continuation-of>
+</continuations>
+</continuity-data>
+<inventors>
+<first-named-inventor>
+<name>
+<given-name>Steven</given-name>
+<middle-name>K.</middle-name>
+<family-name>Skoog</family-name>
+</name>
+<residence>
+<residence-us>
+<city>Colorado Springs</city>
+<state>CO</state>
+<country-code>US</country-code>
+</residence-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</first-named-inventor>
+</inventors>
+<correspondence-address>
+<name-1>TOWNSEND AND TOWNSEND AND CREW</name-1>
+<name-2></name-2>
+<address>
+<address-1>TWO EMBARCADERO CENTER</address-1>
+<address-2>EIGHTH FLOOR</address-2>
+<city>SAN FRANCISCO</city>
+<state>CA</state>
+<postalcode>94111-3834</postalcode>
+<country>
+<country-code>US</country-code>
+</country>
+</address>
+</correspondence-address>
+</subdoc-bibliographic-information>
+<subdoc-abstract>
+<paragraph id="A-00001" lvl="0">The invention concerns a stylus for use with a digitizing tablet. The stylus stores information which identifies characteristics of a user&apos;s handwriting. These characteristics are transmitted to a computer when the user interfaces with the computer, and are used by the computer to recognize the user&apos;s handwriting. </paragraph>
+</subdoc-abstract>
+<subdoc-description>
+<cross-reference-to-related-applications>
+<heading lvl="1">CROSS REFERENCE TO RELATED APPLICATION </heading>
+<paragraph id="P-00001" lvl="0"><number>1.</number> The present invention is related to commonly assigned and co-pending U.S. application entitled, &ldquo;Telemetry by Digitizer Stylus&rdquo;, invented by Trunck and Skoog, and having a docket number of 6054, filed concurrently herewith on Dec. 16, 1994, and hereby incorporated by reference. </paragraph>
+</cross-reference-to-related-applications>
+<summary-of-invention>
+<paragraph id="P-00002" lvl="0"><number>2.</number> The invention concerns a stylus for use with a digitizing tablet. The stylus stores information regarding the characteristics of a user&apos;s handwriting, in digital format. </paragraph>
+<paragraph id="P-00003" lvl="0"><number>3.</number> When the user seeks to interface with a computer, the stylus downloads the characteristics to the computer. The computer then uses the characteristics to recognize, or interpret, the user&apos;s handwriting. </paragraph>
+<section>
+<heading lvl="1">BACKGROUND OF THE INVENTION </heading>
+</section>
+<section>
+<heading lvl="1">Simplified Explanation of Digitizing Tablet </heading>
+<paragraph id="P-00004" lvl="0"><number>4.</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> illustrates a computer <highlight><bold>4</bold></highlight> and a digitizing tablet <highlight><bold>3</bold></highlight>, which provides input to the computer. (The digitizing tablet need not be a separate element, as shown in <cross-reference target="DRAWINGS">FIG. 1</cross-reference>, but can take the form of a transparent overlay of the display <highlight><bold>2</bold></highlight>. This overlay configuration is frequently used in pen-based portable computers.) </paragraph>
+<paragraph id="P-00005" lvl="0"><number>5.</number> The tablet-and-stylus combination provide input to the computer. A simplified explanation of the operation of the tablet will be given. </paragraph>
+<paragraph id="P-00006" lvl="0"><number>6.</number> <cross-reference target="DRAWINGS">FIG. 2</cross-reference> shows a digitizing tablet <highlight><bold>3</bold></highlight> and its associated stylus <highlight><bold>6</bold></highlight>. In the tablet, there are four current-to-voltage amplifiers (labeled I-to-V), one at each corner. The stylus <highlight><bold>6</bold></highlight>, when activated, produces a signal <highlight><bold>9</bold></highlight>, as indicated in <cross-reference target="DRAWINGS">FIG. 4</cross-reference>. This signal induces currents I<highlight><bold>1</bold></highlight>, I<highlight><bold>2</bold></highlight>, I<highlight><bold>3</bold></highlight>, and I<highlight><bold>4</bold></highlight>, which are detected by the I-to-V amplifiers. </paragraph>
+<paragraph id="P-00007" lvl="0"><number>7.</number> The I-to-V amplifiers each produce a voltage (V) indicative of the size of its respective current (I). Processing circuitry, not shown, but known in the art, receives the voltage signals, and computes the position of the stylus <highlight><bold>6</bold></highlight>. </paragraph>
+<paragraph id="P-00008" lvl="0"><number>8.</number> The currents I<highlight><bold>1</bold></highlight>-I<highlight><bold>4</bold></highlight> are induced because the stylus <highlight><bold>6</bold></highlight> acts as one plate of a capacitor. The digitizing tablet supplies the other plate: it bears a resistive surface, or grid, of a material such as indium tin oxide, which acts as the other plate. </paragraph>
+<paragraph id="P-00009" lvl="0"><number>9.</number> As <cross-reference target="DRAWINGS">FIG. 4</cross-reference> indicates, when negative charge is applied to the tip <highlight><bold>2</bold></highlight> of the stylus <highlight><bold>6</bold></highlight>, a positive charge is induced on the surface of the tablet <highlight><bold>3</bold></highlight>. Currents I<highlight><bold>1</bold></highlight>-I<highlight><bold>4</bold></highlight> supply this positive charge. Conversely, as in <cross-reference target="DRAWINGS">FIG. 5, a</cross-reference> positive charge on the tip <highlight><bold>2</bold></highlight> of the stylus <highlight><bold>6</bold></highlight> induces a negative charge on the tablet. The currents I<highlight><bold>1</bold></highlight>-I<highlight><bold>4</bold></highlight> supply this negative charge. </paragraph>
+<paragraph id="P-00010" lvl="0"><number>10.</number> As <cross-reference target="DRAWINGS">FIG. 6</cross-reference> shows, each current can be viewed as following a direct path from the stylus to one corner of the tablet. The following reasoning allows stylus position to be inferred from the voltage signals: </paragraph>
+<paragraph id="P-00011" lvl="2"><number>11.</number> 1. The length of each path determines the resistance of the path. </paragraph>
+<paragraph id="P-00012" lvl="2"><number>12.</number> 2. The resistance determines the size of the current. </paragraph>
+<paragraph id="P-00013" lvl="2"><number>13.</number> 3. The size of the current determines the voltage produced by the amplifier. </paragraph>
+<paragraph id="P-00014" lvl="2"><number>14.</number> 4. Each voltage indicates its respective path length. </paragraph>
+<paragraph id="P-00015" lvl="7"><number>15.</number> A highly simplified example will illustrate. </paragraph>
+<paragraph id="P-00016" lvl="0"><number>16.</number> Assume that the stylus in <cross-reference target="DRAWINGS">FIG. 6</cross-reference> represents a voltage source applied to the tablet. The paths have the relative lengths shown in <cross-reference target="DRAWINGS">FIG. 6</cross-reference>, and also listed in the following Table.  
+<table-cwu id="TABLE-US-00001">
+<number>1</number>
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="5">
+<colspec colname="1" colwidth="28PT" align="center"/>
+<colspec colname="2" colwidth="49PT" align="center"/>
+<colspec colname="3" colwidth="49PT" align="center"/>
+<colspec colname="4" colwidth="49PT" align="center"/>
+<colspec colname="5" colwidth="42PT" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="5" align="center">TABLE</entry>
+</row>
+<row>
+<entry></entry>
+</row>
+<row><entry namest="1" nameend="5" align="center" rowsep="1"></entry>
+</row>
+<row>
+<entry></entry>
+<entry></entry>
+<entry></entry>
+<entry></entry>
+<entry>RELATIVE</entry>
+</row>
+<row>
+<entry></entry>
+<entry>RELATIVE</entry>
+<entry>RELATIVE</entry>
+<entry>RELATIVE</entry>
+<entry>I-to-V</entry>
+</row>
+<row>
+<entry>PATH</entry>
+<entry>LENGTH</entry>
+<entry>RESISTANCE</entry>
+<entry>CURRENT</entry>
+<entry>VOLTAGE</entry>
+</row>
+<row><entry namest="1" nameend="5" align="center" rowsep="1"></entry>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry>AA</entry>
+<entry>0.66</entry>
+<entry>0.66</entry>
+<entry>1.52</entry>
+<entry>1.52</entry>
+</row>
+<row>
+<entry>BB</entry>
+<entry>1.00</entry>
+<entry>1.00</entry>
+<entry>1.00</entry>
+<entry>1.00</entry>
+</row>
+<row>
+<entry>CC</entry>
+<entry>0.93</entry>
+<entry>0.93</entry>
+<entry>1.08</entry>
+<entry>1.08</entry>
+</row>
+<row>
+<entry>DD</entry>
+<entry>0.55</entry>
+<entry>0.55</entry>
+<entry>1.82</entry>
+<entry>1.82</entry>
+</row>
+<row><entry namest="1" nameend="5" align="center" rowsep="1"></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</table-cwu>
+</paragraph>
+<paragraph id="P-00017" lvl="0"><number>17.</number> The resistance of the path depends on the length, so that the relative resistances are in proportion to the relative path lengths, as indicated in the Table&apos;s columns RELATIVE LENGTH and RELATIVE RESISTANCE. </paragraph>
+<paragraph id="P-00018" lvl="0"><number>18.</number> Current equals voltage divided by resistance, V/R, so that the relative currents will be inversely proportional to the relative path lengths, as indicated in the Table&apos;s column RELATIVE CURRENT. </paragraph>
+<paragraph id="P-00019" lvl="0"><number>19.</number> The I-to-V amplifiers in <cross-reference target="DRAWINGS">FIG. 2</cross-reference> each produce a voltage which is proportional to its respective current. Thus, the voltage outputs of the I-to-V amplifiers have the relative magnitudes indicated in the rightmost column of the Table. </paragraph>
+<paragraph id="P-00020" lvl="0"><number>20.</number> The output voltage signals can be used to compute position of the stylus. </paragraph>
+</section>
+<section>
+<heading lvl="1">Signature Recognition </heading>
+<paragraph id="P-00021" lvl="0"><number>21.</number> The system described above can be used to recognize a user&apos;s signature. <cross-reference target="DRAWINGS">FIG. 7</cross-reference> shows the stylus <highlight><bold>6</bold></highlight> writing a signature. The position of the stylus <highlight><bold>6</bold></highlight> is detected periodically, such as every {fraction (1/100)}second, or other suitable interval. Data points, indicated by the crosses in <cross-reference target="DRAWINGS">FIG. 8</cross-reference>, are derived at these intervals. </paragraph>
+<paragraph id="P-00022" lvl="0"><number>22.</number> For each data point, the x- and y-position are known, together with the real-time occurrence of the data point. Consequently, velocities, accelerations, and other parameters, in addition to the x- and y-positions, can be derived. </paragraph>
+<paragraph id="P-00023" lvl="0"><number>23.</number> Each person&apos;s signature is represented by a unique collection of these parameters. Thus, these parameters, like fingerprints, can be used to identify a person. </paragraph>
+</section>
+<section>
+<heading lvl="1">Tether Not Required </heading>
+<paragraph id="P-00024" lvl="0"><number>24.</number> Some styluses are not tethered to the computer by the power cord P shown in <cross-reference target="DRAWINGS">FIG. 1</cross-reference>; instead, they are battery-powered. </paragraph>
+</section>
+<section>
+<heading lvl="1">OBJECTS OF THE INVENTION </heading>
+<paragraph id="P-00025" lvl="0"><number>25.</number> An object of the invention is to provide improved signature recognition apparatus. </paragraph>
+<paragraph id="P-00026" lvl="0"><number>26.</number> A further object of the invention is to provide a stylus, for use with a digitizing tablet, which contains data which describes its owner&apos;s signature. </paragraph>
+</section>
+<section>
+<heading lvl="1">SUMMARY OF THE INVENTION </heading>
+<paragraph id="P-00027" lvl="0"><number>27.</number> In one form of the invention, a stylus contains memory which stores data which describes the signature of the owner of the stylus. </paragraph>
+<paragraph id="P-00028" lvl="0"><number>28.</number> In another form of the invention, the description of the signature, contained in the stylus, is compared with a signature actually written by the user. If they match, the identity of the user is confirmed. </paragraph>
+</section>
+</summary-of-invention>
+<brief-description-of-drawings>
+<section>
+<heading lvl="1">BRIEF DESCRIPTION OF THE DRAWINGS </heading>
+<paragraph id="P-00029" lvl="0"><number>29.</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> illustrates a digitizing tablet <highlight><bold>3</bold></highlight> associated with a computer <highlight><bold>4</bold></highlight>. </paragraph>
+<paragraph id="P-00030" lvl="0"><number>30.</number> <cross-reference target="DRAWINGS">FIG. 2</cross-reference> is a simplified view of a digitizing tablet. </paragraph>
+<paragraph id="P-00031" lvl="0"><number>31.</number> <cross-reference target="DRAWINGS">FIG. 3</cross-reference> illustrates a signal <highlight><bold>9</bold></highlight> produced by a stylus, and currents I<highlight><bold>1</bold></highlight>, I<highlight><bold>2</bold></highlight>, I<highlight><bold>3</bold></highlight>, and I<highlight><bold>4</bold></highlight> induced by the signal. </paragraph>
+<paragraph id="P-00032" lvl="0"><number>32.</number> <cross-reference target="DRAWINGS">FIGS. 4 and 5</cross-reference> illustrate in more detail how the currents are produced. </paragraph>
+<paragraph id="P-00033" lvl="0"><number>33.</number> <cross-reference target="DRAWINGS">FIG. 6</cross-reference> illustrates paths followed by the currents. </paragraph>
+<paragraph id="P-00034" lvl="0"><number>34.</number> <cross-reference target="DRAWINGS">FIG. 7</cross-reference> illustrates a signature. </paragraph>
+<paragraph id="P-00035" lvl="0"><number>35.</number> <cross-reference target="DRAWINGS">FIG. 8</cross-reference> illustrates digitizing a signature. </paragraph>
+<paragraph id="P-00036" lvl="0"><number>36.</number> <cross-reference target="DRAWINGS">FIG. 9</cross-reference> illustrates a stylus <highlight><bold>6</bold></highlight> which contains MEMORY which holds data indicative of a reference signature. </paragraph>
+<paragraph id="P-00037" lvl="0"><number>37.</number> <cross-reference target="DRAWINGS">FIG. 10</cross-reference> illustrates a public data terminal, such as an advanced public telephone, having an associated DIGITIZING PAD, and also a power cable PC containing contacts C<highlight><bold>1</bold></highlight> which connect with contacts C<highlight><bold>2</bold></highlight> carried by a stylus <highlight><bold>6</bold></highlight>. </paragraph>
+<paragraph id="P-00038" lvl="0"><number>38.</number> <cross-reference target="DRAWINGS">FIG. 11</cross-reference> illustrates a stylus lacking batteries or other power source, which receives electrical power through contacts C<highlight><bold>2</bold></highlight>. </paragraph>
+<paragraph id="P-00039" lvl="0"><number>39.</number> <cross-reference target="DRAWINGS">FIG. 12</cross-reference> is a flow chart illustrating one signature verification procedure. </paragraph>
+<paragraph id="P-00040" lvl="0"><number>40.</number> <cross-reference target="DRAWINGS">FIG. 13</cross-reference> is a flow chart illustrating loading of reference signature data into a stylus. </paragraph>
+</section>
+</brief-description-of-drawings>
+<detailed-description>
+<section>
+<heading lvl="1">DETAILED DESCRIPTION OF THE INVENTION </heading>
+</section>
+<section>
+<heading lvl="1">Overview </heading>
+<paragraph id="P-00041" lvl="0"><number>41.</number> One form of the invention can conceptually be divided into two parts. One, a user writes a signature on a digitizing tablet, using a special stylus, and the tablet digitizes or otherwise parameterizes the signature. This signature may be called a sample signature. </paragraph>
+<paragraph id="P-00042" lvl="0"><number>42.</number> Two, the special stylus contains a pre-recorded, digitized image of the user&apos;s signature, which may be called a reference signature. The stylus transmits the reference signature to the digitizing tablet, which compares the sample signature with the reference signature. If they match, the user is assumed to be the actual owner of the stylus. </paragraph>
+</section>
+<section>
+<heading lvl="1">Detailed Description </heading>
+</section>
+<section>
+<heading lvl="1">Storage of Digitized Signature Data into Stylus </heading>
+</section>
+<section>
+<heading lvl="1">EXAMPLE 1 </heading>
+<paragraph id="P-00043" lvl="0"><number>43.</number> The reference signature data can be loaded into the MEMORY of the stylus <highlight><bold>6</bold></highlight> in <cross-reference target="DRAWINGS">FIG. 9</cross-reference> in numerous different ways. Perhaps the easiest to explain is the following procedure: </paragraph>
+<paragraph id="P-00044" lvl="2"><number>44.</number> (1) The user writes the reference signature onto a digitizing tablet, which digitizes the data, in the usual manner. The digitizing produces a table of reference data, which describes the reference signature. </paragraph>
+<paragraph id="P-00045" lvl="2"><number>45.</number> (2) The table is burned into a PROM, EPROM, EEPROM, or other memory chip. </paragraph>
+<paragraph id="P-00046" lvl="2"><number>46.</number> (3) The chip is installed into the stylus, producing the product shown in <cross-reference target="DRAWINGS">FIG. 9</cross-reference>. </paragraph>
+</section>
+<section>
+<heading lvl="1">EXAMPLE 2 </heading>
+<paragraph id="P-00047" lvl="0"><number>47.</number> Another approach eliminates the need to install a memory chip into the stylus, and is illustrated by the flow chart of <cross-reference target="DRAWINGS">FIG. 13</cross-reference>. A user writes a signature onto a digitizing tablet, as in <cross-reference target="DRAWINGS">FIG. 7</cross-reference>, and reference signature data is derived from the written signature, in a known manner. </paragraph>
+<paragraph id="P-00048" lvl="0"><number>48.</number> This reference data is then loaded into the MEMORY within the stylus (illustrated in <cross-reference target="DRAWINGS">FIG. 9</cross-reference>), using wireless telemetry described below. </paragraph>
+</section>
+<section>
+<heading lvl="1">Types of Digitized Parameters </heading>
+<paragraph id="P-00049" lvl="0"><number>49.</number> There are several formats for digitizing signature data. Perhaps the simplest is a bit-map of the signature: the collection of points in <cross-reference target="DRAWINGS">FIG. 7</cross-reference> comprises a bit-map of the signature. </paragraph>
+<paragraph id="P-00050" lvl="0"><number>50.</number> Two other formats are illustrated in the following U.S. patents, which are hereby incorporated by reference: </paragraph>
+<paragraph id="P-00051" lvl="2"><number>51.</number> U.S. Pat. No. 5,285,506, Crooks et al., issued Feb. 8, 1994, Ser. No. 693,822, filed Apr. 30, 1991; and </paragraph>
+<paragraph id="P-00052" lvl="2"><number>52.</number> U.S. Pat. No. 5,054,088, Gunderson et al., issued Oct. 1, 1991, Ser. No. 409,906, filed Sep. 20, 1989. </paragraph>
+<paragraph id="P-00053" lvl="0"><number>53.</number> The particular format used in digitizing the signature is not necessarily significant. </paragraph>
+</section>
+<section>
+<heading lvl="1">Manner of Data Transfer </heading>
+<paragraph id="P-00054" lvl="0"><number>54.</number> It is preferred that the data transfer between the stylus and the digitizing tablet be accomplished by wireless telemetry. </paragraph>
+<paragraph id="P-00055" lvl="0"><number>55.</number> Examples of data transfer between a stylus and a digitizing tablet are given in the following U.S. patents, which are hereby incorporated by reference: </paragraph>
+<paragraph id="P-00056" lvl="2"><number>56.</number> U.S. Pat. No. 4,672,154, Rodgers, et al., issued Jun. 9, 1987, Ser. No. 719,351, filed Apr. 3, 1985; </paragraph>
+<paragraph id="P-00057" lvl="2"><number>57.</number> U.S. Pat. No. 5,247,138, Landmeier, issued Sep. 21, 1993, Ser. No. 789,665, filed Nov. 8, 1991; </paragraph>
+<paragraph id="P-00058" lvl="2"><number>58.</number> U.S. Pat. No. 5,294,792, Lewis, et al., issued Mar. 15, 1994, Ser. No. 816,330, filed Dec. 31, 1991; and </paragraph>
+<paragraph id="P-00059" lvl="2"><number>59.</number> U.S. Pat. No. 5,247,137, Epperson, issued Sep. 21, 1993, Ser. No. 782,615, filed Oct. 25, 1991. </paragraph>
+<paragraph id="P-00060" lvl="0"><number>60.</number> In addition, pending U.S. application Ser. No. 08/200,721, filed by Frank Gasparik, on Feb. 23, 1994, entitled &ldquo;Synchronous Telemetry Channel&rdquo; is hereby incorporated by reference. </paragraph>
+<paragraph id="P-00061" lvl="0"><number>61.</number> The telemetry can be radio-frequency, optical, acoustical, or other types. Numerous approaches, known in the art, exist for transfer of data between a computer and a remote component. </paragraph>
+<paragraph id="P-00062" lvl="0"><number>62.</number> As an alternate to wireless telemetry, a removable, hard-wired connection can be made between the stylus and a digitizing device. For example, the stylus can contain metallic contacts which mate with a receiver, as shown in <cross-reference target="DRAWINGS">FIG. 10</cross-reference>. The hard-wired approach can be useful in situations where it is desired to deliver electrical power to the stylus, as for charging a battery, or for allowing the stylus to consume larger amounts of power than are feasible to provide via battery. </paragraph>
+</section>
+<section>
+<heading lvl="1">Important Considerations </heading>
+<paragraph id="P-00063" lvl="0"><number>63.</number> 1. The signature need not be the actual, legal signature of the user. The signature can be any graphical image which the user draws. It can be a word, or a picture, and can be described generically as an &ldquo;image.&rdquo; </paragraph>
+<paragraph id="P-00064" lvl="0"><number>64.</number> 2. The time of transfer of the reference data, relative to the time of writing the signature, is not necessarily significant. For example, the transfer of reference data can be done prior to the writing of the sample signature, or afterward. </paragraph>
+<paragraph id="P-00065" lvl="0"><number>65.</number> Also, the reference data can be transferred during writing of the signature. That is, a multiplexing between position data and signature transfer data can be undertaken. </paragraph>
+<paragraph id="P-00066" lvl="0"><number>66.</number> Further, the transfer of the reference signature data can be accomplished by a second data channel, independent of the position signal <highlight><bold>9</bold></highlight> shown in <cross-reference target="DRAWINGS">FIG. 3</cross-reference>. Such a channel is described in the U.S. Patent Application of Frank Gasparik, identified above. </paragraph>
+<paragraph id="P-00067" lvl="0"><number>67.</number> 3. From one perspective, there are two computation tasks involved: </paragraph>
+<paragraph id="P-00068" lvl="2"><number>68.</number> (1) producing sample data from the sample signature, and </paragraph>
+<paragraph id="P-00069" lvl="2"><number>69.</number> (2) comparing the sample data with the reference data. </paragraph>
+<paragraph id="P-00070" lvl="0"><number>70.</number> How these tasks are allocated between devices is not necessarily significant. For example, the digitizing tablet may contain a processor which produces the sample data described in task (1). However, a computer may perform the comparison described in task (2). </paragraph>
+<paragraph id="P-00071" lvl="0"><number>71.</number> 4. It should be observed that the reference data stored within the stylus is not mere intangible information. For example, data stored in a PROM takes the form of fuses, which are either blown or intact. A blown fuse indicates a ZERO, and an intact fuse indicates a ONE (or vice-versa). Similar observations apply to EPROMS and EEPROMS. </paragraph>
+<paragraph id="P-00072" lvl="0"><number>72.</number> Thus, even though the reference signature data comprises indicia of the reference signature, the reference signature data is nevertheless a tangible entity. </paragraph>
+<paragraph id="P-00073" lvl="0"><number>73.</number> 5. Power consumption in styluses used with digitizing tablets is an important issue: batteries used to power the styluses occupy space, and must be replaced or recharged periodically. </paragraph>
+<paragraph id="P-00074" lvl="0"><number>74.</number> It may be desirable to construct a stylus which contains no batteries at all, and which draws all of its power from an external, stationary source. <cross-reference target="DRAWINGS">FIGS. 10 and 11</cross-reference> provide an example. </paragraph>
+<paragraph id="P-00075" lvl="0"><number>75.</number> In <cross-reference target="DRAWINGS">FIG. 10, a</cross-reference> user attaches the stylus to a power cord PC, which provides power to the stylus. A VOLTAGE COMPARATOR in <cross-reference target="DRAWINGS">FIG. 11</cross-reference> tests whether proper voltage is being delivered, and lights an LED when proper voltage is received. </paragraph>
+<paragraph id="P-00076" lvl="0"><number>76.</number> With this arrangement, the stylus can produce a higher-power signal <highlight><bold>9</bold></highlight> in <cross-reference target="DRAWINGS">FIG. 3</cross-reference>, without concern over battery depletion. In addition, the power cord PC can contain a channel for downloading of the reference signature data, in order to eliminate telemetry. </paragraph>
+<paragraph id="P-00077" lvl="0"><number>77.</number> 6. The invention can allow local identification of a user, without the requirement of added telecommunication. An example of identification, in which telecommunication is required, will illustrate. </paragraph>
+<paragraph id="P-00078" lvl="0"><number>78.</number> When a user enters a card into an Automated Teller Machine (ATM), the ATM asks the user for a password. Meanwhile, the ATM links, by telephone generally, to a central computer, and finds out the user&apos;s password. The ATM then compares the password which the user entered with the password learned from the central computer. This telecommunication takes time, adds cost, and is subject to failure under certain conditions, such as thunderstorms. </paragraph>
+<paragraph id="P-00079" lvl="0"><number>79.</number> The invention eliminates the requirement of contacting a central computer. <cross-reference target="DRAWINGS">FIG. 12</cross-reference> describes a sequence of steps of identification of a user, without resort to telecommunication. </paragraph>
+<paragraph id="P-00080" lvl="0"><number>80.</number> 7. The following examples illustrate situations in which identification of a user can be made by signature. The list is certainly not exhaustive. </paragraph>
+<paragraph id="P-00081" lvl="2"><number>81.</number> a) Admission of a user to restricted locations. </paragraph>
+<paragraph id="P-00082" lvl="2"><number>82.</number> b) Granting of access to a user to computer installations. </paragraph>
+<paragraph id="P-00083" lvl="2"><number>83.</number> c) Granting access to ATMs. </paragraph>
+<paragraph id="P-00084" lvl="0"><number>84.</number> 8. The data stored in the stylus need not be limited to data which can be used to identify the user&apos;s signature. Rather, the data can be the type used to interpret the user&apos;s handwriting generally. </paragraph>
+<paragraph id="P-00085" lvl="0"><number>85.</number> For example, the sample written by the user, as indicated in <cross-reference target="DRAWINGS">FIG. 7</cross-reference>, may be required to contain a sufficient number of symbols to characterize the user&apos;s handwriting, for purposes of allowing a computer to later read the user&apos;s handwriting. </paragraph>
+<paragraph id="P-00086" lvl="0"><number>86.</number> The system derives the necessary handwriting characteristics from the sample, according to the method of handwriting recognition used by the system. Such handwriting characterization is known in the art. The system then loads these characteristics into memory contained in the stylus, in a manner similar to loading the reference signature data. </paragraph>
+<paragraph id="P-00087" lvl="0"><number>87.</number> Later, when the user interfaces with a computer, using the stylus, the stylus transmits the user&apos;s handwriting characteristics to the computer, in the manner described above. The computer uses these characteristics to interpret the user&apos;s handwriting. </paragraph>
+<paragraph id="P-00088" lvl="0"><number>88.</number> As a very simple example, which illustrates some of the underlying principles, will be given. The sample which the user writes may contain every letter of the alphabet, both upper and lower case, plus the ten numerals. The system digitizes each character, as described in connection with <cross-reference target="DRAWINGS">FIG. 7</cross-reference>. Now, the system contains a digitized sample representing each letter and number of the user&apos;s handwriting. </paragraph>
+<paragraph id="P-00089" lvl="0"><number>89.</number> These digitized samples are stored within the stylus. When the user wishes to deal with a computer, the stylus downloads the digitized samples to the computer. When the user writes handwriting on the digitizing tablet, the computer compares each letter with the digitized samples, and selects the best match, thereby interpreting the handwriting. </paragraph>
+<paragraph id="P-00090" lvl="0"><number>90.</number> Of course, advanced handwriting systems do not perform this comparison of digitized characters. Instead, they characterize the user&apos;s handwriting in other ways, but the basic idea is still the same: obtain unique characteristics of the user&apos;s handwriting (i.e., &ldquo;learn&rdquo; the user&apos;s handwriting), and then interpret the user&apos;s handwriting, based on these characteristics. </paragraph>
+<paragraph id="P-00091" lvl="0"><number>91.</number> Of course, the data indicative of the user&apos;s handwriting characteristics can be loaded into the stylus in other ways, and the particular method of loading is not necessarily significant. Thus, one important aspect of the invention is the storage, no matter how achieved, within the stylus, of data which is used to recognize a user&apos;s handwriting. </paragraph>
+<paragraph id="P-00092" lvl="0"><number>92.</number> Numerous substitutions and modifications can be undertaken without departing from the true spirit and scope of the invention. What is desired to be secured by Letters Patent is the Invention as defined in the following claims. </paragraph>
+</section>
+</detailed-description>
+</subdoc-description>
+<subdoc-claims>
+<heading lvl="1">What is claimed is: </heading>
+<claim id="CLM-00001">
+<claim-text><highlight><bold>1</bold></highlight>. In a hand-held stylus which delivers signals to a digitizing tablet, the improvement comprising: 
+<claim-text>a) stored data which can be used to interpret a user&apos;s handwriting. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002">
+<claim-text><highlight><bold>2</bold></highlight>. In a hand-held stylus which is used to transfer data to a digitizing tablet, the improvement comprising: 
+<claim-text>a) memory for storing characteristics of a user&apos;s handwriting; and </claim-text>
+<claim-text>b) means for transferring said characteristics to a receiver. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00003">
+<claim-text><highlight><bold>3</bold></highlight>. For a signature verification system, the improvement comprising: 
+<claim-text>a) means for parameterizing a signature; and </claim-text>
+<claim-text>b) means for loading the parameterized signature into a stylus. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00004">
+<claim-text><highlight><bold>4</bold></highlight>. A stylus for writing upon a digitizing tablet, comprising: 
+<claim-text>a) means for producing a position signal to be received by the tablet; </claim-text>
+<claim-text>b) memory for storing signature data within the stylus; and </claim-text>
+<claim-text>c) telemetry means for transmitting the stored signature data. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00005">
+<claim-text><highlight><bold>5</bold></highlight>. A signature verification system, comprising: 
+<claim-text>a) a portable hand-held stylus which contains 
+<claim-text>i) memory for storing reference data indicative of a user&apos;s signature; and </claim-text>
+<claim-text>ii) transmission means for transmitting the reference data; and </claim-text>
+</claim-text>
+<claim-text>b) a stationary system, for 
+<claim-text>i) receiving the transmitted reference data, </claim-text>
+<claim-text>ii) allowing the user to write a sample signature, and </claim-text>
+<claim-text>iii) comparing the reference data with the sample signature. </claim-text>
+</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00006">
+<claim-text><highlight><bold>6</bold></highlight>. A system according to <dependent-claim-reference depends_on="CLM-00005"><claim-text>claim 5</claim-text></dependent-claim-reference>, and further comprising: 
+<claim-text>c) a stationary power source, for delivery of power to the stylus. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00007">
+<claim-text><highlight><bold>7</bold></highlight>. A system according to <dependent-claim-reference depends_on="CLM-00006"><claim-text>claim 6</claim-text></dependent-claim-reference>, in which the stationary power source comprises a power cord connectable to the stylus. </claim-text>
+</claim>
+<claim id="CLM-00008">
+<claim-text><highlight><bold>8</bold></highlight>. A system according to <dependent-claim-reference depends_on="CLM-00007"><claim-text>claim 7</claim-text></dependent-claim-reference>, in which the power cord comprises a data channel for delivering the reference data to the digitizing system. </claim-text>
+</claim>
+<claim id="CLM-00009">
+<claim-text><highlight><bold>9</bold></highlight>. A system according to <dependent-claim-reference depends_on="CLM-00005"><claim-text>claim 5</claim-text></dependent-claim-reference>, in which the stylus contains no power source. </claim-text>
+</claim>
+<claim id="CLM-00010">
+<claim-text><highlight><bold>10</bold></highlight>. In a system which detects position of a stylus on a tablet, the improvement comprising the step of: 
+<claim-text>a) transmitting stored data, indicative of characteristics of human&apos;s handwriting, from the stylus. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00011">
+<claim-text><highlight><bold>11</bold></highlight>. A method of loading data into a stylus, which produces a position signal for use by a digitizing tablet, comprising: 
+<claim-text>a) generating digitized data, based on a word written by the stylus; and then </claim-text>
+<claim-text>b) loading the digitized data into the stylus. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00012">
+<claim-text><highlight><bold>12</bold></highlight>. A method of storing indicia of a signature, comprising the following steps: 
+<claim-text>a) using a stylus, drawing the signature; </claim-text>
+<claim-text>b) deriving indicia of the signature; and </claim-text>
+<claim-text>c) storing the indicia into the stylus. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00013">
+<claim-text><highlight><bold>13</bold></highlight>. A method of verifying the signature of a user of a communication device, comprising the following steps: 
+<claim-text>a) transmitting reference data, which describes the user&apos;s signature, to the communication device from a stylus held by the user; </claim-text>
+<claim-text>b) deriving sample data from a signature written by the user; and </claim-text>
+<claim-text>c) comparing the reference data with the sample data. </claim-text>
+</claim-text>
+</claim>
+</subdoc-claims>
+<subdoc-drawings id="DRAWINGS">
+<heading lvl="0" align="CENTER">Drawings</heading>
+<representative-figure>7</representative-figure>
+<figure id="figure-D00001">
+<image id="EMI-D00001" file="US20010000026A1-20010315-D00001.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00002">
+<image id="EMI-D00002" file="US20010000026A1-20010315-D00002.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00003">
+<image id="EMI-D00003" file="US20010000026A1-20010315-D00003.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00004">
+<image id="EMI-D00004" file="US20010000026A1-20010315-D00004.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00005">
+<image id="EMI-D00005" file="US20010000026A1-20010315-D00005.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00006">
+<image id="EMI-D00006" file="US20010000026A1-20010315-D00006.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00007">
+<image id="EMI-D00007" file="US20010000026A1-20010315-D00007.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00008">
+<image id="EMI-D00008" file="US20010000026A1-20010315-D00008.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00009">
+<image id="EMI-D00009" file="US20010000026A1-20010315-D00009.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00010">
+<image id="EMI-D00010" file="US20010000026A1-20010315-D00010.TIF" imf="TIFF" ti="DR"/>
+</figure>
+</subdoc-drawings>
+</patent-application-publication>
+

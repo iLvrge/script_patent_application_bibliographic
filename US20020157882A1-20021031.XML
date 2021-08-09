@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patent-application-publication SYSTEM "pap-v16-2002-01-01.dtd" [
+<!ENTITY US20020157882A1-20021031-D00000.TIF SYSTEM "US20020157882A1-20021031-D00000.TIF" NDATA TIF>
+<!ENTITY US20020157882A1-20021031-D00001.TIF SYSTEM "US20020157882A1-20021031-D00001.TIF" NDATA TIF>
+<!ENTITY US20020157882A1-20021031-D00002.TIF SYSTEM "US20020157882A1-20021031-D00002.TIF" NDATA TIF>
+<!ENTITY US20020157882A1-20021031-D00003.TIF SYSTEM "US20020157882A1-20021031-D00003.TIF" NDATA TIF>
+<!ENTITY US20020157882A1-20021031-D00004.TIF SYSTEM "US20020157882A1-20021031-D00004.TIF" NDATA TIF>
+<!ENTITY US20020157882A1-20021031-D00005.TIF SYSTEM "US20020157882A1-20021031-D00005.TIF" NDATA TIF>
+<!ENTITY US20020157882A1-20021031-D00006.TIF SYSTEM "US20020157882A1-20021031-D00006.TIF" NDATA TIF>
+<!ENTITY US20020157882A1-20021031-D00007.TIF SYSTEM "US20020157882A1-20021031-D00007.TIF" NDATA TIF>
+]>
+<patent-application-publication>
+<subdoc-bibliographic-information>
+<document-id>
+<doc-number>20020157882</doc-number>
+<kind-code>A1</kind-code>
+<document-date>20021031</document-date>
+</document-id>
+<publication-filing-type>new</publication-filing-type>
+<domestic-filing-data>
+<application-number>
+<doc-number>09959910</doc-number>
+</application-number>
+<application-number-series-code>09</application-number-series-code>
+<filing-date>20011113</filing-date>
+</domestic-filing-data>
+<foreign-priority-data>
+<priority-application-number>
+<doc-number>2000-78462</doc-number>
+</priority-application-number>
+<filing-date>20000321</filing-date>
+<country-code>JP</country-code>
+</foreign-priority-data>
+<technical-information>
+<classification-ipc>
+<classification-ipc-primary>
+<ipc>B60K006/04</ipc>
+</classification-ipc-primary>
+<classification-ipc-edition>07</classification-ipc-edition>
+</classification-ipc>
+<classification-us>
+<classification-us-primary>
+<uspc>
+<class>180</class>
+<subclass>065300</subclass>
+</uspc>
+</classification-us-primary>
+</classification-us>
+<title-of-invention>Control device for hybrid vehicle</title-of-invention>
+</technical-information>
+<inventors>
+<first-named-inventor>
+<name>
+<given-name>Asami</given-name>
+<family-name>Kubo</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Kanagawa</city>
+<country-code>JP</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</first-named-inventor>
+<inventor>
+<name>
+<given-name>Kenichi</given-name>
+<family-name>Goto</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Kanagawa</city>
+<country-code>JP</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</inventor>
+</inventors>
+<correspondence-address>
+<name-1>Richard L Schwaab</name-1>
+<name-2>Foley &amp; Lardner</name-2>
+<address>
+<address-1>Washington Harbour Suite 500</address-1>
+<address-2>3000 K Street NW PO Box 25696</address-2>
+<city>Washington</city>
+<state>DC</state>
+<postalcode>20007-8696</postalcode>
+<country>
+<country-code>US</country-code>
+</country>
+</address>
+</correspondence-address>
+<international-conventions>
+<pct-application>
+<document-id>
+<doc-number>PCT/JP01/02105</doc-number>
+<document-date>20010316</document-date>
+<country-code>WO</country-code>
+</document-id>
+</pct-application>
+</international-conventions>
+</subdoc-bibliographic-information>
+<subdoc-abstract>
+<paragraph id="A-0001" lvl="0">A hybrid vehicle is provided with an internal combustion engine as a power source and an electric motor. The electric motor is used to charge the high-voltage battery. Charge/discharge control of the high-voltage battery and an idle-stop control can be performed, taking into account battery deterioration. For this purpose, the internal resistance R is detected as a degree of deterioration in the high-voltage battery. When the internal resistance R is less than a predetermined resistance R<highlight><bold>1</bold></highlight>, a threshold value of a state of charge (SOC) of the high-voltage battery, SOCa above which the idle stop operation permitted is set, fitted to an initial condition wherein the high-voltage battery has not undergone deterioration. On the other hand, when the internal resistance R is greater than or equal to the predetermined value R<highlight><bold>1</bold></highlight>, the threshold value tSOCa is varied to higher value. Further, a target SOC of the high-voltage battery is varied in response to the degree of deterioration of the battery. In order to regenerate sufficient inertial energy during deceleration, the target SOC for the high-voltage battery when the vehicle is not decelerating is set to a lower value than the target state of charge when the vehicle is decelerating. </paragraph>
+</subdoc-abstract>
+<subdoc-description>
+<summary-of-invention>
+<section>
+<heading lvl="1">FIELD OF THE INVENTION </heading>
+<paragraph id="P-0001" lvl="0"><number>&lsqb;0001&rsqb;</number> This invention relates to a control device for a hybrid vehicle which comprises an engine and an electric motor as a source of drive force, the electric motor being used as a generator. </paragraph>
+</section>
+<section>
+<heading lvl="1">BACKGROUND OF THE INVENTION </heading>
+<paragraph id="P-0002" lvl="0"><number>&lsqb;0002&rsqb;</number> Recently, the hybrid vehicle comprising an engine acting as a source of motive power for running the vehicle and an electric motor having a battery as a power supply has been developed. Tokkai Hei 10-201003 published by the Japanese Patent Office in 1998 discloses a hybrid vehicle having a generator in addition to an electric motor, the generator normally being driven in order to return the state of charge (SOC) of the battery to a fully charged level when the state of charge of the battery decreases. </paragraph>
+</section>
+<section>
+<heading lvl="1">SUMMARY OF THE INVENTION </heading>
+<paragraph id="P-0003" lvl="0"><number>&lsqb;0003&rsqb;</number> However, in this type of hybrid vehicle, there is no provision for handling the battery charge of a deteriorated battery. As a result, when the battery consumes electric power, the state of charge is increased to substantially an initial fully charged level rather than the actual fully charged level. Unlike the battery in an initial state wherein there is no deterioration (i.e., unlike a brand-new battery), the deteriorated battery has the possibility of being overcharged when the control described above is used. This is because the fully charged level of a deteriorated battery is lower than an initial fully charged level. </paragraph>
+<paragraph id="P-0004" lvl="0"><number>&lsqb;0004&rsqb;</number> Moreover, when a battery has deteriorated, the chargeable capacity of the battery while the vehicle is decelerating is eliminated as a result of the lowered chargeable level if a target state of charge is maintained at a high level in a non-deceleration driving state. This results in inefficient regeneration of energy. </paragraph>
+<paragraph id="P-0005" lvl="0"><number>&lsqb;0005&rsqb;</number> Furthermore it is necessary to provide for battery deterioration in a hybrid vehicle provided with an idle-stop function which can automatically stop the engine when the vehicle is brought to a temporary halt and automatically restart the engine with the electric motor when predetermined conditions are fulfilled. This is due to the fact that when the battery deteriorates, a voltage drop occurs as a result of the increase in the internal resistance of the battery and therefore the electric motor cannot generate a sufficient output to start the engine. </paragraph>
+<paragraph id="P-0006" lvl="0"><number>&lsqb;0006&rsqb;</number> It is therefore an object of this invention to avoid overcharging of a battery by controlling a battery state of charge in response to the actual chargeable capacity of a battery which is undergoing deterioration. </paragraph>
+<paragraph id="P-0007" lvl="0"><number>&lsqb;0007&rsqb;</number> It is a further object of this invention to maintain a chargeable capacity of a battery and to increase the efficiency of regeneration of energy during deceleration. </paragraph>
+<paragraph id="P-0008" lvl="0"><number>&lsqb;0008&rsqb;</number> It is yet a further object of this invention to guarantee stable vehicle restarting and to avoid shortfalls in the output of the electric motor when restarting the engine after an idle-stop operation. </paragraph>
+<paragraph id="P-0009" lvl="0"><number>&lsqb;0009&rsqb;</number> In order to achieve above objects, this invention provides a control device for a hybrid vehicle, the vehicle having an engine (<highlight><bold>1</bold></highlight>) as a power source for running the vehicle and a motor/generator (<highlight><bold>2</bold></highlight>), and the control device comprising a high-voltage battery (<highlight><bold>11</bold></highlight>) which functions as a power source for the motor/generator (<highlight><bold>2</bold></highlight>), a low-voltage battery (<highlight><bold>14</bold></highlight>) for vehicle-mounted electrical loads which has a lower voltage than the high-voltage battery (<highlight><bold>11</bold></highlight>), an inverter (<highlight><bold>12</bold></highlight>) for controlling the motor/generator (<highlight><bold>2</bold></highlight>), a sensor (<highlight><bold>18</bold></highlight>,<highlight><bold>19</bold></highlight>) which detects a condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); and a microprocessor (<highlight><bold>16</bold></highlight>). </paragraph>
+<paragraph id="P-0010" lvl="0"><number>&lsqb;0010&rsqb;</number> The microprocessor is programmed to compute a state of charge (SOC) of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>), compute a degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>), control a current generated by the motor/generator (<highlight><bold>2</bold></highlight>) so that the SOC of the high-voltage battery (<highlight><bold>11</bold></highlight>) coincides with a target SOC; and vary the target SOC according to the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>). </paragraph>
+<paragraph id="P-0011" lvl="0"><number>&lsqb;0011&rsqb;</number> The details as well as other features and advantages of this invention are set forth in the remainder of the specification and are shown in the accompanying drawings.</paragraph>
+</section>
+</summary-of-invention>
+<brief-description-of-drawings>
+<section>
+<heading lvl="1">BRIEF DESCRIPTION OF THE DRAWINGS </heading>
+<paragraph id="P-0012" lvl="0"><number>&lsqb;0012&rsqb;</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> is a schematic diagram of a drive system for a hybrid vehicle according to this invention. </paragraph>
+<paragraph id="P-0013" lvl="0"><number>&lsqb;0013&rsqb;</number> <cross-reference target="DRAWINGS">FIG. 2</cross-reference> is a schematic diagram of a control device for a hybrid vehicle according to this invention. </paragraph>
+<paragraph id="P-0014" lvl="0"><number>&lsqb;0014&rsqb;</number> <cross-reference target="DRAWINGS">FIG. 3</cross-reference> is a flowchart describing a main control routine executed by a control unit according to this invention. </paragraph>
+<paragraph id="P-0015" lvl="0"><number>&lsqb;0015&rsqb;</number> <cross-reference target="DRAWINGS">FIG. 4</cross-reference> is a flowchart describing a sub-routine in <cross-reference target="DRAWINGS">FIG. 3</cross-reference>, for computing a threshold value SOCa of a state of charge and a target state of charge tSOC. </paragraph>
+<paragraph id="P-0016" lvl="0"><number>&lsqb;0016&rsqb;</number> <cross-reference target="DRAWINGS">FIG. 5</cross-reference> is a flowchart describing the sub-routine in <cross-reference target="DRAWINGS">FIG. 4</cross-reference>. </paragraph>
+<paragraph id="P-0017" lvl="0"><number>&lsqb;0017&rsqb;</number> <cross-reference target="DRAWINGS">FIG. 6</cross-reference> is a flowchart describing a charge/discharge control routine executed by a control unit according to this invention. </paragraph>
+<paragraph id="P-0018" lvl="0"><number>&lsqb;0018&rsqb;</number> <cross-reference target="DRAWINGS">FIG. 7</cross-reference> is a flowchart describing an idle-stop control routine executed by a control unit according to this invention.</paragraph>
+</section>
+</brief-description-of-drawings>
+<detailed-description>
+<section>
+<heading lvl="1">DESCRIPTION OF THE PREFERRED EMBODIMENTS </heading>
+<paragraph id="P-0019" lvl="0"><number>&lsqb;0019&rsqb;</number> Referring to <cross-reference target="DRAWINGS">FIG. 1</cross-reference> of the drawings, a hybrid vehicle applying this invention comprises an engine <highlight><bold>1</bold></highlight>, a motor/generator <highlight><bold>2</bold></highlight> which is directly connected to the engine <highlight><bold>1</bold></highlight>, a transmission <highlight><bold>3</bold></highlight> which is connected to the motor/generator <highlight><bold>2</bold></highlight>, an output shaft <highlight><bold>4</bold></highlight> of the transmission <highlight><bold>3</bold></highlight> and a drive shaft <highlight><bold>6</bold></highlight> which transmits the rotation of the output shaft <highlight><bold>4</bold></highlight> through a differential gear <highlight><bold>5</bold></highlight>. </paragraph>
+<paragraph id="P-0020" lvl="0"><number>&lsqb;0020&rsqb;</number> The vehicle is provided with an idle-stop function which automatically stops the engine <highlight><bold>1</bold></highlight> for example when the vehicle is temporarily stationary. The motor/generator <highlight><bold>2</bold></highlight> cranks the engine <highlight><bold>1</bold></highlight> when the engine <highlight><bold>1</bold></highlight> is started. For example, the motor/generator <highlight><bold>2</bold></highlight> restarts the engine <highlight><bold>1</bold></highlight> on each occasion that conditions for engine restart are satisfied after an idle-stop operation. In contrast, the motor/generator <highlight><bold>2</bold></highlight> is driven as a generator during deceleration in order to regenerate the inertial energy of the running vehicle. In addition, the motor/generator <highlight><bold>2</bold></highlight> charges the battery and supplies electrical current for other electrical loads. </paragraph>
+<paragraph id="P-0021" lvl="0"><number>&lsqb;0021&rsqb;</number> Referring to <cross-reference target="DRAWINGS">FIG. 2</cross-reference>, the electrical power supply system of a hybrid vehicle applying this invention comprises a high-voltage battery <highlight><bold>11</bold></highlight>, an inverter <highlight><bold>12</bold></highlight>, a junction box <highlight><bold>13</bold></highlight>, a low-voltage battery <highlight><bold>14</bold></highlight> and a DC/DC converter <highlight><bold>15</bold></highlight>. The high-voltage battery <highlight><bold>11</bold></highlight> acts as a charging/discharging power source and is rated to 42&lsqb;V&rsqb;. More precisely, the high-voltage battery <highlight><bold>11</bold></highlight> is a lead-acid battery (a lead storage battery having an electrode of a lead grid containing lead oxide whereof the composition changes during charging and discharging, and an electrolyte of dilute sulfuric acid). </paragraph>
+<paragraph id="P-0022" lvl="0"><number>&lsqb;0022&rsqb;</number> Referring to <cross-reference target="DRAWINGS">FIG. 2, a</cross-reference> control device for a hybrid vehicle according to this invention comprises a control unit (C/U) <highlight><bold>16</bold></highlight>, a first current sensor <highlight><bold>17</bold></highlight> which detects a generated current IMG generated by the motor/generator <highlight><bold>2</bold></highlight> and converted by the inverter <highlight><bold>12</bold></highlight>, a second current sensor <highlight><bold>18</bold></highlight> which detects a charging current (or a discharging current) IH to the high-voltage battery <highlight><bold>11</bold></highlight>, a voltage sensor <highlight><bold>19</bold></highlight> which detects terminal voltage VH of the high-voltage battery <highlight><bold>11</bold></highlight>, a rotation speed sensor <highlight><bold>31</bold></highlight> which detects a rotation speed Ne of the engine <highlight><bold>1</bold></highlight>, a key switch <highlight><bold>32</bold></highlight>, a start switch <highlight><bold>33</bold></highlight>, a vehicle speed sensor <highlight><bold>34</bold></highlight> which detects a vehicle speed VSP, an idle switch <highlight><bold>35</bold></highlight> which detects the release or depression of the accelerator pedal and a brake switch <highlight><bold>36</bold></highlight> which detects the depression of the brake pedal. </paragraph>
+<paragraph id="P-0023" lvl="0"><number>&lsqb;0023&rsqb;</number> When the motor/generator <highlight><bold>2</bold></highlight> is driven as a generator, a three-phase current generated by the motor/generator <highlight><bold>2</bold></highlight> is converted to a DC current by the inverter <highlight><bold>12</bold></highlight> and supplied to the high-voltage battery <highlight><bold>11</bold></highlight> through the junction box <highlight><bold>13</bold></highlight>. On the other hand, when the motor/generator <highlight><bold>2</bold></highlight> functions as a motor when electrical current is discharged, electrical power from the high-voltage battery <highlight><bold>11</bold></highlight> is converted to a three-phase current through the inverter <highlight><bold>12</bold></highlight> and the junction box <highlight><bold>13</bold></highlight> and supplied to the motor/generator <highlight><bold>2</bold></highlight>. </paragraph>
+<paragraph id="P-0024" lvl="0"><number>&lsqb;0024&rsqb;</number> A low-voltage battery <highlight><bold>14</bold></highlight> which acts as a power source for vehicle-mounted electrical loads including engine auxiliary loads is a standard lead-acid battery rated to 14 &lsqb;V&rsqb;. After a part of the generated current from the motor/generator <highlight><bold>2</bold></highlight> passes through the inverter <highlight><bold>12</bold></highlight> and the junction box <highlight><bold>13</bold></highlight>, it is stored in the low-voltage battery <highlight><bold>14</bold></highlight> via the DC/DC converter <highlight><bold>15</bold></highlight>. </paragraph>
+<paragraph id="P-0025" lvl="0"><number>&lsqb;0025&rsqb;</number> The control unit (C/U) <highlight><bold>16</bold></highlight> comprises a timer and a microprocessor which has a central processing unit (CPU), a random access memory (RAM), a read only memory (ROM) and an input/output interface (I/O interface) (not shown). The control unit <highlight><bold>16</bold></highlight> controls the motor/generator <highlight><bold>2</bold></highlight> through the inverter <highlight><bold>12</bold></highlight>. Furthermore the control unit <highlight><bold>16</bold></highlight> controls the engine <highlight><bold>1</bold></highlight>. The control unit <highlight><bold>16</bold></highlight> performs the idle-stop control and the battery charge/discharge control based on signals from the sensors described above. </paragraph>
+<paragraph id="P-0026" lvl="0"><number>&lsqb;0026&rsqb;</number> The control unit <highlight><bold>16</bold></highlight> sets the target state of charge tSOC of the high-voltage battery <highlight><bold>11</bold></highlight> and the threshold value of state of charge SOCa of the high-voltage battery <highlight><bold>11</bold></highlight>. Here the threshold value SOCa is a threshold value used when determining whether or not an idle-stop operation is permitted The idle-stop operation is allowed only when the actual state of charge is greater than the threshold value SOCa. </paragraph>
+<paragraph id="P-0027" lvl="0"><number>&lsqb;0027&rsqb;</number> Control performed by the control unit <highlight><bold>16</bold></highlight> will be described below based on the flowcharts in <cross-reference target="DRAWINGS">FIG. 3</cross-reference> to <cross-reference target="DRAWINGS">FIG. 7</cross-reference>. </paragraph>
+<paragraph id="P-0028" lvl="0"><number>&lsqb;0028&rsqb;</number> Referring to <cross-reference target="DRAWINGS">FIG. 3</cross-reference>, the main control routine performed by the control unit <highlight><bold>16</bold></highlight> according to this invention will be described. </paragraph>
+<paragraph id="P-0029" lvl="0"><number>&lsqb;0029&rsqb;</number> When the engine key (hereafter referred to as key) is placed in the ON position, firstly in a step SI, the control unit <highlight><bold>16</bold></highlight> determines whether the start switch is in the ON or OFF position. When the start switch is ON, the routine proceeds to a step S<highlight><bold>2</bold></highlight> where the target state of charge tSOC and the threshold value of state of charge SOCa are computed. </paragraph>
+<paragraph id="P-0030" lvl="0"><number>&lsqb;0030&rsqb;</number> Then in a step S<highlight><bold>3</bold></highlight>, it is determined whether the key is in the ON or the OFF position. When the key is in the OFF position, a timer is reset in a step S<highlight><bold>4</bold></highlight>. When the key is in the ON position, the battery charge/discharge control routine shown by the flowchart in <cross-reference target="DRAWINGS">FIG. 6</cross-reference> and the idle-stop control routine shown by the flowchart in <cross-reference target="DRAWINGS">FIG. 7</cross-reference> are executed in a step S<highlight><bold>7</bold></highlight> and S<highlight><bold>8</bold></highlight>, respectively until the key is in the OFF position. </paragraph>
+<paragraph id="P-0031" lvl="0"><number>&lsqb;0031&rsqb;</number> After the step S<highlight><bold>4</bold></highlight>, the routine proceeds to a step S<highlight><bold>5</bold></highlight>. In the step S<highlight><bold>5</bold></highlight>, a flag F<highlight><bold>1</bold></highlight> is set to zero. The flag F<highlight><bold>1</bold></highlight> is used when the control unit <highlight><bold>16</bold></highlight> determines whether or not an idle-stop operation is permitted. When the flag has a value of zero, i.e. F<highlight><bold>1</bold></highlight>&equals;0, the idle-stop operation is allowed and when the flag has a value of one, i.e. F<highlight><bold>1</bold></highlight>&equals;1, the idle-stop operation is prohibited. In a step S<highlight><bold>6</bold></highlight>, the main routine is terminated, placing the main relay <highlight><bold>21</bold></highlight> in the junction box <highlight><bold>13</bold></highlight> in an OFF position and opening the terminal of the high-voltage battery <highlight><bold>11</bold></highlight>. </paragraph>
+<paragraph id="P-0032" lvl="0"><number>&lsqb;0032&rsqb;</number> Referring to the flowchart shown in <cross-reference target="DRAWINGS">FIG. 4, a</cross-reference> sub-routine for computing the target state of charge tSOC and the threshold value of state of charge SOCa in the step S<highlight><bold>2</bold></highlight> will be described. Firstly in a step S<highlight><bold>11</bold></highlight>, it is determined whether or not a timer value which has been reset when the key has been placed in the OFF position is greater than or equal to a predetermined timer value. That is to say, in this step, it is determined whether or not a predetermined time, for example three hours has passed since the key has been placed in an OFF position. </paragraph>
+<paragraph id="P-0033" lvl="0"><number>&lsqb;0033&rsqb;</number> When the timer value is less than the predetermined timer value, the routine is returned. On the other hand, when the timer value is greater than or equal to the predetermined timer value, the routine proceeds to a step S<highlight><bold>12</bold></highlight> where the open circuit voltage OCV of the high-voltage battery <highlight><bold>11</bold></highlight> is measured. Thus it is possible to measure the open circuit voltage OCV after the high-voltage battery <highlight><bold>11</bold></highlight> is in an equilibrium state by waiting for more than a predetermined time after the main relay is placed in the OFF position. </paragraph>
+<paragraph id="P-0034" lvl="0"><number>&lsqb;0034&rsqb;</number> After the open circuit voltage OCV is measured, in a step S<highlight><bold>13</bold></highlight>, the control unit <highlight><bold>16</bold></highlight> places the main relay in an ON position and starts the engine <highlight><bold>1</bold></highlight> with the motor/generator <highlight><bold>2</bold></highlight>. Then in a step S<highlight><bold>14</bold></highlight>, the terminal voltage VH of the high-voltage battery <highlight><bold>11</bold></highlight> when the engine is starting is measured. The internal resistance R of the high-voltage battery <highlight><bold>11</bold></highlight> is computed in a step S<highlight><bold>15</bold></highlight>. </paragraph>
+<paragraph id="P-0035" lvl="0"><number>&lsqb;0035&rsqb;</number> The internal resistance R is calculated based on the open circuit voltage OCV of the high-voltage battery <highlight><bold>11</bold></highlight> in an equilibrium state and the terminal voltage VH during discharge of large currents to start the engine. This allows the internal resistance R to be calculated in a simple manner without being affected by dielectric polarization. </paragraph>
+<paragraph id="P-0036" lvl="0"><number>&lsqb;0036&rsqb;</number> It is possible to calculate the internal resistance R based on the open circuit voltage OCV and the terminal voltage VH from Equation (1). </paragraph>
+<paragraph lvl="0"><in-line-formula><highlight><italic>R</italic></highlight>&equals;(<highlight><italic>OCV&minus;VH</italic></highlight>)/<highlight><italic>IH</italic></highlight>&emsp;&emsp;(1) </in-line-formula></paragraph>
+<paragraph id="P-0037" lvl="0"><number>&lsqb;0037&rsqb;</number> When discharging large currents, the discharged current IH from the high-voltage battery <highlight><bold>11</bold></highlight> is approximately fixed irrespectively of the degree of battery deterioration. The internal resistance of the battery calculated in the above manner has the characteristic that it varies in response to a degree of deterioration. </paragraph>
+<paragraph id="P-0038" lvl="0"><number>&lsqb;0038&rsqb;</number> In the step S<highlight><bold>16</bold></highlight>, a target state of charge tSOC and a threshold value of state of charge SOCa are set based on the internal resistance R calculated from Equation (1). </paragraph>
+<paragraph id="P-0039" lvl="0"><number>&lsqb;0039&rsqb;</number> Referring to <cross-reference target="DRAWINGS">FIG. 5</cross-reference>, the sub-routine executed in the step S<highlight><bold>16</bold></highlight> will be described. In a step S<highlight><bold>21</bold></highlight>, when it is determined that the internal resistance R is smaller than a first predetermined resistance R<highlight><bold>1</bold></highlight>, the routine proceeds to a step S<highlight><bold>22</bold></highlight>. On the other hand, when it is determined that the internal resistance R is greater than or equal to the first predetermined resistance R<highlight><bold>1</bold></highlight>, the routine proceeds to a step S<highlight><bold>23</bold></highlight>. For example, the first predetermined resistance R<highlight><bold>1</bold></highlight> is set to about 125% of the internal resistance of the high-voltage battery in an initial state wherein there is no deterioration (i.e. the brand-new battery). </paragraph>
+<paragraph id="P-0040" lvl="0"><number>&lsqb;0040&rsqb;</number> This invention is adapted to switch over the target state of charge tSOC between a low target state of charge tSOCI when the vehicle is not decelerating and a high target state of charge tSOCh when the vehicle is decelerating. </paragraph>
+<paragraph id="P-0041" lvl="0"><number>&lsqb;0041&rsqb;</number> In the steps S<highlight><bold>22</bold></highlight> to S<highlight><bold>23</bold></highlight>, the low target state of charge tSOCI which is used in a non-deceleration driving state and the high target state of charge tSOCh which is used in a deceleration driving state are set in response to the internal resistance R. The low target state of charge tSOCI is set to be less than the high target state of charge tSOCh so that there is a chargeable capacity in the battery when the vehicle starts decelerating. That is to say, the setting is tSOCI&lt;tSOCh. In this manner, the energy regeneration efficiency of the vehicle when decelerating is increased. </paragraph>
+<paragraph id="P-0042" lvl="0"><number>&lsqb;0042&rsqb;</number> In a step S<highlight><bold>22</bold></highlight>, a low target state of charge tSOCI and a high target state of charge tSOCh are respectively set as tSOCIi and tSOChi. tSOCIi and tSOChi are pre-set values, fitted for the initial state of the high-voltage battery. </paragraph>
+<paragraph id="P-0043" lvl="0"><number>&lsqb;0043&rsqb;</number> The value of tSOCIi is set to 80% for example. When the detected deviation in the state of charge is &plusmn;e, for example &plusmn;5%, the value of tSOChi is set to 100&minus;e, for example 95%. The value of tSOChI which corresponds to a fully charged level is determined in consideration of a detected deviation (or estimated deviation) of the state of charge SOC in order to avoid overcharging. </paragraph>
+<paragraph id="P-0044" lvl="0"><number>&lsqb;0044&rsqb;</number> In a step S<highlight><bold>23</bold></highlight>, the low target state of charge tSOCI is reduced by a first predetermined value &agr;, for example 5%, according to the deterioration in the high-voltage battery <highlight><bold>11</bold></highlight>. That is to say, tSOCI is set to a lower value tSOCIi&minus;&agr;, for example, to 75%. </paragraph>
+<paragraph id="P-0045" lvl="0"><number>&lsqb;0045&rsqb;</number> Furthermore when the battery has deteriorated, tSOCh may be set to a value which is lower than tSOChi by a second predetermined value &ggr;, for example 5%, in order to avoid overcharging. Also tSOCI and tSOCh may be respectively set to low values in response to the degree of deterioration of the high-voltage battery <highlight><bold>11</bold></highlight>. </paragraph>
+<paragraph id="P-0046" lvl="0"><number>&lsqb;0046&rsqb;</number> After the target state of charge is varied, the threshold value for the state of charge SOCa is determined in response to the degree of deterioration of the high-voltage battery <highlight><bold>11</bold></highlight>. </paragraph>
+<paragraph id="P-0047" lvl="0"><number>&lsqb;0047&rsqb;</number> In a step S<highlight><bold>2</bold></highlight> <highlight><bold>1</bold></highlight>, when the internal resistance R is determined to be smaller than the first predetermined resistance R<highlight><bold>1</bold></highlight>, the routine proceeds to a step S<highlight><bold>24</bold></highlight> from the step S<highlight><bold>22</bold></highlight>. In the step S<highlight><bold>22</bold></highlight>, the threshold value for the state of charge SOCa is set to a predetermined state of charge SOCai which is a threshold value fitted for the initial state of the high-voltage battery. The predetermined state of charge SOCai is set on the basis of mechanical friction and the inertial mass of the engine components in addition to the output characteristics and capacity of the high-voltage battery <highlight><bold>11</bold></highlight>. </paragraph>
+<paragraph id="P-0048" lvl="0"><number>&lsqb;0048&rsqb;</number> On the other hand, when the internal resistance R is greater than or equal to the first predetermined resistance R<highlight><bold>1</bold></highlight>, the routine proceeds to a step S<highlight><bold>25</bold></highlight> from the step S<highlight><bold>23</bold></highlight>. In the step S<highlight><bold>25</bold></highlight>, the threshold value for the state of charge SOCa is set to a value (SOCai&plus;&bgr;) greater than SOCai by a third predetermined value &bgr;, for example 5%. In this manner, when the vehicle is restarted after the idle-stop operation, it is possible to avoid shortfalls in the output of the motor/generator <highlight><bold>2</bold></highlight> and stable restarting of the vehicle is guaranteed. </paragraph>
+<paragraph id="P-0049" lvl="0"><number>&lsqb;0049&rsqb;</number> When the internal resistance R is greater than or equal to the first predetermined resistance R<highlight><bold>1</bold></highlight>, in a further step S<highlight><bold>26</bold></highlight>, it is determined whether or not the internal resistance R is greater than or equal to a second predetermined resistance R<highlight><bold>2</bold></highlight> Here R<highlight><bold>2</bold></highlight> is greater than R<highlight><bold>1</bold></highlight>. For example, the second predetermined resistance R<highlight><bold>2</bold></highlight> is set to about 150% of the internal resistance of the high-voltage battery in the initial state. When the internal resistance R is smaller than the second predetermined resistance R<highlight><bold>2</bold></highlight>, the routine is returned. </paragraph>
+<paragraph id="P-0050" lvl="0"><number>&lsqb;0050&rsqb;</number> When the internal resistance R is greater than or equal to a second predetermined resistance R<highlight><bold>2</bold></highlight>, the routine proceeds to a step S<highlight><bold>27</bold></highlight>. After the flag F<highlight><bold>1</bold></highlight> is set to a value of one in the step S<highlight><bold>27</bold></highlight>, the routine is returned. The flag F<highlight><bold>1</bold></highlight> is set to zero when the key is in the OFF position. However after the engine is started thereafter, the flag F<highlight><bold>1</bold></highlight> is set to a value of one when the internal resistance R of the battery is determined to be greater than or equal to the second predetermined resistance R<highlight><bold>2</bold></highlight>. When the flag F<highlight><bold>1</bold></highlight> is set to a value of one, the idle-stop operation is prohibited. </paragraph>
+<paragraph id="P-0051" lvl="0"><number>&lsqb;0051&rsqb;</number> Referring to the flowchart in <cross-reference target="DRAWINGS">FIG. 6</cross-reference>, the charge/discharge control routine of the high-voltage battery <highlight><bold>11</bold></highlight> will be described below. Firstly in a step S<highlight><bold>31</bold></highlight>, the actual state of charge SOC of the high-voltage battery <highlight><bold>11</bold></highlight> is computed. The control unit <highlight><bold>16</bold></highlight> computes the state of charge SOC, for example by integrating over time the charging and discharging current IH detected by the second current sensor <highlight><bold>18</bold></highlight>. </paragraph>
+<paragraph id="P-0052" lvl="0"><number>&lsqb;0052&rsqb;</number> Then in the step S<highlight><bold>32</bold></highlight>, it is determined whether or not the vehicle is currently decelerating based on the idle switch signal, the engine speed Ne and the vehicle speed VSP. When Ne is greater than or equal to a predetermined engine speed, VSP is greater than or equal to a predetermined vehicle speed, and the idle switch is in the ON position (the accelerator pedal is released), it is determined that the vehicle is decelerating. Thereupon the routine proceeds to a step S<highlight><bold>33</bold></highlight>. In the step S<highlight><bold>33</bold></highlight>, the target state of charge tSOC is set to a high target state of charge tSOCh, for example 95% in order to regenerate sufficient energy. On the other hand, when the vehicle is not decelerating, the routine proceeds to a step S<highlight><bold>34</bold></highlight> and the target state of charge tSOC is set to a low target state of charge tSOCI, for example 75% in order to leave a capacity to allow a sufficient regeneration of energy. </paragraph>
+<paragraph id="P-0053" lvl="0"><number>&lsqb;0053&rsqb;</number> In a step S<highlight><bold>35</bold></highlight>, the target state of charge tSOC (that is to say, tSOCh or tSOCI) is compared with the actual state of charge SOC. A feedback control amount for the state of charge is calculated by multiplying the gain K based on proportional integral control by the difference (tSOC&minus;SOC). This feedback control amount is converted to the target charging current tIc to the high-voltage battery <highlight><bold>11</bold></highlight>. </paragraph>
+<paragraph id="P-0054" lvl="0"><number>&lsqb;0054&rsqb;</number> In a step S<highlight><bold>36</bold></highlight>, the charging current for vehicle-mounted electrical loads Ie is estimated in the following manner. The charging current IH to the high-voltage battery <highlight><bold>11</bold></highlight> is subtracted from the generated current IMG of the motor/generator <highlight><bold>2</bold></highlight> in order to calculate the charging current to the low-voltage battery <highlight><bold>14</bold></highlight>. The charging current to the low-voltage battery <highlight><bold>14</bold></highlight> is taken to be an electrical load current Ie (Ie&equals;IMG&minus;IH). </paragraph>
+<paragraph id="P-0055" lvl="0"><number>&lsqb;0055&rsqb;</number> In a step S<highlight><bold>37</bold></highlight>, the target charging current tIc and the electrical-load current Ie are added to calculate the target generated current tIg of the motor/generator <highlight><bold>2</bold></highlight>. (That is to say, tIg&equals;tIc&plus;Ie). In a step S<highlight><bold>38</bold></highlight>, it is determined whether or not the high-voltage battery <highlight><bold>11</bold></highlight> is self-discharging. When the battery is self-discharging, the routine proceeds to a step S<highlight><bold>39</bold></highlight>. In the step S<highlight><bold>39</bold></highlight>, the target generated current tIg is set to a predetermined current of approximately 1&tilde;2 &lsqb;A&rsqb;, and then the routine proceeds to a step S<highlight><bold>40</bold></highlight>. The motor/generator <highlight><bold>2</bold></highlight> generates an ineffectual current in order to prevent deterioration of the high-voltage battery during self-discharge. On the other hand, when the high-voltage battery is not self-discharging, the routine proceeds directly to a step S<highlight><bold>40</bold></highlight>. </paragraph>
+<paragraph id="P-0056" lvl="0"><number>&lsqb;0056&rsqb;</number> In the step S<highlight><bold>40</bold></highlight>, a target torque which is supplied to the motor/generator <highlight><bold>2</bold></highlight> is controlled so that the actual motor generated current is equal to the target generated current tIg. </paragraph>
+<paragraph id="P-0057" lvl="0"><number>&lsqb;0057&rsqb;</number> The above charge/discharge control allows the target state of charge tSOC to be set to a low value according to the battery deterioration when the vehicle is not decelerating. (That is to say, tSOC&equals;tSOCI&equals;tSOCIi&minus;&agr;). Therefore the chargeable capacity of the battery during deceleration can be ensured, even if there is a high degree of battery deterioration. Thus in this manner, it is possible to regenerate energy consumed during deceleration effectively with a relatively simple control routine. </paragraph>
+<paragraph id="P-0058" lvl="0"><number>&lsqb;0058&rsqb;</number> Referring to the flowchart in <cross-reference target="DRAWINGS">FIG. 7</cross-reference>, the idle-stop control routine will be described below. </paragraph>
+<paragraph id="P-0059" lvl="0"><number>&lsqb;0059&rsqb;</number> Firstly in a step S<highlight><bold>51</bold></highlight>, it is determined whether or not the flag F<highlight><bold>1</bold></highlight> has a value of one. When the flag F<highlight><bold>1</bold></highlight> has a value of one, the degree of battery deterioration is high. In this case the idle-stop operation must be prohibited in order to avoid a shortfall in the output of the electrical motor required for restarting the engine. Therefore the routine is returned. </paragraph>
+<paragraph id="P-0060" lvl="0"><number>&lsqb;0060&rsqb;</number> In a step S<highlight><bold>51</bold></highlight>, when the flag F<highlight><bold>1</bold></highlight> does not have a value of one, that is to say, F<highlight><bold>1</bold></highlight>&equals;0, the routine proceeds to a step S<highlight><bold>52</bold></highlight> and it is determined whether or not idle-stop conditions are satisfied. The idle-stop conditions are defined as being that the vehicle is brought to a temporary halt with the engine running at idle speed. Specifically, the idle-stop conditions is defined as the brake switch being in the ON position, the idle switch being in the ON position, the engine rotation speed Ne being in the vicinity of an idle rotation speed and the vehicle speed being zero. </paragraph>
+<paragraph id="P-0061" lvl="0"><number>&lsqb;0061&rsqb;</number> When the idle-stop conditions are satisfied, the routine proceeds to a step S<highlight><bold>53</bold></highlight> and the actual state of charge SOC and threshold value for state of charge SOCa are read. </paragraph>
+<paragraph id="P-0062" lvl="0"><number>&lsqb;0062&rsqb;</number> In a step S<highlight><bold>54</bold></highlight>, the actual state of charge SOC and state of charge threshold value SOCa are compared. The idle-stop operation is prohibited when the state of charge SOC is less than the threshold value SOCa. When the high-voltage battery has deteriorated, a state of charge SOC required to restart the engine becomes higher. In this case, in the step S<highlight><bold>25</bold></highlight>, the threshold value SOCa has been already set to a value (SOCai&plus;&bgr;) which is greater than the threshold value in the initial state SOCaI. In this manner, the idle-stop operation is prohibited in response to the degree of deterioration of the high-voltage battery <highlight><bold>11</bold></highlight>. </paragraph>
+<paragraph id="P-0063" lvl="0"><number>&lsqb;0063&rsqb;</number> On the other hand, when the state of charge SOC is greater than or equal to the threshold value SOCa, the idle-stop is permitted since the state of charge is sufficient to restart the engine. In this case, the routine proceeds to a step S<highlight><bold>55</bold></highlight> and the control unit <highlight><bold>16</bold></highlight> commands the engine <highlight><bold>1</bold></highlight> to stop. </paragraph>
+<paragraph id="P-0064" lvl="0"><number>&lsqb;0064&rsqb;</number> After the idle-stop operation, in a step S<highlight><bold>56</bold></highlight>, it is determined whether or not the engine restart conditions are satisfied. The engine restart conditions are for example that the idle switch is in the OFF position (the accelerator pedal is depressed) and the brake switch is in the OFF position. When the engine restart conditions are satisfied, the routine proceeds to a step S<highlight><bold>57</bold></highlight> and the engine <highlight><bold>1</bold></highlight> is restarted by the motor/generator <highlight><bold>2</bold></highlight>. </paragraph>
+<paragraph id="P-0065" lvl="0"><number>&lsqb;0065&rsqb;</number> In this embodiment, a target state of charge tSOC of the high-voltage battery <highlight><bold>11</bold></highlight> and a threshold value of the state of charge SOCa of the high-voltage battery <highlight><bold>11</bold></highlight> are switched between two values in response to the internal resistance. However the target state of charge tSOC and the threshold value of the state of charge SOCa may be set in a more detailed manner by referring to a map. </paragraph>
+<paragraph id="P-0066" lvl="0"><number>&lsqb;0066&rsqb;</number> The entire contents of Japanese Patent Applications P2000-78462 (filed Mar. 21, 2000) are incorporated herein by reference. </paragraph>
+<paragraph id="P-0067" lvl="0"><number>&lsqb;0067&rsqb;</number> Although the invention has been described above by reference to a certain embodiment of the invention, the invention is not limited to the embodiment described above Modifications and variations of the embodiment described above will occur to those skilled in the art, in light of the above teachings. The scope of the invention is defined with reference to the following claims. </paragraph>
+</section>
+</detailed-description>
+</subdoc-description>
+<subdoc-claims>
+<claim id="CLM-00001">
+<claim-text><highlight><bold>1</bold></highlight>. A control device for a hybrid vehicle which comprises an engine (<highlight><bold>1</bold></highlight>) as a power source for running the vehicle and a motor/generator (<highlight><bold>2</bold></highlight>), comprising: 
+<claim-text>a high-voltage battery (<highlight><bold>11</bold></highlight>) which functions as a power source for the motor/generator (<highlight><bold>2</bold></highlight>); </claim-text>
+<claim-text>a low-voltage battery (<highlight><bold>14</bold></highlight>) for vehicle-mounted electrical loads which has a lower voltage than the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>an inverter (<highlight><bold>12</bold></highlight>) for controlling the motor/generator (<highlight><bold>2</bold></highlight>); </claim-text>
+<claim-text>a sensor (<highlight><bold>18</bold></highlight>,<highlight><bold>19</bold></highlight>) which detects a condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); and </claim-text>
+<claim-text>a microprocessor (<highlight><bold>16</bold></highlight>) which is programmed to: 
+<claim-text>compute a state of charge (SOC) of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>compute a degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>control a current generated by the motor/generator (<highlight><bold>2</bold></highlight>) so that the SOC of the high-voltage battery (<highlight><bold>11</bold></highlight>) coincides with a target SOC; and </claim-text>
+<claim-text>vary the target SOC according to the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>). </claim-text>
+</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002">
+<claim-text><highlight><bold>2</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference>, wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to lower the target SOC as the degree of deterioration increases. </claim-text>
+</claim>
+<claim id="CLM-00003">
+<claim-text><highlight><bold>3</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference>, further comprising a sensor (<highlight><bold>31</bold></highlight>) which detects a rotation speed of the engine (<highlight><bold>1</bold></highlight>), a sensor (<highlight><bold>34</bold></highlight>) which detects a vehicle speed and a sensor (<highlight><bold>35</bold></highlight>) which detects depression of an accelerator pedal; wherein 
+<claim-text>the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to: 
+<claim-text>determine a driving state of the vehicle based on the rotation speed of the engine, the vehicle speed and the depression of the accelerator pedal; and </claim-text>
+<claim-text>vary the target SOC depending upon the driving state of the vehicle. </claim-text>
+</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00004">
+<claim-text><highlight><bold>4</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference>, further comprising a sensor (<highlight><bold>31</bold></highlight>) which detects a rotation speed of the engine (<highlight><bold>1</bold></highlight>), a sensor (<highlight><bold>34</bold></highlight>) which detects a vehicle speed and a sensor (<highlight><bold>35</bold></highlight>) which detects depression of an accelerator pedal; wherein 
+<claim-text>the target SOC comprises a low target SOC for a case where the vehicle is not decelerating and a high target SOC for a case where the vehicle is decelerating, the low target SOC being lower than the high target SOC; and </claim-text>
+<claim-text>the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to: 
+<claim-text>determine whether or not the vehicle is decelerating, based on the rotation speed of the engine, the vehicle speed and the depression of the accelerator pedal; and </claim-text>
+<claim-text>set the target SOC to the low target SOC when the vehicle is not decelerating and to set the target SOC to the high target SOC when the vehicle is decelerating. </claim-text>
+</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00005">
+<claim-text><highlight><bold>5</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00004">claim 4</dependent-claim-reference>, wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to decrease the low target SOC with an increase in the degree of deterioration in the high-voltage battery (<highlight><bold>11</bold></highlight>). </claim-text>
+</claim>
+<claim id="CLM-00006">
+<claim-text><highlight><bold>6</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00004">claim 4</dependent-claim-reference>, wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to decrease the high target SOC with an increase in the degree of deterioration in the high-voltage battery </claim-text>
+</claim>
+<claim id="CLM-00007">
+<claim-text><highlight><bold>7</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference>, wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to: 
+<claim-text>compute a target charging current to the high-voltage battery (<highlight><bold>11</bold></highlight>) according to the SOC of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>compute an electrical load current for vehicle-mounted electrical loads; </claim-text>
+<claim-text>compute a target generated current generated by the motor/generator (<highlight><bold>2</bold></highlight>) by adding the target charging current and the electrical load current; and </claim-text>
+<claim-text>control a target torque which is supplied to the motor/generator (<highlight><bold>2</bold></highlight>) so that the current generated by the motor/generator (<highlight><bold>2</bold></highlight>) is equal to the target generated current. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00008">
+<claim-text><highlight><bold>8</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference>, wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to: 
+<claim-text>determine whether or not the high-voltage battery (<highlight><bold>11</bold></highlight>) is self-discharging, based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); and </claim-text>
+<claim-text>command the motor/generator (<highlight><bold>2</bold></highlight>) to generate a predetermined current when the high-voltage battery (<highlight><bold>11</bold></highlight>) is self-discharging. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00009">
+<claim-text><highlight><bold>9</bold></highlight>. A control device for a hybrid vehicle which comprises an engine (<highlight><bold>1</bold></highlight>) as a power source for running the vehicle and a motor/generator (<highlight><bold>2</bold></highlight>), comprising; 
+<claim-text>a high-voltage battery (<highlight><bold>11</bold></highlight>) which functions as a power source of the motor/generator (<highlight><bold>2</bold></highlight>); </claim-text>
+<claim-text>a low-voltage battery (<highlight><bold>14</bold></highlight>) for vehicle-mounted electrical loads which has a lower voltage than the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>an inverter (<highlight><bold>12</bold></highlight>) for controlling the motor/generator (<highlight><bold>2</bold></highlight>); </claim-text>
+<claim-text>a sensor (<highlight><bold>18</bold></highlight>,<highlight><bold>19</bold></highlight>) which detects a condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>a sensor (<highlight><bold>31</bold></highlight>) which detects a rotation speed of the engine (<highlight><bold>1</bold></highlight>); </claim-text>
+<claim-text>a sensor (<highlight><bold>34</bold></highlight>) which detects a vehicle speed; </claim-text>
+<claim-text>a sensor (<highlight><bold>35</bold></highlight>) which detects depression of an accelerator pedal; </claim-text>
+<claim-text>a sensor (<highlight><bold>36</bold></highlight>) which detects depression of a brake pedal; and </claim-text>
+<claim-text>a microprocessor (<highlight><bold>16</bold></highlight>) programmed to: 
+<claim-text>compute a state of charge (SOC) of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>determine whether or not the vehicle is brought to a temporary halt with the engine running at idle speed, based on the rotation speed of the engine, the vehicle speed, the depression of the accelerator pedal, and the depression of the brake pedal; and </claim-text>
+<claim-text>stop the engine (<highlight><bold>1</bold></highlight>) when the SOC of the high-voltage battery (<highlight><bold>11</bold></highlight>) is greater than or equal to a threshold value and when the vehicle is brought to the temporary halt with the engine running at the idle speed. </claim-text>
+</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00010">
+<claim-text><highlight><bold>10</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00009">claim 9</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to: 
+<claim-text>compute a degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); and </claim-text>
+<claim-text>vary the threshold value according to the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>). </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00011">
+<claim-text><highlight><bold>11</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00011">claim 10</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to increase the threshold value with an increase in the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>). </claim-text>
+</claim>
+<claim id="CLM-00012">
+<claim-text><highlight><bold>12</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference> wherein the degree of deterioration corresponds to an internal resistance of the high-voltage battery (<highlight><bold>11</bold></highlight>), and 
+<claim-text>the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to compute the internal resistance of the high-voltage battery (<highlight><bold>11</bold></highlight>). </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00013">
+<claim-text><highlight><bold>13</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00011">claim 10</dependent-claim-reference> wherein the degree of deterioration corresponds to an internal resistance of the high-voltage battery (<highlight><bold>11</bold></highlight>), and 
+<claim-text>the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to compute the internal resistance of the high-voltage battery (<highlight><bold>11</bold></highlight>). </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00014">
+<claim-text><highlight><bold>14</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to compute the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on a terminal voltage of the high-voltage battery (<highlight><bold>11</bold></highlight>) when the motor/generator (<highlight><bold>2</bold></highlight>) is started in an equilibrium state and on an open terminal voltage when the high-voltage battery is in the equilibrium state. </claim-text>
+</claim>
+<claim id="CLM-00015">
+<claim-text><highlight><bold>15</bold></highlight>. The control device in <dependent-claim-reference depends_on="CLM-00011">claim 10</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to compute the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on a terminal voltage of the high-voltage battery (<highlight><bold>11</bold></highlight>) when the motor/generator (<highlight><bold>2</bold></highlight>) is started in an equilibrium state and on an open terminal voltage when the high-voltage battery is in the equilibrium state. </claim-text>
+</claim>
+<claim id="CLM-00016">
+<claim-text><highlight><bold>16</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00001">claim 1</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to compute the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) when a start switch is placed in an ON position and a time which has elapsed after a key has been placed in an OFF position is greater than or equal to a predetermined time. </claim-text>
+</claim>
+<claim id="CLM-00017">
+<claim-text><highlight><bold>17</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00011">claim 10</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to compute the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) when a start switch is placed in an ON position and a time which has elapsed after a key has been placed in an OFF position is greater than or equal to a predetermined time. </claim-text>
+</claim>
+<claim id="CLM-00018">
+<claim-text><highlight><bold>18</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00009">claim 9</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to restart the engine (<highlight><bold>1</bold></highlight>) when the brake pedal is not depressed after the engine (<highlight><bold>1</bold></highlight>) has been stopped. </claim-text>
+</claim>
+<claim id="CLM-00019">
+<claim-text><highlight><bold>19</bold></highlight>. The control device as defined in <dependent-claim-reference depends_on="CLM-00011">claim 10</dependent-claim-reference> wherein the microprocessor (<highlight><bold>16</bold></highlight>) is further programmed to stop the engine (<highlight><bold>1</bold></highlight>) when the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) is smaller than a predetermined degree of deterioration and when the vehicle is brought to the temporary halt with the engine running at the idle speed. </claim-text>
+</claim>
+<claim id="CLM-00020">
+<claim-text><highlight><bold>20</bold></highlight>. A control device for a hybrid vehicle which comprises an engine (<highlight><bold>1</bold></highlight>) as a power source for running the vehicle and a motor/generator (<highlight><bold>2</bold></highlight>), comprising: 
+<claim-text>a high-voltage battery (<highlight><bold>11</bold></highlight>) which functions as a power source for the motor/generator (<highlight><bold>2</bold></highlight>); </claim-text>
+<claim-text>a low-voltage battery (<highlight><bold>14</bold></highlight>) for vehicle-mounted electrical loads which has a lower voltage than the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>means (<highlight><bold>12</bold></highlight>) for controlling the motor/generator (<highlight><bold>2</bold></highlight>); </claim-text>
+<claim-text>means (<highlight><bold>18</bold></highlight>,<highlight><bold>19</bold></highlight>) for detecting a condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>means for computing a state of charge (SOC) of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>means for computing a degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>) based on the condition of the high-voltage battery (<highlight><bold>11</bold></highlight>); </claim-text>
+<claim-text>means for controlling a current generated by the motor/generator (<highlight><bold>2</bold></highlight>) so that the SOC of the high-voltage battery (<highlight><bold>11</bold></highlight>) coincides with a target SOC; and </claim-text>
+<claim-text>means for varying the target SOC according to the degree of deterioration of the high-voltage battery (<highlight><bold>11</bold></highlight>).</claim-text>
+</claim-text>
+</claim>
+</subdoc-claims>
+<subdoc-drawings id="DRAWINGS">
+<heading lvl="0" align="CENTER">Drawings</heading>
+<representative-figure>1</representative-figure>
+<figure id="figure-D00000">
+<image id="EMI-D00000" file="US20020157882A1-20021031-D00000.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00001">
+<image id="EMI-D00001" file="US20020157882A1-20021031-D00001.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00002">
+<image id="EMI-D00002" file="US20020157882A1-20021031-D00002.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00003">
+<image id="EMI-D00003" file="US20020157882A1-20021031-D00003.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00004">
+<image id="EMI-D00004" file="US20020157882A1-20021031-D00004.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00005">
+<image id="EMI-D00005" file="US20020157882A1-20021031-D00005.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00006">
+<image id="EMI-D00006" file="US20020157882A1-20021031-D00006.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00007">
+<image id="EMI-D00007" file="US20020157882A1-20021031-D00007.TIF" imf="TIFF" ti="DR"/>
+</figure>
+</subdoc-drawings>
+</patent-application-publication>
+

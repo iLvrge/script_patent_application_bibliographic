@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patent-application-publication SYSTEM "pap-v15-2001-01-31.dtd" [
+<!ENTITY US20010000007A1-20010315-D00001.TIF SYSTEM "US20010000007A1-20010315-D00001.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00002.TIF SYSTEM "US20010000007A1-20010315-D00002.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00003.TIF SYSTEM "US20010000007A1-20010315-D00003.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00004.TIF SYSTEM "US20010000007A1-20010315-D00004.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00005.TIF SYSTEM "US20010000007A1-20010315-D00005.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00006.TIF SYSTEM "US20010000007A1-20010315-D00006.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00007.TIF SYSTEM "US20010000007A1-20010315-D00007.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00008.TIF SYSTEM "US20010000007A1-20010315-D00008.TIF" NDATA TIF>
+<!ENTITY US20010000007A1-20010315-D00009.TIF SYSTEM "US20010000007A1-20010315-D00009.TIF" NDATA TIF>
+]>
+<patent-application-publication>
+<subdoc-bibliographic-information>
+<document-id>
+<doc-number>20010000007</doc-number>
+<kind-code>A1</kind-code>
+<document-date>20010315</document-date></document-id>
+<publication-filing-type>new-utility</publication-filing-type>
+<domestic-filing-data>
+<application-number>
+<doc-number>09725780</doc-number>
+</application-number>
+<application-number-series-code>09</application-number-series-code>
+<filing-date>20001129</filing-date>
+</domestic-filing-data>
+<foreign-priority-data>
+<priority-application-number>
+<doc-number>10-235238</doc-number>
+</priority-application-number>
+<filing-date>19980821</filing-date>
+<country-code>JP</country-code>
+</foreign-priority-data>
+<foreign-priority-data>
+<priority-application-number>
+<doc-number>9-351217</doc-number>
+</priority-application-number>
+<filing-date>19971912</filing-date>
+<country-code>JP</country-code>
+</foreign-priority-data>
+<technical-information>
+<classification-ipc>
+<classification-ipc-primary>
+<ipc>C02F003/00</ipc>
+</classification-ipc-primary>
+<classification-ipc-edition>07</classification-ipc-edition>
+</classification-ipc>
+<classification-us>
+<classification-us-primary>
+<uspc>
+<class>210</class>
+<subclass>606000</subclass>
+</uspc>
+</classification-us-primary>
+</classification-us>
+<title-of-invention>Method and apparatus for treating organic waste water</title-of-invention>
+</technical-information>
+<continuity-data>
+<division-of>
+<parent-child>
+<child>
+<document-id>
+<doc-number>09725780</doc-number>
+<kind-code>A1</kind-code>
+<document-date>20001129</document-date>
+</document-id>
+</child>
+<parent>
+<document-id>
+<doc-number>09173224</doc-number>
+<document-date>19981015</document-date>
+<country-code>US</country-code>
+</document-id>
+</parent>
+<parent-status>PENDING</parent-status>
+</parent-child>
+</division-of>
+</continuity-data>
+<inventors>
+<first-named-inventor>
+<name>
+<given-name>Susumu</given-name>
+<family-name>Hasegawa</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Kobe-shi</city>
+<country-code>JP</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</first-named-inventor>
+<inventor>
+<name>
+<given-name>Akira</given-name>
+<family-name>Akashi</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Kobe-shi</city>
+<country-code>JP</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</inventor>
+<inventor>
+<name>
+<given-name>Kenji</given-name>
+<family-name>Katsura</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Kobe-shi</city>
+<country-code>JP</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</inventor>
+<inventor>
+<name>
+<given-name>Masahiko</given-name>
+<family-name>Miura</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Kobe-shi</city>
+<country-code>JP</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</inventor>
+<inventor>
+<name>
+<given-name>Takahiro</given-name>
+<family-name>Fukui</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Kawanishi-shi</city>
+<country-code>JP</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</inventor>
+</inventors>
+<correspondence-address>
+<name-1>MARSHALL, O&apos;TOOLE, GERSTEIN, MURRAY &amp; BORUN</name-1>
+<name-2></name-2>
+<address>
+<address-1>6300 SEARS TOWER</address-1>
+<address-2>233 SOUTH WACKER DRIVE</address-2>
+<city>CHICAGO</city>
+<state>IL</state>
+<postalcode>60606-6402</postalcode>
+<country>
+<country-code>US</country-code>
+</country>
+</address>
+</correspondence-address>
+</subdoc-bibliographic-information>
+<subdoc-abstract>
+<paragraph id="A-00001" lvl="0">A method and apparatus are disclosed for treating an organic waste water which are capable of utilizing compact equipment by reducing the quantity of a sludge to be treated. Organic waste water (A) is subjected to an aerobic biological treatment in a biological treatment tank (<highlight><bold>3</bold></highlight>). Then, solution (B) obtained by the treatment in the biological treatment tank (<highlight><bold>3</bold></highlight>) is solid-liquid separated into treated water (C) and sludge (D) in precipitation tank (<highlight><bold>5</bold></highlight>). A portion of the sludge (D) separated in the precipitation tank (<highlight><bold>5</bold></highlight>) is returned to the biological treatment tank (<highlight><bold>3</bold></highlight>) through a route (<highlight><bold>6</bold></highlight>). A portion (E) of the sludge separated in the precipitation tank (<highlight><bold>5</bold></highlight>) is concentrated by a concentration device (<highlight><bold>8</bold></highlight>). Thereafter, the concentrated sludge (E) is solubilized by thermophilic bacteria in a solubilizing tank (<highlight><bold>10</bold></highlight>). </paragraph>
+</subdoc-abstract>
+<subdoc-description>
+<summary-of-invention>
+<section>
+<heading lvl="1">FIELD OF THE INVENTION </heading>
+<paragraph id="P-00001" lvl="0"><number>1.</number> The present invention relates to an apparatus for discharging an organic sludge, in particular to a method and an apparatus for treating, by biological digestion, organic wastes containing organic sludge discharged from a sewage treatment process, such as a sewage treatment plant, a night soil treatment plant, and the like, and from a manufacturing process, such as a food factory, a chemical factory, and the like. </paragraph>
+</section>
+<section>
+<heading lvl="1">BACKGROUND OF THE INVENTION </heading>
+<paragraph id="P-00002" lvl="0"><number>2.</number> Conventionally, an aerobic biological treatment method, which is referred to as an activated sludge method, has been used to treat organic waste water. This method is carried out as shown in <cross-reference target="DRAWINGS">FIG. 8</cross-reference>, wherein organic waste water, such as sewage, introduced from organic waste water reservoir <highlight><bold>1</bold></highlight> into biological treatment tank <highlight><bold>3</bold></highlight> is decomposed into an inorganic matter, such as carbon dioxide or water, under aerobic conditions in biological treatment tank <highlight><bold>3</bold></highlight> by biological oxidation, which is oxidative decomposition performed by a microorganism. The waste water which has been treated in the biological treatment tank <highlight><bold>3</bold></highlight> is solid-liquid separated into treated water C and sludge D in precipitation tank <highlight><bold>5</bold></highlight>. In general, a portion of sludge D is returned as a microorganism source to biological treatment tank <highlight><bold>3</bold></highlight>, and the residual sludge is treated as an excess sludge E. </paragraph>
+<paragraph id="P-00003" lvl="0"><number>3.</number> In this case, however, precipitated and concentrated sludge containing an organic solid, which has been solid-liquid separated in the precipitation tank <highlight><bold>5</bold></highlight>, is treated through the steps of concentration, digestion, dehydration, composting, and incineration. Such a treatment is not preferred because it requires a large quantity of labor, time, and expense. </paragraph>
+<paragraph id="P-00004" lvl="0"><number>4.</number> For this reason, methods of decreasing a sludge as much as possible, such as an extended aeration method for increasing the residence time of the sludge, and a fixed bed oxidation method utilizing a biomass attached to a catalytic material surface of a media to hold a large quantity of microorganisms in a reaction tank (see &ldquo;Sewage Service Project&mdash;Design Guide and Explanation&rdquo; issued by Japan Sewage Works Agency, edited by Sewage Works Division, Municipal Department of the Ministry of Construction, Vol. 2, 1994), have been proposed and commercialized. However, these methods require a large site area for increasing the residence time. In the extended aeration method, the sludge is dispersed when a load is reduced, thereby interfering with solid-liquid separation. In the fixed bed oxidation method, fouling of the sludge results when the load is increased. Therefore, these methods are not desirable. In order to solve these problems, a method has been proposed which temporarily stores an excess sludge, and decreases the sludge by an anaerobic digestion method to reduce the quantity of the sludge and to lessen the waste treatment load. In this method, the treatment time is long, for example 20 to 30 days, and the decrease of organic sludge is not sufficient, for example 30% to 50%. </paragraph>
+<paragraph id="P-00005" lvl="0"><number>5.</number> Japanese Provisional Patent Publication No. 6-206088 discloses a method for performing an aerobic biological treatment on organic waste water, and then oxidizing a solid-liquid separated sludge by an ozone oxidation column, to reduce an excess sludge. However, this method requires operators well-skilled in handling the ozone oxidation column, and has the problem of treating residual ozone. In addition, the decomposition rate of the excess sludge is not sufficient in the ozone oxidation column. </paragraph>
+<paragraph id="P-00006" lvl="0"><number>6.</number> Japanese Provisional Patent Publication No. 9-10791 discloses an activated sludge treatment method capable of considerably reducing the quantity of a generated excess sludge. The method comprises steps of subjecting organic waste water to an aerobic biological treatment in an aeration tank, solid-liquid separating the waste water treated in the aeration tank into treated water and a sludge in a precipitation device, returning a part of the sludge separated in the precipitation device to the aeration tank through a recycle route, solubilizing the excess sludge separated in the precipitation device at a high temperature in a solubilizing treatment device, and returning the treated sludge solubilized in the solubilizing treatment device to the aeration tank through a return route. According to the method described in the publication, however, it is necessary to increase the size of the solubilizing treatment device according to the maximum quantity of the excess sludge which flows into solubilizing treatment equipment. Furthermore, a large quantity of treated sludge solubilized in the solubilizing treatment device is returned to the aeration tank. Therefore, the substantial residence time is shortened in the aeration tank. Consequently, the quality of treated water at times is reduced. </paragraph>
+<paragraph id="P-00007" lvl="0"><number>7.</number> Japanese Provisional Patent Publication No. 9-276887, as shown in <cross-reference target="DRAWINGS">FIG. 9</cross-reference>, discloses an organic waste water treatment apparatus comprising an activated sludge treatment tank <highlight><bold>21</bold></highlight>, a solid-liquid separation device <highlight><bold>22</bold></highlight> for solid-liquid separating a sludge obtained after an activated sludge treatment, a sludge returning means <highlight><bold>23</bold></highlight> for returning a part of the separated sludge to activated sludge treatment tank <highlight><bold>21</bold></highlight>, a sludge concentration device <highlight><bold>24</bold></highlight> for concentrating the residual sludge, a heating device <highlight><bold>25</bold></highlight> for heating the concentrated sludge to a temperature of 40 to 100&deg; C., and a sludge returning means <highlight><bold>26</bold></highlight> for returning the heated sludge to activated sludge treatment tank <highlight><bold>21</bold></highlight>. According to the treatment apparatus, the excess sludge separated in solid-liquid separation device <highlight><bold>22</bold></highlight> is concentrated in sludge concentration device <highlight><bold>24</bold></highlight>, and then is sent to heating device <highlight><bold>25</bold></highlight>. There is therefore the advantage that the quantity of the sludge sent to heating device <highlight><bold>25</bold></highlight> can be decreased. In the treatment apparatus, however, the sludge is solubilized in only a heating treatment. For this reason, the solubilization ratio of the sludge is low, for example 20% to 25%. It should take a long time to solubilize a large quantity of sludge by using a solubilizing tank of a large capacity. Consequently, the scale of equipment is enlarged. Thus, the treatment apparatus has a disadvantage that the cost of heating, the maintenance cost, and the like are increased. </paragraph>
+<paragraph id="P-00008" lvl="0"><number>8.</number> In order to reduce the equipment cost, furthermore, it is preferable to reduce the number of required devices and the space occupied by the devices. </paragraph>
+</section>
+<section>
+<heading lvl="1">SUMMARY OF THE INVENTION </heading>
+<paragraph id="P-00009" lvl="0"><number>9.</number> In consideration of the above-mentioned problems of the prior art, it is an aspect of the present invention to provide a method and apparatus for treating an organic waste water which are capable of utilizing compact equipment by reducing the quantity of sludge to be treated. </paragraph>
+<paragraph id="P-00010" lvl="0"><number>10.</number> It is another aspect of the present invention to provide a method and apparatus for treating an organic waste water which are capable of improving the quality of treated water. </paragraph>
+<paragraph id="P-00011" lvl="0"><number>11.</number> It is yet another aspect of the present invention to provide a method and apparatus for efficiently treating an organic waste water at a low cost. </paragraph>
+<paragraph id="P-00012" lvl="0"><number>12.</number> It is a further aspect of the present invention to provide a method of treating an organic waste water which is capable of specifying and shortening the treatment time for solubilizing reaction and of efficiently performing sufficient solubilization. </paragraph>
+<paragraph id="P-00013" lvl="0"><number>13.</number> In order to attain the above-mentioned aspects, the present invention employs a method comprising the steps of biologically treating organic waste water by a biological treatment device, solid-liquid separating the waste water treated by the biological treatment device into treated water and a sludge by a solid-liquid separation device, concentrating at least a portion of the sludge separated by the solid-liquid separation device by a concentration device, and directing the concentrated sludge to a solubilizing tank. Consequently, the quantity of the treated sludge directed to the solubilizing tank can be decreased. Thus, the size of the solubilizing tank can be reduced. In particular, the concentrated sludge is directed to the solubilizing tank, such that the nutritive conditions suitable for the growth of thermophilic bacteria can be obtained. Therefore, a high solubilization ratio can be obtained by performing a solubilizing treatment using the thermophilic bacteria in the solubilizing tank. </paragraph>
+<paragraph id="P-00014" lvl="0"><number>14.</number> The solid-liquid separated sludge is concentrated, and then returned to the biological treatment device. Consequently, the quantity of microorganisms returned to the biological treatment device is increased. Therefore, the quantity of microorganisms in the biological treatment device can be kept at a high concentration, such that the organic matter is fully oxidatively decomposed by the microorganisms. As a result, the sludge load is reduced, whereby the quality of treated water can be improved. </paragraph>
+<paragraph id="P-00015" lvl="0"><number>15.</number> Furthermore, the solubilizing treatment for the sludge is carried out using heat, and under the conditions wherein a sludge solubilization enzyme is produced and secreted from the microorganisms, and solubilization is promoted by the enzyme. The time taken for the solubilizing treatment is determined based on a hydraulic residence time (hereinafter referred to as an &ldquo;HRT&rdquo;) of treated sludge in the solubilizing treatment device. Consequently, it is possible to avoid a lengthy solubilizing reaction. Therefore, even if the size of the solubilizing tank is reduced, the solubilizing treatment can be performed efficiently. </paragraph>
+</section>
+</summary-of-invention>
+<brief-description-of-drawings>
+<section>
+<heading lvl="1">BRIEF DESCRIPTION OF THE DRAWINGS </heading>
+<paragraph id="P-00016" lvl="0"><number>16.</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> is a structural diagram schematically showing an apparatus for treating an organic waste water suitable for executing a method of treating an organic waste water according to an embodiment of the present invention; </paragraph>
+<paragraph id="P-00017" lvl="0"><number>17.</number> <cross-reference target="DRAWINGS">FIG. 2</cross-reference> is a structural diagram schematically showing an apparatus for treating an organic waste water suitable for executing a method of treating an organic waste water according to another embodiment of the present invention; </paragraph>
+<paragraph id="P-00018" lvl="0"><number>18.</number> <cross-reference target="DRAWINGS">FIG. 3</cross-reference> is a structural diagram schematically showing an apparatus for treating an organic waste water according to the prior art; </paragraph>
+<paragraph id="P-00019" lvl="0"><number>19.</number> <cross-reference target="DRAWINGS">FIG. 4</cross-reference> is a chart showing a change in protease production by bacteria for an HRT at a solubilizing step according to the method of the present invention; </paragraph>
+<paragraph id="P-00020" lvl="0"><number>20.</number> <cross-reference target="DRAWINGS">FIG. 5</cross-reference> is a chart showing a change in protease production by an excess sludge for the HRT at the solubilizing step according to the method of the present invention; </paragraph>
+<paragraph id="P-00021" lvl="0"><number>21.</number> <cross-reference target="DRAWINGS">FIG. 6</cross-reference> is a chart showing a change in a solubilization ratio of the excess sludge for the HRT at the solubilizing step according to the method of the present invention; </paragraph>
+<paragraph id="P-00022" lvl="0"><number>22.</number> <cross-reference target="DRAWINGS">FIG. 7</cross-reference> is a structural diagram schematically showing an apparatus for treating an organic waste water suitable for executing a method of treating an organic waste water according to yet another embodiment of the present invention; </paragraph>
+<paragraph id="P-00023" lvl="0"><number>23.</number> <cross-reference target="DRAWINGS">FIG. 8</cross-reference> is a structural diagram schematically showing another apparatus for treating an organic waste water according to the prior art; and </paragraph>
+<paragraph id="P-00024" lvl="0"><number>24.</number> <cross-reference target="DRAWINGS">FIG. 9</cross-reference> is a structural diagram schematically showing a further apparatus for treating an organic waste water according to the prior art. </paragraph>
+</section>
+</brief-description-of-drawings>
+<detailed-description>
+<section>
+<heading lvl="1">DESCRIPTION OF THE PREFERRED EMBODIMENTS </heading>
+<paragraph id="P-00025" lvl="0"><number>25.</number> A first aspect of the present invention is directed to a method of biologically treating an organic waste water which comprises the steps of biologically treating the organic waste water by a biological treatment device, solid-liquid separating the waste water treated by the biological treatment device into treated water and a sludge by a solid-liquid separation device, returning a portion of the sludge separated by the solid-liquid separation device to the biological treatment device, concentrating at least a portion of a residual sludge by a concentration device, and solubilizing the concentrated sludge by thermophilic bacteria in a solubilizing tank. According to this method, at least a portion of the sludge separated by the solid-liquid separation device is concentrated by the concentration device, and then directed to the solubilizing tank. Therefore, it is possible to ensure the nutritive conditions suitable for growth of thermophilic bacteria, and attain a high solubilization ratio by the production of a solubilizing enzyme. Further, since at least a portion of the sludge is concentrated and then sent to the solubilizing tank, the quantity of the treated sludge sent to the solubilizing tank is decreased such that the size of the solubilizing tank can be reduced. </paragraph>
+<paragraph id="P-00026" lvl="0"><number>26.</number> A second aspect of the present invention is directed to a method of treating an organic waste water according to the first aspect of the present invention, wherein at least a portion of the treated liquid solubilized by the solubilizing tank is returned to the biological treatment device. Consequently, the solubilized treated liquid is biologically digested in the biological treatment device simultaneously with the decrease of the sludge. </paragraph>
+<paragraph id="P-00027" lvl="0"><number>27.</number> A third aspect of the present invention is directed to a method of biologically treating an organic waste water which comprises the steps of biologically treating the organic waste water by a biological treatment device, solid-liquid separating the waste water treated by the biological treatment device into treated water and a sludge by a solid-liquid separation device, concentrating the sludge separated by the solid-liquid separation device in a concentration device, returning a portion of the sludge to the biological treatment device, and solubilizing at least a portion of a residual sludge by thermophilic bacteria in a solubilizing tank. According to this method, all the sludge separated by the solid-liquid separation device is concentrated, and a portion of the concentrated sludge is directed to the solubilizing tank. Therefore, the following advantages can be obtained in addition to the advantage that a high solubilization ratio can be ensured and the size of the solubilizing tank can be reduced in the same manner as in the first aspect of the present invention. More specifically, a portion of the sludge separated by the solid-liquid separation device is concentrated and then directed to the biological treatment device. Therefore, the quantity of microorganisms in the biological treatment device is increased more than in the first aspect of the present invention. Consequently, the quantity of microorganisms in the biological treatment device can be kept at a high concentration, and an organic matter is fully decomposed by the microorganisms. As a result, the sludge load is reduced such that the quality of treated water can advantageously be improved. </paragraph>
+<paragraph id="P-00028" lvl="0"><number>28.</number> A fourth aspect of the present invention is directed to a method of treating an organic waste water according to the third aspect of the present invention wherein at least a portion of the treated liquid solubilized by the solubilizing tank is returned to the biological treatment device. Consequently, the above-mentioned advantages can be obtained. </paragraph>
+<paragraph id="P-00029" lvl="0"><number>29.</number> A fifth aspect of the present invention is directed to a method of biologically treating an organic waste water which comprises the steps of biologically treating the organic waste water by a biological treatment device having a membrane separation device provided in a tank, concentrating at least a portion of the sludge in the biological treatment device by a concentration device, and solubilizing the concentrated sludge by thermophilic bacteria in a solubilizing tank. According to this method, the digesting decomposition of the organic waste water and the solid-liquid separation based on membrane separation are performed at the same time. Therefore, the waste water can be treated efficiently. At least a portion of the sludge in the biological treatment device is concentrated by the concentration device and then directed to the solubilizing tank. Therefore, the following advantage can be obtained in addition to the advantage that a high solubilization ratio can be ensured and the size of the solubilizing tank can be reduced in the same manner as in the first and third aspects of the present invention. More specifically, there is no hindrance to solid-liquid separation caused by a deterioration of the sedimentation properties of the sludge in a gravity sedimentation tank. Therefore, the quantity of biomass in the biological treatment device can be easily set to a high concentration such that the quality of treated water can be enhanced. </paragraph>
+<paragraph id="P-00030" lvl="0"><number>30.</number> A sixth aspect of the present invention is directed to a method of treating an organic waste water according to the fifth aspect of the present invention wherein at least a portion of the treated liquid solubilized by the solubilizing tank is returned to the biological treatment device. Consequently, the above-mentioned advantages can be obtained. </paragraph>
+<paragraph id="P-00031" lvl="0"><number>31.</number> A seventh aspect of the present invention is directed to a method of treating an organic waste water according to any of the first through sixth aspects of the present invention wherein the sludge is concentrated to have a water content of 99% or less (a sludge concentration of 1% or more) by the concentration device. Consequently, nutritive conditions more suitable for the growth of thermophilic bacteria can be obtained. Therefore, the solubilizing treatment can be performed more efficiently, and the size of the solubilizing tank can be further reduced. Even if the sludge is concentrated to have a water content of 90% or less, the above-mentioned advantages cannot be achieved. Conversely, the flow properties are deteriorated, and in the case where the solubilizing tank is operated aerobically or microaerobically, aeration causes a foaming phenomenon. Therefore, it is preferable that the sludge is concentrated by the concentration device with a water content of 90% to 99%. </paragraph>
+<paragraph id="P-00032" lvl="0"><number>32.</number> An eighth aspect of the present invention is directed to a method of treating an organic waste water according to any of the first through sixth aspects of the present invention wherein the solubilizing treatment is carried out using heat and under conditions such that a sludge solubilization enzyme is produced and secreted from a microorganism and solubilization is promoted by the enzyme, and the time required for the solubilizing treatment is determined based on the HRT (hydraulic residence time) of the treated sludge in the solubilizing treatment device. Consequently, solubilization is performed under conditions such that the solubilization enzyme can be produced and can perform solubilization. Thus, a lengthy solubilizing reaction can be avoided. Therefore, the size of the solubilizing tank can be reduced and the solubilizing treatment can be performed advantageously. </paragraph>
+<paragraph id="P-00033" lvl="0"><number>33.</number> A ninth aspect of the present invention is directed to a method of treating an organic waste water according to the eighth aspect of the present invention, wherein the HRT is 3 to 24 hours. Consequently, the sludge can be solubilized efficiently. </paragraph>
+<paragraph id="P-00034" lvl="0"><number>34.</number> A tenth aspect of the present invention is directed to an apparatus for biologically treating an organic waste water. The apparatus comprises a biological treatment device for biologically treating the organic waste water, a solid-liquid separation device for solid-liquid separating the waste water treated by the biological treatment device into treated water and a sludge, a route for returning a portion of the sludge separated by the solid-liquid separation device to the biological treatment device, a concentration device for concentrating at least a portion of a residual sludge, and a solubilizing tank for solubilizing, by thermophilic bacteria, the sludge concentrated in the concentration device. According to the tenth aspect of the present invention, it is possible to execute the treatment method according to the first aspect of the present invention wherein a high solubilization ratio can be ensured and the size of the solubilizing tank can be reduced. </paragraph>
+<paragraph id="P-00035" lvl="0"><number>35.</number> An eleventh aspect of the present invention is directed to an apparatus for treating an organic waste water according to the tenth aspect of the present invention, further comprising a route for returning at least portion of the treated liquid solubilized by the solubilizing tank to the biological treatment device. Consequently, it is possible to execute the treatment method according to the second aspect of the present invention wherein the sludge can be reduced. </paragraph>
+<paragraph id="P-00036" lvl="0"><number>36.</number> A twelfth aspect of the present invention is directed to an apparatus for biologically treating an organic waste water. The apparatus comprises a biological treatment device for biologically treating the organic waste water, a solid-liquid separation device for solid-liquid separating the waste water treated by the biological treatment device into treated water and a sludge, a concentration device for concentrating the sludge separated by the solid-liquid separation device, a route for returning a portion of the sludge concentrated by the concentration device to the biological treatment device, and a solubilizing tank for solubilizing at least a portion of a residual sludge by thermophilic bacteria. According to the twelfth aspect of the present invention, it is possible to execute the treatment method according to the third aspect of the present invention wherein the quality of the treated water can be improved, a high solubilization ratio can be ensured, and the size of the solubilizing tank can be reduced. </paragraph>
+<paragraph id="P-00037" lvl="0"><number>37.</number> A thirteenth aspect of the present invention is directed to an apparatus for treating an organic waste water according to the twelfth aspect of the present invention, further comprising a route for returning at least a portion of the treated liquid solubilized by the solubilizing tank to the biological treatment device. Consequently, it is possible to execute the treatment method according to the fourth aspect of the present invention in which the sludge can be reduced. </paragraph>
+<paragraph id="P-00038" lvl="0"><number>38.</number> A fourteenth aspect of the present invention is directed to an apparatus for biologically treating an organic waste water. The apparatus comprises a biological treatment device having a membrane separation device provided in a tank, a concentration device for concentrating at least a portion of the sludge separated by the biological treatment device, and a solubilizing tank for solubilizing the sludge concentrated in the concentration device using thermophilic bacteria. According to the fourteenth aspect of the present invention, it is possible to execute the treatment method according to the fifth aspect of the present invention wherein the quality of the treated water can be enhanced with the apparatus having a comparatively simple structure and the treatment can be performed efficiently at low cost. </paragraph>
+<paragraph id="P-00039" lvl="0"><number>39.</number> A fifteenth aspect of the present invention is directed to the apparatus for treating an organic waste water according to the fourteenth aspect of the present invention, further comprising a route for returning at least a portion of the treated liquid solubilized by the solubilizing tank to the biological treatment device. Consequently, it is possible to execute the treatment method according to the sixth aspect of the present invention in which a decrease in the sludge can be achieved. </paragraph>
+<paragraph id="P-00040" lvl="0"><number>40.</number> In the present invention, the solid-liquid separation device represents a precipitation device and a membrane separation device, for example. As the concentration device, centrifugal concentration, floating concentration, evaporating concentration, membrane concentration, and the like can be employed. A concentrator of a floating ring lamination type also can be used. </paragraph>
+<paragraph id="P-00041" lvl="0"><number>41.</number> The biological treatment device used in the apparatus of the present invention can be used in both an aerobic biological treatment and an anaerobic biological treatment. It is preferred that the aeration tank used for the aerobic biological treatment is provided with aeration means. The aeration treatment is executed at a room temperature preferably with an airflow of 0.1 to 0.5 vvm in such a manner that aerobic digesting decomposition can be achieved. It also can be performed at a higher temperature with a larger airflow depending on a load. It is preferred that the pH value in the aeration tank is controlled to pH 5 to 8. In order to promote aerobic digesting decomposition, a microorganism, such as yeast, and a flocculant to promote floc formation, such as aluminum sulfate, polychlorinated aluminum, ferric chloride, or ferrous sulfate, can be added to the aeration tank. The aerobic biological treatment can be performed by the devices capable of performing an aerobic treatment other than the aeration tank. For the anaerobic biological treatment, it is possible to use a method of circulating a solution in a tank to perform mixing, a method for circulating and bubbling a generated gas to perform mixing, a method using an agitator such as a stirring blade, and a method using active microorganism fixing means, i.e., means for efficiently causing an active microorganism to come in contact with waste water to be treated. </paragraph>
+<paragraph id="P-00042" lvl="0"><number>42.</number> It is desirable that a membrane having a pore of 0.1 to 2.5 &mgr;m, preferably, 0.3 to 0.5 &mgr;m, is used in the membrane separation device provided on the aeration tank, for example. Furthermore, a membrane separation device having one or more membrane module structures is suitable. Examples of a preferred membrane separation device includes an immersion type membrane separation device having a T-type filter element, manufactured by Yuasa Corporation. It is preferred that the membrane separation device has a structure in which washing means utilizing pressurization by hydraulic pressure, air pressure, or the like, rubbing, vibration, chemical injection, or the like is built in the membrane separation device, or is provided thereon, and substances that do not pass through the membrane foul a membrane surface as little as possible. </paragraph>
+<paragraph id="P-00043" lvl="0"><number>43.</number> While a sludge is decomposed by thermophilic bacteria (for example, a biomass, such as bacillus, stearothermophilous, or the like, can be added) at the solubilizing step, decomposition can be performed in combination with various methods which are conventionally known, for example, ozone decomposition, electrolysis, thermal alkaline decomposition, and enzyme decomposition (for example, protease, lipase, glycositase, and the like, are added solely or in combination). </paragraph>
+<paragraph id="P-00044" lvl="0"><number>44.</number> In the present invention, the following represents &ldquo;the solubilization is carried out using heat and under the conditions such that the sludge solubilization enzyme is produced and secreted from a microorganism, and the solubilization is promoted by the enzyme&rdquo;: </paragraph>
+<paragraph id="P-00045" lvl="2"><number>45.</number> (1) Temperature: 50&deg; C. to 80&deg; C., preferably 60&deg; C. to 70&deg; C.; </paragraph>
+<paragraph id="P-00046" lvl="2"><number>46.</number> (2) Concentration of the sludge: 1000 mg/1 or more, preferably 5000 mg/1 or more, more preferably 10,000 mg/1 or more (i.e., a water content of 99% or less); </paragraph>
+<paragraph id="P-00047" lvl="2"><number>47.</number> (3) pH: 7 to 9, preferably 7.5 to 8.5; </paragraph>
+<paragraph id="P-00048" lvl="2"><number>48.</number> (4) Environment: aerobic or microaerobic conditions; and </paragraph>
+<paragraph id="P-00049" lvl="2"><number>49.</number> (5) Time: determined based on an HRT of the sludge to be treated in the solubilizing tank. </paragraph>
+<paragraph id="P-00050" lvl="0"><number>50.</number> In cases where the excess sludge is solubilized continuously, the HRT is determined from the amount of an inflow and an effective volume of a reactor. In other words, the HRT (hydraulic residence time) can be calculated based on an equation of HRT&equals;V/Q (V is the capacity of the reactor, Q is the amount of the inflow). </paragraph>
+<paragraph id="P-00051" lvl="0"><number>51.</number> HRT is directly proportional to the volume of the reactor. The excess sludge is solubilized in a solubilizing treatment device, i.e., a reactor. Therefore, to achieve solubilization to a desired extent, it is apparent that the volume of the reactor can be reduced as the HRT is shortened. In consideration of an aspect of the present invention, i.e., reduction of the equipment size, the solubilization time is determined based on the HRT so that a lengthy solubilizing treatment can be avoided. </paragraph>
+<paragraph id="P-00052" lvl="0"><number>52.</number> It is preferred that the production and secretion quantities of the sludge solubilization enzyme are monitored to select an HRT at which the production and secretion quantities are maximized. If the HRT is thus set, the reaction performed by the produced and secreted sludge solubilization enzyme can be utilized efficiently. Usually, it is preferred that the HRT is set to 3 to 24 hours. </paragraph>
+</section>
+<section>
+<heading lvl="1">EXAMPLES </heading>
+<paragraph id="P-00053" lvl="0"><number>53.</number> Examples of the present invention are described below. </paragraph>
+<paragraph id="P-00054" lvl="7"><number>54.</number> 1. Effect of Sludge Concentration </paragraph>
+</section>
+<section>
+<heading lvl="1">(1) Example 1 </heading>
+<paragraph id="P-00055" lvl="0"><number>55.</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> is a structural diagram schematically showing an apparatus for treating an organic waste water which is suitable for executing a method of the present invention for treating an organic waste water. </paragraph>
+<paragraph id="P-00056" lvl="0"><number>56.</number> As shown in <cross-reference target="DRAWINGS">FIG. 1</cross-reference>, original waste water A stored in organic waste water reservoir I is introduced into a biological treatment tank <highlight><bold>3</bold></highlight> through a route <highlight><bold>2</bold></highlight>. The original waste water A, which is organic waste water, is subjected to an aerobic biological treatment in biological treatment tank <highlight><bold>3</bold></highlight>. The aerobic biological treatment represents that an organic matter is decomposed into an inorganic matter, such as carbon dioxide or water, by biological oxidation. An aerobic microorganism used is gram-negative or gram-positive bacillus, for example, the <highlight><italic>Pseudomonas </italic></highlight>species and the <highlight><italic>Bacillus </italic></highlight>species, which have been used in an activated sludge method for sewage treatment. These inoculation bacteria are obtained from a usual sewage treatment plant. In this case, an operation is performed in such a manner that the temperature of biological treatment tank <highlight><bold>3</bold></highlight> is set to a range of 10&deg; C. to 50&deg; C., usually 20&deg; C. to 30&deg; C. In order to perform the treatment more efficiently, a high temperature is preferred. For example, in the case where mesophile bacteria separated from the excess sludge of sewage is used, the operation is performed at a temperature of 35&deg; C. to 45&deg; C. In any case, the operation should be performed by selecting an optimum temperature condition from the temperature range disclosed above such that a microorganism can perform the oxidative decomposition efficiently and fully. In this case, the biological treatment tank can be a batch type or a continuous type. </paragraph>
+<paragraph id="P-00057" lvl="0"><number>57.</number> Subsequently, treated water B treated in biological treatment tank <highlight><bold>3</bold></highlight> is introduced through a route <highlight><bold>4</bold></highlight> into a precipitation tank <highlight><bold>5</bold></highlight> acting as a solid-liquid separation device and solid-liquid separated therein. Supernatant solution C obtained by the solid-liquid separation is subjected to a tertiary treatment, if necessary, such as denitrification or an ozone treatment according to the regulations of a discharge destination. The solution thus treated is reused or utilized. </paragraph>
+<paragraph id="P-00058" lvl="0"><number>58.</number> On the other hand, a portion of sludge D separated in precipitation tank <highlight><bold>5</bold></highlight> is introduced into biological treatment tank <highlight><bold>3</bold></highlight> through a route <highlight><bold>6</bold></highlight>. The quantity of sludge sent through route <highlight><bold>6</bold></highlight> is determined by the quantity of retention of the microorganism in biological treatment tank <highlight><bold>3</bold></highlight>. </paragraph>
+<paragraph id="P-00059" lvl="0"><number>59.</number> Furthermore, residual sludge E separated in precipitation tank <highlight><bold>5</bold></highlight> is introduced into a concentration tank <highlight><bold>8</bold></highlight> through route <highlight><bold>7</bold></highlight>. Depending on circumstances, a portion of residual sludge E separated in precipitation tank <highlight><bold>5</bold></highlight> can be extracted to the outside of a system. Concentration tank <highlight><bold>8</bold></highlight> concentrates the sludge by gravity sedimentation. As a concentration method, a method utilizing floating concentration, evaporating concentration, membrane concentration, addition of a flocculant or centrifugal force also can be used. As described above, it is preferred that the sludge is concentrated to have a water content of 99% or less (i.e., sludge concentration of 1% or more). The solution obtained after concentration is introduced into a solubilizing tank <highlight><bold>10</bold></highlight> through a route <highlight><bold>9</bold></highlight>. Solubilizing tank <highlight><bold>10</bold></highlight> solubilizes an organic sludge anaerobically or aerobically at a high temperature. In this case, inoculation bacteria (i.e., thermophilic bacteria) of an anaerobic or aerobic microorganism, which are to be used at a high temperature, are obtained by incubating the microorganism in an anaerobic or aerobic digesting tank according to the prior art, for example. While the operation is performed such that the optimum temperature of solubilizing tank <highlight><bold>10</bold></highlight> is preferably 50&deg; C. to 90&deg; C., the optimum temperature is varied depending on the type of the thermophilic bacteria for decomposing an organic solid contained in the sludge E to be treated at a high temperature. For example, in case of the thermophilic bacteria separated from an excess sludge of sewage treatment plant, the operation is performed at a high temperature of 55&deg; C. to 75&deg; C., preferably, about 65&deg; C., in such a manner that the solubilizing reaction performed by the microorganism (thermophilic bacteria) and physicochemically thermal decomposition performed by heat can be carried out efficiently and fully at the same time. In any case, it is preferred that the temperature is set to a range of 50&deg; C. to 90&deg; C. depending on the type of microorganisms, in such a manner that the solubilizing reaction to be performed by the microorganism (thermophilic bacteria) and the physicochemically thermal decomposition to be performed by heat can be carried out efficiently and fully at the same time. </paragraph>
+<paragraph id="P-00060" lvl="0"><number>60.</number> Furthermore, a device for aerobic microorganism decomposition in solubilizing tank <highlight><bold>10</bold></highlight> can be provided with a diffuser according to the prior art, and a device for anaerobic microorganism decomposition can use a method of circulating a solution in a tank for mixing, a method of circulating and bubbling a generated gas for mixing, a method having an agitator, such as a stirring blade, and a method having active microorganism fixing means, i.e., means for efficiently causing an active microorganism to come in contact with a sludge to be treated. In this case, the solubilizing tank can be a batch type or a continuous type. </paragraph>
+<paragraph id="P-00061" lvl="0"><number>61.</number> Thus, treated solution F solubilized in solubilizing tank <highlight><bold>10</bold></highlight> is introduced into biological treatment tank <highlight><bold>3</bold></highlight> through a route <highlight><bold>11</bold></highlight> such that an aerobic biological treatment is performed there. Subsequently, the above-mentioned treatment cycle is repeated. </paragraph>
+</section>
+<section>
+<heading lvl="1">(2) Example 2 </heading>
+<paragraph id="P-00062" lvl="0"><number>62.</number> <cross-reference target="DRAWINGS">FIG. 2</cross-reference> is a structural diagram schematically showing an apparatus for treating an organic waste water, which is suitable for executing a method of treating an organic waste water according to another embodiment of the present invention. The apparatus shown in <cross-reference target="DRAWINGS">FIG. 2</cross-reference> is different from the apparatus shown in <cross-reference target="DRAWINGS">FIG. 1</cross-reference> in that route <highlight><bold>6</bold></highlight> is not provided, all sludge separated in precipitation tank <highlight><bold>5</bold></highlight> is introduced into concentration tank <highlight><bold>8</bold></highlight>, a part of the sludge concentrated to have a water content of 99% or less (a sludge concentration of 1% or more) in concentration tank <highlight><bold>8</bold></highlight> is introduced into biological treatment tank <highlight><bold>3</bold></highlight> through route <highlight><bold>12</bold></highlight>, a residual sludge is introduced into solubilizing tank <highlight><bold>10</bold></highlight> and solubilized by thermophilic bacteria, the solubilized solution is introduced into biological treatment tank <highlight><bold>3</bold></highlight> through route <highlight><bold>11</bold></highlight>, and an aerobic biological treatment of the concentrated sludge and the solubilized solution is performed in biological treatment tank <highlight><bold>3</bold></highlight>. Subsequently, the above-mentioned treatment cycle is repeated. A part of the sludge concentrated in concentration tank <highlight><bold>8</bold></highlight> can be extracted to the outside of a system. </paragraph>
+<paragraph id="P-00063" lvl="0"><number>63.</number> In order to confirm the advantages of the present invention, an angular tank was used as a biological treatment tank. The tank was made of transparent polyvinyl chloride resin and had an effective volume of 40 liters, with a sectional area of 800 cm<highlight><superscript>2 </superscript></highlight>and a height of 60 cm, and the biological treatment tank was aerated with an airflow of 0.3 vvm, a lower pyramid type angular tank was used as a precipitation tank, which was made of transparent polyvinyl chloride resin and had an effective volume of 10 liters with a sectional area of 400 cm<highlight><superscript>2 </superscript></highlight>and a height of 40 cm. A lower cone type cylindrical tank was used as a concentration tank, which was made of transparent polyvinyl chloride resin and had an effective volume of 2 liters with an inside diameter of 10 cm and a height of 40 cm. A glass cylinder was used as a solubilizing tank, which had an effective volume of 2 liters with an inside diameter of 13 cm and a height of 25 cm, and the solubilizing tank was aerated with an airflow of 0.5 vvm. 1 vvm means &ldquo;1 liter air volume/1 liter reactor volume/min.&rdquo; Organic waste water (original waste water) having properties of peptone:glucose:yeast extract&equals;4:4:1 was used, and the apparatus shown in <cross-reference target="DRAWINGS">FIG. 1</cross-reference> was operated by regulating the quantity of the sludge flowing into route <highlight><bold>6</bold></highlight> with a load of 0.4 kg BOD/m<highlight><superscript>3</superscript></highlight>/day in such a manner that biological treatment tank <highlight><bold>3</bold></highlight> had a sludge concentration of about 3000 mg/liter. The apparatus shown in <cross-reference target="DRAWINGS">FIG. 2</cross-reference> was operated by regulating the quantity of a sludge in such a manner that the quantity of the sludge flowing into route <highlight><bold>12</bold></highlight> was equal to the quantity of the sludge flowing into route <highlight><bold>6</bold></highlight> shown in <cross-reference target="DRAWINGS">FIG. 1</cross-reference>. While the precipitation tank has been used for solid-liquid separation in the above-mentioned example, it is apparent that a device typically used for solid-liquid separations, such as a membrane separation device, can be used, for example. </paragraph>
+</section>
+<section>
+<heading lvl="1">(3) Comparative Example </heading>
+<paragraph id="P-00064" lvl="0"><number>64.</number> For comparison, as shown in <cross-reference target="DRAWINGS">FIG. 3</cross-reference>, an apparatus for treating an organic waste water, in which concentration tank <highlight><bold>8</bold></highlight> was removed from the apparatus shown in <cross-reference target="DRAWINGS">FIG. 1</cross-reference>, was operated using the above-mentioned organic waste water with the above-mentioned airflow and the above-mentioned BOD load, and regulating the quantity of a sludge flowing into route <highlight><bold>6</bold></highlight> in such a manner that biological treatment tank <highlight><bold>3</bold></highlight> had a sludge concentration of about 3000 mg/liter. Consequently, the results listed in the following Table 1 were obtained.  
+<table-cwu id="TABLE-US-00001">
+<number>1</number>
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="4">
+<colspec colname="OFFSET" colwidth="77PT" align="left"/>
+<colspec colname="1" colwidth="56PT" align="center"/>
+<colspec colname="2" colwidth="35PT" align="center"/>
+<colspec colname="3" colwidth="49PT" align="center"/>
+<thead>
+<row>
+<entry></entry>
+<entry namest="OFFSET" nameend="3" align="center">TABLE 1</entry>
+</row>
+<row>
+<entry></entry>
+<entry></entry>
+</row>
+<row>
+<entry></entry>
+<entry namest="OFFSET" nameend="3" align="center" rowsep="1"></entry>
+</row>
+<row>
+<entry></entry>
+<entry>Comparative</entry>
+<entry>Example</entry>
+<entry>Example</entry>
+</row>
+<row>
+<entry></entry>
+<entry>Example</entry>
+<entry>1</entry>
+<entry>2</entry>
+</row>
+<row>
+<entry></entry>
+<entry namest="OFFSET" nameend="3" align="center" rowsep="1"></entry>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry></entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="4">
+<colspec colname="1" colwidth="77PT" align="left"/>
+<colspec colname="2" colwidth="56PT" align="char"/>
+<colspec colname="3" colwidth="35PT" align="char"/>
+<colspec colname="4" colwidth="49PT" align="char"/>
+<tbody valign="top">
+<row>
+<entry>Sludge concentration</entry>
+<entry>3000</entry>
+<entry>3080</entry>
+<entry>4800</entry>
+</row>
+<row>
+<entry>of biological treatment</entry>
+</row>
+<row>
+<entry>tank (mg/liter)</entry>
+</row>
+<row>
+<entry>Sludge concentration</entry>
+<entry>5900</entry>
+<entry>5790</entry>
+<entry>5530</entry>
+</row>
+<row>
+<entry>of precipitation tank</entry>
+</row>
+<row>
+<entry>(mg/liter)</entry>
+</row>
+<row>
+<entry>Sludge concentration</entry>
+<entry>&mdash;</entry>
+<entry>9750</entry>
+<entry>10800</entry>
+</row>
+<row>
+<entry>of concentration tank</entry>
+</row>
+<row>
+<entry>(mg/liter)</entry>
+</row>
+<row>
+<entry>Sludge to be treated</entry>
+<entry>2.0</entry>
+<entry>1.4</entry>
+<entry>1.2</entry>
+</row>
+<row>
+<entry>at solubilizing tank</entry>
+</row>
+<row>
+<entry>(liter/day)</entry>
+</row>
+<row>
+<entry>Quality of treated water</entry>
+</row>
+<row>
+<entry>BOD (mg/liter)</entry>
+<entry>&lt;5</entry>
+<entry>&lt;5</entry>
+<entry>&lt;5</entry>
+</row>
+<row>
+<entry>S-TOC (mg/liter)</entry>
+<entry>23</entry>
+<entry>22</entry>
+<entry>17</entry>
+</row>
+<row>
+<entry>SS (mg/liter)</entry>
+<entry>22</entry>
+<entry>21</entry>
+<entry>20</entry>
+</row>
+<row><entry namest="1" nameend="4" align="center" rowsep="1"></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</table-cwu>
+</paragraph>
+<paragraph id="P-00065" lvl="0"><number>65.</number> From Table 1, the following results are illustrated. </paragraph>
+<paragraph id="P-00066" lvl="0"><number>66.</number> (1) According to Example 1, the sludge concentrated in the concentration tank is introduced into the solubilizing tank. Therefore, the quantity of the sludge to be treated in the solubilizing tank can be decreased more than in the comparative example. Consequently, the size of the solubilizing tank can be reduced. </paragraph>
+<paragraph id="P-00067" lvl="0"><number>67.</number> (2) According to Example 2, all the sludge separated in the precipitation tank is introduced into the concentration tank. Therefore, in addition to the advantage that the size of the solubilizing tank can be reduced in the same manner as in Example 1, the quality of treated water can be improved because the concentration of the sludge in the biological treatment tank is increased, i.e., the quantity of microorganisms in the biological treatment tank is increased. </paragraph>
+<paragraph id="P-00068" lvl="0"><number>68.</number> (3) According to the comparative example, a large quantity of sludge is treated in the solubilizing tank. In addition, the quality of treated water is the lowest. </paragraph>
+<paragraph id="P-00069" lvl="7"><number>69.</number> 2. Specification of Treatment Time for Solubilizing Reaction </paragraph>
+</section>
+<section>
+<heading lvl="1">Example 3 </heading>
+</section>
+<section>
+<heading lvl="1">Change in Enzyme Production by Microorganism Corresponding to a Residence Time </heading>
+<paragraph id="P-00070" lvl="0"><number>70.</number> A yeast-peptone medium, manufactured by DIFCO Co., Ltd., (4 g of yeast extract, 8 g of peptone and 1 liter of water, pH 6.8) was put into a reactor made of glass, and bacillus stearothermophilus SPT 2-1 &lsqb;FERM P-15395&rsqb;, which was derived from an excess sludge of a sewage treatment plant and preincubated, was raised and concussively incubated at a temperature of 65&deg; C. First, an HRT was set to 36 hours while an incubation solution is continuously supplied. In order to shorten the HRT to a predetermined time, while the quantity of organic matter to be introduced is kept constant, an appropriate quantity of dilution water was added for incubation. A supernatant solution was sampled at each residence time, and each protease activity was measured as follows. More specifically, an equivalent sample was added to 0.7 ml of a solution (5 mg/ml) obtained by suspending azocoal (trade name, manufactured by Sigma Co., Ltd.) acting as a substrate for nonspecific protease assay into a phosphoric acid buffer solution having pH 7.0. The mixture was incubated for 30 minutes at a temperature of 70&deg; C. After the reaction was completed, an absorbance at 520 nm was measured. When a similar measurement was conducted using, as a sample, 30 &mgr;g/ml of the phosphoric acid buffer solution (pH 7.0) of trypsin (about 400 BAEE U/mg, manufactured by Wako Junyaku Co., Ltd.), an absorbance of 1.0 was obtained at 520 nm. </paragraph>
+<paragraph id="P-00071" lvl="0"><number>71.</number> The obtained results are shown in <cross-reference target="DRAWINGS">FIG. 4</cross-reference>. It has been found that the enzyme activity reaches a peak at an HRT of 12 hours and then is lowered to a low level before an HRT of 20 hours. Accordingly, it is apparent that the HRT suitable for the enzyme production by the strain is about 12 hours. </paragraph>
+</section>
+<section>
+<heading lvl="1">Example 4 </heading>
+</section>
+<section>
+<heading lvl="1">Change in Enzyme Production by Excess Sludge Corresponding to a Residence Time </heading>
+<paragraph id="P-00072" lvl="0"><number>72.</number> After bacillus stearothermophilus SPT 2-1 &lsqb;FERM P-15395&rsqb;, which was derived from an excess sludge of a sewage treatment plant and preincubated, was raised, an excess sludge derived from the sewage treatment plant (which had an organic solid (vss) concentration of 3% by weight) was put into a 5-liter jar fermenter made of glass, and was treated at a temperature of 65&deg; C with an airflow of 0.3 vvm and a stirring speed of 300 rpm. In the same manner as in Example 3, an HRT first was set to 36 hours, dilution water was suitably injected to set a predetermined HRT, and a protease activity at each HRT was measured. The excess sludge of the sewage treatment plant was obtained by precipitating and separating a sludge in a final precipitation tank, and further causing the precipitated sludge to be subjected to floating concentration. </paragraph>
+<paragraph id="P-00073" lvl="0"><number>73.</number> The obtained results are shown in <cross-reference target="DRAWINGS">FIG. 5</cross-reference>. It has been found that the enzyme activity reaches a peak at an HRT of 15 to 20 hours, and then are reduced to a lower level before an HRT of 25 hours. Accordingly, it is apparent that the HRT suitable for the enzyme production is about 20 hours. </paragraph>
+</section>
+<section>
+<heading lvl="1">Example 5 </heading>
+</section>
+<section>
+<heading lvl="1">Change in Solubilization Ratio of Excess Sludge Corresponding to a Residence Time </heading>
+<paragraph id="P-00074" lvl="0"><number>74.</number> An excess sludge was treated in the same manner as in Example 4, a solubilization sample was taken at each HRT to measure an organic solid (vss) content, and a solubilization ratio (%) at each time was measured based on the vss content obtained before the treatment. The vss content was measured in accordance with JISK0102. </paragraph>
+<paragraph id="P-00075" lvl="0"><number>75.</number> The obtained results are shown in <cross-reference target="DRAWINGS">FIG. 6</cross-reference>. It is apparent from <cross-reference target="DRAWINGS">FIG. 6</cross-reference> that the solubilization ratio is maximum at an HRT of about 15 to 20 hours, and an increase in the solubilization ratio, which is attributed to heating, can be detected at an HRT of 3 to 9 hours. </paragraph>
+<paragraph id="P-00076" lvl="0"><number>76.</number> From the results of Examples 4 and 5, accordingly, the following was suggested. More specifically, in the case of solubilizing 3% by weight of the excess sludge derived from the sewage treatment plant under the conditions suitable for the enzyme production, it is preferable that the protease activity would be monitored to select an HRT at which the protease activity reaches a peak. In this case, it has been found that the solubilization can be performed efficiently at an HRT of 3 to 24 hours because the actions of the heat and the enzymes are maximized. </paragraph>
+<paragraph id="P-00077" lvl="7"><number>77.</number> 3. Treatment of Waste Water Performed by a Biological Treatment Tank Provided with Membrane Separation Device </paragraph>
+</section>
+<section>
+<heading lvl="1">Example 6 </heading>
+<paragraph id="P-00078" lvl="0"><number>78.</number> In Example 6, route <highlight><bold>6</bold></highlight> was removed from the structure of <cross-reference target="DRAWINGS">FIG. 1</cross-reference>, the same tanks as concentration tank <highlight><bold>8</bold></highlight> and the solubilizing tank <highlight><bold>10</bold></highlight> in <cross-reference target="DRAWINGS">FIG. 1</cross-reference> were used, and biological treatment tank <highlight><bold>3</bold></highlight> provided with immersion-type membrane separation device <highlight><bold>13</bold></highlight> (manufactured by Yuasa Corporation, a T-type filter element) was used in place of biological treatment tank <highlight><bold>3</bold></highlight> and precipitation tank <highlight><bold>5</bold></highlight>. <cross-reference target="DRAWINGS">FIG. 7</cross-reference> schematically shows the structure of an apparatus for treating an organic waste water according to Example 6. The operation of the apparatus was performed using the above-mentioned organic waste water with the above-mentioned airflow and the above-mentioned BOD load, and regulating the quantity of a sludge flowing into route <highlight><bold>7</bold></highlight> in such a manner that biological treatment tank <highlight><bold>3</bold></highlight> had a sludge concentration of about 12000 mg/liter. </paragraph>
+</section>
+<section>
+<heading lvl="1">Comparative Example </heading>
+<paragraph id="P-00079" lvl="0"><number>79.</number> For comparison, the apparatus for treating organic waste water shown in <cross-reference target="DRAWINGS">FIG. 3</cross-reference> was operated using the above-mentioned organic waste water with the above-mentioned airflow and the above-mentioned BOD load by regulating the quantity of a sludge-flowing into route <highlight><bold>6</bold></highlight> in such a manner that biological treatment tank <highlight><bold>3</bold></highlight> had a sludge concentration of about 3000 mg/liter. Consequently, the results listed in the following Table 2 were obtained.  
+<table-cwu id="TABLE-US-00002">
+<number>2</number>
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="OFFSET" colwidth="112PT" align="left"/>
+<colspec colname="1" colwidth="49PT" align="center"/>
+<colspec colname="2" colwidth="56PT" align="center"/>
+<thead>
+<row>
+<entry></entry>
+<entry namest="OFFSET" nameend="2" align="center">TABLE 2</entry>
+</row>
+<row>
+<entry></entry>
+<entry></entry>
+</row>
+<row>
+<entry></entry>
+<entry namest="OFFSET" nameend="2" align="center" rowsep="1"></entry>
+</row>
+<row>
+<entry></entry>
+<entry>Comparative</entry>
+<entry>Example</entry>
+</row>
+<row>
+<entry></entry>
+<entry>Example</entry>
+<entry>6</entry>
+</row>
+<row>
+<entry></entry>
+<entry namest="OFFSET" nameend="2" align="center" rowsep="1"></entry>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry></entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="112PT" align="left"/>
+<colspec colname="2" colwidth="49PT" align="char"/>
+<colspec colname="3" colwidth="56PT" align="char"/>
+<tbody valign="top">
+<row>
+<entry>Sludge concentration of biological</entry>
+<entry>3050</entry>
+<entry>12040</entry>
+</row>
+<row>
+<entry>treatment tank (mg/liter)</entry>
+</row>
+<row>
+<entry>Sludge concentration of precipitation</entry>
+<entry>5800</entry>
+<entry>&mdash;</entry>
+</row>
+<row>
+<entry>tank (mg/liter)</entry>
+</row>
+<row>
+<entry>Sludge concentration of concentation</entry>
+<entry>&mdash;</entry>
+<entry>25000</entry>
+</row>
+<row>
+<entry>tank (mg/liter)</entry>
+</row>
+<row>
+<entry>Sludge to be treated at solubilizing</entry>
+<entry>2.0</entry>
+<entry>0.5</entry>
+</row>
+<row>
+<entry>tank (liter/day)</entry>
+</row>
+<row>
+<entry>Quality of treated water</entry>
+</row>
+<row>
+<entry>BOD (mg/liter)</entry>
+<entry>&lt;5</entry>
+<entry>&lt;5</entry>
+</row>
+<row>
+<entry>S-TOC (mg/liter)</entry>
+<entry>20</entry>
+<entry>18</entry>
+</row>
+<row>
+<entry>SS (mg/liter)</entry>
+<entry>18</entry>
+<entry>1</entry>
+</row>
+<row><entry namest="1" nameend="3" align="center" rowsep="1"></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</table-cwu>
+</paragraph>
+<paragraph id="P-00080" lvl="0"><number>80.</number> (1) According to Example 6, all the sludge separated in the biological treatment tank is introduced into the concentration tank. Therefore, in addition to the advantage that the size of the solubilizing tank can be reduced, the quality of the treated water can be improved because the concentration of the sludge in the biological treatment tank is increased, that is, the quantity of microorganisms in the biological treatment tank is increased. </paragraph>
+<paragraph id="P-00081" lvl="0"><number>81.</number> (2) According to the comparative example, a large quantity of sludge is treated in the solubilizing tank. In addition, the quality of treated water is low. </paragraph>
+<paragraph id="P-00082" lvl="0"><number>82.</number> In view of the foregoing, the following advantages can be obtained from the present invention. </paragraph>
+<paragraph id="P-00083" lvl="0"><number>83.</number> (1) According to the first aspect of the present invention, the concentrated sludge is directed to the solubilizing tank. Therefore, the solubilizing tank has nutritive conditions suitable for growth of thermophilic bacteria, and the solubilization enzyme also is produced. Therefore, a high solubilization ratio can be obtained. Since the quantity of the sludge to be treated in the solubilizing tank can be reduced, the size of the solubilizing tank can be reduced. </paragraph>
+<paragraph id="P-00084" lvl="0"><number>84.</number> (2) According to the third aspect of the present invention, the following advantage can be obtained in addition to the advantages that a high solubilization ratio can be ensured and the size of the solubilizing tank can be reduced. More specifically, all the sludge separated by the solid-liquid separation device is concentrated and a portion of the concentrated sludge is directed to the biological treatment device. Therefore, the quantity of microorganisms to be directed to the biological treatment device can be kept at a high concentration such that the quality of treated water can be improved. </paragraph>
+<paragraph id="P-00085" lvl="0"><number>85.</number> (3) According to the fifth aspect of the present invention, in addition to the advantage that a high-solubilization ratio can be ensured and the size of the solubilizing tank can be reduced, waste water can efficiently be treated because the digesting decomposition of the organic waste water and the solid-liquid separation based on membrane separation are simultaneously performed. Furthermore, there is no hindrance to solid-liquid separation caused by the deterioration of sedimentation properties of the sludge in the gravity precipitation tank. Therefore, the quantity of biological retention in the biological treatment device can be kept at a high concentration. Consequently, the quality of treated water can be enhanced. </paragraph>
+<paragraph id="P-00086" lvl="0"><number>86.</number> (4) According to the second, fourth, and sixth aspects of the present invention, the sludge can be reduced. </paragraph>
+<paragraph id="P-00087" lvl="0"><number>87.</number> (5) According to the seventh aspect of the present invention, the solubilizing tank has nutritive conditions more suitable for the growth of thermophilic bacteria. Consequently, the solubilizing treatment can be performed more efficiently and the size of the solubilizing tank can be reduced still more. </paragraph>
+<paragraph id="P-00088" lvl="0"><number>88.</number> (6) According to the eighth aspect of the present invention, a lengthy solubilizing reaction can be avoided. Therefore, the size of the solubilizing tank can be reduced and the solubilizing reaction can be performed efficiently. </paragraph>
+<paragraph id="P-00089" lvl="0"><number>89.</number> (7) According to the ninth aspect of the present invention, the sludge can be solubilized efficiently. </paragraph>
+<paragraph id="P-00090" lvl="0"><number>90.</number> (8) According to the tenth aspect of the present invention, it is possible to provide a treatment apparatus suitable for executing the treatment method according to the first aspect of the present invention. </paragraph>
+<paragraph id="P-00091" lvl="0"><number>91.</number> (9) According to the eleventh aspect of the present invention, it is possible to provide a treatment apparatus suitable for executing the treatment method according to the second aspect of the present invention. </paragraph>
+<paragraph id="P-00092" lvl="0"><number>92.</number> (10) According to the twelfth aspect of the present invention, it is possible to provide a treatment apparatus suitable for executing the treatment method according to the third aspect of the present invention. </paragraph>
+<paragraph id="P-00093" lvl="0"><number>93.</number> (11) According to the thirteenth aspect of the present invention, it is possible to provide a treatment apparatus suitable for executing the treatment method according to the fourth aspect of the present invention. </paragraph>
+<paragraph id="P-00094" lvl="0"><number>94.</number> (12) According to the fourteenth aspect of the present invention, it is possible to provide a treatment apparatus suitable for executing the treatment method according to the fifth aspect of the present invention. </paragraph>
+<paragraph id="P-00095" lvl="0"><number>95.</number> (13) According to the fifteenth aspect of the present invention, it is possible to provide a treatment apparatus suitable for executing the treatment method according to the sixth aspect of the present invention. </paragraph>
+<paragraph id="P-00096" lvl="0"><number>96.</number> Although the present invention has fully been described by way of example with reference to the accompanying drawings, it is to be understood that various changes and modifications will be apparent to those skilled in the art. Therefore, unless otherwise such changes and modifications depart from the scope of the invention, they should be construed as being included therein. </paragraph>
+</section>
+</detailed-description>
+</subdoc-description>
+<subdoc-claims>
+<heading lvl="1">What is claimed is: </heading>
+<claim id="CLM-00001">
+<claim-text><highlight><bold>1</bold></highlight>. A method of biologically treating an organic waste water, comprising the steps of: 
+<claim-text>biologically treating the organic waste water in a biological treatment device; </claim-text>
+<claim-text>solid-liquid separating the waste water treated in the biological treatment device into a treated water and a sludge by a solid-liquid separation device; </claim-text>
+<claim-text>returning a portion of the sludge separated by the solid-liquid separation device to the biological treatment device; </claim-text>
+<claim-text>concentrating at least a portion of a residual sludge by a concentration device; and </claim-text>
+<claim-text>solubilizing the concentrated sludge by thermophilic bacteria in a solubilizing tank. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002">
+<claim-text><highlight><bold>2</bold></highlight>. The method of <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference> wherein at least a portion of the treated liquid solubilized by the solubilizing tank is returned to the biological treatment device. </claim-text>
+</claim>
+<claim id="CLM-00003">
+<claim-text><highlight><bold>3</bold></highlight>. A method of biologically treating an organic waste water comprising the steps of: 
+<claim-text>biologically treating the organic waste water in a biological treatment device; </claim-text>
+<claim-text>solid-liquid separating the waste water treated in the biological treatment device into treated liquid and a sludge by a solid-liquid separation device; </claim-text>
+<claim-text>concentrating the sludge separated by the solid-liquid separation device in a concentration device; </claim-text>
+<claim-text>returning a portion of the sludge to the biological treatment device; and </claim-text>
+<claim-text>solubilizing at least a portion of a residual sludge by thermophilic bacteria in a solubilizing tank. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00004">
+<claim-text><highlight><bold>4</bold></highlight>. The method of <dependent-claim-reference depends_on="CLM-00003"><claim-text>claim 3</claim-text></dependent-claim-reference> wherein at least a portion of the treated liquid solubilized by the solubilizing tank is returned to the biological treatment device. </claim-text>
+</claim>
+<claim id="CLM-00005">
+<claim-text><highlight><bold>5</bold></highlight>. A method of biologically treating an organic waste water comprising the steps of: 
+<claim-text>biologically treating the organic waste water in a biological treatment device having a membrane separation device provided in a tank; </claim-text>
+<claim-text>concentrating at least a portion of the sludge in the biological treatment device by a concentration device; and </claim-text>
+<claim-text>solubilizing the concentrated sludge by thermophilic bacteria in a solubilizing tank. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00006">
+<claim-text><highlight><bold>6</bold></highlight>. The method of <dependent-claim-reference depends_on="CLM-00005"><claim-text>claim 5</claim-text></dependent-claim-reference> wherein at least a portion of the treated liquid solubilized by the solubilizing tank is returned to the biological treatment device. </claim-text>
+</claim>
+<claim id="CLM-00007">
+<claim-text><highlight><bold>7</bold></highlight>. The method of <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference> wherein the sludge is concentrated to have a water content of 99% or less by the concentration device. </claim-text>
+</claim>
+<claim id="CLM-00008">
+<claim-text><highlight><bold>8</bold></highlight>. The method of <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference> wherein the solubilizing treatment is performed using heat and under the conditions such that a sludge solubilization enzyme is produced and secreted from a microorganism and the solubilization is promoted by the enzyme, and a time requirement for the solubilizing treatment is determined based on a hydraulic residence time of the treated liquid in the solubilizing treatment device. </claim-text>
+</claim>
+<claim id="CLM-00009">
+<claim-text><highlight><bold>9</bold></highlight>. The method of <dependent-claim-reference depends_on="CLM-00008"><claim-text>claim 8</claim-text></dependent-claim-reference> wherein the hydraulic residence time is 3 to 24 hours. </claim-text>
+</claim>
+<claim id="CLM-00010">
+<claim-text><highlight><bold>10</bold></highlight>. An apparatus for biologically treating an organic waste water, the apparatus comprising: 
+<claim-text>a biological treatment device for biologically treating the organic waste water; </claim-text>
+<claim-text>a solid-liquid separation device for solid-liquid separating the waste water treated by the biological treatment device into treated liquid and a sludge; </claim-text>
+<claim-text>a route for returning a portion of the sludge separated by the solid-liquid Separation device to the biological treatment device; </claim-text>
+<claim-text>a concentration device for concentrating at least a portion of a residual sludge; and </claim-text>
+<claim-text>a solubilizing tank for solubilizing the sludge concentrated in the concentration device by thermophilic bacteria. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00011">
+<claim-text><highlight><bold>11</bold></highlight>. The apparatus of <dependent-claim-reference depends_on="CLM-00010"><claim-text>claim 10</claim-text></dependent-claim-reference> further comprising a route for returning at least a portion of the treated liquid solubilized by the solubilizing tank to the biological treatment device. </claim-text>
+</claim>
+<claim id="CLM-00012">
+<claim-text><highlight><bold>12</bold></highlight>. An apparatus for biologically treating an organic waste water, the apparatus comprising: 
+<claim-text>a biological treatment device for biologically treating the organic waste water; </claim-text>
+<claim-text>a solid-liquid separation device for solid-liquid separating the waste water treated by the biological treatment device into treated liquid and a sludge; </claim-text>
+<claim-text>a concentration device for concentrating the sludge separated by the solid-liquid separation device; </claim-text>
+<claim-text>a route for returning a portion of the sludge concentrated by the concentration device to the biological treatment device; and </claim-text>
+<claim-text>a solubilizing tank for solubilizing at least a portion of a residual sludge by thermophilic bacteria. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00013">
+<claim-text><highlight><bold>13</bold></highlight>. The apparatus of <dependent-claim-reference depends_on="CLM-00012"><claim-text>claim 12</claim-text></dependent-claim-reference> further comprising a route for returning at least a portion of the treated liquid solubilized by the solubilizing tank to the biological treatment device. </claim-text>
+</claim>
+<claim id="CLM-00014">
+<claim-text><highlight><bold>14</bold></highlight>. An apparatus for biologically treating an organic waste water, the apparatus comprising: 
+<claim-text>a biological treatment device having a membrane separation device provided in a tank; </claim-text>
+<claim-text>a concentration device for concentrating at least a portion of a sludge separated by the biological treatment device; and </claim-text>
+<claim-text>a solubilizing tank for solubilizing the sludge concentrated in the concentration device by thermophilic bacteria. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00015">
+<claim-text><highlight><bold>15</bold></highlight>. The apparatus of <dependent-claim-reference depends_on="CLM-00014"><claim-text>claim 14</claim-text></dependent-claim-reference> further comprising a route for returning at least a portion of the treated liquid solubilized by the solubilizing tank to the biological treatment device. </claim-text>
+</claim>
+</subdoc-claims>
+<subdoc-drawings id="DRAWINGS">
+<heading lvl="0" align="CENTER">Drawings</heading>
+<representative-figure>1</representative-figure>
+<figure id="figure-D00001">
+<image id="EMI-D00001" file="US20010000007A1-20010315-D00001.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00002">
+<image id="EMI-D00002" file="US20010000007A1-20010315-D00002.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00003">
+<image id="EMI-D00003" file="US20010000007A1-20010315-D00003.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00004">
+<image id="EMI-D00004" file="US20010000007A1-20010315-D00004.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00005">
+<image id="EMI-D00005" file="US20010000007A1-20010315-D00005.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00006">
+<image id="EMI-D00006" file="US20010000007A1-20010315-D00006.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00007">
+<image id="EMI-D00007" file="US20010000007A1-20010315-D00007.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00008">
+<image id="EMI-D00008" file="US20010000007A1-20010315-D00008.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00009">
+<image id="EMI-D00009" file="US20010000007A1-20010315-D00009.TIF" imf="TIFF" ti="DR"/>
+</figure>
+</subdoc-drawings>
+</patent-application-publication>
+

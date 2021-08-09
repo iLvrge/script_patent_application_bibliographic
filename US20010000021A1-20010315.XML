@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patent-application-publication SYSTEM "pap-v15-2001-01-31.dtd" [
+<!ENTITY US20010000021A1-20010315-D00001.TIF SYSTEM "US20010000021A1-20010315-D00001.TIF" NDATA TIF>
+<!ENTITY US20010000021A1-20010315-D00002.TIF SYSTEM "US20010000021A1-20010315-D00002.TIF" NDATA TIF>
+]>
+<patent-application-publication>
+<subdoc-bibliographic-information>
+<document-id>
+<doc-number>20010000021</doc-number>
+<kind-code>A1</kind-code>
+<document-date>20010315</document-date></document-id>
+<publication-filing-type>new-utility</publication-filing-type>
+<domestic-filing-data>
+<application-number>
+<doc-number>09725378</doc-number>
+</application-number>
+<application-number-series-code>09</application-number-series-code>
+<filing-date>20001129</filing-date>
+</domestic-filing-data>
+<foreign-priority-data>
+<priority-application-number>
+<doc-number>196 34 785</doc-number>
+</priority-application-number>
+<filing-date>19960828</filing-date>
+<country-code>DE</country-code>
+</foreign-priority-data>
+<technical-information>
+<classification-ipc>
+<classification-ipc-primary>
+<ipc>G01B005/00</ipc>
+</classification-ipc-primary>
+<classification-ipc-edition>07</classification-ipc-edition>
+</classification-ipc>
+<classification-us>
+<classification-us-primary>
+<uspc>
+<class>356</class>
+<subclass>375000</subclass>
+</uspc>
+</classification-us-primary>
+</classification-us>
+<title-of-invention>Optoelectronic measuring method and distance measuring device for carrying out the method</title-of-invention>
+</technical-information>
+<continuity-data>
+<continuations>
+<continuation-of>
+<parent-child>
+<child>
+<document-id>
+<doc-number>09725378</doc-number>
+<kind-code>A1</kind-code>
+<document-date>20001129</document-date>
+</document-id>
+</child>
+<parent>
+<document-id>
+<doc-number>09328552</doc-number>
+<document-date>19981120</document-date>
+<country-code>US</country-code>
+</document-id>
+</parent>
+<parent-status>PENDING</parent-status>
+</parent-child>
+</continuation-of>
+</continuations>
+</continuity-data>
+<inventors>
+<first-named-inventor>
+<name>
+<given-name>Rolf</given-name>
+<family-name>Beck</family-name>
+</name>
+<residence>
+<residence-non-us>
+<city>Esslingen</city>
+<country-code>DE</country-code>
+</residence-non-us>
+</residence>
+<authority-applicant>INV</authority-applicant>
+</first-named-inventor>
+</inventors>
+<correspondence-address>
+<name-1>Friedrich Kueffner</name-1>
+<name-2></name-2>
+<address>
+<address-1>342 Madison Avenue</address-1>
+<city>New York</city>
+<state>NY</state>
+<postalcode>10173</postalcode>
+<country>
+<country-code>US</country-code>
+</country>
+</address>
+</correspondence-address>
+</subdoc-bibliographic-information>
+<subdoc-abstract>
+<paragraph id="A-00001" lvl="0">An optoelectronic measuring method and a distance measuring device for carrying out the method for determining the dimensions with respect to length, width or height of objects mounted in or outside of processing or measuring machines. At least one ray bundle transmitted by a measuring head of a measuring device is projected on a surface of an object to be measured as a dot-shaped measuring spot at various locations on a circumferential line of a geometric figure, and the reflected ray bundle projects through a projection unit the respective measuring spot onto an optoelectronic transducer unit of the measuring head and the signals produced by the transducer unit are evaluated in an evaluating unit. The reflected ray bundle is deflected by the projection unit of the measuring head in such a way that the measuring spot projected on the optoelectronic transducer unit is independent of the position of rotation of the measuring spot projected onto the surface relative to the optical center axis of the measuring head. </paragraph>
+</subdoc-abstract>
+<subdoc-description>
+<summary-of-invention>
+<section>
+<heading lvl="1">BACKGROUND OF THE INVENTION </heading>
+<paragraph id="P-00001" lvl="2"><number>1.</number> 1. Field of the Invention </paragraph>
+<paragraph id="P-00002" lvl="0"><number>2.</number> The present invention relates to an optoelectronic measuring method and to a distance measuring device for carrying out the method. Specifically, the present invention relates to a method for determining the dimensions with respect to length, width or height of objects mounted in or outside of processing or measuring machines. </paragraph>
+<paragraph id="P-00003" lvl="2"><number>3.</number> 2. Description of the Related Art </paragraph>
+<paragraph id="P-00004" lvl="0"><number>4.</number> Various optoelectronic methods and devices are known in the art for measuring objects. In these methods and devices, a distance measurement is carried out by producing a ray bundle from a radiation source by means of a structural focussing group (condenser), wherein, when impinging on the location to be examined (surface) of an object, the ray bundle projects on the object a dot-shaped measuring spot and the reflected measuring spot is projected by a projection unit onto an optoelectronic transducer unit of the measuring device, for example, a CCD line camera or CCD area camera, and the signals of the measuring device are evaluated; such a method is, for example, the triangulation method. Another method and a suitable device are described, for example, in DE 35 07 445 C 2. </paragraph>
+<paragraph id="P-00005" lvl="0"><number>5.</number> In the methods described above, the transmitting unit as well as the receiving unit are in a fixed geometric relationship to the ray bundle. These methods are also called 1D methods (cf. DIN V 32936-1). </paragraph>
+<paragraph id="P-00006" lvl="0"><number>6.</number> Also known in the art are solutions in which, for measuring surfaces and shapes or geometric shapes to be examined on the object, several dot-shaped measuring spots are successively or simultaneously projected and measured on a measuring length (straight measuring line), or several measuring lines located next to each other form a measuring area. Such methods are also called 2D methods or 3D methods. </paragraph>
+<paragraph id="P-00007" lvl="0"><number>7.</number> These measuring lines or measuring areas are produced particularly either by deflecting the ray bundle, i.e., the measuring line or the measuring area is formed by a timed sequential sequence of individual measuring points, or by simultaneously illuminating the measuring locations by a so-called structured illumination. </paragraph>
+<paragraph id="P-00008" lvl="0"><number>8.</number> All measuring methods and measuring devices mentioned above have independently of the basic 1D method a preferred direction with respect to a middle measuring ray direction because always at least approximately section-like measuring lines or a plurality thereof are used. </paragraph>
+<paragraph id="P-00009" lvl="0"><number>9.</number> This disadvantage occurs especially in the case of moving devices as they are used on coordinate measuring machines or machine tools for evaluating larger components. This is because, in that case, the direction of movement of the device must be adapted to the preferred direction of the device in order to facilitate the intended use of the device. For example, a measuring line is moved preferably perpendicularly of its elongation because this makes it possible to measure the largest possible surface area, while a movement in the direction of the measuring line does not provide an advantage as compared to a 1D method. The disadvantage mentioned last is very often considered negligible because most of the 1D methods based on the 2D or 3D methods also already have a preferred direction. </paragraph>
+</section>
+<section>
+<heading lvl="1">SUMMARY OF THE INVENTION </heading>
+<paragraph id="P-00010" lvl="0"><number>10.</number> Therefore, it is the primary object of the present invention to provide a novel optoelectronic distance measuring method and a distance measuring device which at least minimize the disadvantages discussed above and are technically simpler and more economical and, moreover, make it possible to adapt to various measuring tasks. </paragraph>
+<paragraph id="P-00011" lvl="0"><number>11.</number> In accordance with the present invention, in an optoelectronic distance measuring method of the above-described type, at least one ray bundle transmitted by a measuring head of a measuring device is projected on a surface of an object to be measured as a dot-shaped measuring spot at various locations on a circumferential line of a geometric figure, and the reflected ray bundle projects through a projection unit the respective measuring spot onto an optoelectronic transducer unit of the measuring head and the signals produced by the transducer unit are evaluated in an evaluating unit. The reflected ray bundle is deflected by the projection unit of the measuring head in such a way that the measuring spot projected on the optoelectronic transducer unit is independent of the position of rotation of the measuring spot projected onto the surface relative to the optical center axis of the measuring head. </paragraph>
+<paragraph id="P-00012" lvl="0"><number>12.</number> The measuring spots projected at various locations are located on the circumferential line of a geometric figure which preferably is a circular line; this circumferential line may sometimes also be the circumferential line of a regular polygon or the like. </paragraph>
+<paragraph id="P-00013" lvl="0"><number>13.</number> The present invention is preferably used so as to supplement optoelectronic measuring methods and devices whose basic 1D method is a method without preferred direction, particularly in connection with a distance measuring device according to DE 35 07 445 C2. </paragraph>
+<paragraph id="P-00014" lvl="0"><number>14.</number> In accordance with a further development of the method according to the present invention, the evaluation computations are synchronously adapted to the respective measuring location, wherein, within the framework of a calibration for any position of rotation of the projected measuring spot, the function between distance and measuring signal is determined separately and the respective function is activated during the measuring operation in dependence on the position of rotation; the optical axes of all transmitted ray bundles may also be guided parallel to each other independently of the position of rotation referred to above. </paragraph>
+<paragraph id="P-00015" lvl="0"><number>15.</number> A significant advantage of the present invention is that during the use in the moved measuring system, all directions of movement are treated equally and no influence of the direction of movement on the measuring result has to be expected. </paragraph>
+<paragraph id="P-00016" lvl="0"><number>16.</number> Another significant advantage of the present invention is the fact that the optical components used for producing the scanned circumferential line, to be described below, are simple and inexpensive and that, even when used in a measuring system which does not move, a symmetrical measuring space is created. </paragraph>
+<paragraph id="P-00017" lvl="0"><number>17.</number> Moreover, the distance measuring method according to the present invention has the advantage that it can be used for determining a surface inclination, the location of edges or the like, a mean distance value, gap widths and sight lines or contour lines. </paragraph>
+<paragraph id="P-00018" lvl="0"><number>18.</number> For determining a surface inclination, the novel optoelectronic distance measuring method is carried out in such a way that the processing of the measuring value for determining the surface inclination is effected by computing a compensation plane through all measuring points of a scanned circumferential line, preferably a circular line, possibly after previously filtering for noise suppression in accordance with known methods; the computation is effected preferably in accordance with the method of the smallest error squares and the computation of the angle of inclination and the orientation of the compensation plane referred to above, preferably by indicating the angle between the perpendicular relative to the compensation plane and a mean ray bundle direction and the angle between an arbitrarily determined zero degree plane, which is fixed relative to the device and extends through the ray bundle direction, and the plane determined by this ray bundle direction and the perpendicular relative to the compensation plane. </paragraph>
+<paragraph id="P-00019" lvl="0"><number>19.</number> It is advantageous in this connection that the determination of the inclination also takes place if only a portion of the scanned circumferential line produces valid measuring values. </paragraph>
+<paragraph id="P-00020" lvl="0"><number>20.</number> In accordance with further developments, a quality function for the deviation of the individual measuring values relative to the computed compensation plane and the proportion of the invalid measured values is determined, or two or more partial ranges of the scanned circumferential line are used for a separate determination of the inclination. </paragraph>
+<paragraph id="P-00021" lvl="0"><number>21.</number> For determining the distance of the location of edges or the like, for example, the inner or outer contour or the edge of an object, the present invention provides that the two points of intersection of a generated measuring circle with the edge is determined by evaluating the distance change on the measuring circle, a straight compensating line extending through these two points is computed and the distance of this straight line to the center axis of the measuring circle is computed as is the position of rotation of the straight line, i.e., the angle between an arbitrarily selected zero degree plane which is stationary relative to the device and extends through this center axis and the plane formed by this center axis and a parallel line to the straight compensating line extending through this center axis. </paragraph>
+<paragraph id="P-00022" lvl="0"><number>22.</number> Which portion of the measuring circle is located on the object or the sign of the distance are determined by the smaller or valid distance value in this portion. </paragraph>
+<paragraph id="P-00023" lvl="0"><number>23.</number> Another advantage in this connection is that the two points of intersection, possibly after filtering the individual measuring values per measuring circle, are determined by determining the two greatest local maxima of the distance change and/or that additionally the average distance is computed from the measuring values located on the object between the two determined points of intersection. </paragraph>
+<paragraph id="P-00024" lvl="0"><number>24.</number> In addition, the inclination can be computed from the measuring values located on the object between the two determined points of intersection analogous to the determination of the surface inclination. </paragraph>
+<paragraph id="P-00025" lvl="0"><number>25.</number> Moreover, it is possible to additionally determine the inclination of the straight compensating line, i.e., the angle between the center axis of the measuring circle (optical axis) and a line extending parallel to the perpendicular relative to the straight compensating line extending through this center axis of the measuring circle. Also, it is possible to lower the measuring uncertainty of the characteristic values of each generated measuring circle by a communication over several measuring circles, i.e., over several rotations of the individual measuring point on the measuring circle. </paragraph>
+<paragraph id="P-00026" lvl="0"><number>26.</number> The specific method steps for determining the mean distance value are to form the average over several different measuring locations even when the device is not moved and, thus, to reduce not only the electrical, time-dependent noise, but also the optical noise which is dependent on the surface microreflections. </paragraph>
+<paragraph id="P-00027" lvl="0"><number>27.</number> For the determination of gap widths using the novel optoelectronic distance measuring method, the determination of gap widths, particularly gaps which are smaller than the generated diameter of the measuring circle, is carried out by determining the four points of intersection of the measuring circle with the two edges of a gap by evaluating the distance change on the generated measuring circle, by computing two straight compensating lines through these four points and by computing the distance between the two lines. </paragraph>
+<paragraph id="P-00028" lvl="0"><number>28.</number> Which sections of the circle line are located on the two structural components including the gap is determined by the smaller or valid distance values in these sections. The distance is preferably defined as that distance which is formed by the shortest connecting line through the center axis of the circle between the two planes formed from a parallel line to the center axis of the measuring circle through a respective straight compensating line and for the respective straight compensating line. </paragraph>
+<paragraph id="P-00029" lvl="0"><number>29.</number> In accordance with a further development, the four points of intersection, possibly after filtering the individual measuring values per measuring circle, are determined by determining the four greatest local maxima of the distance change; in accordance with another development, additionally the parallelism of the gap width is computed. This parallelism is preferably defined by the angle between the two planes which are formed by a parallel line to the center axis of the measuring circle through a respective straight compensating line and by the respective straight compensating line. </paragraph>
+<paragraph id="P-00030" lvl="0"><number>30.</number> In accordance with further advantageous embodiments, the gap width can be determined as follows. The gap misalignment relative to the center axis of the measuring circle is computed. Preferably, the gap misalignment is determined by the distance of the bisecting line of the angle between the two straight compensating lines from the center axis of the measuring circle. In addition, the gap orientation can be computed. Preferably, the gap orientation is defined as an angle between an arbitrarily determined zero degree plane which is stationary relative to the device and extends through the center axis of the measuring plane and the plane which is formed by this center axis and a parallel plane to the angle bisecting line through this center axis. On the other hand, on both sides of the gap the average distance is computed as the mean value of the measuring values located on the respective object between the two determined points of intersection. In addition, the two inclinations are computed, analogously to the surface inclination determination, from the measuring values located on the two objects between the two determined points of intersection. </paragraph>
+<paragraph id="P-00031" lvl="0"><number>31.</number> Also, the vertical offset of the two edges of the gap is determined in the area of the measuring circle diameter. The vertical offset is preferably determined as the difference between the two mean distance values determined in accordance with the steps described above. The computation of the vertical offset can also be related to one of the two compensating planes through the measuring values located on the two objects between the two determined points of intersection, or, in accordance with an equally valid feature, through a mean plane determined by the two planes, i.e., on a plane extending perpendicularly to the angle bisecting plane of the two planes. Even when the device is inclined, this makes it possible to determine a vertical offset which is in relation to the object and independent of the orientation of the device. </paragraph>
+<paragraph id="P-00032" lvl="0"><number>32.</number> The vertical offset if preferably computed from the distance of the center point of one of the two lines through the point of intersection and the compensating plane through the measuring points on the respectively other structural component or, if the mean plane is selected as the reference plane, through the difference of the distances of the two center points of the two lines relative to this plane. </paragraph>
+<paragraph id="P-00033" lvl="0"><number>33.</number> In addition, it is possible to compute the vertical offset pattern of the two edges of the gap. Preferably, the vertical offset pattern is defined as the angle between the two straight lines which result as the lines of intersection of the plane through the angle dissecting line of the two lines and the center axis of the measuring circle and by the two compensating planes on the two objects. </paragraph>
+<paragraph id="P-00034" lvl="0"><number>34.</number> Moreover, the measuring uncertainty of the characteristic values determined per measuring circle can be reduced by forming the average over several measuring circles, i.e., for measuring methods with several rotations of the individual measuring point on the measuring circle. </paragraph>
+<paragraph id="P-00035" lvl="0"><number>35.</number> For determining sight lines or contour lines, the optoelectronic distance measuring method according to the present invention provides recognizing predefined distance change patterns whose axis of symmetry and spatial location relative to the measuring circle center axis are computed, wherein preferably, instead of predefined distance change patterns, general pattern recognizing functions can be used for recognizing sight lines and contour lines. This pattern recognizing function preferably is the determination of local maxima or minima, wherein line patterns are recognized by a suitable allocation. </paragraph>
+<paragraph id="P-00036" lvl="0"><number>36.</number> In addition, a measuring value processing can be carried out with respect to a tape value determination. </paragraph>
+<paragraph id="P-00037" lvl="0"><number>37.</number> The various features of novelty which characterize the invention are pointed out with particularity in the claims annexed to and forming a part of the disclosure. For a better understanding of the invention, its operating advantages, specific objects attained by its use, reference should be had to the drawing and descriptive matter in which there are illustrated and described preferred embodiments of the invention </paragraph>
+</section>
+</summary-of-invention>
+<brief-description-of-drawings>
+<section>
+<heading lvl="1">BRIEF DESCRIPTION OF THE DRAWING </heading>
+<paragraph id="P-00038" lvl="0"><number>38.</number> In the drawing: </paragraph>
+<paragraph id="P-00039" lvl="0"><number>39.</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> is a schematic illustration of the distance measuring device according to the present invention, wherein the transmitted ray bundle meets the object deflected parallel to the optical axis of the measuring head; </paragraph>
+<paragraph id="P-00040" lvl="0"><number>40.</number> <cross-reference target="DRAWINGS">FIG. 2</cross-reference> is a top view of the object to which the ray bundle is transmitted, showing a generated measuring field with scanned circle line; </paragraph>
+<paragraph id="P-00041" lvl="0"><number>41.</number> <cross-reference target="DRAWINGS">FIG. 3</cross-reference> is a bottom view into the measuring head with a circular line-shaped arrangement of several dot-shaped radiation sources; </paragraph>
+<paragraph id="P-00042" lvl="0"><number>42.</number> <cross-reference target="DRAWINGS">FIG. 4</cross-reference> is a bottom view into the measuring head with the arrangement of several dot-shaped radiation sources over a surface area; and </paragraph>
+<paragraph id="P-00043" lvl="0"><number>43.</number> <cross-reference target="DRAWINGS">FIG. 4</cross-reference><highlight><italic>a </italic></highlight>is a partial side view of the measuring head of <cross-reference target="DRAWINGS">FIGS. 3 and 4</cross-reference>. </paragraph>
+</section>
+</brief-description-of-drawings>
+<detailed-description>
+<section>
+<heading lvl="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS </heading>
+<paragraph id="P-00044" lvl="0"><number>44.</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> of the drawing shows a preferred embodiment of an optoelectronic distance measuring device M according to the present invention for carrying out the optoelectronic distance measuring method according to the present invention. </paragraph>
+<paragraph id="P-00045" lvl="0"><number>45.</number> <cross-reference target="DRAWINGS">FIG. 1</cross-reference> of the drawing shows a conventional measuring head <highlight><bold>1</bold></highlight> mounted in a frame <highlight><bold>11</bold></highlight>. The measuring head <highlight><bold>1</bold></highlight> includes at least one illumination unit <highlight><bold>2</bold></highlight> with a radiation source <highlight><bold>3</bold></highlight> and a condenser <highlight><bold>4</bold></highlight> as well as a reproduction unit <highlight><bold>16</bold></highlight> with an optoelectronic transducer unit <highlight><bold>17</bold></highlight> arranged following the reproduction unit <highlight><bold>16</bold></highlight>. In addition, the measuring head <highlight><bold>1</bold></highlight> or parts thereof are connected through signal pulse lines or control pulse lines <highlight><bold>20</bold></highlight>, <highlight><bold>21</bold></highlight>, <highlight><bold>22</bold></highlight> to an evaluating unit <highlight><bold>18</bold></highlight> and a control unit <highlight><bold>19</bold></highlight>; in a special embodiment, if required, at least parts of the evaluating unit <highlight><bold>18</bold></highlight> and/or the control unit <highlight><bold>19</bold></highlight> may be arranged directly in the measuring head. </paragraph>
+<paragraph id="P-00046" lvl="0"><number>46.</number> The important feature with respect to the device and the method according to the present invention is the fact that the transmitted ray bundle <highlight><bold>5</bold></highlight> is projected as a measuring spot <highlight><bold>9</bold></highlight> on the surface <highlight><bold>13</bold></highlight> of the illustrated object <highlight><bold>12</bold></highlight> to be measured along the circumferential line L of a predeterminable geometric <cross-reference target="DRAWINGS">FIG. 5</cross-reference>, specifically a circle line L<highlight><subscript>K</subscript></highlight>, as is particularly clear from <cross-reference target="DRAWINGS">FIG. 2</cross-reference>. The scanned circumferential line L is preferably not limited to the circle line L<highlight><subscript>K</subscript></highlight>, but may also be the circumferential line of a regular polygon, an equilateral triangle, a square or other geometric figures. The shape of the circumferential line to be scanned depends essentially on the measuring task to be performed. </paragraph>
+<paragraph id="P-00047" lvl="0"><number>47.</number> In accordance with a preferred development, a deflection unit <highlight><bold>7</bold></highlight> is mounted on the measuring head <highlight><bold>1</bold></highlight> on the side of the object, wherein the deflection unit <highlight><bold>7</bold></highlight> is constructed in such a way that the transmitted ray bundle <highlight><bold>5</bold></highlight> is deflected from the optical axis <highlight><bold>6</bold></highlight> into a second optical axis <highlight><bold>8</bold></highlight> extending parallel to the optical axis <highlight><bold>6</bold></highlight>, and wherein the second optical axis <highlight><bold>8</bold></highlight> is optionally rotatable about the optical axis <highlight><bold>6</bold></highlight>; preferably, the rotation of the second optical axis <highlight><bold>8</bold></highlight> about the optical axis <highlight><bold>6</bold></highlight> takes place continuously. </paragraph>
+<paragraph id="P-00048" lvl="0"><number>48.</number> The reflected ray bundle <highlight><bold>15</bold></highlight> emanating from the dot-shaped measuring spot <highlight><bold>9</bold></highlight> projected sequentially at various locations is reproduced through a reproduction unit <highlight><bold>16</bold></highlight> on an optoelectronic transducer unit <highlight><bold>17</bold></highlight> of the measuring head <highlight><bold>1</bold></highlight> at <highlight><bold>9</bold></highlight><highlight><italic>a</italic></highlight>. The signals <highlight><bold>20</bold></highlight> produced by the transducer unit <highlight><bold>17</bold></highlight> are then evaluated in an evaluating unit <highlight><bold>18</bold></highlight>. </paragraph>
+<paragraph id="P-00049" lvl="0"><number>49.</number> Another and especially important feature is that fact that the reflected ray bundle <highlight><bold>15</bold></highlight> is deflected from the reproduction unit <highlight><bold>16</bold></highlight> of the measuring head <highlight><bold>1</bold></highlight> in such a way that the measuring spot <highlight><bold>9</bold></highlight><highlight><italic>a </italic></highlight>projected on the optoelectronic transducer unit is independent of the position of rotation of the measuring spot <highlight><bold>9</bold></highlight> projected onto the surface <highlight><bold>13</bold></highlight> relative to the optical center axis <highlight><bold>6</bold></highlight> of the measuring head <highlight><bold>1</bold></highlight>. Consequently, reproduction errors which are due to the system, particularly in the case of measurements according to the triangulation principle, are substantially minimized or eliminated. </paragraph>
+<paragraph id="P-00050" lvl="0"><number>50.</number> In accordance with additional further developments according to the present invention, the means provided in the measuring head <highlight><bold>1</bold></highlight> for projecting the transmitted ray bundle <highlight><bold>5</bold></highlight> and the means for reproducing the reflected ray bundle <highlight><bold>15</bold></highlight> are at least partially one and the same optical parts or structural groups, wherein these parts or structural groups are additionally mounted so as to be adjustable; in addition or alternatively, the means for projecting and the means for reproducing each include at least one planar parallel plate. </paragraph>
+<paragraph id="P-00051" lvl="0"><number>51.</number> Additional further developments of the invention are the embodiments shown in <cross-reference target="DRAWINGS">FIGS. 3, 4</cross-reference> and <highlight><bold>4</bold></highlight><highlight><italic>a. </italic></highlight></paragraph>
+<paragraph id="P-00052" lvl="0"><number>52.</number> <cross-reference target="DRAWINGS">FIG. 3</cross-reference> shows an embodiment in which several dot-shaped radiation sources <highlight><bold>3</bold></highlight><highlight><italic>a </italic></highlight>. . . , <highlight><bold>3</bold></highlight><highlight><italic>n </italic></highlight>are provided in the measuring head <highlight><bold>1</bold></highlight>, wherein the radiation sources are arranged distributed over a surface area and can be operated optionally, and wherein the radiation sources are located preferably in accordance with the respectively selected circumferential line L to be scanned, i.e., the circle L<highlight><subscript>K</subscript></highlight>, in the illustrated embodiment. </paragraph>
+<paragraph id="P-00053" lvl="0"><number>53.</number> In the embodiment of <cross-reference target="DRAWINGS">FIG. 4</cross-reference>, of the plurality of dot-shaped radiation sources <highlight><bold>3</bold></highlight><highlight><italic>a </italic></highlight>. . . , <highlight><bold>3</bold></highlight><highlight><italic>n </italic></highlight>arranged distributed over a surface area in the measuring head <highlight><bold>1</bold></highlight> in accordance with the selected circumferential line or lines to be scanned, the respective radiation sources are preferably operated sequentially over time. </paragraph>
+<paragraph id="P-00054" lvl="0"><number>54.</number> In the embodiment of the device according to the present invention shown in <cross-reference target="DRAWINGS">FIGS. 3 and 4</cross-reference>, there is the additional possibility that, of the plurality of dot-shaped radiation sources <highlight><bold>3</bold></highlight><highlight><italic>a </italic></highlight>. . . , <highlight><bold>3</bold></highlight><highlight><italic>n</italic></highlight>, several or all radiation sources <highlight><bold>3</bold></highlight><highlight><italic>a </italic></highlight>. . . , <highlight><bold>3</bold></highlight><highlight><italic>n </italic></highlight>are in operation simultaneously and that, in accordance with the selectable circumferential line, a specific modulation is allocated for the radiation sources <highlight><bold>3</bold></highlight><highlight><italic>a </italic></highlight>. . . , <highlight><bold>3</bold></highlight><highlight><italic>n </italic></highlight>which are in operation. </paragraph>
+<paragraph id="P-00055" lvl="0"><number>55.</number> In accordance with another significant feature of the present invention, the scanned circumferential line L is produced by moving the support <highlight><bold>14</bold></highlight> holding the object <highlight><bold>12</bold></highlight>. </paragraph>
+<paragraph id="P-00056" lvl="0"><number>56.</number> In practical use, the novel optoelectronic distance measuring method and the optoelectronic distance measuring device, as well as the method steps according to the present invention for the fields of use described above, produce improved measuring qualities. </paragraph>
+<paragraph id="P-00057" lvl="0"><number>57.</number> The invention is not limited by the embodiments described above which are presented as examples only but can be modified in various ways within the scope of protection defined by the appended patent claims. </paragraph>
+</section>
+</detailed-description>
+</subdoc-description>
+<subdoc-claims>
+<heading lvl="1">I claim: </heading>
+<claim id="CLM-00001">
+<claim-text><highlight><bold>1</bold></highlight>. In an optoelectronic distance measuring method including projecting at least one ray bundle transmitted by a measuring head of a measuring device on a surface of an object to be measured as a dot-shaped measuring spot at various locations on a circumferential line of a geometric figure, wherein the reflected ray bundle projects through a projection unit the respective measuring spot onto an optoelectronic transducer unit of the measuring head, and evaluating signals produced by the optoelectronic transducer unit in an evaluating unit, the improvement comprising deflecting the reflected ray bundle by the projection unit of the measuring head in such a way that the measuring spot projected on the optoelectronic transducer unit is independent of a position of rotation of the measuring spot projected onto the surface relative to an optical center axis of the measuring head. </claim-text>
+</claim>
+<claim id="CLM-00002">
+<claim-text><highlight><bold>2</bold></highlight>. The method according to <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference>, comprising synchronously adapting the evaluation computations to the measuring location, wherein, within a framework of a calibration for any position of rotation of the projected measuring spot, a function between distance and measuring signal is determined separately and the function is activated during the measuring operation in dependence on the position of rotation. </claim-text>
+</claim>
+<claim id="CLM-00003">
+<claim-text><highlight><bold>3</bold></highlight>. The method according to <dependent-claim-reference depends_on="CLM-00002"><claim-text>claim 2</claim-text></dependent-claim-reference>, wherein the optical axes of all transmitted ray bundles extend parallel to each other independently of the position of rotation. </claim-text>
+</claim>
+<claim id="CLM-00004">
+<claim-text><highlight><bold>4</bold></highlight>. The method according to <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference>, wherein the method is used for determining a surface inclination, further comprising carrying out a measured value processing for determining the surface inclination by computing a compensation plane through all points of a measured circumferential line, and computing an angle of inclination and an orientation of the compensation plane. </claim-text>
+</claim>
+<claim id="CLM-00005">
+<claim-text><highlight><bold>5</bold></highlight>. The method according to <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference>, wherein the method is used for determining a mean distance value, comprising scanning the circumferential line and carrying out a measured value processing for determining the mean distance through the scanned circumferential line. </claim-text>
+</claim>
+<claim id="CLM-00006">
+<claim-text><highlight><bold>6</bold></highlight>. The method according to <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference>, wherein the method is used for determining locations of edges or the like, comprising carrying out a measured value processing in such a way that the circumferential line is scanned, points of intersection of the scanned circumferential line with a scanned contour are determined by evaluating a distance change on a circle line, computing a straight compensation line through the points of intersection, and computing a distance of the straight compensation line to the center axis of the measuring circle formed by the circle line and computing the position of rotation of the measuring circle. </claim-text>
+</claim>
+<claim id="CLM-00007">
+<claim-text><highlight><bold>7</bold></highlight>. The method according to <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference>, wherein the method is used for determining gap widths, wherein the gap widths are smaller than a diameter of measuring circles, comprising carrying out a measured value processing in such a way that four points of intersection of the measuring circle with two edges of a gap are determined by evaluating a distance change on the generated measuring circle, by computing two straight compensation lines through the four points of intersection and computing the distance between the two straight compensation lines. </claim-text>
+</claim>
+<claim id="CLM-00008">
+<claim-text><highlight><bold>8</bold></highlight>. The method according to <dependent-claim-reference depends_on="CLM-00001"><claim-text>claim 1</claim-text></dependent-claim-reference>, wherein the method is used for determining sight lines or contour lines on an object, comprising carrying out a measured value processing in such a way that predefined distance changing patterns are recognized, an axis of symmetry of the patterns and a spatial position relative to a center axis of the scanned geometric figure are computed. </claim-text>
+</claim>
+<claim id="CLM-00009">
+<claim-text><highlight><bold>9</bold></highlight>. A distance measuring device for carrying out an optoelectronic distance measuring method, the device comprising a frame and at least one measuring head, and at least one evaluating unit and a control unit connected to one another through signal lines, wherein the measuring head comprises means for producing, transmitting and projecting at least one ray bundle along a circumferential line of a predeterminable geometric figure on an object, and means for reproducing the ray bundle reflected by the object on at least one optoelectronic transducer unit, wherein the means for projecting the transmitted ray bundle along the circumferential line of the predeterminable figure and the means for reproducing the reflected ray bundle on the optoelectronic transducer unit are configured such that system-inherent reproduction errors are essentially minimized or eliminated. </claim-text>
+</claim>
+<claim id="CLM-00010">
+<claim-text><highlight><bold>10</bold></highlight>. The device according to <dependent-claim-reference depends_on="CLM-00009"><claim-text>claim 9</claim-text></dependent-claim-reference>, wherein the means for projecting the transmitted ray bundle along the circumferential line of the predeterminable figure and the means for reproducing the reflected ray bundle on the optoelectronic transducer unit are selected so as to essentially eliminate system-inherent reproduction errors in measurements according to the triangulation principle. </claim-text>
+</claim>
+<claim id="CLM-00011">
+<claim-text><highlight><bold>11</bold></highlight>. The device according to <dependent-claim-reference depends_on="CLM-00009"><claim-text>claim 9</claim-text></dependent-claim-reference>, wherein the means for projecting and the means for reproducing each comprise at least one planar parallel plate. </claim-text>
+</claim>
+<claim id="CLM-00012">
+<claim-text><highlight><bold>12</bold></highlight>. The device according to <dependent-claim-reference depends_on="CLM-00009"><claim-text>claim 9</claim-text></dependent-claim-reference>, wherein the means for projecting the transmitted ray bundle and the means for projecting the reflected ray bundle are at least partially comprised of a single optical part or structural component. </claim-text>
+</claim>
+<claim id="CLM-00013">
+<claim-text><highlight><bold>13</bold></highlight>. The device according to <dependent-claim-reference depends_on="CLM-00012"><claim-text>claim 12</claim-text></dependent-claim-reference>, comprising means for adjusting the optical parts or components. </claim-text>
+</claim>
+</subdoc-claims>
+<subdoc-drawings id="DRAWINGS">
+<heading lvl="0" align="CENTER">Drawings</heading>
+<representative-figure>1</representative-figure>
+<figure id="figure-D00001">
+<image id="EMI-D00001" file="US20010000021A1-20010315-D00001.TIF" imf="TIFF" ti="DR"/>
+</figure>
+<figure id="figure-D00002">
+<image id="EMI-D00002" file="US20010000021A1-20010315-D00002.TIF" imf="TIFF" ti="DR"/>
+</figure>
+</subdoc-drawings>
+</patent-application-publication>
+
