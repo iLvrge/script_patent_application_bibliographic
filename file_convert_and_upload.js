@@ -15,7 +15,7 @@ let allFiles = [], startIndex = 0
 const uploadFileToAWSAndDelete = (index) => {
     const file = allFiles[index]
     console.log(`File in Queue - ${index} - ${file}`)
-    if(file != '') {
+    if(file != '' && file.indexOf('TIF') >= 0) {
         const outputFile = file.replace('TIF', 'png')
         /*const tif2png = spawn('convert', [file, outputFile]);*/
         const tif2png = spawn('tiff2png', ['-force', '-destdir', `${mainFolderPath}IMAGES`, file]);
@@ -55,7 +55,7 @@ const uploadFileToAWSAndDelete = (index) => {
                                 ContentType: contentType,
                                 ContentDisposition: 'inline'
                             }
-                                        
+
                             s3.upload(params, function(err, data) {
                                 console.log(`S3 ${err} - ${JSON.stringify(data)}`)
                                 if(err == null) {
