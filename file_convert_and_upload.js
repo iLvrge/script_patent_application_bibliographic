@@ -114,7 +114,6 @@ Promise.all([processTIFFiles])
     console.log('allFiles', allFiles.length)
 
     if(allFiles.length > 0 ) {
-        uploadFileToAWSAndDelete(allFiles(startIndex))
-    }
-  
+        uploadFileToAWSAndDelete(allFiles[startIndex])
+    }  
 })
