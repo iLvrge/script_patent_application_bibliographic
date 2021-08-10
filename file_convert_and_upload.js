@@ -99,6 +99,7 @@ Promise.all([processTIFFiles])
     console.log('allFiles', allFiles.length)
 
     allFiles.forEach( file => {
+        console.log('file', file);
         const outputFile = file.replace('TIF', 'PNG')
         const tif2png = spawn('convert', [file, outputFile]);
         tif2png.stderr.on('data', (data) => {
@@ -108,15 +109,5 @@ Promise.all([processTIFFiles])
             console.log(`conversion done - ${code}`)
             uploadFileToAWSAndDelete(file, outputFile)                       
         }) 
-    }) 
-    const file = allFiles[0]
-    const outputFile = file.replace('TIF', 'PNG')
-    const tif2png = spawn('convert', [file, outputFile]);
-    tif2png.stderr.on('data', (data) => {
-        console.log(`Convert Error - ${data}`)
-    });
-    tif2png.on('close', (code) => {
-        console.log(`conversion done - ${code}`)
-        uploadFileToAWSAndDelete(file, outputFile)                       
-    })
+    })     
 })
