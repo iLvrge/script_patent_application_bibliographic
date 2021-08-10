@@ -4,6 +4,8 @@ const { exec, spawn  } = require('child_process');
 
 const mainFolderPath = '/var/www/html/trash/patent_application_bibliographic/';
 
+const AWS  = require('aws-sdk');
+
 
 const config = require("./config/index");
 
