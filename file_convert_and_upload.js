@@ -15,7 +15,7 @@ let allFiles = [], startIndex = 0
 const uploadFileToAWSAndDelete = (index) => {
     const file = allFiles[index]
     console.log(`File in Queue - ${index} - ${file}`)
-    const outputFile = file.replace('TIF', 'PNG')
+    const outputFile = file.replace('TIF', 'png')
     /*const tif2png = spawn('convert', [file, outputFile]);*/
     const tif2png = spawn('tiff2png', ['-force', '-destdir', `${mainFolderPath}IMAGES`, file]);
     tif2png.stdout.on('data', (data) => {
@@ -33,7 +33,7 @@ const uploadFileToAWSAndDelete = (index) => {
     });
     tif2png.on('close', (code) => {
         console.log(`conversion done - ${code}`)
-        fs.readFile(file, function(err,data){
+        fs.readFile(file, function(err, fileData){
             if (!err) {
                 try {            
                     let name = outputFile.split('/').pop()
@@ -51,18 +51,20 @@ const uploadFileToAWSAndDelete = (index) => {
                     const contentType = "image/png"
     
                     const params = {
-                        Key: `${bucketConfig.dirName}/${name}`,
+                        Key: `logo/${name}`,
                         Bucket: bucketConfig.bucketName,
-                        Body: data,
+                        Body: fileData,
                         ACL: 'public-read',
                         ContentType: contentType,
                         ContentDisposition: 'inline'
                     }
+
+                    console.log(params)
     
                     s3.putObject(params, function(err, data) {
                         console.log(`S3 ${err} - ${JSON.stringify(data)}`)
                         if(err == null) {
-                            console.log(`File upload Done https://s3-${bucketConfig.region}.amazonaws.com/${bucketConfig.bucketName}/${bucketConfig.documentDir}/${name}`)
+                            console.log(`File upload Done https://s3-${bucketConfig.region}.amazonaws.com/${bucketConfig.bucketName}/logo/${name}`)
                             //file uploaded to aws
                             /*const mainFile = spawn('rm', [file]);
                             mainFile.stdout.on('data', (data) => {
