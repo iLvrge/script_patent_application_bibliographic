@@ -26,9 +26,15 @@ const uploadFileToAWSAndDelete = (index) => {
     });
     tif2png.on('close', (code) => {
         console.log(`conversion done - ${code}`)
-        fs.readFile(file, function(err, fileContent){
+        fs.readFile(outputFile, function(err, fileData){
             if (!err) {
                 try {            
+
+
+                    const fileContent = fs.readFileSync(outputFile);
+
+
+
                     let name = outputFile.split('/').pop()
                     //name = name.replace(/-/g, '_')
                     const bucketConfig = config.bucketConfig
