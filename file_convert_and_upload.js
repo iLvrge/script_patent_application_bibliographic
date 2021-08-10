@@ -40,7 +40,7 @@ const uploadFileToAWSAndDelete = (file, outputFile) => {
                 s3.putObject(params, function(err, data) {
                     console.log(err, data)
                     if(err == null) {
-                        console.log('File upload Done')
+                        console.log('File upload Donee')
                         //file uploaded to aws
                         /* const mainFile = spawn('rm', [file]);
                         mainFile.stdout.on('data', (data) => {
@@ -80,7 +80,7 @@ const processTIFFiles = new Promise( function(resolve, reject) {
     const child = spawn('find', [`${mainFolderPath}IMAGES`, '-name', `*.TIF`]);
     child.stdout.on('data', (data) => {
         console.log(`child.stdout: ${data}`)
-        const files = data.toString().split('\n')
+        const files = data.toString().split('\n')  
         allFiles = [...allFiles, ...files]
     });
     child.stderr.on('data', (data) => {
