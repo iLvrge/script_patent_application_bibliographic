@@ -16,9 +16,20 @@ const uploadFileToAWSAndDelete = (index) => {
     const file = allFiles[index]
     console.log(`File in Queue - ${index} - ${file}`)
     const outputFile = file.replace('TIF', 'PNG')
-    const tif2png = spawn('convert', [file, outputFile]);
+    /*const tif2png = spawn('convert', [file, outputFile]);*/
+    const tif2png = spawn('tiff2png', ['-force', file, outputFile]);
+    tif2png.stdout.on('data', (data) => {
+        console.log(`Convert DONE - ${data}`)
+    });
     tif2png.stderr.on('data', (data) => {
         console.log(`Convert Error - ${data}`)
+
+        /* const anotherConversion = spawn('tiff2png',['-force', file, outputFile])
+
+        tif2png.stdout.pipe(anotherConversion.stdin); */
+
+        
+        
     });
     tif2png.on('close', (code) => {
         console.log(`conversion done - ${code}`)
