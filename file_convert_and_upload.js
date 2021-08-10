@@ -70,7 +70,7 @@ const uploadFileToAWSAndDelete = (file, outputFile) => {
                     }
                 });
             } catch (error) {
-                console.log(`File Error - ${file} - ${outputFile}`)
+                console.log(`File Error - ${error} - ${file} - ${outputFile}`)
             }
         }
     })
