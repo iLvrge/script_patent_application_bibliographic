@@ -11,6 +11,8 @@ const config = require("./config/index");
 
 let allFiles = []
 
+console.log(config)
+
 const uploadFileToAWSAndDelete = (file, outputFile) => {
 
     fs.readFile(file, function(err,data){
