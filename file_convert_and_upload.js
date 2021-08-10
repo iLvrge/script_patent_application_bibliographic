@@ -15,7 +15,7 @@ const uploadFileToAWSAndDelete = (file, outputFile) => {
         if (!err) {
             try {            
                 let name = outputFile.split('/').pop()
-
+                //name = name.replace(/-/g, '_')
                 const bucketConfig = config.bucketConfig
 
                 let s3 = new AWS.S3({
@@ -38,7 +38,7 @@ const uploadFileToAWSAndDelete = (file, outputFile) => {
                 }
 
                 s3.putObject(params, function(err, data) {
-                    console.log(err, data)
+                    console.log(`S3 ${err} - ${data}`)
                     if(err == null) {
                         console.log('File upload Donee')
                         //file uploaded to aws
@@ -75,7 +75,7 @@ const uploadFileToAWSAndDelete = (file, outputFile) => {
         }
     })
 }
-
+/*
 const processTIFFiles = new Promise( function(resolve, reject) {
     const child = spawn('find', [`${mainFolderPath}IMAGES`, '-name', `*.TIF`]);
     child.stdout.on('data', (data) => {
@@ -95,7 +95,7 @@ Promise.all([processTIFFiles])
 .then(() => {
     console.log('allFiles', allFiles.length)
 
-    /* allFiles.forEach( file => {
+    /allFiles.forEach( file => {
         const outputFile = file.replace('TIF', 'PNG')
         const tif2png = spawn('convert', [file, outputFile]);
         tif2png.stderr.on('data', (data) => {
@@ -105,7 +105,7 @@ Promise.all([processTIFFiles])
             console.log(`conversion done - ${code}`)
             uploadFileToAWSAndDelete(file, outputFile)                       
         }) 
-    }) */
+    }) 
     const file = allFiles[0]
     const outputFile = file.replace('TIF', 'PNG')
     const tif2png = spawn('convert', [file, outputFile]);
@@ -116,5 +116,14 @@ Promise.all([processTIFFiles])
         console.log(`conversion done - ${code}`)
         uploadFileToAWSAndDelete(file, outputFile)                       
     })
+})*/
+const file = '/var/www/html/trash/patent_application_bibliographic/IMAGES/US20200027872A1-20200123-D00015.TIF'
+const outputFile = file.replace('TIF', 'PNG')
+const tif2png = spawn('convert', [file, outputFile]);
+tif2png.stderr.on('data', (data) => {
+    console.log(`Convert Error - ${data}`)
+});
+tif2png.on('close', (code) => {
+    console.log(`conversion done - ${code}`)
+    uploadFileToAWSAndDelete(file, outputFile)                       
 })
-
