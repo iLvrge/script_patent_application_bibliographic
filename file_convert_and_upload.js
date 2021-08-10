@@ -60,7 +60,9 @@ const uploadFileToAWSAndDelete = (index) => {
                         if(err == null) {
                             console.log(`File upload Done`)
                             //file uploaded to aws
-                            /*const mainFile = spawn('rm', [file]);
+
+                            console.log(`DELETE INPUT FILE ${file}`)
+                            const mainFile = spawn('rm', [file]);
                             mainFile.stdout.on('data', (data) => {
                                 console.log(`mainFile.stdout: ${data}`)
                             });
@@ -75,6 +77,7 @@ const uploadFileToAWSAndDelete = (index) => {
                                
                             })  
                             //Delete Output file
+                            console.log(`DELETE OUTPUT FILE - ${outputFile}`)
                             const newFile = spawn('rm', [outputFile]);
                             newFile.stdout.on('data', (data) => {
                                 console.log(`newFile.stdout: ${data}`)
@@ -84,11 +87,11 @@ const uploadFileToAWSAndDelete = (index) => {
                             });
                             newFile.on('close', (code) => {
                                 console.log(`newFile.close: ${code}`)
-                                startIndex++
-                                if(startIndex < allFiles.length - 1) {
-                                    //uploadFileToAWSAndDelete(startIndex)
-                                }
-                            })*/
+                            })
+                            startIndex++
+                            if(startIndex < allFiles.length - 1) {
+                                uploadFileToAWSAndDelete(startIndex)
+                            }
                         }
                     });
                 } catch (error) {
