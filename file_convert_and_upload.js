@@ -75,6 +75,8 @@ const uploadFileToAWSAndDelete = (file, outputFile) => {
             } catch (error) {
                 console.log(`File Error - ${error} - ${file} - ${outputFile}`)
             }
+        } else {
+            console.log(`Error while reading file - ${err}`)
         }
     })
 }
