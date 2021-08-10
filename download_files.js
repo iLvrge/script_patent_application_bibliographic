@@ -173,7 +173,7 @@ const downloadFilesAndProcess = async() => {
                                         }) 
 
 
-                                        console.log(`DONEEEEEEE: ${downloadPath} -  ${startDate} - ${folderName}`)
+                                        console.log(`ALLLL DONEEEEEEE: ${downloadPath} -  ${startDate} - ${folderName}`)
                                         downloadFilesAndProcess()
                                     })
 
