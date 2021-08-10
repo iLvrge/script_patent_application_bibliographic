@@ -9,76 +9,89 @@ const AWS  = require('aws-sdk');
 
 const config = require("./config/index");
 
-let allFiles = []
+let allFiles = [], startIndex = 0
 
 console.log(config)
 
-const uploadFileToAWSAndDelete = (file, outputFile) => {
-
-    fs.readFile(file, function(err,data){
-        if (!err) {
-            try {            
-                let name = outputFile.split('/').pop()
-                //name = name.replace(/-/g, '_')
-                const bucketConfig = config.bucketConfig
-
-                let s3 = new AWS.S3({
-                    credentials: {
-                        accessKeyId: bucketConfig.accessKeyId,
-                        secretAccessKey: bucketConfig.secretAccessKey,
-                    },
-                    region: bucketConfig.region
-                })
-
-                const contentType = "image/png"
-
-                const params = {
-                    Key: `${bucketConfig.dirName}/${name}`,
-                    Bucket: bucketConfig.bucketName,
-                    Body: data,
-                    ACL: 'public-read',
-                    ContentType: contentType,
-                    ContentDisposition: 'inline'
-                }
-
-                s3.putObject(params, function(err, data) {
-                    console.log(`S3 ${err} - ${JSON.stringify(data)}`)
-                    if(err == null) {
-                        console.log('File upload Donee')
-                        //file uploaded to aws
-                        const mainFile = spawn('rm', [file]);
-                        mainFile.stdout.on('data', (data) => {
-                            console.log(`mainFile.stdout: ${data}`)
-                        });
-                        mainFile.stderr.on('data', (data) => {
-                            console.log(`mainFile.stderr: ${data}`)
-                        });
-                        mainFile.on('close', (code) => {
-                            //Done
-                            mainFile.on('close', (code) => {
-                                console.log(`mainFile.close: ${code}`)
-                            })
-                            //Delete Output file
-                            const newFile = spawn('rm', [outputFile]);
-                            newFile.stdout.on('data', (data) => {
-                                console.log(`newFile.stdout: ${data}`)
-                            });
-                            newFile.stderr.on('data', (data) => {
-                                console.log(`newFile.stderr: ${data}`)
-                            });
-                            newFile.on('close', (code) => {
-                                console.log(`newFile.close: ${code}`)
-                            })
-                        })  
+const uploadFileToAWSAndDelete = (index) => {
+    const file = allFiles[index]
+    const outputFile = file.replace('TIF', 'PNG')
+    const tif2png = spawn('convert', [file, outputFile]);
+    tif2png.stderr.on('data', (data) => {
+        console.log(`Convert Error - ${data}`)
+    });
+    tif2png.on('close', (code) => {
+        console.log(`conversion done - ${code}`)
+        fs.readFile(file, function(err,data){
+            if (!err) {
+                try {            
+                    let name = outputFile.split('/').pop()
+                    //name = name.replace(/-/g, '_')
+                    const bucketConfig = config.bucketConfig
+    
+                    let s3 = new AWS.S3({
+                        credentials: {
+                            accessKeyId: bucketConfig.accessKeyId,
+                            secretAccessKey: bucketConfig.secretAccessKey,
+                        },
+                        region: bucketConfig.region
+                    })
+    
+                    const contentType = "image/png"
+    
+                    const params = {
+                        Key: `${bucketConfig.dirName}/${name}`,
+                        Bucket: bucketConfig.bucketName,
+                        Body: data,
+                        ACL: 'public-read',
+                        ContentType: contentType,
+                        ContentDisposition: 'inline'
                     }
-                });
-            } catch (error) {
-                console.log(`File Error - ${error} - ${file} - ${outputFile}`)
+    
+                    s3.putObject(params, function(err, data) {
+                        console.log(`S3 ${err} - ${JSON.stringify(data)}`)
+                        if(err == null) {
+                            console.log('File upload Donee')
+                            //file uploaded to aws
+                            const mainFile = spawn('rm', [file]);
+                            mainFile.stdout.on('data', (data) => {
+                                console.log(`mainFile.stdout: ${data}`)
+                            });
+                            mainFile.stderr.on('data', (data) => {
+                                console.log(`mainFile.stderr: ${data}`)
+                            });
+                            mainFile.on('close', (code) => {
+                                //Done
+                                mainFile.on('close', (code) => {
+                                    console.log(`mainFile.close: ${code}`)
+                                })
+                                //Delete Output file
+                                const newFile = spawn('rm', [outputFile]);
+                                newFile.stdout.on('data', (data) => {
+                                    console.log(`newFile.stdout: ${data}`)
+                                });
+                                newFile.stderr.on('data', (data) => {
+                                    console.log(`newFile.stderr: ${data}`)
+                                });
+                                newFile.on('close', (code) => {
+                                    console.log(`newFile.close: ${code}`)
+                                    startIndex++
+                                    if(startIndex < allFiles.length - 1) {
+                                        uploadFileToAWSAndDelete(startIndex)
+                                    }
+                                })
+                            })  
+                        }
+                    });
+                } catch (error) {
+                    console.log(`File Error - ${error} - ${file} - ${outputFile}`)
+                }
+            } else {
+                console.log(`Error while reading file - ${err}`)
             }
-        } else {
-            console.log(`Error while reading file - ${err}`)
-        }
+        })          
     })
+    
 }
 
 const processTIFFiles = new Promise( function(resolve, reject) {
@@ -100,16 +113,8 @@ Promise.all([processTIFFiles])
 .then(() => {
     console.log('allFiles', allFiles.length)
 
-    allFiles.forEach( file => {
-        console.log('file', file);
-        const outputFile = file.replace('TIF', 'PNG')
-        const tif2png = spawn('convert', [file, outputFile]);
-        tif2png.stderr.on('data', (data) => {
-            console.log(`Convert Error - ${data}`)
-        });
-        tif2png.on('close', (code) => {
-            console.log(`conversion done - ${code}`)
-            uploadFileToAWSAndDelete(file, outputFile)                       
-        }) 
-    })     
+    if(allFiles.length > 0 ) {
+        uploadFileToAWSAndDelete(allFiles(startIndex))
+    }
+  
 })
