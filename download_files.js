@@ -14,9 +14,10 @@ const ApplicationDetails = require("./models/ApplicationDetails"),
 
 const fileName = 'US20210045996A1-20210218.XML'
     filePath = path.join(__dirname, fileName),
-    mainFolderPath = '/var/www/html/trash/patent_application_bibliographic/';
+    mainFolderPath = process.env.MAIN_FOLDER_PATH,
+    extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
 
-let startDate = '2020-01-09 00:00:00', endDate = '2020-12-31 00:00:00'
+let startDate = '2020-03-05 00:00:00', endDate = '2020-12-31 00:00:00'
 
 const downloadFilesAndProcess = async() => {
     const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
@@ -123,7 +124,7 @@ const downloadFilesAndProcess = async() => {
                                 Promise.all(unzipAllFolder)
                                 .then(() => {
                                     const promiseXML = new Promise( function(resolve, reject) { //move xml files
-                                        const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${mainFolderPath}XML`, '{}', '+']);
+                                        const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${extraDiskFolderPath}XML`, '{}', '+']);
 
                                         findXMLFiles.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
