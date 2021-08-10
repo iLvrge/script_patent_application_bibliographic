@@ -26,14 +26,9 @@ const uploadFileToAWSAndDelete = (index) => {
     });
     tif2png.on('close', (code) => {
         console.log(`conversion done - ${code}`)
-        fs.readFile(outputFile, function(err, fileData){
+        fs.readFile(outputFile, function(err, fileContent){
             if (!err) {
                 try {            
-
-
-                    const fileContent = fs.readFileSync(outputFile);
-
-
 
                     let name = outputFile.split('/').pop()
                     //name = name.replace(/-/g, '_')
@@ -63,7 +58,7 @@ const uploadFileToAWSAndDelete = (index) => {
                     s3.upload(params, function(err, data) {
                         console.log(`S3 ${err} - ${JSON.stringify(data)}`)
                         if(err == null) {
-                            console.log(`File upload Done https://s3-${bucketConfig.region}.amazonaws.com/${bucketConfig.bucketName}/${bucketConfig.figuresDir}/${name}`)
+                            console.log(`File upload Done`)
                             //file uploaded to aws
                             /*const mainFile = spawn('rm', [file]);
                             mainFile.stdout.on('data', (data) => {
