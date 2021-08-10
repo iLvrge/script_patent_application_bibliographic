@@ -62,7 +62,7 @@ const uploadFileToAWSAndDelete = (index) => {
                     s3.putObject(params, function(err, data) {
                         console.log(`S3 ${err} - ${JSON.stringify(data)}`)
                         if(err == null) {
-                            console.log(`File upload Done https://s3-${bucketConfig.region}.amazonaws.com/${bucketConfig.bucketName}/${bucketConfig.documentDir}/${name})
+                            console.log(`File upload Done https://s3-${bucketConfig.region}.amazonaws.com/${bucketConfig.bucketName}/${bucketConfig.documentDir}/${name}`)
                             //file uploaded to aws
                             /*const mainFile = spawn('rm', [file]);
                             mainFile.stdout.on('data', (data) => {
