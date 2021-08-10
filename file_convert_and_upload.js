@@ -11,11 +11,10 @@ const config = require("./config/index");
 
 let allFiles = [], startIndex = 0
 
-console.log(config)
 
 const uploadFileToAWSAndDelete = (index) => {
     const file = allFiles[index]
-    console.log(`File in Queue - ${file}`)
+    console.log(`File in Queue - ${index} - ${file}`)
     const outputFile = file.replace('TIF', 'PNG')
     const tif2png = spawn('convert', [file, outputFile]);
     tif2png.stderr.on('data', (data) => {
