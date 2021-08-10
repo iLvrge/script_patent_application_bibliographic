@@ -55,9 +55,7 @@ const uploadFileToAWSAndDelete = (index) => {
                                 ContentType: contentType,
                                 ContentDisposition: 'inline'
                             }
-        
-                            console.log(params)
-            
+                                        
                             s3.upload(params, function(err, data) {
                                 console.log(`S3 ${err} - ${JSON.stringify(data)}`)
                                 if(err == null) {
