@@ -17,12 +17,12 @@ const uploadFileToAWSAndDelete = (index) => {
     console.log(`File in Queue - ${index} - ${file}`)
     const outputFile = file.replace('TIF', 'PNG')
     /*const tif2png = spawn('convert', [file, outputFile]);*/
-    const tif2png = spawn('tiff2png', ['-force', file, outputFile]);
+    const tif2png = spawn('tiff2png', ['-force', '-destdir', `${mainFolderPath}IMAGES`, file]);
     tif2png.stdout.on('data', (data) => {
         console.log(`Convert DONE - ${data}`)
     });
     tif2png.stderr.on('data', (data) => {
-        console.log(`Convert Error - ${data}`)
+        console.log(`Convert Error - ${data} - ${file}`)
 
         /* const anotherConversion = spawn('tiff2png',['-force', file, outputFile])
 
@@ -88,7 +88,7 @@ const uploadFileToAWSAndDelete = (index) => {
                                     console.log(`newFile.close: ${code}`)
                                     startIndex++
                                     if(startIndex < allFiles.length - 1) {
-                                        uploadFileToAWSAndDelete(startIndex)
+                                        //uploadFileToAWSAndDelete(startIndex)
                                     }
                                 })
                             })  
