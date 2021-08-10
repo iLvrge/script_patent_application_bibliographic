@@ -2,7 +2,9 @@ const fs = require('fs');
 
 const { exec, spawn  } = require('child_process');
 
-const mainFolderPath = '/var/www/html/trash/patent_application_bibliographic/';
+const mainFolderPath = process.env.MAIN_FOLDER_PATH;
+
+const extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
 
 const AWS  = require('aws-sdk');
 
@@ -12,13 +14,13 @@ const config = require("./config/index");
 let allFiles = [], startIndex = 0
 
 
-const uploadFileToAWSAndDelete = (index) => {
+const uploadFileToAWSAndDelete = (index, t) => {
     const file = allFiles[index]
     console.log(`File in Queue - ${index} - ${file}`)
     if(file != '' && file.indexOf('TIF') >= 0) {
         const outputFile = file.replace('TIF', 'png')
         /*const tif2png = spawn('convert', [file, outputFile]);*/
-        const tif2png = spawn('tiff2png', ['-force', '-destdir', `${mainFolderPath}IMAGES`, file]);
+        const tif2png = spawn('tiff2png', ['-force', '-destdir', `${t === 0 ? mainFolderPath : extraDiskFolderPath}IMAGES`, file]);
         tif2png.stdout.on('data', (data) => {
             console.log(`Convert DONE - ${data}`)
         });
@@ -91,7 +93,7 @@ const uploadFileToAWSAndDelete = (index) => {
                                     })
                                     startIndex++
                                     if(startIndex < allFiles.length - 1) {
-                                        uploadFileToAWSAndDelete(startIndex)
+                                        uploadFileToAWSAndDelete(startIndex, t)
                                     }
                                 }
                             });
@@ -105,38 +107,48 @@ const uploadFileToAWSAndDelete = (index) => {
             } else {
                 startIndex++
                 if(startIndex < allFiles.length - 1) {
-                    uploadFileToAWSAndDelete(startIndex)
+                    uploadFileToAWSAndDelete(startIndex, t)
                 }
             }                  
         })
     } else {
         startIndex++
         if(startIndex < allFiles.length - 1) {
-            uploadFileToAWSAndDelete(startIndex)
+            uploadFileToAWSAndDelete(startIndex, t)
         }
     }
 }
 
-const processTIFFiles = new Promise( function(resolve, reject) {
-    const child = spawn('find', [`${mainFolderPath}IMAGES`, '-name', `*.TIF`]);
-    child.stdout.on('data', (data) => {
-        console.log(`child.stdout: ${data}`)
-        const files = data.toString().split('\n')  
-        allFiles = [...allFiles, ...files]
-    });
-    child.stderr.on('data', (data) => {
-        reject(data)
-    });
-    child.on('close', (code) => {
-        resolve('AllFolderDone')    
-    })  
-})
+const getFilesList = async (t) => {
+    return new Promise( function(resolve, reject) {
+        const child = spawn('find', [`${t === 0 ? mainFolderPath : extraDiskFolderPath}IMAGES`, '-name', `*.TIF`]);
+        child.stdout.on('data', (data) => {
+            console.log(`child.stdout: ${data}`)
+            const files = data.toString().split('\n')  
+            allFiles = [...allFiles, ...files]
+        });
+        child.stderr.on('data', (data) => {
+            reject(data)
+        });
+        child.on('close', (code) => {
+            resolve('AllFolderDone')    
+        })  
+    })
+    
+}
 
-Promise.all([processTIFFiles])
-.then(() => {
-    console.log('allFiles', allFiles.length)
-
+(async () => {
+    let imagesPromise =  await getFilesList(0)
+    console.log(`All Files - ${allFiles.length} - ${mainFolderPath}`)
     if(allFiles.length > 0 ) {
-        uploadFileToAWSAndDelete(startIndex)
-    }  
-})
+        uploadFileToAWSAndDelete(startIndex, 0)
+    } else {
+        imagesPromise =  await getFilesList(1)
+        console.log(`All Files - ${allFiles.length} - ${extraDiskFolderPath}`)
+        if(allFiles.length > 0 ) {
+            uploadFileToAWSAndDelete(startIndex, 1)
+        }
+    }
+})()
+
+

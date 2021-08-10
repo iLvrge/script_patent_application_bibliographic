@@ -17,7 +17,7 @@ const fileName = 'US20210045996A1-20210218.XML'
     mainFolderPath = process.env.MAIN_FOLDER_PATH,
     extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
 
-let startDate = '2020-03-05 00:00:00', endDate = '2020-12-31 00:00:00'
+let startDate = '2020-00-27 00:00:00', endDate = '2020-12-31 00:00:00'
 
 const downloadFilesAndProcess = async() => {
     const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
@@ -30,7 +30,7 @@ const downloadFilesAndProcess = async() => {
             const downloadPath = `https://bulkdata.uspto.gov/data/patent/application/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
             console.log(`FolderName: ${startDate} - ${folderName} - ${downloadPath}`)
             const downloadFileProcess = new Promise( (resolve, reject) => {
-                const downloadFileSpawn = spawn('wget', [downloadPath, '-P', `${mainFolderPath}DOWNLOAD/`])
+                const downloadFileSpawn = spawn('wget', [downloadPath, '-P', `${extraDiskFolderPath}DOWNLOAD/`])
                 downloadFileSpawn.stdout.on('data', (data) => {
                     console.log(`downloadFileSpawn.stdout: ${data}`)
                 });
@@ -41,27 +41,14 @@ const downloadFilesAndProcess = async() => {
 
                 downloadFileSpawn.on('close', (code) => {
                     resolve(`download downloadFileSpawn.close ${code}`)    
-                })
-                /* const downloadFileSpawn = spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
-                downloadFileSpawn.stdout.on('data', (data) => {
-                    console.log(`child.stdout: ${data}`)
-                    const allFolders = data.toString().split('\n')
-                    extractAllFolder = [...extractAllFolder, ...allFolders]
-                });
-                downloadFileSpawn.stderr.on('data', (data) => {
-                    console.log(`Error: ${data}`)
-                    reject(data)
-                });
-                downloadFileSpawn.on('close', (code) => {
-                    resolve('download Done')    
-                })  */   
+                }) 
             })
             Promise.all([downloadFileProcess])
             .then(async () => {
                 /* await downloadFilesAndProcess() */
                 let folderList = []
                 const extractTar = new Promise((resolve, reject) => {        
-                    const child =  spawn('tar', ['-xvf', `${mainFolderPath}DOWNLOAD/${folderName}.tar`])
+                    const child =  spawn('tar', ['-xvf', `${extraDiskFolderPath}DOWNLOAD/${folderName}.tar`])
                     child.stdout.on('data', (data) => {
                         console.log(`child.stdout: ${data}`)
                         const allFolders = data.toString().split('\n')
@@ -110,7 +97,7 @@ const downloadFilesAndProcess = async() => {
                                 const unzipAllFolder = []
                                 allUTILFolders.forEach( folder => { //unzip all UTIL folders
                                     const processUnZipFolders = new Promise((resolve, reject) => {     
-                                        const child = spawn('unzip', ['-o', `${folder}/*.ZIP`, '-d', `${mainFolderPath}EXTRACT_FILES/`])
+                                        const child = spawn('unzip', ['-o', `${folder}/*.ZIP`, '-d', `${extraDiskFolderPath}EXTRACT_FILES/`])
                                         child.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
                                         });
@@ -124,7 +111,7 @@ const downloadFilesAndProcess = async() => {
                                 Promise.all(unzipAllFolder)
                                 .then(() => {
                                     const promiseXML = new Promise( function(resolve, reject) { //move xml files
-                                        const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${extraDiskFolderPath}XML`, '{}', '+']);
+                                        const findXMLFiles = spawn('find', [`${extraDiskFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${extraDiskFolderPath}XML`, '{}', '+']);
 
                                         findXMLFiles.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
@@ -142,7 +129,7 @@ const downloadFilesAndProcess = async() => {
                                     })   
                                     
                                     const promiseTIF = new Promise( function(resolve, reject) { // move tif files
-                                        const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${mainFolderPath}IMAGES`, '{}', '+']);
+                                        const findIMAGESFiles = spawn('find', [`${extraDiskFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${extraDiskFolderPath}IMAGES`, '{}', '+']);
 
                                         findIMAGESFiles.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
@@ -161,13 +148,13 @@ const downloadFilesAndProcess = async() => {
                                     Promise.all([promiseXML, promiseTIF])
                                     .then(() => {
 
-                                        const childFolders =  spawn('rm', ['-R', `${mainFolderPath}EXTRACT_FILES/*`])
+                                        const childFolders =  spawn('rm', ['-R', `${extraDiskFolderPath}EXTRACT_FILES/*`])
 
                                         childFolders.on('close', (code) => {
                                             resolve('Child folders deleted')    
                                         })
 
-                                        const child =  spawn('rm', [`${mainFolderPath}DOWNLOAD/${folderName}.tar`])
+                                        const child =  spawn('rm', [`${extraDiskFolderPath}DOWNLOAD/${folderName}.tar`])
 
                                         child.on('close', (code) => {
                                             resolve('File deleted')    
@@ -177,30 +164,6 @@ const downloadFilesAndProcess = async() => {
                                         console.log(`ALLLL DONEEEEEEE: ${downloadPath} -  ${startDate} - ${folderName}`)
                                         downloadFilesAndProcess()
                                     })
-
-                                    /* Promise.all([promiseXML, promiseTIF])
-                                    .then(() => {
-                                        let allFiles = []
-                                        const processXMLFiles = new Promise( function(resolve, reject) {
-                                            const child = spawn('find', [`${mainFolderPath}XML`, '-name', `*.XML`]);
-                                            child.stdout.on('data', (data) => {
-                                                console.log(`child.stdout: ${data}`)
-                                                const files = data.toString().split('\n')
-                                                allFiles = [...allFiles, ...files]
-                                            });
-                                            child.stderr.on('data', (data) => {
-                                                reject(data)
-                                            });
-                                            child.on('close', (code) => {
-                                                resolve('AllFolderDOne')    
-                                            })  
-                                        })
-
-                                        Promise.all([processXMLFiles])
-                                        .then(() => {
-                                            console.log('allFiles', allFiles.length)
-                                        })
-                                    }) */
                                 })
                             }
                         })
