@@ -15,6 +15,7 @@ console.log(config)
 
 const uploadFileToAWSAndDelete = (index) => {
     const file = allFiles[index]
+    console.log(`File in Queue - ${file}`)
     const outputFile = file.replace('TIF', 'PNG')
     const tif2png = spawn('convert', [file, outputFile]);
     tif2png.stderr.on('data', (data) => {
@@ -114,6 +115,6 @@ Promise.all([processTIFFiles])
     console.log('allFiles', allFiles.length)
 
     if(allFiles.length > 0 ) {
-        uploadFileToAWSAndDelete(allFiles[startIndex])
+        uploadFileToAWSAndDelete(startIndex)
     }  
 })
