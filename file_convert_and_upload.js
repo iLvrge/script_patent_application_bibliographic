@@ -23,17 +23,10 @@ const uploadFileToAWSAndDelete = (index) => {
     });
     tif2png.stderr.on('data', (data) => {
         console.log(`Convert Error - ${data} - ${file}`)
-
-        /* const anotherConversion = spawn('tiff2png',['-force', file, outputFile])
-
-        tif2png.stdout.pipe(anotherConversion.stdin); */
-
-        
-        
     });
     tif2png.on('close', (code) => {
         console.log(`conversion done - ${code}`)
-        fs.readFile(file, function(err, fileData){
+        fs.readFile(file, function(err, fileContent){
             if (!err) {
                 try {            
                     let name = outputFile.split('/').pop()
@@ -51,9 +44,9 @@ const uploadFileToAWSAndDelete = (index) => {
                     const contentType = "image/png"
     
                     const params = {
-                        Key: `logo/${name}`,
+                        Key: `${bucketConfig.figuresDir}/${name}`,
                         Bucket: bucketConfig.bucketName,
-                        Body: fileData,
+                        Body: fileContent,
                         ACL: 'public-read',
                         ContentType: contentType,
                         ContentDisposition: 'inline'
@@ -61,10 +54,10 @@ const uploadFileToAWSAndDelete = (index) => {
 
                     console.log(params)
     
-                    s3.putObject(params, function(err, data) {
+                    s3.upload(params, function(err, data) {
                         console.log(`S3 ${err} - ${JSON.stringify(data)}`)
                         if(err == null) {
-                            console.log(`File upload Done https://s3-${bucketConfig.region}.amazonaws.com/${bucketConfig.bucketName}/logo/${name}`)
+                            console.log(`File upload Done https://s3-${bucketConfig.region}.amazonaws.com/${bucketConfig.bucketName}/${bucketConfig.figuresDir}/${name}`)
                             //file uploaded to aws
                             /*const mainFile = spawn('rm', [file]);
                             mainFile.stdout.on('data', (data) => {
