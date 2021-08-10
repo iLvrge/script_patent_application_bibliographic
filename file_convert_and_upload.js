@@ -5,7 +5,7 @@ const { exec, spawn  } = require('child_process');
 const mainFolderPath = '/var/www/html/trash/patent_application_bibliographic/';
 
 
-const config = require("../config/index");
+const config = require("./config/index");
 
 let allFiles = []
 
