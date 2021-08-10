@@ -76,22 +76,23 @@ const uploadFileToAWSAndDelete = (index) => {
                                 mainFile.on('close', (code) => {
                                     console.log(`mainFile.close: ${code}`)
                                 })
-                                //Delete Output file
-                                const newFile = spawn('rm', [outputFile]);
-                                newFile.stdout.on('data', (data) => {
-                                    console.log(`newFile.stdout: ${data}`)
-                                });
-                                newFile.stderr.on('data', (data) => {
-                                    console.log(`newFile.stderr: ${data}`)
-                                });
-                                newFile.on('close', (code) => {
-                                    console.log(`newFile.close: ${code}`)
-                                    startIndex++
-                                    if(startIndex < allFiles.length - 1) {
-                                        //uploadFileToAWSAndDelete(startIndex)
-                                    }
-                                })
+                               
                             })  
+                            //Delete Output file
+                            const newFile = spawn('rm', [outputFile]);
+                            newFile.stdout.on('data', (data) => {
+                                console.log(`newFile.stdout: ${data}`)
+                            });
+                            newFile.stderr.on('data', (data) => {
+                                console.log(`newFile.stderr: ${data}`)
+                            });
+                            newFile.on('close', (code) => {
+                                console.log(`newFile.close: ${code}`)
+                                startIndex++
+                                if(startIndex < allFiles.length - 1) {
+                                    //uploadFileToAWSAndDelete(startIndex)
+                                }
+                            })
                         }
                     });
                 } catch (error) {
