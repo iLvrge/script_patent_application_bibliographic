@@ -97,7 +97,7 @@ const downloadFilesAndProcess = async() => {
                                 const unzipAllFolder = []
                                 allUTILFolders.forEach( folder => { //unzip all UTIL folders
                                     const processUnZipFolders = new Promise((resolve, reject) => {     
-                                        const child = spawn('unzip', ['-o', `${folder}/*.ZIP`, '-d', `${extraDiskFolderPath}EXTRACT_FILES/`])
+                                        const child = spawn('unzip', ['-o', `${folder}/*.ZIP`, '-d', `${mainFolderPath}EXTRACT_FILES/`])
                                         child.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
                                         });
@@ -111,7 +111,7 @@ const downloadFilesAndProcess = async() => {
                                 Promise.all(unzipAllFolder)
                                 .then(() => {
                                     const promiseXML = new Promise( function(resolve, reject) { //move xml files
-                                        const findXMLFiles = spawn('find', [`${extraDiskFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${extraDiskFolderPath}XML`, '{}', '+']);
+                                        const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${extraDiskFolderPath}XML`, '{}', '+']);
 
                                         findXMLFiles.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
@@ -129,7 +129,7 @@ const downloadFilesAndProcess = async() => {
                                     })   
                                     
                                     const promiseTIF = new Promise( function(resolve, reject) { // move tif files
-                                        const findIMAGESFiles = spawn('find', [`${extraDiskFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${extraDiskFolderPath}IMAGES`, '{}', '+']);
+                                        const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${extraDiskFolderPath}IMAGES`, '{}', '+']);
 
                                         findIMAGESFiles.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
@@ -181,8 +181,8 @@ const downloadFilesAndProcess = async() => {
 
 (async function() {
     try {
-        //await downloadFilesAndProcess()
-        console.log(`${extraDiskFolderPath}DOWNLOAD/`)
+        await downloadFilesAndProcess()
+        //console.log(`${extraDiskFolderPath}DOWNLOAD/`)
     } catch (e) {
       console.log('caught', e)
     }
