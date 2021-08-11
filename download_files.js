@@ -181,7 +181,8 @@ const downloadFilesAndProcess = async() => {
 
 (async function() {
     try {
-        await downloadFilesAndProcess()
+        //await downloadFilesAndProcess()
+        console.log(`${extraDiskFolderPath}DOWNLOAD/`)
     } catch (e) {
       console.log('caught', e)
     }
