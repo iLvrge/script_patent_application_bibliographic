@@ -17,7 +17,7 @@ const fileName = 'US20210045996A1-20210218.XML'
     mainFolderPath = process.env.MAIN_FOLDER_PATH,
     extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
 
-let startDate = '2020-03-26 00:00:00', endDate = '2020-12-31 00:00:00'
+let startDate = '2020-04-02 00:00:00', endDate = '2020-12-31 00:00:00'
 
 const downloadFilesAndProcess = async() => {
     const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
@@ -154,7 +154,7 @@ const downloadFilesAndProcess = async() => {
                                         const childFolders =  spawn('rm', ['-R', `${extraDiskFolderPath}EXTRACT_FILES/*`])
 
                                         childFolders.on('close', (code) => {
-                                            resolve('Child folders deleted')    
+                                            console.log('Child folders deleted')    
                                         }) 
 
                                         const deleteTar =  spawn('rm', [`${extraDiskFolderPath}DOWNLOAD/${folderName}.tar`])
