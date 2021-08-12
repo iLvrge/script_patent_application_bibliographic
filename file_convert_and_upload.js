@@ -138,17 +138,17 @@ const getFilesList = async (t) => {
 }
 
 (async () => {
-    let imagesPromise =  await getFilesList(0)
+    let imagesPromise =  await getFilesList(1)
     console.log(`All Files - ${allFiles.length} - ${mainFolderPath}`)
     if(allFiles.length > 0 ) {
-        uploadFileToAWSAndDelete(startIndex, 0)
-    } else {
+        uploadFileToAWSAndDelete(startIndex, 1)
+    } /* else {
         imagesPromise =  await getFilesList(1)
         console.log(`All Files - ${allFiles.length} - ${extraDiskFolderPath}`)
         if(allFiles.length > 0 ) {
             uploadFileToAWSAndDelete(startIndex, 1)
         }
-    }
+    } */
 })()
 
 
