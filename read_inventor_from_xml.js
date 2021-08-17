@@ -10,7 +10,7 @@ const { decode } = require('html-entities');
 
 const ApplicationPublication = require("./models/ApplicationPublication"),
     Inventors = require("./models/Inventors");
-console.log(`Inventors`, Inventors);
+
 const extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
 let allFiles = []
 const processXMLFiles = new Promise( function(resolve, reject) {
@@ -48,9 +48,10 @@ Promise.all([processXMLFiles])
 
 
 const readFile = async (fileIndex) => {
-    const fileName = allFiles[fileIndex]
-    console.log(`FileIndex - ${fileIndex} - ${fileName}`)
-    fs.readFile(fileName, async function(err,data){
+    const fullPath = allFiles[fileIndex]
+    console.log(`FileIndex - ${fileIndex} - ${fullPath}`)
+    const fileName = fullPath.split('/').pop();
+    fs.readFile(fullPath, async function(err,data){
         if (!err) {
             try {            
                 let inventors = [], applicationPublication = {}
