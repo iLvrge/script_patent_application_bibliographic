@@ -37,7 +37,7 @@ const processXMLFiles = new Promise( function(resolve, reject) {
 
 Promise.all([processXMLFiles])
 .then(async () => {
-    console.log(`Files Length -  ${allFiles}`)
+    console.log(`Files Length -  ${allFiles.length}`)
     /* if(allFiles.length > 0) {
         await readFile(0)
     } */
