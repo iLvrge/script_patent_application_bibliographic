@@ -62,8 +62,7 @@ const readFile = async (fileIndex) => {
                     if(parser.validate(xmlData)) {
                         const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
                         //console.log(JSON.stringify(xmlToJSON))
-                        if(xmlToJSON.hasOwnProperty('us-patent-application')) {
-                            console.log(`xmlToJSON ${findIndex}`)      
+                        if(xmlToJSON.hasOwnProperty('us-patent-application')) {                                 
                             const usBibliographic = xmlToJSON['us-patent-application']['us-bibliographic-data-application']
                             const publicationReference = usBibliographic['publication-reference']
                             const applicationReference = usBibliographic['application-reference']
@@ -215,6 +214,7 @@ const readFile = async (fileIndex) => {
                     }
                 }   
                 if(inventors.length > 0 ) {
+                    console.log(inventors, applicationPublication)
                     await Inventors.bulkCreate(inventors,  {ignoreDuplicates: true})
                     await ApplicationPublication.create(applicationPublication)
                 }
