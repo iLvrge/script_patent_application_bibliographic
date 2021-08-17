@@ -16,14 +16,16 @@ let allFiles = []
 const processXMLFiles = new Promise( function(resolve, reject) {
     const child = spawn('find', [`${extraDiskFolderPath}XML`, '-name', `*.XML`]);
     child.stdout.on('data', (data) => {
-        console.log(`child.stdout: ${data}`)
+        //console.log(`child.stdout: ${data}`)
         const files = data.toString().split('\n')
         if(files[files.length - 1] == '') {
             files.splice(files.length - 1, 1)
         }
+        console.log(`child.files: ${files.length}`)
         allFiles = [...allFiles, ...files]
     });
     child.stderr.on('data', (data) => {
+        console.log(`ERRORRRRRRR - ${data}`)
         reject(data)
     });
     child.on('close', (code) => {
