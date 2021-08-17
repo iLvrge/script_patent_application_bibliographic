@@ -95,7 +95,7 @@ const readFile = async (fileIndex) => {
                                 }
                             } else if(usBibliographic.hasOwnProperty('us-parties')) {
                                 const applicants = usBibliographic['us-parties'].inventors.inventor  
-                                console.log(JSON.stringify(applicants))                          
+                                console.log(applicants.length, JSON.stringify(applicants))                          
                                 if(applicants.length > 0) {
                                     applicants.forEach( applicant => {
                                         const addressBook = applicant.addressbook
