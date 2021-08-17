@@ -48,9 +48,9 @@ Promise.all([processXMLFiles])
 
 
 const readFile = async (fileIndex) => {
-    const filePath = allFiles[fileIndex]
-    console.log(`FileIndex - ${fileIndex} - ${filePath}`)
-    fs.readFile(filePath, async function(err,data){
+    const fileName = allFiles[fileIndex]
+    console.log(`FileIndex - ${fileIndex} - ${fileName}`)
+    fs.readFile(fileName, async function(err,data){
         if (!err) {
             try {            
                 let inventors = [], applicationPublication = {}
@@ -193,7 +193,7 @@ const readFile = async (fileIndex) => {
                                             given_name: decode(firstInventor['given-name'], {level: 'xml'}),
                                             family_name: decode(firstInventor['family-name'], {level: 'xml'}),
                                             middle_name: decode(middleName, {level: 'xml'}),
-                                            file_name: filePath
+                                            file_name: fileName
                                         })
                                     }
 
@@ -217,7 +217,7 @@ const readFile = async (fileIndex) => {
                                                     given_name: decode(applicant['name']['given-name'], {level: 'xml'}),
                                                     family_name: decode(applicant['name']['family-name'], {level: 'xml'}),
                                                     middle_name: decode(middleName, {level: 'xml'}),
-                                                    file_name: filePath
+                                                    file_name: fileName
                                                 })
                                             })
                                         } else if(typeof inventor === "object") {
@@ -235,7 +235,7 @@ const readFile = async (fileIndex) => {
                                                 given_name: decode(inventor['name']['given-name'], {level: 'xml'}),
                                                 family_name: decode(inventor['name']['family-name'], {level: 'xml'}),
                                                 middle_name: decode(middleName, {level: 'xml'}),
-                                                file_name: filePath
+                                                file_name: fileName
                                             })
                                         }
                                     }
