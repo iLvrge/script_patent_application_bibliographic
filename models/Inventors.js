@@ -3,7 +3,7 @@ const Sequelize = require("sequelize");
 const connection = require("../config/index");
 
 
-const Inventors = connection.resources.define('inventor',{
+const Inventors = connection.inventorDB.define('inventor',{
     appno_doc_num:{
         type: Sequelize.STRING,
         allowNull: false,
@@ -11,10 +11,6 @@ const Inventors = connection.resources.define('inventor',{
     name:{
         type: Sequelize.STRING,
         allowNull: false,
-    },
-    another_name:{
-        type: Sequelize.STRING,
-        allowNull: true,
     },
     given_name:{
         type: Sequelize.STRING,
@@ -29,14 +25,6 @@ const Inventors = connection.resources.define('inventor',{
         allowNull: true,
     },
     file_name:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    other_name:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    insert_api:{
         type: Sequelize.STRING,
         allowNull: true,
     }

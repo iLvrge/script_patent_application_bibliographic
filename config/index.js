@@ -15,6 +15,20 @@ const resources = new Sequelize('db_patent_application_bibliographic_new', 'db_u
     }*/
 });
 
+
+const inventorDB = new Sequelize('db_inventor', 'inventor_user', '!Q2w3e4r', {
+  host: '147.182.255.135',
+  dialect: 'mysql',
+  operatorsAliases: Op,
+ /*
+  pool: {
+    max: 1000,
+    min: 0,
+    acquire: 1000000,
+    idle: 10000
+  }*/
+});
+
 const bucketConfig = {
     bucketName: process.env.BUCKET_NAME,
     dirName: process.env.BUCKET_PHOTO_DIR, /* optional */
@@ -26,6 +40,6 @@ const bucketConfig = {
     figuresDir: process.env.BUCKET_FIGURES_DIR,
   }
 
-const db = { Sequelize, Op, resources, bucketConfig }
+const db = { Sequelize, Op, resources, inventorDB, bucketConfig }
 
 module.exports = db;
