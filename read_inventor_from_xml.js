@@ -35,6 +35,7 @@ const processXMLFiles = new Promise( function(resolve, reject) {
 
 Promise.all([processXMLFiles])
 .then(async () => {
+    console.log(`Files Length ${allFiles}`)
     if(allFiles.length > 0) {
         await readFile(0)
     }
@@ -43,10 +44,11 @@ Promise.all([processXMLFiles])
 
 const readFile = async (fileIndex) => {
     const filePath = allFiles[fileIndex]
+    console.log(`FileIndex - ${fileIndex} - ${filePath}`)
     fs.readFile(filePath, async function(err,data){
         if (!err) {
             try {            
-                let findIndex = data.indexOf('<us-patent-application')
+                let findIndex = data.toString().indexOf('<us-patent-application')
                 if(findIndex !== -1) {                
                     let xmlData = data.toString().substring(findIndex, data.length)
                     if(parser.validate(xmlData)) {
