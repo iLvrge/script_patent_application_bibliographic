@@ -274,28 +274,28 @@ const readFile = async (fileIndex) => {
                     if(applicationPublication.length > 0) {
                         await ApplicationPublication.bulkCreate(applicationPublication,  {ignoreDuplicates: true})
                     }
-                    const nextIndex = fileIndex++;
+                    const nextIndex = fileIndex + 1;
                     if(nextIndex < allFiles.length) {
                         readFile(nextIndex)
                     }
                 }) 
                 .catch((error) => {
                     console.log(`Eror message - ${error} - ${fullPath}`);
-                    const nextIndex = fileIndex++;
+                    const nextIndex = fileIndex + 1;
                     if(nextIndex < allFiles.length) {
                         readFile(nextIndex)
                     }
                 }) 
             } catch(error){
                 console.log(`Eror message - ${error.message} - ${fullPath}`);
-                const nextIndex = fileIndex++;
+                const nextIndex = fileIndex + 1;
                 if(nextIndex < allFiles.length) {
                     await readFile(nextIndex)
                 }
             }
         } else {
             console.log(`Eror while reading file - ${err} - ${fullPath}`);
-            const nextIndex = fileIndex++;
+            const nextIndex = fileIndex + 1;
             if(nextIndex < allFiles.length) {
                 await readFile(nextIndex)
             }
