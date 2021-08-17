@@ -72,7 +72,7 @@ const readFile = async (fileIndex) => {
                             if(usBibliographic.hasOwnProperty('parties')) {
                                 const applicants = usBibliographic.parties.applicants.applicant
                                 
-                                if(applicants.length > 0) {
+                                if(Array.isArray(applicants) && applicants.length > 0) {
                                     applicants.forEach( applicant => {
                                         if(applicant['@_app-type'] == 'applicant-inventor') {
                                             const addressBook = applicant.addressbook
@@ -92,11 +92,29 @@ const readFile = async (fileIndex) => {
                                             })
                                         }
                                     })
+                                } else if(typeof applicants === "object") {
+                                    if(applicants['@_app-type'] == 'applicant-inventor') {
+                                        const addressBook = applicants.addressbook
+                                        const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
+                                        let name = `${addressBook['first-name']} `
+                                        if(middleName !== '') {
+                                            name += `${middleName} `
+                                        }
+                                        name += `${addressBook['last-name']}`
+                                        inventors.push({
+                                            appno_doc_num: applicationReference['document-id']['doc-number'],
+                                            name: decode(name, {level: 'xml'}),
+                                            given_name: decode(addressBook['first-name'], {level: 'xml'}),
+                                            family_name: decode(addressBook['last-name'], {level: 'xml'}),
+                                            middle_name: decode(middleName, {level: 'xml'}),
+                                            file_name: fileName
+                                        })
+                                    }
                                 }
                             } else if(usBibliographic.hasOwnProperty('us-parties')) {
                                 const applicants = usBibliographic['us-parties'].inventors.inventor  
                                 console.log(applicants.length, JSON.stringify(applicants))                          
-                                if(applicants.length > 0) {
+                                if(Array.isArray(applicants) && applicants.length > 0) {
                                     applicants.forEach( applicant => {
                                         const addressBook = applicant.addressbook
     
@@ -115,6 +133,24 @@ const readFile = async (fileIndex) => {
                                             middle_name: decode(middleName, {level: 'xml'}),
                                             file_name: fileName
                                         })
+                                    })
+                                } else if(typeof applicants === "object") {
+                                    const addressBook = applicants.addressbook
+    
+                                    const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
+                                    let name = `${addressBook['first-name']} `
+                                    if(middleName !== '') {
+                                        name += `${middleName} `
+                                    }
+                                    name += `${addressBook['last-name']}`
+
+                                    inventors.push({
+                                        appno_doc_num: applicationReference['document-id']['doc-number'],
+                                        name: decode(name, {level: 'xml'}),
+                                        given_name: decode(addressBook['first-name'], {level: 'xml'}),
+                                        family_name: decode(addressBook['last-name'], {level: 'xml'}),
+                                        middle_name: decode(middleName, {level: 'xml'}),
+                                        file_name: fileName
                                     })
                                 }
                             }
