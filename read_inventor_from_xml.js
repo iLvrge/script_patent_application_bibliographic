@@ -60,8 +60,9 @@ const readFile = async (fileIndex) => {
                          
                     let xmlData = data.toString().substring(findIndex, data.length)
                     if(parser.validate(xmlData)) {
+                        
                         const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
-                        //console.log(JSON.stringify(xmlToJSON))
+                        console.log(JSON.stringify(xmlToJSON))
                         if(xmlToJSON.hasOwnProperty('us-patent-application')) {                                 
                             const usBibliographic = xmlToJSON['us-patent-application']['us-bibliographic-data-application']
                             const publicationReference = usBibliographic['publication-reference']
