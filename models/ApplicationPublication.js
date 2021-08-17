@@ -28,4 +28,6 @@ const ApplicationPublication = connection.inventorDB.define('application_publica
     tableName: 'application_publication'
 });
 
+ApplicationPublication.removeAttribute('id');
+
 module.exports = ApplicationPublication;

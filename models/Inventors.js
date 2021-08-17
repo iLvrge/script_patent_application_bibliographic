@@ -36,4 +36,6 @@ const Inventors = connection.inventorDB.define('inventor',{
     tableName: 'inventor'
 });
 
+Inventors.removeAttribute('id');
+
 module.exports = Inventors;
