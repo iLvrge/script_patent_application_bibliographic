@@ -54,9 +54,10 @@ const readFile = async (fileIndex) => {
         if (!err) {
             try {            
                 let inventors = [], applicationPublication = {}
-                console.log( data.toString())
+                
                 let findIndex = data.toString().indexOf('<us-patent-application')
-                if(findIndex !== -1) {                
+                if(findIndex !== -1) {    
+                    console.log(`Index Find ${findIndex}`)            
                     let xmlData = data.toString().substring(findIndex, data.length)
                     if(parser.validate(xmlData)) {
                         const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
