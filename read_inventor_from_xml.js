@@ -279,7 +279,7 @@ const readFile = async (fileIndex) => {
                         await readFile(nextIndex)
                     }
                 }) 
-                .catch(() => {
+                .catch(async () => {
                     console.log(`Eror message - ${error.message} - ${fullPath}`);
                     const nextIndex = fileIndex++;
                     if(nextIndex < allFiles.length) {
