@@ -55,28 +55,46 @@ const readFile = async (fileIndex) => {
         if (!err) {
             try {            
                 let inventors = [], applicationPublication = {}
-                
-                let findIndex = data.toString().indexOf('<us-patent-application')
-                if(findIndex !== -1) {    
-                         
-                    let xmlData = data.toString().substring(findIndex, data.length)
-                    if(parser.validate(xmlData)) {
-                        
-                        const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
-                        
-                        if(xmlToJSON.hasOwnProperty('us-patent-application')) {                                 
-                            const usBibliographic = xmlToJSON['us-patent-application']['us-bibliographic-data-application']
-                            const publicationReference = usBibliographic['publication-reference']
-                            const applicationReference = usBibliographic['application-reference']
+
+                const promise = new Promise( (resolve, reject) => {
+                    let findIndex = data.toString().indexOf('<us-patent-application')
+                    if(findIndex !== -1) {
+                        let xmlData = data.toString().substring(findIndex, data.length)
+                        if(parser.validate(xmlData)) {                        
+                            const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
                             
-                            
-                            if(usBibliographic.hasOwnProperty('parties')) {
-                                const applicants = usBibliographic.parties.applicants.applicant
+                            if(xmlToJSON.hasOwnProperty('us-patent-application')) {                                 
+                                const usBibliographic = xmlToJSON['us-patent-application']['us-bibliographic-data-application']
+                                const publicationReference = usBibliographic['publication-reference']
+                                const applicationReference = usBibliographic['application-reference']
                                 
-                                if(Array.isArray(applicants) && applicants.length > 0) {
-                                    applicants.forEach( applicant => {
-                                        if(applicant['@_app-type'] == 'applicant-inventor') {
-                                            const addressBook = applicant.addressbook
+                                
+                                if(usBibliographic.hasOwnProperty('parties')) {
+                                    const applicants = usBibliographic.parties.applicants.applicant
+                                    
+                                    if(Array.isArray(applicants) && applicants.length > 0) {
+                                        applicants.forEach( applicant => {
+                                            if(applicant['@_app-type'] == 'applicant-inventor') {
+                                                const addressBook = applicant.addressbook
+                                                const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
+                                                let name = `${addressBook['first-name']} `
+                                                if(middleName !== '') {
+                                                    name += `${middleName} `
+                                                }
+                                                name += `${addressBook['last-name']}`
+                                                inventors.push({
+                                                    appno_doc_num: applicationReference['document-id']['doc-number'],
+                                                    name: decode(name, {level: 'xml'}),
+                                                    given_name: decode(addressBook['first-name'], {level: 'xml'}),
+                                                    family_name: decode(addressBook['last-name'], {level: 'xml'}),
+                                                    middle_name: decode(middleName, {level: 'xml'}),
+                                                    file_name: fileName
+                                                })
+                                            }
+                                        })
+                                    } else if(typeof applicants === "object") {
+                                        if(applicants['@_app-type'] == 'applicant-inventor') {
+                                            const addressBook = applicants.addressbook
                                             const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
                                             let name = `${addressBook['first-name']} `
                                             if(middleName !== '') {
@@ -89,163 +107,147 @@ const readFile = async (fileIndex) => {
                                                 given_name: decode(addressBook['first-name'], {level: 'xml'}),
                                                 family_name: decode(addressBook['last-name'], {level: 'xml'}),
                                                 middle_name: decode(middleName, {level: 'xml'}),
-                                                file_name: fileName
-                                            })
-                                        }
-                                    })
-                                } else if(typeof applicants === "object") {
-                                    if(applicants['@_app-type'] == 'applicant-inventor') {
-                                        const addressBook = applicants.addressbook
-                                        const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
-                                        let name = `${addressBook['first-name']} `
-                                        if(middleName !== '') {
-                                            name += `${middleName} `
-                                        }
-                                        name += `${addressBook['last-name']}`
-                                        inventors.push({
-                                            appno_doc_num: applicationReference['document-id']['doc-number'],
-                                            name: decode(name, {level: 'xml'}),
-                                            given_name: decode(addressBook['first-name'], {level: 'xml'}),
-                                            family_name: decode(addressBook['last-name'], {level: 'xml'}),
-                                            middle_name: decode(middleName, {level: 'xml'}),
-                                            file_name: fileName,
-                                            full_path: fullPath
-                                        })
-                                    }
-                                }
-                            } else if(usBibliographic.hasOwnProperty('us-parties')) {
-                                const applicants = usBibliographic['us-parties'].inventors.inventor  
-                                console.log(applicants.length, JSON.stringify(applicants))                          
-                                if(Array.isArray(applicants) && applicants.length > 0) {
-                                    applicants.forEach( applicant => {
-                                        const addressBook = applicant.addressbook
-    
-                                        const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
-                                        let name = `${addressBook['first-name']} `
-                                        if(middleName !== '') {
-                                            name += `${middleName} `
-                                        }
-                                        name += `${addressBook['last-name']}`
-    
-                                        inventors.push({
-                                            appno_doc_num: applicationReference['document-id']['doc-number'],
-                                            name: decode(name, {level: 'xml'}),
-                                            given_name: decode(addressBook['first-name'], {level: 'xml'}),
-                                            family_name: decode(addressBook['last-name'], {level: 'xml'}),
-                                            middle_name: decode(middleName, {level: 'xml'}),
-                                            file_name: fileName,
-                                            full_path: fullPath
-                                        })
-                                    })
-                                } else if(typeof applicants === "object") {
-                                    const addressBook = applicants.addressbook
-    
-                                    const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
-                                    let name = `${addressBook['first-name']} `
-                                    if(middleName !== '') {
-                                        name += `${middleName} `
-                                    }
-                                    name += `${addressBook['last-name']}`
-
-                                    inventors.push({
-                                        appno_doc_num: applicationReference['document-id']['doc-number'],
-                                        name: decode(name, {level: 'xml'}),
-                                        given_name: decode(addressBook['first-name'], {level: 'xml'}),
-                                        family_name: decode(addressBook['last-name'], {level: 'xml'}),
-                                        middle_name: decode(middleName, {level: 'xml'}),
-                                        file_name: fileName,
-                                        full_path: fullPath
-                                    })
-                                }
-                            }
-                            const appnoDate = applicationReference['document-id']['date'].toString(), grantDate = publicationReference['document-id']['date'].toString()
-                            applicationPublication = {
-                                appno_doc_num: applicationReference['document-id']['doc-number'],
-                                appno_date: `${appnoDate.substr(0,4)}-${appnoDate.substr(4,2)}-${appnoDate.substr(6,2)}`,
-                                pgpub_doc_num: publicationReference['document-id']['doc-number'],
-                                pgpub_date: `${grantDate.substr(0,4)}-${grantDate.substr(4,2)}-${grantDate.substr(6,2)}`,
-                            }
-                        }
-                    }                
-                } else {
-                    let findIndex = data.toString().indexOf('<patent-application-publication')
-                    if(findIndex !== -1) {                
-                        let xmlData = data.toString().substring(findIndex, data.length)
-                        if(parser.validate(xmlData)) {
-                            const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
-                            console.log(JSON.stringify(xmlToJSON))
-                            if(xmlToJSON.hasOwnProperty('patent-application-publication')) {
-                                const usBibliographic = xmlToJSON['patent-application-publication']['subdoc-bibliographic-information']
-                                const publicationReference = usBibliographic['document-id']
-                                const applicationReference = usBibliographic['domestic-filing-data']
-                                if(usBibliographic.hasOwnProperty('inventors')) {
-                                    const inventorsList = usBibliographic.inventors
-                                    if(inventorsList.hasOwnProperty('first-named-inventor')) {
-                                        const firstInventor = inventorsList['first-named-inventor']['name']
-                                        const middleName = firstInventor.hasOwnProperty('middle-name') ? firstInventor['middle-name'] : ''
-
-                                        let name = `${firstInventor['given-name']} `
-                                        if(middleName !== '') {
-                                            name += `${middleName} `
-                                        }
-                                        name += `${firstInventor['family-name']}`
-
-                                        inventors.push({
-                                            appno_doc_num: applicationReference['application-number']['doc-number'],
-                                            grant_doc_num: publicationReference['doc-number'],
-                                            name: decode(name, {level: 'xml'}),
-                                            given_name: decode(firstInventor['given-name'], {level: 'xml'}),
-                                            family_name: decode(firstInventor['family-name'], {level: 'xml'}),
-                                            middle_name: decode(middleName, {level: 'xml'}),
-                                            file_name: fileName,
-                                            full_path: fullPath
-                                        })
-                                    }
-
-
-                                    if(inventorsList.hasOwnProperty('inventor')) {
-                                        const inventor = inventorsList.inventor
-
-                                        if(Array.isArray(inventor) ){
-                                            inventor.forEach( applicant => {
-                                                const middleName = applicant['name'].hasOwnProperty('middle-name') ? applicant['name']['middle-name'] : ''
-
-                                                let name = `${applicant['name']['given-name']} `
-                                                if(middleName !== '') {
-                                                    name += `${middleName} `
-                                                }
-                                                name += `${applicant['name']['family-name']}`
-                                                inventors.push({
-                                                    appno_doc_num: applicationReference['application-number']['doc-number'],
-                                                    grant_doc_num: publicationReference['doc-number'],
-                                                    name: decode(name, {level: 'xml'}),
-                                                    given_name: decode(applicant['name']['given-name'], {level: 'xml'}),
-                                                    family_name: decode(applicant['name']['family-name'], {level: 'xml'}),
-                                                    middle_name: decode(middleName, {level: 'xml'}),
-                                                    file_name: fileName,
-                                                    full_path: fullPath
-                                                })
-                                            })
-                                        } else if(typeof inventor === "object") {
-                                            const middleName = inventor.hasOwnProperty('middle-name') ? inventor['name']['middle-name'] : ''
-
-                                            let name = `${inventor['name']['given-name']} `
-                                            if(middleName !== '') {
-                                                name += `${middleName} `
-                                            }
-                                            name += `${inventor['name']['family-name']}`
-                                            inventors.push({
-                                                appno_doc_num: applicationReference['application-number']['doc-number'],
-                                                grant_doc_num: publicationReference['doc-number'],
-                                                name: decode(name, {level: 'xml'}),
-                                                given_name: decode(inventor['name']['given-name'], {level: 'xml'}),
-                                                family_name: decode(inventor['name']['family-name'], {level: 'xml'}),
-                                                middle_name: decode(middleName, {level: 'xml'}),
                                                 file_name: fileName,
                                                 full_path: fullPath
                                             })
                                         }
                                     }
+                                } else if(usBibliographic.hasOwnProperty('us-parties')) {
+                                    const applicants = usBibliographic['us-parties'].inventors.inventor  
+                                    console.log(applicants.length, JSON.stringify(applicants))                          
+                                    if(Array.isArray(applicants) && applicants.length > 0) {
+                                        applicants.forEach( applicant => {
+                                            const addressBook = applicant.addressbook
+        
+                                            const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
+                                            let name = `${addressBook['first-name']} `
+                                            if(middleName !== '') {
+                                                name += `${middleName} `
+                                            }
+                                            name += `${addressBook['last-name']}`
+        
+                                            inventors.push({
+                                                appno_doc_num: applicationReference['document-id']['doc-number'],
+                                                name: decode(name, {level: 'xml'}),
+                                                given_name: decode(addressBook['first-name'], {level: 'xml'}),
+                                                family_name: decode(addressBook['last-name'], {level: 'xml'}),
+                                                middle_name: decode(middleName, {level: 'xml'}),
+                                                file_name: fileName,
+                                                full_path: fullPath
+                                            })
+                                        })
+                                    } else if(typeof applicants === "object") {
+                                        const addressBook = applicants.addressbook
+        
+                                        const middleName = addressBook.hasOwnProperty('middle-name') ? addressBook['middle-name'] : ''
+                                        let name = `${addressBook['first-name']} `
+                                        if(middleName !== '') {
+                                            name += `${middleName} `
+                                        }
+                                        name += `${addressBook['last-name']}`
+
+                                        inventors.push({
+                                            appno_doc_num: applicationReference['document-id']['doc-number'],
+                                            name: decode(name, {level: 'xml'}),
+                                            given_name: decode(addressBook['first-name'], {level: 'xml'}),
+                                            family_name: decode(addressBook['last-name'], {level: 'xml'}),
+                                            middle_name: decode(middleName, {level: 'xml'}),
+                                            file_name: fileName,
+                                            full_path: fullPath
+                                        })
+                                    }
+                                }
+                                const appnoDate = applicationReference['document-id']['date'].toString(), grantDate = publicationReference['document-id']['date'].toString()
+                                applicationPublication = {
+                                    appno_doc_num: applicationReference['document-id']['doc-number'],
+                                    appno_date: `${appnoDate.substr(0,4)}-${appnoDate.substr(4,2)}-${appnoDate.substr(6,2)}`,
+                                    pgpub_doc_num: publicationReference['document-id']['doc-number'],
+                                    pgpub_date: `${grantDate.substr(0,4)}-${grantDate.substr(4,2)}-${grantDate.substr(6,2)}`,
+                                }
+                                resolve('read')
+                            }
+                        }                
+                    } else {
+                        let findIndex = data.toString().indexOf('<patent-application-publication')
+                        if(findIndex !== -1) {                
+                            let xmlData = data.toString().substring(findIndex, data.length)
+                            if(parser.validate(xmlData)) {
+                                const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
+                                console.log(JSON.stringify(xmlToJSON))
+                                if(xmlToJSON.hasOwnProperty('patent-application-publication')) {
+                                    const usBibliographic = xmlToJSON['patent-application-publication']['subdoc-bibliographic-information']
+                                    const publicationReference = usBibliographic['document-id']
+                                    const applicationReference = usBibliographic['domestic-filing-data']
+                                    if(usBibliographic.hasOwnProperty('inventors')) {
+                                        const inventorsList = usBibliographic.inventors
+                                        if(inventorsList.hasOwnProperty('first-named-inventor')) {
+                                            const firstInventor = inventorsList['first-named-inventor']['name']
+                                            const middleName = firstInventor.hasOwnProperty('middle-name') ? firstInventor['middle-name'] : ''
+
+                                            let name = `${firstInventor['given-name']} `
+                                            if(middleName !== '') {
+                                                name += `${middleName} `
+                                            }
+                                            name += `${firstInventor['family-name']}`
+
+                                            inventors.push({
+                                                appno_doc_num: applicationReference['application-number']['doc-number'],
+                                                grant_doc_num: publicationReference['doc-number'],
+                                                name: decode(name, {level: 'xml'}),
+                                                given_name: decode(firstInventor['given-name'], {level: 'xml'}),
+                                                family_name: decode(firstInventor['family-name'], {level: 'xml'}),
+                                                middle_name: decode(middleName, {level: 'xml'}),
+                                                file_name: fileName,
+                                                full_path: fullPath
+                                            })
+                                        }
+
+
+                                        if(inventorsList.hasOwnProperty('inventor')) {
+                                            const inventor = inventorsList.inventor
+
+                                            if(Array.isArray(inventor) ){
+                                                inventor.forEach( applicant => {
+                                                    const middleName = applicant['name'].hasOwnProperty('middle-name') ? applicant['name']['middle-name'] : ''
+
+                                                    let name = `${applicant['name']['given-name']} `
+                                                    if(middleName !== '') {
+                                                        name += `${middleName} `
+                                                    }
+                                                    name += `${applicant['name']['family-name']}`
+                                                    inventors.push({
+                                                        appno_doc_num: applicationReference['application-number']['doc-number'],
+                                                        grant_doc_num: publicationReference['doc-number'],
+                                                        name: decode(name, {level: 'xml'}),
+                                                        given_name: decode(applicant['name']['given-name'], {level: 'xml'}),
+                                                        family_name: decode(applicant['name']['family-name'], {level: 'xml'}),
+                                                        middle_name: decode(middleName, {level: 'xml'}),
+                                                        file_name: fileName,
+                                                        full_path: fullPath
+                                                    })
+                                                })
+                                            } else if(typeof inventor === "object") {
+                                                const middleName = inventor.hasOwnProperty('middle-name') ? inventor['name']['middle-name'] : ''
+
+                                                let name = `${inventor['name']['given-name']} `
+                                                if(middleName !== '') {
+                                                    name += `${middleName} `
+                                                }
+                                                name += `${inventor['name']['family-name']}`
+                                                inventors.push({
+                                                    appno_doc_num: applicationReference['application-number']['doc-number'],
+                                                    grant_doc_num: publicationReference['doc-number'],
+                                                    name: decode(name, {level: 'xml'}),
+                                                    given_name: decode(inventor['name']['given-name'], {level: 'xml'}),
+                                                    family_name: decode(inventor['name']['family-name'], {level: 'xml'}),
+                                                    middle_name: decode(middleName, {level: 'xml'}),
+                                                    file_name: fileName,
+                                                    full_path: fullPath
+                                                })
+                                            }
+                                        }
+                                    }
+                                    
                                     const appnoDate = applicationReference['filing-date'].toString(), grantDate = publicationReference['document-date'].toString()
                                     applicationPublication = {
                                         appno_doc_num: applicationReference['application-number']['doc-number'],
@@ -253,21 +255,50 @@ const readFile = async (fileIndex) => {
                                         pgpub_doc_num: publicationReference['doc-number'],
                                         pgpub_date: `${grantDate.substr(0,4)}-${grantDate.substr(4,2)}-${grantDate.substr(6,2)}`,
                                     }
+                                    resolve('read')
                                 }
                             }
+                        } else {
+                            reject('inventor not found')
                         }
                     }
-                }   
-                if(inventors.length > 0 ) {
-                    console.log(inventors, applicationPublication)
-                    await Inventors.bulkCreate(inventors,  {ignoreDuplicates: true})
-                    await ApplicationPublication.create(applicationPublication)
-                }
+                });
+                
+                promise
+                .then(() => {
+                    if(inventors.length > 0 ) {
+                        await Inventors.bulkCreate(inventors,  {ignoreDuplicates: true})
+                    } else {
+                        console.log(`No inventor - ${fullPath}`);
+                    }
+                    if(Object.keys(applicationPublication).length > 0) {
+                        await ApplicationPublication.create(applicationPublication)
+                    }
+                    const nextIndex = fileIndex++;
+                    if(nextIndex < allFiles.length) {
+                        await readFile(nextIndex)
+                    }
+                }) 
+                .catch(() => {
+                    console.log(`Eror message - ${error.message} - ${fullPath}`);
+                    const nextIndex = fileIndex++;
+                    if(nextIndex < allFiles.length) {
+                        await readFile(nextIndex)
+                    }
+                }) 
             } catch(error){
-                console.log(`Eror message - ${error.message}`);
+                console.log(`Eror message - ${error.message} - ${fullPath}`);
+                const nextIndex = fileIndex++;
+                if(nextIndex < allFiles.length) {
+                    await readFile(nextIndex)
+                }
             }
         } else {
-            console.log(`Eror while reading file - ${err}`);
+            console.log(`Eror while reading file - ${err} - ${fullPath}`);
+            const nextIndex = fileIndex++;
+            if(nextIndex < allFiles.length) {
+                await readFile(nextIndex)
+            }
         }
     });
 }
