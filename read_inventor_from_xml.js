@@ -54,7 +54,7 @@ const readFile = async (fileIndex) => {
     fs.readFile(fullPath, async function(err,data){
         if (!err) {
             try {            
-                let inventors = [], applicationPublication = {}
+                let inventors = [], applicationPublication = []
 
                 const promise = new Promise( (resolve, reject) => {
                     let findIndex = data.toString().indexOf('<us-patent-application')
@@ -158,12 +158,12 @@ const readFile = async (fileIndex) => {
                                     }
                                 }
                                 const appnoDate = applicationReference['document-id']['date'].toString(), grantDate = publicationReference['document-id']['date'].toString()
-                                applicationPublication = {
+                                applicationPublication.push({
                                     appno_doc_num: applicationReference['document-id']['doc-number'],
                                     appno_date: `${appnoDate.substr(0,4)}-${appnoDate.substr(4,2)}-${appnoDate.substr(6,2)}`,
                                     pgpub_doc_num: publicationReference['document-id']['doc-number'],
                                     pgpub_date: `${grantDate.substr(0,4)}-${grantDate.substr(4,2)}-${grantDate.substr(6,2)}`,
-                                }
+                                })
                                 resolve('read')
                             }
                         }                
@@ -249,12 +249,12 @@ const readFile = async (fileIndex) => {
                                     }
                                     
                                     const appnoDate = applicationReference['filing-date'].toString(), grantDate = publicationReference['document-date'].toString()
-                                    applicationPublication = {
+                                    applicationPublication.push({
                                         appno_doc_num: applicationReference['application-number']['doc-number'],
                                         appno_date: `${appnoDate.substr(0,4)}-${appnoDate.substr(4,2)}-${appnoDate.substr(6,2)}`,
                                         pgpub_doc_num: publicationReference['doc-number'],
                                         pgpub_date: `${grantDate.substr(0,4)}-${grantDate.substr(4,2)}-${grantDate.substr(6,2)}`,
-                                    }
+                                    })
                                     resolve('read')
                                 }
                             }
@@ -271,16 +271,16 @@ const readFile = async (fileIndex) => {
                     } else {
                         console.log(`No inventor - ${fullPath}`);
                     }
-                    if(Object.keys(applicationPublication).length > 0) {
-                        await ApplicationPublication.create(applicationPublication)
+                    if(applicationPublication.length > 0) {
+                        await ApplicationPublication.bulkCreate(applicationPublication,  {ignoreDuplicates: true})
                     }
                     const nextIndex = fileIndex++;
                     if(nextIndex < allFiles.length) {
                         readFile(nextIndex)
                     }
                 }) 
-                .catch(() => {
-                    console.log(`Eror message - ${error.message} - ${fullPath}`);
+                .catch((error) => {
+                    console.log(`Eror message - ${error} - ${fullPath}`);
                     const nextIndex = fileIndex++;
                     if(nextIndex < allFiles.length) {
                         readFile(nextIndex)
