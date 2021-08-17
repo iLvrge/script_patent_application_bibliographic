@@ -21,7 +21,7 @@ const processXMLFiles = new Promise( function(resolve, reject) {
         if(files[files.length - 1] == '') {
             files.splice(files.length - 1, 1)
         }
-        console.log(`child.files: ${files.length}`)
+        //console.log(`child.files: ${files.length}`)
         allFiles = [...allFiles, ...files]
     });
     child.stderr.on('data', (data) => {
@@ -38,6 +38,9 @@ const processXMLFiles = new Promise( function(resolve, reject) {
 Promise.all([processXMLFiles])
 .then(async () => {
     console.log(`Files Length -  ${allFiles.length}`)
+    allFiles = [...new Set(allFiles)];
+    console.log(`Unique Files Length -  ${allFiles.length}`)
+    console.log(`${allFiles[0]}`)
     /* if(allFiles.length > 0) {
         await readFile(0)
     } */
