@@ -29,7 +29,6 @@ const inventorDB = new Sequelize('db_inventor', 'inventor_user', '!Q2w3e4r', {
   }*/
 });
 
-console.log(inventorDB)
 
 const bucketConfig = {
     bucketName: process.env.BUCKET_NAME,

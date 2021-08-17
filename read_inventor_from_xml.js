@@ -10,7 +10,7 @@ const { decode } = require('html-entities');
 
 const ApplicationPublication = require("./models/ApplicationPublication"),
     Inventors = require("./models/Inventors");
-
+console.log(Inventors);
 const extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
 let allFiles = []
 const processXMLFiles = new Promise( function(resolve, reject) {
