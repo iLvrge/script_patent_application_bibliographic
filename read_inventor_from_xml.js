@@ -57,12 +57,13 @@ const readFile = async (fileIndex) => {
                 
                 let findIndex = data.toString().indexOf('<us-patent-application')
                 if(findIndex !== -1) {    
-                    console.log(`Index Find ${findIndex}`)            
+                         
                     let xmlData = data.toString().substring(findIndex, data.length)
                     if(parser.validate(xmlData)) {
                         const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
                         //console.log(JSON.stringify(xmlToJSON))
                         if(xmlToJSON.hasOwnProperty('us-patent-application')) {
+                            console.log(`xmlToJSON ${findIndex}`)      
                             const usBibliographic = xmlToJSON['us-patent-application']['us-bibliographic-data-application']
                             const publicationReference = usBibliographic['publication-reference']
                             const applicationReference = usBibliographic['application-reference']
