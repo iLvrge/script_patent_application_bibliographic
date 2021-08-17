@@ -276,14 +276,14 @@ const readFile = async (fileIndex) => {
                     }
                     const nextIndex = fileIndex++;
                     if(nextIndex < allFiles.length) {
-                        await readFile(nextIndex)
+                        readFile(nextIndex)
                     }
                 }) 
-                .catch(async () => {
+                .catch(() => {
                     console.log(`Eror message - ${error.message} - ${fullPath}`);
                     const nextIndex = fileIndex++;
                     if(nextIndex < allFiles.length) {
-                        await readFile(nextIndex)
+                        readFile(nextIndex)
                     }
                 }) 
             } catch(error){
