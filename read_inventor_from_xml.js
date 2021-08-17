@@ -41,9 +41,9 @@ Promise.all([processXMLFiles])
     allFiles = [...new Set(allFiles)];
     console.log(`Unique Files Length -  ${allFiles.length}`)
     console.log(`${allFiles[0]}`)
-    /* if(allFiles.length > 0) {
+    if(allFiles.length > 0) {
         await readFile(0)
-    } */
+    } 
 })
 
 
@@ -216,10 +216,10 @@ const readFile = async (fileIndex) => {
                     await ApplicationPublication.create(applicationPublication)
                 }
             } catch(error){
-                console.log(error.message)
+                console.log(`Eror message - ${error.message}`);
             }
         } else {
-            console.log(err);
+            console.log(`Eror while reading file - ${err}`);
         }
     });
 }
