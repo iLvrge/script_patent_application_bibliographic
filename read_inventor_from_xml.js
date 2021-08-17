@@ -108,7 +108,8 @@ const readFile = async (fileIndex) => {
                                             given_name: decode(addressBook['first-name'], {level: 'xml'}),
                                             family_name: decode(addressBook['last-name'], {level: 'xml'}),
                                             middle_name: decode(middleName, {level: 'xml'}),
-                                            file_name: fileName
+                                            file_name: fileName,
+                                            full_path: fullPath
                                         })
                                     }
                                 }
@@ -132,7 +133,8 @@ const readFile = async (fileIndex) => {
                                             given_name: decode(addressBook['first-name'], {level: 'xml'}),
                                             family_name: decode(addressBook['last-name'], {level: 'xml'}),
                                             middle_name: decode(middleName, {level: 'xml'}),
-                                            file_name: fileName
+                                            file_name: fileName,
+                                            full_path: fullPath
                                         })
                                     })
                                 } else if(typeof applicants === "object") {
@@ -151,7 +153,8 @@ const readFile = async (fileIndex) => {
                                         given_name: decode(addressBook['first-name'], {level: 'xml'}),
                                         family_name: decode(addressBook['last-name'], {level: 'xml'}),
                                         middle_name: decode(middleName, {level: 'xml'}),
-                                        file_name: fileName
+                                        file_name: fileName,
+                                        full_path: fullPath
                                     })
                                 }
                             }
@@ -194,7 +197,8 @@ const readFile = async (fileIndex) => {
                                             given_name: decode(firstInventor['given-name'], {level: 'xml'}),
                                             family_name: decode(firstInventor['family-name'], {level: 'xml'}),
                                             middle_name: decode(middleName, {level: 'xml'}),
-                                            file_name: fileName
+                                            file_name: fileName,
+                                            full_path: fullPath
                                         })
                                     }
 
@@ -218,7 +222,8 @@ const readFile = async (fileIndex) => {
                                                     given_name: decode(applicant['name']['given-name'], {level: 'xml'}),
                                                     family_name: decode(applicant['name']['family-name'], {level: 'xml'}),
                                                     middle_name: decode(middleName, {level: 'xml'}),
-                                                    file_name: fileName
+                                                    file_name: fileName,
+                                                    full_path: fullPath
                                                 })
                                             })
                                         } else if(typeof inventor === "object") {
@@ -236,7 +241,8 @@ const readFile = async (fileIndex) => {
                                                 given_name: decode(inventor['name']['given-name'], {level: 'xml'}),
                                                 family_name: decode(inventor['name']['family-name'], {level: 'xml'}),
                                                 middle_name: decode(middleName, {level: 'xml'}),
-                                                file_name: fileName
+                                                file_name: fileName,
+                                                full_path: fullPath
                                             })
                                         }
                                     }

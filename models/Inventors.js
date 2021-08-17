@@ -27,6 +27,10 @@ const Inventors = connection.inventorDB.define('inventor',{
     file_name:{
         type: Sequelize.STRING,
         allowNull: true,
+    },
+    full_path:{
+        type: Sequelize.STRING,
+        allowNull: true,
     }
 },
 {
