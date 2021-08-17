@@ -62,7 +62,7 @@ const readFile = async (fileIndex) => {
                     if(parser.validate(xmlData)) {
                         
                         const xmlToJSON = parser.parse( xmlData, {ignoreAttributes: false});
-                        console.log(JSON.stringify(xmlToJSON))
+                        
                         if(xmlToJSON.hasOwnProperty('us-patent-application')) {                                 
                             const usBibliographic = xmlToJSON['us-patent-application']['us-bibliographic-data-application']
                             const publicationReference = usBibliographic['publication-reference']
@@ -71,7 +71,7 @@ const readFile = async (fileIndex) => {
                             
                             if(usBibliographic.hasOwnProperty('parties')) {
                                 const applicants = usBibliographic.parties.applicants.applicant
-    
+                                
                                 if(applicants.length > 0) {
                                     applicants.forEach( applicant => {
                                         if(applicant['@_app-type'] == 'applicant-inventor') {
@@ -94,7 +94,8 @@ const readFile = async (fileIndex) => {
                                     })
                                 }
                             } else if(usBibliographic.hasOwnProperty('us-parties')) {
-                                const applicants = usBibliographic['us-parties'].inventors.inventor                            
+                                const applicants = usBibliographic['us-parties'].inventors.inventor  
+                                console.log(JSON.stringify(applicants))                          
                                 if(applicants.length > 0) {
                                     applicants.forEach( applicant => {
                                         const addressBook = applicant.addressbook
