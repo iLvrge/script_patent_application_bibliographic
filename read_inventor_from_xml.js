@@ -265,7 +265,7 @@ const readFile = async (fileIndex) => {
                 });
                 
                 promise
-                .then(() => {
+                .then(async () => {
                     if(inventors.length > 0 ) {
                         await Inventors.bulkCreate(inventors,  {ignoreDuplicates: true})
                     } else {
