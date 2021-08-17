@@ -16,7 +16,7 @@ const resources = new Sequelize('db_patent_application_bibliographic_new', 'db_u
 });
 
 
-const inventorDB = new Sequelize('db_inventor', 'inventor_user', '!Q2w3e4r', {
+const inventorDB = new Sequelize('db_inventor', 'inventor_user', 'wDv%5tgn0O0kMkMN', {
   host: '147.182.255.135',
   dialect: 'mysql',
   operatorsAliases: Op,
