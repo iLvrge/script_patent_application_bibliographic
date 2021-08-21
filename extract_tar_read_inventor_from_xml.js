@@ -173,23 +173,22 @@ const extractFile = async (fileIndex) => {
                                 .then(() => {
 
                                     console.log(`ALLLL DONEEEEEEE:  - ${folderName}`)
-                                    downloadFilesAndProcess()
+                                    
 
                                     const childFolders =  spawn('rm', ['-R', `${extraDiskFolderPath2}EXTRACT_FILES/*`])
 
                                     childFolders.on('close', (code) => {
                                         console.log('Child folders deleted')    
-                                    }) 
+                                        const deleteTar =  spawn('rm', [folderName])
 
-                                    const deleteTar =  spawn('rm', [folderName])
-
-                                    deleteTar.on('close', (code) => {
-                                        console.log('File Tar deleted')    
-                                        const nextIndex = fileIndex + 1;
-                                        if(nextIndex < allFiles.length) {
-                                            extractFile(nextIndex)
-                                        }
-                                    })                                         
+                                        deleteTar.on('close', (code) => {
+                                            console.log('File Tar deleted')    
+                                            const nextIndex = fileIndex + 1;
+                                            if(nextIndex < allFiles.length) {
+                                                extractFile(nextIndex)
+                                            }
+                                        })
+                                    })                                    
                                 })
                             })
                         }
