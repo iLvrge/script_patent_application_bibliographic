@@ -182,11 +182,17 @@ const extractFile = async (fileIndex) => {
                                         const deleteTar =  spawn('rm', [folderName])
 
                                         deleteTar.on('close', (code) => {
-                                            console.log('File Tar deleted')    
-                                            const nextIndex = fileIndex + 1;
-                                            if(nextIndex < compressFiles.length) {
-                                                extractFile(nextIndex)
-                                            }
+                                            console.log('File Tar deleted')  
+                                            
+                                            folderName = folderName.replace(extraDiskFolderPath2, extraDiskFolderPath)
+                                            const deleteTar1 =  spawn('rm', [folderName])
+                                            deleteTar1.on('close', (code) => {
+                                                console.log('File Tar deleted')  
+                                                const nextIndex = fileIndex + 1;
+                                                if(nextIndex < compressFiles.length) {
+                                                    extractFile(nextIndex)
+                                                }  
+                                            })
                                         })
                                     })                                    
                                 })
