@@ -184,7 +184,7 @@ const extractFile = async (fileIndex) => {
                                         deleteTar.on('close', (code) => {
                                             console.log('File Tar deleted')    
                                             const nextIndex = fileIndex + 1;
-                                            if(nextIndex < allFiles.length) {
+                                            if(nextIndex < compressFiles.length) {
                                                 extractFile(nextIndex)
                                             }
                                         })
