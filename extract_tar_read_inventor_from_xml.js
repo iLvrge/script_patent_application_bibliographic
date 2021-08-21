@@ -172,7 +172,7 @@ const extractFile = async (fileIndex) => {
                                 Promise.all([promiseXML, promiseTIF])
                                 .then(() => {
 
-                                    console.log(`ALLLL DONEEEEEEE: ${downloadPath} -  ${startDate} - ${folderName}`)
+                                    console.log(`ALLLL DONEEEEEEE:  - ${folderName}`)
                                     downloadFilesAndProcess()
 
                                     const childFolders =  spawn('rm', ['-R', `${extraDiskFolderPath2}EXTRACT_FILES/*`])
@@ -185,6 +185,10 @@ const extractFile = async (fileIndex) => {
 
                                     deleteTar.on('close', (code) => {
                                         console.log('File Tar deleted')    
+                                        const nextIndex = fileIndex + 1;
+                                        if(nextIndex < allFiles.length) {
+                                            extractFile(nextIndex)
+                                        }
                                     })                                         
                                 })
                             })
