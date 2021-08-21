@@ -48,25 +48,34 @@ Promise.all([processXMLFiles])
 
 const extractFile = async (fileIndex) => {
     const folderName = compressFiles[fileIndex]
-    const moveTar = new Promise((resolve, reject) => {
-        const child =  spawn('mv', [folderName, `${extraDiskFolderPath2}DOWNLOAD/`])
-
-        child.stdout.on('data', (data) => {
-            console.log(`child.stdout: ${data}`)            
-        });
-
-        child.stderr.on('data', (data) => {
-            reject(data)
-        });
-
-        child.on('close', (code) => {
-            resolve('Extract DOne')    
+    console.log(`Start file moving -  ${folderName} - ${extraDiskFolderPath2}DOWNLOAD/`)
+    try {
+        const moveTar = new Promise((resolve, reject) => {
+            const child =  spawn('mv', [folderName, `${extraDiskFolderPath2}DOWNLOAD/`])
+    
+            child.stdout.on('data', (data) => {
+                console.log(`child.stdout: ${data}`)            
+            });
+    
+            child.stderr.on('data', (data) => {
+                reject(data)
+            });
+    
+            child.on('close', (code) => {
+                resolve('Extract DOne')    
+            })
         })
-    })
-    Promise.all([moveTar])
-    .then(() => {
-        console.log('File move done')
-    })
+        Promise.all([moveTar])
+        .then(() => {
+            console.log('File move done')
+        })
+        .catch((err) => {
+            console.log(`Error in file moving - ${err}`)
+        })
+    } catch( err ) {
+        console.log(`Error in extractFile - ${err}`)
+    }
+    
     /* let folderList = []
     const extractTar = new Promise((resolve, reject) => {        
         const child =  spawn('tar', ['-xvf', folderName])
