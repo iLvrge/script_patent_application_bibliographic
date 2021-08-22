@@ -183,7 +183,7 @@ const extractFile = async (fileIndex) => {
 
                                         deleteTar.on('close', (code) => {
                                             console.log('File Tar deleted')  
-                                            
+
                                             folderName = folderName.replace(extraDiskFolderPath2, extraDiskFolderPath)
                                             const deleteTar1 =  spawn('rm', [folderName])
                                             deleteTar1.on('close', (code) => {
@@ -198,9 +198,13 @@ const extractFile = async (fileIndex) => {
                                 })
                             })
                         }
+                    }).catch((err) => {
+                        console.log(`File Tar ZIP - ${err}`)
                     })
                 }
                 
+            }).catch((err) => {
+                console.log(`File Tar - ${err}`)
             })
         })
         .catch((err) => {
