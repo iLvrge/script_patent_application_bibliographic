@@ -3,7 +3,7 @@ const Sequelize = require("sequelize");
 const connection = require("../config/index");
 
 
-const ApplicationPublication = connection.inventorDB.define('application_publication',{
+const ApplicationPublication = connection.applicationBibliograhic.define('application_publication',{
     appno_doc_num:{
         type: Sequelize.STRING,
         allowNull: false,
@@ -19,7 +19,15 @@ const ApplicationPublication = connection.inventorDB.define('application_publica
     pgpub_date:{
         type: Sequelize.DATE,
         allowNull: true,
-    }
+    },
+    title:{
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    file_name:{
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
 },
 {
     underscored: true,

@@ -11,144 +11,114 @@ const AWS  = require('aws-sdk');
 
 const config = require("./config/index");
 
-let allFiles = [], startIndex = 0
+let allFiles = ['part30.zip', 'part31.zip', 'part32.zip', 'part33.zip', 'part34.zip', 'part35.zip'], startIndex = 0
 
 
-const uploadFileToAWSAndDelete = (index, t) => {
-    const file = allFiles[index]
-    console.log(`File in Queue - ${index} - ${file}`)
-    if(file != '' && file.indexOf('TIF') >= 0) {
-        const outputFile = file.replace('TIF', 'png')
-        /*const tif2png = spawn('convert', [file, outputFile]);*/
-        const tif2png = spawn('tiff2png', ['-force', '-destdir', `${t === 0 ? mainFolderPath : extraDiskFolderPath}IMAGES`, file]);
-        tif2png.stdout.on('data', (data) => {
-            console.log(`Convert DONE - ${data}`)
-        });
-        tif2png.stderr.on('data', (data) => {
-            console.log(`Convert Error - ${data} - ${file}`)
-        });
-        tif2png.on('close', (code) => {
-            console.log(`conversion done - ${code}`)
-            if (fs.existsSync(outputFile)) {
-                //file exists
-                fs.readFile(outputFile, function(err, fileContent){
-                    if (!err) {
-                        try {            
-        
-                            let name = outputFile.split('/').pop()
-                            //name = name.replace(/-/g, '_')
-                            const bucketConfig = config.bucketConfig
-            
-                            let s3 = new AWS.S3({
-                                credentials: {
-                                    accessKeyId: bucketConfig.accessKeyId,
-                                    secretAccessKey: bucketConfig.secretAccessKey,
-                                },
-                                region: bucketConfig.region
-                            })
-            
-                            const contentType = "image/png"
-            
-                            const params = {
-                                Key: `${bucketConfig.figuresDir}/${name}`,
-                                Bucket: bucketConfig.bucketName,
-                                Body: fileContent,
-                                ACL: 'public-read',
-                                ContentType: contentType,
-                                ContentDisposition: 'inline'
-                            }
-
-                            s3.upload(params, function(err, data) {
-                                console.log(`S3 ${err} - ${JSON.stringify(data)}`)
-                                if(err == null) {
-                                    console.log(`File upload Done`)
-                                    //file uploaded to aws
-        
-                                    console.log(`DELETE INPUT FILE ${file}`)
-                                    const mainFile = spawn('rm', [file]);
-                                    mainFile.stdout.on('data', (data) => {
-                                        console.log(`mainFile.stdout: ${data}`)
-                                    });
-                                    mainFile.stderr.on('data', (data) => {
-                                        console.log(`mainFile.stderr: ${data}`)
-                                    });
-                                    mainFile.on('close', (code) => {
-                                        //Done
-                                        mainFile.on('close', (code) => {
-                                            console.log(`mainFile.close: ${code}`)
-                                        })
-                                    
-                                    })  
-                                    //Delete Output file
-                                    console.log(`DELETE OUTPUT FILE - ${outputFile}`)
-                                    const newFile = spawn('rm', [outputFile]);
-                                    newFile.stdout.on('data', (data) => {
-                                        console.log(`newFile.stdout: ${data}`)
-                                    });
-                                    newFile.stderr.on('data', (data) => {
-                                        console.log(`newFile.stderr: ${data}`)
-                                    });
-                                    newFile.on('close', (code) => {
-                                        console.log(`newFile.close: ${code}`)
-                                    })
-                                    startIndex++
-                                    if(startIndex < allFiles.length - 1) {
-                                        uploadFileToAWSAndDelete(startIndex, t)
-                                    }
+const uploadFileToAWSAndDelete = (startIndex) => {
+    const dirName = allFiles[startIndex].replace('.zip', '')
+    console.log('IN uploadFileToAWSAndDelete DIR NAME: ', dirName)
+    console.log('COMMANDDD.............................................')
+    console.log('find '+ process.env.EXTRA_DISK_PATH10 + 'script/' + dirName +'/. -name "*.TIF" | while read f; do echo "Converting ${f}"; tiff2png ${f}; done')
+    exec('find '+ process.env.EXTRA_DISK_PATH10 + 'script/' + dirName +'/. -name "*.TIF" | while read f; do echo "Converting ${f}"; tiff2png ${f}; done', (err, stdout, stderr) => {
+        if(!err) {
+            console.log('ALL FILES CONVERTED........................................', err, stdout, stderr)
+            exec('aws s3 cp '+ process.env.EXTRA_DISK_PATH10 + 'script/' + dirName +'/ s3://static.patentrack.com/figures/ --recursive  --acl public-read-write --include "*.png"', (err1, stdout1, stderr1) => {
+                if(!err1) {
+                    console.log('ALL FILES UPLOADED TO S3.................................', err1, stdout1, stderr1)
+                    exec('find '+ process.env.EXTRA_DISK_PATH10 + 'script/' + dirName +'/. -name "*.png" -type f -delete', (err2, stdout2, stderr2) => {
+                        if(!err2) {
+                            console.log('ALL FILES PNG DELETED.................................', err2, stdout2, stderr2)
+                            exec('find '+ process.env.EXTRA_DISK_PATH10 + 'script/' + dirName +'/. -name "*.TIF" -type f -delete', (err3, stdout3, stderr3) => {
+                                if(!err3) {
+                                    console.log('ALL FILES TIF DELETED.................................', err3, stdout3, stderr3)
+                                    moveToNextDIR(startIndex)
+                                } else {
+                                    console.log('ERROR IN FILE TIF DELETION..............................', err3)
                                 }
-                            });
-                        } catch (error) {
-                            console.log(`File Error - ${error} - ${file} - ${outputFile}`)
+                            })
+                        } else {
+                            console.log('ERROR IN FILE PNG DELETION..............................', err2)
                         }
-                    } else {
-                        console.log(`Error while reading file - ${err}`)
-                    }
-                })
-            } else {
-                startIndex++
-                if(startIndex < allFiles.length - 1) {
-                    uploadFileToAWSAndDelete(startIndex, t)
+                    })
+                } else {
+                    console.log('ERROR IN FILE UPLOADING..............................', err1)
                 }
-            }                  
-        })
-    } else {
-        startIndex++
-        if(startIndex < allFiles.length - 1) {
-            uploadFileToAWSAndDelete(startIndex, t)
+            })
+        } else {
+            console.log('ERROR IN FILE CONVERSION..............................', err)
         }
+    })
+}
+
+const moveToNextDIR = (startIndex) => {
+    startIndex += 1
+
+    if(startIndex < allFiles.length) {
+        moveFile(startIndex)
     }
 }
 
-const getFilesList = async (t) => {
-    return new Promise( function(resolve, reject) {
-        const child = spawn('find', [`${t === 0 ? mainFolderPath : extraDiskFolderPath}IMAGES`, '-name', `*.TIF`]);
+const moveFile = (startIndex) => {
+   /* console.log(`${process.env.EXTRA_DISK_PATH}${allFiles[startIndex]}`, `${process.env.EXTRA_DISK_PATH10}`)
+    const child = spawn('mv', [`${process.env.EXTRA_DISK_PATH}${allFiles[startIndex]}`, `${process.env.EXTRA_DISK_PATH10}`]);
+    child.stdout.on('data', (data) => {
+        console.log(`child.stdout: ${data}`)
+        
+    });
+    child.stderr.on('data', (data) => {
+        console.log('DATA REJECTED', data)
+    });
+    child.on('close', (code) => {
+        console.log('AllFolderDone')    
+       
+        const unZip = spawn('unzip', [`${process.env.EXTRA_DISK_PATH10}${allFiles[startIndex]}`]);
+        unZip.stdout.on('data', (data) => {
+            console.log(`unzipchild.stdout: ${data}`)
+
+        });
+        unZip.stderr.on('data', (data) => {
+            console.log('DATA REJECTED', data)
+        });
+        unZip.on('close', (code) => {
+            uploadFileToAWSAndDelete(startIndex)
+        })
+    })  */
+    
+
+    const dirName = "part30"
+
+        const child = spawn('find', [
+            `${process.env.EXTRA_DISK_PATH10}`, 
+            "script/", 
+            `${dirName}`, 
+            "/.", 
+            "-name",
+            "*.TIF",
+            "|",
+            "while",
+            "read",
+            "f;",
+            "do",
+            "echo",
+            '"Converting ${f}";',
+            "tiff2png",
+            "${f};",
+            "done"
+        ]);
         child.stdout.on('data', (data) => {
-            console.log(`child.stdout: ${data}`)
-            const files = data.toString().split('\n')  
-            allFiles = [...allFiles, ...files]
+            console.log(`CONVERSION child.stdout: ${data}`)
+            
         });
         child.stderr.on('data', (data) => {
-            reject(data)
+            console.log('CONVERSION  DATA REJECTED', data)
         });
         child.on('close', (code) => {
-            resolve('AllFolderDone')    
-        })  
-    })
-    
+            console.log('CONVERSION DONE')   
+        }
 }
 
 (async () => {
-    let imagesPromise =  await getFilesList(1)
-    console.log(`All Files - ${allFiles.length} - ${mainFolderPath}`)
-    if(allFiles.length > 0 ) {
-        uploadFileToAWSAndDelete(startIndex, 1)
-    } /* else {
-        imagesPromise =  await getFilesList(1)
-        console.log(`All Files - ${allFiles.length} - ${extraDiskFolderPath}`)
-        if(allFiles.length > 0 ) {
-            uploadFileToAWSAndDelete(startIndex, 1)
-        }
-    } */
+    moveFile(startIndex)
 })()
 
 

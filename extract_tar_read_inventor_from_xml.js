@@ -51,7 +51,8 @@ const extractFile = async (fileIndex) => {
     console.log(`Start file moving -  ${folderName} - ${extraDiskFolderPath2}DOWNLOAD/`)
     try {
         const moveTar = new Promise((resolve, reject) => {
-            const child =  spawn('mv', [folderName, `${extraDiskFolderPath2}DOWNLOAD/`])
+	resolve('Done')
+		/*            const child =  spawn('mv', [folderName, `${extraDiskFolderPath2}DOWNLOAD/`])
     
             child.stdout.on('data', (data) => {
                 console.log(`child.stdout: ${data}`)            
@@ -63,7 +64,7 @@ const extractFile = async (fileIndex) => {
     
             child.on('close', (code) => {
                 resolve('Extract DOne')    
-            })
+            })*/
         })
         Promise.all([moveTar])
         .then(() => {

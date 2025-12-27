@@ -15,22 +15,22 @@ const ApplicationDetails = require("./models/ApplicationDetails"),
 const fileName = 'US20210045996A1-20210218.XML'
     filePath = path.join(__dirname, fileName),
     mainFolderPath = process.env.MAIN_FOLDER_PATH,
-    extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
+    extraDiskFolderPath =  process.env.EXTRA_DISK_PATH;
 
-let startDate = '2020-05-28 00:00:00', endDate = '2020-12-31 00:00:00'
+let startDate = '2024-07-16 00:00:00', endDate = '2024-09-03 00:00:00'
 
 const downloadFilesAndProcess = async() => {
     const startGetTime = new Date(startDate).getTime(), endGetTime = new Date(endDate).getTime()
     try{
         if (startGetTime < endGetTime) {
             const date = new Date(startDate)
-            startDate = moment(date).add(1, 'week').day(4);
+            startDate = moment(date).add(1, 'week').day(2);
             const momentObject = moment(new Date(startDate))
             const folderName = `I${momentObject.format('YYYYMMDD')}`
-            const downloadPath = `https://bulkdata.uspto.gov/data/patent/application/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
+            const downloadPath = `https://bulkdata.uspto.gov/data/patent/grant/redbook/${momentObject.format('YYYY')}/${folderName}.tar`
             console.log(`FolderName: ${startDate} - ${folderName} - ${downloadPath}`)
             const downloadFileProcess = new Promise( (resolve, reject) => {
-                const downloadFileSpawn = spawn('wget', [downloadPath, '-P', `${extraDiskFolderPath}DOWNLOAD/`])
+                const downloadFileSpawn = spawn('wget', [downloadPath, '-P', `${extraDiskFolderPath}patent/DOWNLOAD/`])
                 downloadFileSpawn.stdout.on('data', (data) => {
                     console.log(`downloadFileSpawn.stdout: ${data}`)
                 });
@@ -45,8 +45,9 @@ const downloadFilesAndProcess = async() => {
             })
             Promise.all([downloadFileProcess])
             .then(async () => {
-                /* await downloadFilesAndProcess() */
-                let folderList = []
+                
+		     await downloadFilesAndProcess() 
+               /* let folderList = []
                 const extractTar = new Promise((resolve, reject) => {        
                     const child =  spawn('tar', ['-xvf', `${extraDiskFolderPath}DOWNLOAD/${folderName}.tar`])
                     child.stdout.on('data', (data) => {
@@ -65,6 +66,7 @@ const downloadFilesAndProcess = async() => {
                     child.on('close', (code) => {
                         resolve('Extract DOne')    
                     })        
+		            resolve('EXTRACT')
                 })
                 Promise.all([extractTar])
                 .then(() => {
@@ -111,7 +113,7 @@ const downloadFilesAndProcess = async() => {
                                 Promise.all(unzipAllFolder)
                                 .then(() => {
                                     const promiseXML = new Promise( function(resolve, reject) { //move xml files
-                                        const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${extraDiskFolderPath}XML`, '{}', '+']);
+                                        const findXMLFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.XML`, '-exec', 'mv', '-t', `${extraDiskFolderPath}patent/XML2`, '{}', '+']);
 
                                         findXMLFiles.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
@@ -129,7 +131,7 @@ const downloadFilesAndProcess = async() => {
                                     })   
                                     
                                     const promiseTIF = new Promise( function(resolve, reject) { // move tif files
-                                        const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${extraDiskFolderPath}IMAGES`, '{}', '+']);
+                                        const findIMAGESFiles = spawn('find', [`${mainFolderPath}EXTRACT_FILES/`, '-name', `*.TIF`, '-exec', 'mv', '-t', `${extraDiskFolderPath}patent/IMAGES`, '{}', '+']);
 
                                         findIMAGESFiles.stdout.on('data', (data) => {
                                             console.log(`child.stdout: ${data}`)
@@ -168,9 +170,11 @@ const downloadFilesAndProcess = async() => {
                         })
                     }
                     
-                })
+                })*/
             }).catch(function(err) {
                 console.log(`Reject: ${err}`)
+            }).finally(() => {
+                console.log('Files Downloaed and Extracted');
             });
         }
     } catch (e) {

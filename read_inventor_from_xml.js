@@ -14,7 +14,7 @@ const ApplicationPublication = require("./models/ApplicationPublication"),
 const extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
 let allFiles = []
 const processXMLFiles = new Promise( function(resolve, reject) {
-    const child = spawn('find', [`${extraDiskFolderPath}XML`, '-name', `*.XML`]);
+    const child = spawn('find', [`${extraDiskFolderPath}applications/XML2`, '-name', `*.XML`]);
     child.stdout.on('data', (data) => {
         //console.log(`child.stdout: ${data}`)
         const files = data.toString().split('\n')
@@ -88,7 +88,8 @@ const readFile = async (fileIndex) => {
                                                     given_name: decode(addressBook['first-name'], {level: 'xml'}),
                                                     family_name: decode(addressBook['last-name'], {level: 'xml'}),
                                                     middle_name: decode(middleName, {level: 'xml'}),
-                                                    file_name: fileName
+                                                    file_name: fileName,
+													full_path: fullPath
                                                 })
                                             }
                                         })
@@ -158,11 +159,14 @@ const readFile = async (fileIndex) => {
                                     }
                                 }
                                 const appnoDate = applicationReference['document-id']['date'].toString(), grantDate = publicationReference['document-id']['date'].toString()
+                                const title = usBibliographic['invention-title']['#text'].toString()
                                 applicationPublication.push({
                                     appno_doc_num: applicationReference['document-id']['doc-number'],
                                     appno_date: `${appnoDate.substr(0,4)}-${appnoDate.substr(4,2)}-${appnoDate.substr(6,2)}`,
                                     pgpub_doc_num: publicationReference['document-id']['doc-number'],
                                     pgpub_date: `${grantDate.substr(0,4)}-${grantDate.substr(4,2)}-${grantDate.substr(6,2)}`,
+									file_name: fileName,
+                                    title
                                 })
                                 resolve('read')
                             }
@@ -254,6 +258,7 @@ const readFile = async (fileIndex) => {
                                         appno_date: `${appnoDate.substr(0,4)}-${appnoDate.substr(4,2)}-${appnoDate.substr(6,2)}`,
                                         pgpub_doc_num: publicationReference['doc-number'],
                                         pgpub_date: `${grantDate.substr(0,4)}-${grantDate.substr(4,2)}-${grantDate.substr(6,2)}`,
+										file_name: fileName
                                     })
                                     resolve('read')
                                 }

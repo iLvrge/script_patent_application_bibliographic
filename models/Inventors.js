@@ -3,7 +3,7 @@ const Sequelize = require("sequelize");
 const connection = require("../config/index");
 
 
-const Inventors = connection.inventorDB.define('inventor',{
+const Inventors = connection.applicationBibliograhic.define('inventor',{
     appno_doc_num:{
         type: Sequelize.STRING,
         allowNull: false,
