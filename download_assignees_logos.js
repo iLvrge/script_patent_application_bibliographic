@@ -132,7 +132,8 @@ const resizeFile = async (startIndex, contentType, pathDirectory, name) => {
 
             let filename = name.replace(pathDirectory, '').replace(/\s+/g, '-');
             // New Local Logic
-            const staticPath = process.env.STATIC_PATH || '/mnt2/data/s3';
+            const staticPath = process.env.STATIC_PATH || '/mnt2/data/s3/';
+            const staticPathUrl = process.env.STATIC_PATH_URL || 'https://localstaticfiles.patentrack.com/';
             if (!staticPath) {
                 console.error("STATIC_PATH env variable is not set.");
                 checkNextRow(startIndex);
@@ -164,7 +165,7 @@ const resizeFile = async (startIndex, contentType, pathDirectory, name) => {
                 // But the user said "path of the static directory is in the env ... so we will take it as ...".
                 // I will use `targetPath` as the stored value.
 
-                filename = targetPath;
+                filename = staticPathUrl + bucketConfig.dirName + '/' + filename;
                 console.log('New DB Filename:', filename);
 
                 handleDbUpdate(startIndex, filename, name, pathDirectory);
