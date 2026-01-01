@@ -13,12 +13,15 @@ const Applicants = require("./models/Applicants"),
 const { Console } = require('console');
 
 const extraDiskFolderPath = process.env.EXTRA_DISK_PATH;
+if (!extraDiskFolderPath) {
+    throw new Error('EXTRA_DISK_PATH is not set');
+}
 let allFiles = []
 const processXMLFiles = new Promise( function(resolve, reject) {
     const argumentSlice = process.argv.slice(2);
     const year = argumentSlice[0]
     console.log(`FILEPATH: ${extraDiskFolderPath}applications/XML2`)
-    const child = spawn('find', [`${extraDiskFolderPath}applications/XML2`, '-name', `*.XML`]);
+    const child = spawn('/usr/bin/find', [`${extraDiskFolderPath}applications/XML2`, '-name', `*.XML`]);
     child.stdout.on('data', (data) => {
         //console.log(`child.stdout: ${data}`)
         const files = data.toString().split('\n')
