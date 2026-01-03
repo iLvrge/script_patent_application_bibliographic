@@ -4,7 +4,7 @@ const fs = require('fs'),
 
 const ApplicationStatus = require('./models/ApplicationStatus')
 let YEAR = 0;
-const FILE_PATH = '/mnt/volume_sfo2_12/DOWNLOAD/'
+const FILE_PATH = '/mnt/volume_sfo2_12/STATUS/'
 
 /**
  * ./node_modules/.bin/env-cmd node read_assets_status_from_file.js "2022"
