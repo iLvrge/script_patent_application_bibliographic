@@ -21,7 +21,7 @@ const streamFile = () => {
 	const fileStream = fs.createReadStream(`${FILE_PATH}${YEAR}.json`);
 	
 	fileStream
-		.pipe(JSONStream.parse("PatentBulkData.*"))
+		.pipe(JSONStream.parse("patentFileWrapperDataBag.*"))
 		.pipe(
 			es.through(
 				async function(data) {
@@ -74,9 +74,9 @@ const processOneAsset = async (data, es) => {
 		}
 		
 		const assetStatus = {
-			appno_doc_num: data?.patentCaseMetadata?.applicationNumberText?.value,
-			status: data?.patentCaseMetadata?.applicationStatusCategory,
-			status_date: data?.patentCaseMetadata?.applicationStatusDate
+			appno_doc_num: data?.applicationNumberText,
+			status: data?.applicationMetaData?.applicationStatusDescriptionText,
+			status_date: data?.applicationMetaData?.applicationStatusDate
 		};
 		
 		if (assetStatus.appno_doc_num != undefined && assetStatus.status != undefined && assetStatus.status_date != undefined) {
