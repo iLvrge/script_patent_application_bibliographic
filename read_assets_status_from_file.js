@@ -24,10 +24,10 @@ const streamFile = () => {
 		.pipe(JSONStream.parse("PatentBulkData.*"))
 		.pipe(
 			es.through(
-				function(data) {
+				async function(data) {
 					try {
 						this.pause();
-						processOneAsset(data, this);
+						await processOneAsset(data, this);
 					} catch(err) {
 						console.log('ERROR in es.through', err);
 						this.resume();
@@ -35,7 +35,7 @@ const streamFile = () => {
 					return data;
 				},
 				async function end() {
-					console.log("Stream reading ended");
+					console.log(`Stream reading ended - ${arrayDB.length} records`);
 					
 					// Insert remaining records
 					if (arrayDB.length > 0) {
@@ -74,12 +74,12 @@ const processOneAsset = async (data, es) => {
 		}
 		
 		const assetStatus = {
-			appno_doc_num: data.patentCaseMetadata.applicationNumberText.value,
-			status: data.patentCaseMetadata.applicationStatusCategory,
-			status_date: data.patentCaseMetadata.applicationStatusDate
+			appno_doc_num: data?.patentCaseMetadata?.applicationNumberText?.value,
+			status: data?.patentCaseMetadata?.applicationStatusCategory,
+			status_date: data?.patentCaseMetadata?.applicationStatusDate
 		};
 		
-		if (assetStatus.status != undefined && assetStatus.status_date != undefined) {
+		if (assetStatus.appno_doc_num != undefined && assetStatus.status != undefined && assetStatus.status_date != undefined) {
 			arrayDB.push(assetStatus);
 			
 			if (arrayDB.length >= BATCH_SIZE) {
