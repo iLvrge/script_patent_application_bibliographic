@@ -9,13 +9,8 @@ ini_set("log_errors", 1);
 ini_set("error_log", "/var/www/html/trash/daily_file.log");
 
 ini_set('xdebug.max_nesting_level', 1000);
-$host = getenv('DB_HOST');
-$user = getenv('DB_USER'); 
-$password = getenv('DB_PASSWORD');
-$dbUSPTO = getenv('DB_USPTO_DB');
-$dbBusiness = getenv('DB_BUSINESS');
-$dbApplication = getenv('DB_APPLICATION_DB');
-$con = new mysqli($host, $user, $password, 'db_uspto');
+
+require_once '/var/www/html/trash/connection.php';
 
 
 $con->query("TRUNCATE db_uspto.company_temp");
